@@ -190,6 +190,18 @@ body[data-theme="dark"] .brand {
   box-shadow: none;
 }
 
+.brand-logo-dark {
+  display: none;
+}
+
+body[data-theme="dark"] .brand-logo-light {
+  display: none;
+}
+
+body[data-theme="dark"] .brand-logo-dark {
+  display: block;
+}
+
 .brand-text {
   position: absolute;
   width: 1px;
