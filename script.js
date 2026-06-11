@@ -616,6 +616,125 @@ const translations = {
   },
 };
 
+const brandVoiceContent = {
+  plain: {
+    zh: {
+      navHome: "首頁",
+      navValues: "理念",
+      navResilience: "道路行動",
+      navManifesto: "品牌理念",
+      navLoop: "參與流程",
+      navGuide: "使用說明",
+      navCommunity: "社群",
+      heroKicker: "NVD 協會｜道路回饋與修復行動",
+      heroTitle: "把路上的問題，變成可以被看見、被追蹤、被改善的行動",
+      heroSubtitle:
+        "<strong>NVD 協會從日常通行出發</strong>，讓坑洞、障礙、危險路段與不友善設計，不再只是個人的困擾，而是可以整理成資料、串起協作、推動修復的公共訊號。<span class='tagline'>Better Roads, Better Together.</span>",
+      homePrimaryCta: "查看道路行動",
+      homeSecondaryCta: "認識 NVD 協會",
+      homeTertiaryCta: "加入共創",
+      gatewayTitle: "先讓問題被看見，再讓更多人一起修復",
+      gatewayLead:
+        "NVD 把現場回饋、友善通行、資料整理與協作流程接在一起，讓一般人也能用簡單方式參與公共改善。",
+      gatewaySoftwareTitle: "認識 NVD 協會",
+      gatewaySoftwareText:
+        "我們關心的不只是科技，而是科技能不能讓人更省力、更安全、更有尊嚴地生活。",
+      gatewayResilienceTitle: "道路回饋與修復行動",
+      gatewayResilienceText:
+        "從一個現場回報開始，把道路問題整理成可追蹤的資訊，讓改善不再只靠抱怨或等待。",
+      gatewayJoinTitle: "加入共創",
+      gatewayJoinText:
+        "學生、居民、志工、設計者、工程與資料夥伴，都可以從測試、回饋與分享開始參與。",
+      valuesTitle: "NVD 的核心：讓通行更安全，讓回饋真的有用",
+      valuesLead:
+        "我們相信友善道路不是口號，而是一套可以被回報、被整理、被協作、被改善的行動循環。",
+      footerProductsTitle: "協會行動",
+      footerProductTools: "道路回饋與修復行動",
+      footerProductConverter: "加入共創",
+      footerProductSlides: "品牌理念",
+      footerGuidesTitle: "理念",
+      footerGuideQuickStart: "核心主張",
+      footerGuideRightClick: "科技摩擦",
+      footerGuideSlides: "友善科技循環",
+      footerGuideFriction: "NVD 生態入口",
+      footerGuidePrivacy: "降低數位摩擦",
+      footerGuideElderFriendly: "友善設計理念",
+      footerCompareTitle: "專案",
+      footerCompareNvdVsCommand: "社會韌性友善專案",
+      footerCompareNvdVsManual: "參與共創",
+      footerCompareNvdVsOnline: "高雄友善道路模擬",
+      footerComparePptx: "種子測試",
+      footerCompareWorkflow: "回饋與協作",
+      footerCompanyTitle: "公司",
+      footerCompanyAbout: "關於 NVD 協會",
+      footerCompanyFaq: "常見問題",
+      footerCompanyUpdates: "更新日誌",
+      footerCompanyPrivacy: "隱私權政策",
+      footerCompanyTerms: "服務條款",
+      footerPrivacyNote: "本地優先 · 不收集敏感資料 · 無需帳戶",
+      footerCopy: "© 2026 NVD 協會. Road Feedback & Repair Action.",
+    },
+  },
+  official: {
+    zh: {
+      navHome: "首頁",
+      navValues: "核心理念",
+      navResilience: "道路治理行動",
+      navManifesto: "品牌論述",
+      navLoop: "參與機制",
+      navGuide: "操作指引",
+      navCommunity: "協作網絡",
+      heroKicker: "NVD 協會｜友善通行與道路回饋治理",
+      heroTitle: "建構道路回饋、資料整合與修復協作之社會韌性機制",
+      heroSubtitle:
+        "<strong>NVD 協會以友善通行、即時回饋、資料化整理與跨域協作為核心</strong>，將道路障礙與通行風險轉化為可辨識、可追蹤、可協調之公共治理訊號，促進道路安全與城市友善環境之持續改善。<span class='tagline'>Better Roads, Better Together.</span>",
+      homePrimaryCta: "查看治理行動",
+      homeSecondaryCta: "了解協會定位",
+      homeTertiaryCta: "參與協作機制",
+      gatewayTitle: "建立由現場回饋到修復協作的公共價值流程",
+      gatewayLead:
+        "NVD 整合使用者回饋、道路風險辨識、資料彙整與多方協作，協助形成具可讀性、可追蹤性與可治理性的友善通行資料基礎。",
+      gatewaySoftwareTitle: "協會定位",
+      gatewaySoftwareText:
+        "NVD 關注科技、生活與公共治理之交會，致力降低數位與空間摩擦，提升民眾參與公共改善的可近性。",
+      gatewayResilienceTitle: "道路治理行動",
+      gatewayResilienceText:
+        "透過標準化回饋流程，將道路現場問題轉化為可追蹤資料，作為後續協調、溝通與改善倡議之基礎。",
+      gatewayJoinTitle: "參與機制",
+      gatewayJoinText:
+        "邀請公民、學生、專業者、社群與跨域夥伴，透過測試、回饋、資料協作與倡議參與，共同推動友善通行環境。",
+      valuesTitle: "以友善通行、資料治理與社會韌性為核心之公共倡議",
+      valuesLead:
+        "NVD 將道路回饋視為城市治理的重要訊號，透過資料化、流程化與協作化，促進更安全、更可及且更具韌性的公共環境。",
+      footerProductsTitle: "協會行動",
+      footerProductTools: "道路治理行動",
+      footerProductConverter: "參與協作",
+      footerProductSlides: "品牌論述",
+      footerGuidesTitle: "核心理念",
+      footerGuideQuickStart: "主張架構",
+      footerGuideRightClick: "科技摩擦",
+      footerGuideSlides: "友善科技循環",
+      footerGuideFriction: "NVD 生態入口",
+      footerGuidePrivacy: "降低數位摩擦",
+      footerGuideElderFriendly: "友善設計原則",
+      footerCompareTitle: "專案機制",
+      footerCompareNvdVsCommand: "社會韌性友善專案",
+      footerCompareNvdVsManual: "協作參與",
+      footerCompareNvdVsOnline: "高雄友善道路模擬",
+      footerComparePptx: "種子測試",
+      footerCompareWorkflow: "回饋與協作流程",
+      footerCompanyTitle: "組織資訊",
+      footerCompanyAbout: "關於 NVD 協會",
+      footerCompanyFaq: "常見問題",
+      footerCompanyUpdates: "更新紀錄",
+      footerCompanyPrivacy: "隱私權政策",
+      footerCompanyTerms: "服務條款",
+      footerPrivacyNote: "本地優先 · 資料最小化 · 無需帳戶",
+      footerCopy: "© 2026 NVD 協會. Road Feedback & Repair Action.",
+    },
+  },
+};
+
 const tools = [];
 
 const simulatedStats = {
@@ -628,6 +747,7 @@ const iconThemeCount = 4;
 const savedFavorites = localStorage.getItem("nvd-favorites");
 const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 const savedTheme = localStorage.getItem("nvd-theme");
+const savedBrandVoice = localStorage.getItem("nvd-brand-voice");
 const htmlTranslationKeys = new Set(["heroSubtitle"]);
 
 const state = {
@@ -635,6 +755,9 @@ const state = {
   categoryKey: "all",
   language: localStorage.getItem("nvd-language") || "zh",
   theme: savedTheme || (systemThemeQuery.matches ? "dark" : "light"),
+  brandVoice: ["plain", "official"].includes(savedBrandVoice)
+    ? savedBrandVoice
+    : "plain",
   favorites: new Set(parseStoredFavorites(savedFavorites)),
 };
 
@@ -648,6 +771,8 @@ const languageMenu = document.querySelector("#languageMenu");
 const languageToggle = document.querySelector("#languageToggle");
 const languageOptions = document.querySelectorAll(".language-option");
 const currentLanguageLabel = document.querySelector("#currentLanguageLabel");
+const brandVoiceToggle = document.querySelector("#brandVoiceToggle");
+const currentBrandVoiceLabel = document.querySelector("#currentBrandVoiceLabel");
 const themeToggle = document.querySelector("#themeToggle");
 const mobileNavToggle = document.querySelector("#mobileNavToggle");
 const siteHeader = document.querySelector(".site-header");
@@ -714,8 +839,10 @@ const manifestoModeContent = [
 ];
 
 function t(key, replacements = {}) {
+  const voiceDictionary = brandVoiceContent[state.brandVoice]?.[state.language];
   const dictionary = translations[state.language] || translations.zh;
-  const template = dictionary[key] || translations.zh[key] || key;
+  const template =
+    voiceDictionary?.[key] || dictionary[key] || translations.zh[key] || key;
 
   return Object.entries(replacements).reduce((text, [name, value]) => {
     return text.replace(`{${name}}`, value);
@@ -1528,6 +1655,31 @@ function setLanguage(language) {
   renderTools();
 }
 
+function setBrandVoice(voice, shouldPersist = true) {
+  state.brandVoice = voice === "official" ? "official" : "plain";
+
+  if (shouldPersist) {
+    localStorage.setItem("nvd-brand-voice", state.brandVoice);
+  }
+
+  const isOfficial = state.brandVoice === "official";
+
+  if (brandVoiceToggle) {
+    brandVoiceToggle.classList.toggle("is-official", isOfficial);
+    brandVoiceToggle.setAttribute(
+      "aria-label",
+      isOfficial ? "切換為白話版" : "切換為治理版",
+    );
+  }
+
+  if (currentBrandVoiceLabel) {
+    currentBrandVoiceLabel.textContent = isOfficial ? "治理" : "白話";
+  }
+
+  applyTranslations();
+  renderTools();
+}
+
 function closeLanguageMenu() {
   if (!languageMenu || !languageToggle) return;
 
@@ -1775,6 +1927,12 @@ if (themeToggle) {
   });
 }
 
+if (brandVoiceToggle) {
+  brandVoiceToggle.addEventListener("click", () => {
+    setBrandVoice(state.brandVoice === "official" ? "plain" : "official");
+  });
+}
+
 if (manifestoModeToggle) {
   manifestoModeToggle.addEventListener("click", () => {
     manifestoMode = manifestoMode === "hardcore" ? "human" : "hardcore";
@@ -1887,6 +2045,7 @@ if (legalModal) {
 }
 
 setLanguage(state.language);
+setBrandVoice(state.brandVoice, false);
 setTheme(state.theme, Boolean(savedTheme));
 renderManifestoMode(manifestoMode);
 if (processedFilesCount) {
