@@ -369,7 +369,7 @@ body[data-theme="dark"] .nav-links a:hover {
   padding: 0 14px;
   gap: 8px;
   color: var(--brand-navy);
-  background: color-mix(in srgb, var(--surface-main) 92%, var(--brand-orange));
+  background: var(--surface-main);
   border: 1px solid var(--border-main);
   border-radius: 999px;
   box-shadow: 0 4px 12px rgba(45, 49, 66, 0.04);
@@ -385,9 +385,16 @@ body[data-theme="dark"] .nav-links a:hover {
 }
 
 .brand-voice-toggle.is-official {
-  color: var(--text-inverse);
-  background: var(--brand-navy);
-  border-color: rgba(13, 35, 64, 0.28);
+  color: var(--brand-navy);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(240, 253, 250, 0.92)
+  );
+  border-color: rgba(16, 185, 129, 0.34);
+  box-shadow:
+    0 4px 12px rgba(45, 49, 66, 0.04),
+    inset 0 -2px 0 rgba(16, 185, 129, 0.18);
 }
 
 body[data-theme="dark"] .brand-voice-toggle {
@@ -397,9 +404,12 @@ body[data-theme="dark"] .brand-voice-toggle {
 }
 
 body[data-theme="dark"] .brand-voice-toggle.is-official {
-  color: #ffffff;
-  background: rgba(242, 140, 56, 0.24);
-  border-color: rgba(242, 140, 56, 0.38);
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(94, 234, 212, 0.28);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.14),
+    inset 0 -2px 0 rgba(94, 234, 212, 0.22);
 }
 
 .theme-toggle:hover {
