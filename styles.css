@@ -20,8 +20,8 @@
   --accent-teal: var(--brand-navy);
   --accent-yellow: #f7b955;
   --header-bg: rgba(255, 255, 255, 0.88);
-  --footer-bg: #071426;
-  --footer-text: rgba(255, 255, 255, 0.72);
+  --footer-bg: #f4f7fb;
+  --footer-text: #667085;
   --modal-backdrop: rgba(30, 34, 48, 0.5);
   --shadow-main: 0 16px 42px rgba(45, 49, 66, 0.08);
   --shadow-hover: 0 22px 54px rgba(45, 49, 66, 0.14);
@@ -50,7 +50,7 @@ body[data-theme="dark"] {
   --text-muted: #a5adba;
   --text-inverse: #ffffff;
   --border-main: #30343b;
-  --header-bg: rgba(18, 18, 18, 0.88);
+  --header-bg: rgba(7, 20, 38, 0.92);
   --footer-bg: #050b14;
   --footer-text: rgba(255, 255, 255, 0.72);
   --modal-backdrop: rgba(0, 0, 0, 0.62);
@@ -166,9 +166,14 @@ button {
 .brand {
   min-width: 0;
   gap: 0;
+  padding: 4px 6px;
+  border-radius: 12px;
   font-size: 1.18rem;
   font-weight: 800;
   line-height: 1;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .brand-logo {
@@ -177,6 +182,13 @@ button {
   height: auto;
   max-height: 52px;
   object-fit: contain;
+}
+
+body[data-theme="dark"] .brand {
+  background: rgba(5, 36, 65, 0.76);
+  box-shadow:
+    0 0 0 1px rgba(125, 184, 228, 0.18),
+    0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .brand-logo-dark {
@@ -3969,20 +3981,20 @@ body[data-theme="dark"] .manifesto-card {
 
 .site-footer {
   padding: clamp(38px, 6vw, 56px) 0 clamp(28px, 4vw, 34px);
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--footer-text);
   background:
     radial-gradient(
       circle at 12% 0%,
-      rgba(242, 140, 56, 0.14),
+      rgba(242, 140, 56, 0.12),
       transparent 26rem
     ),
     radial-gradient(
       circle at 92% 0%,
-      rgba(255, 255, 255, 0.06),
+      rgba(13, 35, 64, 0.08),
       transparent 24rem
     ),
-    linear-gradient(180deg, var(--brand-navy) 0%, #071426 100%);
-  border-top: 1px solid rgba(242, 140, 56, 0.22);
+    linear-gradient(180deg, #ffffff 0%, var(--footer-bg) 100%);
+  border-top: 1px solid var(--border-main);
   font-size: 0.95rem;
 }
 
@@ -4019,7 +4031,7 @@ body[data-theme="dark"] .site-footer {
 
 .footer-column h2 {
   margin: 0 0 16px;
-  color: #ffffff;
+  color: var(--brand-navy);
   font-size: 0.95rem;
   font-weight: 800;
 }
@@ -4037,7 +4049,7 @@ body[data-theme="dark"] .footer-column h2 {
 }
 
 .footer-column a {
-  color: rgba(214, 226, 242, 0.76);
+  color: var(--text-muted);
   line-height: 1.5;
   text-decoration: none;
   transition:
@@ -4065,7 +4077,7 @@ body[data-theme="dark"] .footer-column a:hover {
   gap: 24px;
   margin-top: 34px;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid var(--border-main);
 }
 
 body[data-theme="dark"] .footer-bottom {
@@ -4081,7 +4093,7 @@ body[data-theme="dark"] .footer-bottom {
 
 .footer-brand p,
 .footer-meta span {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-muted);
   margin: 0;
   line-height: 1.6;
   font-weight: 600;
@@ -4094,10 +4106,17 @@ body[data-theme="dark"] .footer-bottom {
   place-items: center;
   flex: 0 0 auto;
   color: #fff;
-  background: transparent;
+  background: #ffffff;
+  border: 1px solid rgba(13, 35, 64, 0.1);
   border-radius: 14px;
-  box-shadow: 0 12px 26px rgba(242, 140, 56, 0.2);
+  box-shadow: 0 12px 26px rgba(13, 35, 64, 0.12);
   overflow: hidden;
+}
+
+body[data-theme="dark"] .footer-logo {
+  background: rgba(5, 36, 65, 0.82);
+  border-color: rgba(125, 184, 228, 0.2);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 }
 
 .footer-logo-img {
