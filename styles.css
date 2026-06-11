@@ -167,7 +167,7 @@ button {
 .brand {
   min-width: 0;
   gap: 0;
-  padding: 4px 6px;
+  padding: 0;
   border-radius: 12px;
   font-size: 1.18rem;
   font-weight: 800;
@@ -186,10 +186,8 @@ button {
 }
 
 body[data-theme="dark"] .brand {
-  background: rgba(5, 36, 65, 0.76);
-  box-shadow:
-    0 0 0 1px rgba(125, 184, 228, 0.18),
-    0 12px 28px rgba(0, 0, 0, 0.18);
+  background: transparent;
+  box-shadow: none;
 }
 
 .brand-logo-dark {
