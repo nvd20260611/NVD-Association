@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; form-action 'none'; upgrade-insecure-requests"
+    />
+    <title>NVD 協會｜道路回饋與修復行動</title>
+    <meta
+      name="description"
+      content="NVD 協會推動道路回饋與修復行動，串聯友善通行、即時回饋、修復行動與智慧協作，讓每一次通行都更安全。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NVD 協會｜道路回饋與修復行動" />
+    <meta
+      property="og:description"
+      content="NVD 協會推動道路回饋與修復行動，串聯友善通行、即時回饋、修復行動與智慧協作，讓每一次通行都更安全。"
+    />
+    <meta
+      property="og:url"
+      content="https://yi-anchen888.github.io/NVD-Toolkit/"
+    />
+    <meta
+      property="og:image"
+      content="https://yi-anchen888.github.io/NVD-Toolkit/assets/og-image.jpg"
+    />
+    <link rel="icon" type="image/png" href="assets/nvd-logo-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260604-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="主要導覽">
+        <a class="brand" href="index.html" aria-label="NVD 協會首頁">
+          <img class="brand-logo brand-logo-light" src="assets/nvd-logo-horizontal.png" alt="NVD Road Feedback & Repair" width="950" height="318" />
+          <img class="brand-logo brand-logo-dark" src="assets/nvd-logo-horizontal-reverse.png" alt="NVD Road Feedback & Repair" width="330" height="145" />
+          <span class="brand-text" data-i18n="brandName">NVD 協會</span>
+        </a>
+
+        <button
+          class="mobile-nav-toggle"
+          id="mobileNavToggle"
+          type="button"
+          aria-label="開啟網站選單"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="primaryNav" aria-label="網站選單">
+          <a class="active" href="index.html" data-i18n="navHome">首頁</a>
+          <a href="resilience.html" data-i18n="navResilience">道路行動</a>
+          <a href="manifesto.html" data-i18n="navManifesto">品牌理念</a>
+          <a href="join.html" data-i18n="navLoop">加入共創</a>
+          <a href="#footer" data-i18n="navCommunity">社群</a>
+        </div>
+
+        <div class="header-actions">
+          <div class="language-menu" id="languageMenu">
+            <button
+              id="languageToggle"
+              class="language-toggle"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLanguageLabel">中文</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="language-options" role="listbox" aria-label="選擇語言">
+              <button
+                class="language-option active"
+                type="button"
+                role="option"
+                data-language="zh"
+                aria-selected="true"
+              >
+                中文
+              </button>
+              <button
+                class="language-option"
+                type="button"
+                role="option"
+                data-language="en"
+                aria-selected="false"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="切換深淺色主題"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner container">
+          <p class="hero-kicker" data-i18n="heroKicker">
+            NVD 協會｜Road Feedback & Repair
+          </p>
+          <h1 data-i18n="heroTitle">
+            道路回饋與修復行動，讓每一次通行都更安全。
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            <strong>以友善通行、即時回饋、修復行動與智慧協作為核心</strong
+            >，NVD 協會把道路上的真實阻礙整理成可被看見、可被追蹤、可被改善的公共訊號。<span
+              class="tagline"
+              >Better Roads, Better Together.</span
+            >
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-link-btn" href="resilience.html">
+              <span data-i18n="homePrimaryCta">查看道路行動</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="secondary-link-btn" href="manifesto.html">
+              <span data-i18n="homeSecondaryCta">認識 NVD 協會</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="tertiary-link-btn" href="join.html">
+              <span data-i18n="homeTertiaryCta">參與共創</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats" aria-label="友善行動計數">
+            <span class="stat-dot" aria-hidden="true"></span>
+            <strong id="processedFilesCount">1,312,619</strong>
+            <span data-i18n="statsProcessedFiles">友善行動節點</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="hub-dashboard-section container"
+        aria-labelledby="hubDashboardTitle"
+      >
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow">NVD LIFE HUB</p>
+            <h2 id="hubDashboardTitle">把道路回饋、資料與友善行動接成一個入口</h2>
+            <p class="section-lead">
+              左側是使用者最直覺的一鍵回報端，右側是社會韌性數據板。NVD
+              讓每一次道路回饋，都能被整理成可理解、可討論、可改善的系統訊號。
+            </p>
+          </div>
+        </div>
+
+        <div class="hub-dashboard-grid">
+          <article class="hub-phone-card" aria-label="NVD 手機回報端">
+            <div class="hub-phone-shell">
+              <div class="hub-phone-camera"></div>
+              <div class="hub-phone-screen">
+                <div class="hub-json-stream" aria-hidden="true">
+                  { "site": "Kaohsiung", "risk": "curb_gap", "status":
+                  "syncing", "asset": "verified" }
+                </div>
+                <div class="hub-phone-banner">
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                  <div>
+                    <strong>高雄市三民區</strong>
+                    <small>現場狀況已整理成友善道路回報</small>
+                  </div>
+                </div>
+                <div class="hub-phone-action">
+                  <span>一鍵回報</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="hub-scoreboard-card" aria-label="NVD 公民分數板">
+            <div class="hub-scoreboard-header">
+              <div>
+                <span>Social Resilience Score</span>
+                <strong>92.21</strong>
+              </div>
+              <span class="hub-live-pill">LIVE</span>
+            </div>
+            <div class="hub-scoreboard-body">
+              <svg viewBox="0 0 240 180" role="img" aria-label="韌性雷達圖">
+                <path
+                  class="hub-radar-grid"
+                  d="M120 16 214 70 214 142 120 170 26 142 26 70Z M120 52 180 86 180 128 120 146 60 128 60 86Z M120 16v154M26 70l188 72M214 70 26 142"
+                />
+                <path
+                  class="hub-radar-fill"
+                  d="M120 34 196 78 178 133 120 153 54 132 42 76Z"
+                />
+              </svg>
+              <div class="hub-score-metrics">
+                <span><strong>13,786</strong> 市民參與</span>
+                <span><strong>46,931</strong> 障礙回報</span>
+                <span><strong>147</strong> 改善節點</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="values"
+        class="values-section container"
+        aria-labelledby="valuesTitle"
+      >
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow" data-i18n="valuesEyebrow">Core Values</p>
+            <h2 id="valuesTitle" data-i18n="valuesTitle">
+              從道路回饋開始，走向友善社會系統
+            </h2>
+            <p class="section-lead" data-i18n="valuesLead">
+              我們把道路上的真實阻礙整理成可被看見、可被追蹤、可被改善的公共訊號。
+            </p>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <span class="value-icon"
+              ><i class="fa-solid fa-wand-magic-sparkles"></i
+            ></span>
+            <h3 data-i18n="valueFrictionTitle">降低摩擦</h3>
+            <p data-i18n="valueFrictionText">
+              把複雜指令、黑色視窗與繁瑣流程，折成更直覺的一鍵操作。
+            </p>
+          </article>
+          <article class="value-card">
+            <span class="value-icon"
+              ><i class="fa-solid fa-universal-access"></i
+            ></span>
+            <h3 data-i18n="valueAccessTitle">友善可及</h3>
+            <p data-i18n="valueAccessText">
+              讓專業前輩、企業經營者、無礙需求者與照護同行者，都能以更低摩擦參與 AI 時代的公共協作。
+            </p>
+          </article>
+          <article class="value-card">
+            <span class="value-icon"><i class="fa-solid fa-route"></i></span>
+            <h3 data-i18n="valueActionTitle">從回饋到行動</h3>
+            <p data-i18n="valueActionText">
+              每一次觀察、分享與回饋，都能推動下一個更友善的道路專案。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="friction" class="dual-friction-section">
+        <div class="container">
+          <div class="section-heading centered-heading">
+            <div>
+              <p class="eyebrow" data-i18n="dualFrictionEyebrow">
+                Dual Friction
+              </p>
+              <h2 data-i18n="dualFrictionTitle">
+                我們想解決的，不只是道路問題
+              </h2>
+              <p class="section-lead" data-i18n="dualFrictionLead">
+                數位流程會卡住人，城市空間也會卡住人。NVD
+                把這些摩擦視為可以被看見、被降低、被改善的系統問題。
+              </p>
+            </div>
+          </div>
+
+          <div class="dual-friction-grid">
+            <article class="dual-friction-card digital-card">
+              <span class="dual-friction-icon"
+                ><i class="fa-solid fa-terminal"></i
+              ></span>
+              <h3 data-i18n="digitalFrictionTitle">數位摩擦</h3>
+              <p data-i18n="digitalFrictionText">
+                資訊落差、通報門檻、責任分散與介面焦慮，讓很多真實需求難以被看見。
+              </p>
+            </article>
+            <article class="dual-friction-card physical-card">
+              <span class="dual-friction-icon"
+                ><i class="fa-solid fa-wheelchair-move"></i
+              ></span>
+              <h3 data-i18n="physicalFrictionTitle">生活摩擦</h3>
+              <p data-i18n="physicalFrictionText">
+                高低差、斷裂人行道、資訊不透明與不友善動線，讓日常移動變成被迫繞路、等待或放棄。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="gateway"
+        class="gateway-section container"
+        aria-labelledby="gatewayTitle"
+      >
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow" data-i18n="gatewayEyebrow">Ecosystem Gateway</p>
+            <h2 id="gatewayTitle" data-i18n="gatewayTitle">
+              三個入口，對應同一個使命
+            </h2>
+            <p class="section-lead" data-i18n="gatewayLead">
+              NVD
+              不是先要求認同，而是先提供可感受到的幫助，再把幫助轉成理解與參與。
+            </p>
+          </div>
+        </div>
+
+        <div class="gateway-grid">
+          <a class="gateway-card" href="resilience.html">
+            <span><i class="fa-solid fa-leaf"></i></span>
+            <h3 data-i18n="gatewaySoftwareTitle">認識 NVD 協會</h3>
+            <p data-i18n="gatewaySoftwareText">
+              從轉檔、簡報還原與日常效率開始，讓人不用註冊、不背指令也能完成任務。
+            </p>
+          </a>
+          <a class="gateway-card" href="resilience.html">
+            <span><i class="fa-solid fa-road"></i></span>
+            <h3 data-i18n="gatewayResilienceTitle">社會韌性友善專案</h3>
+            <p data-i18n="gatewayResilienceText">
+              用模擬資料盤呈現城市障礙如何被標記、被理解，並走向可協作的改善。
+            </p>
+          </a>
+          <a class="gateway-card" href="join.html">
+            <span><i class="fa-solid fa-people-group"></i></span>
+            <h3 data-i18n="gatewayJoinTitle">參與共創</h3>
+            <p data-i18n="gatewayJoinText">
+              讓同學、師資與種子使用者從測試、回饋、分享開始，進入 NVD
+              友善科技循環。
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="loop"
+        class="loop-section container"
+        aria-labelledby="loopTitle"
+      >
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow" data-i18n="loopEyebrow">Friendly Tech Loop</p>
+            <h2 id="loopTitle" data-i18n="loopTitle">
+              從回饋到修復：NVD 的友善道路循環
+            </h2>
+            <p class="section-lead" data-i18n="loopLead">
+              NVD
+              不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。
+            </p>
+          </div>
+        </div>
+        <div class="loop-grid">
+          <article class="loop-card">
+            <span>01</span>
+            <h3 data-i18n="loopUseTitle">現場回饋</h3>
+            <p data-i18n="loopUseText">
+              從道路阻礙、通行風險與日常不便開始，讓真實需求被看見。
+            </p>
+          </article>
+          <article class="loop-card">
+            <span>02</span>
+            <h3 data-i18n="loopTrustTitle">建立認同</h3>
+            <p data-i18n="loopTrustText">
+              回饋被整理、被標記、被理解，才有機會成為修復行動的起點。
+            </p>
+          </article>
+          <article class="loop-card">
+            <span>03</span>
+            <h3 data-i18n="loopCoCreateTitle">參與共創</h3>
+            <p data-i18n="loopCoCreateText">
+              邀請居民、專業者、企業與公共部門共同參與，讓下一次通行更安全。
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-grid" aria-label="頁尾導覽">
+            <section class="footer-column">
+              <h2 data-i18n="footerProductsTitle">協會行動</h2>
+              <ul>
+                <li>
+                  <a href="resilience.html" data-i18n="footerProductTools">道路回饋與修復行動</a>
+                </li>
+                <li>
+                  <a href="join.html" data-i18n="footerProductConverter">加入共創</a>
+                </li>
+                <li>
+                  <a href="manifesto.html" data-i18n="footerProductSlides">品牌理念</a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="footer-column">
+              <h2 data-i18n="footerGuidesTitle">理念</h2>
+              <ul>
+                <li>
+                  <a
+                    href="manifesto.html#manifesto"
+                    data-i18n="footerGuideQuickStart"
+                    >核心主權宣言</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="manifesto.html#friction"
+                    data-i18n="footerGuideRightClick"
+                    >科技摩擦</a
+                  >
+                </li>
+                <li>
+                  <a href="join.html#loop" data-i18n="footerGuideSlides"
+                    >友善科技循環</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#gateway" data-i18n="footerGuideFriction"
+                    >NVD 生態入口</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="manifesto.html#friction"
+                    data-i18n="footerGuidePrivacy"
+                    >降低數位摩擦</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="manifesto.html#manifesto"
+                    data-i18n="footerGuideElderFriendly"
+                    >友善設計理念</a
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <section class="footer-column">
+              <h2 data-i18n="footerCompareTitle">專案</h2>
+              <ul>
+                <li>
+                  <a
+                    href="resilience.html#resilience"
+                    data-i18n="footerCompareNvdVsCommand"
+                    >社會韌性友善專案</a
+                  >
+                </li>
+                <li>
+                  <a href="join.html#loop" data-i18n="footerCompareNvdVsManual"
+                    >參與共創</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="resilience.html#resilience"
+                    data-i18n="footerCompareNvdVsOnline"
+                    >高雄友善道路模擬</a
+                  >
+                </li>
+                <li>
+                  <a href="join.html#loop" data-i18n="footerComparePptx"
+                    >種子測試</a
+                  >
+                </li>
+                <li>
+                  <a href="join.html#loop" data-i18n="footerCompareWorkflow"
+                    >回饋與協作</a
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <section class="footer-column">
+              <h2 data-i18n="footerCompanyTitle">公司</h2>
+              <ul>
+                <li>
+                  <a
+                    href="manifesto.html#manifesto"
+                    data-i18n="footerCompanyAbout"
+                    >關於 NVD 協會</a
+                  >
+                </li>
+                <li>
+                  <a href="join.html#faq" data-i18n="footerCompanyFaq"
+                    >常見問題</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="resilience.html"
+                    data-i18n="footerCompanyUpdates"
+                    >更新日誌</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#privacy"
+                    data-legal-modal="privacy"
+                    data-i18n="footerCompanyPrivacy"
+                    >隱私權政策</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#terms"
+                    data-legal-modal="terms"
+                    data-i18n="footerCompanyTerms"
+                    >服務條款</a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-brand">
+            <span class="footer-logo" aria-hidden="true"><img class="footer-logo-img" src="assets/nvd-logo-icon.png" alt="" /></span>
+            <p data-i18n="footerCopy">
+              © 2026 NVD 協會. Road Feedback & Repair Action.
+            </p>
+          </div>
+          <div class="footer-meta">
+            <span data-i18n="footerPrivacyNote"
+              >100% 本地優先 · 不收集敏感資料 · 無需帳戶</span
+            >
+            <div class="social-links" aria-label="社群連結">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="guideModal"
+      class="modal-backdrop"
+      aria-hidden="true"
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">
+            <i class="fa-regular fa-circle-question"></i>
+            <span data-i18n="modalTitle">使用說明手冊</span>
+          </h2>
+          <button
+            id="closeModalBtn"
+            class="modal-close-icon-btn"
+            aria-label="關閉視窗"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <section class="modal-section">
+            <h3 data-i18n="modalStepsTitle">極簡 3 步驟輕鬆上手</h3>
+            <ol class="step-list">
+              <li>
+                <span class="step-number">1</span>
+                <div>
+                  <strong data-i18n="stepOneTitle">認識行動入口</strong>
+                  <p data-i18n="stepOneText">
+                    從首頁、道路行動、品牌理念或加入共創頁面，選擇最符合您需求的參與入口。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-number">2</span>
+                <div>
+                  <strong data-i18n="stepTwoTitle">送出友善回饋</strong>
+                  <p data-i18n="stepTwoText">
+                    依照頁面提示完成回饋或參與表單，讓資訊進入後續整理流程。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-number">3</span>
+                <div>
+                  <strong data-i18n="stepThreeTitle">完成參與回饋</strong>
+                  <p data-i18n="stepThreeText">
+                    透過表單、社群或現場協作完成回饋，讓道路阻礙被看見並進入後續整理。
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="modal-section">
+            <h3 data-i18n="faqTitle">常見問題 FAQ</h3>
+            <div class="faq-group">
+              <div class="faq-item">
+                <h4 data-i18n="faqOneQuestion">
+                  Q: 參與 NVD 行動需要付費或註冊嗎？
+                </h4>
+                <p data-i18n="faqOneAnswer">
+                  參與 NVD 協會行動不以購買服務為前提；實際活動、合作與社群參與方式，將依各專案公告為準。
+                </p>
+              </div>
+              <div class="faq-item">
+                <h4 data-i18n="faqTwoQuestion">
+                  Q: 外部平台要求登入或授權時該怎麼辦？
+                </h4>
+                <p data-i18n="faqTwoAnswer">
+                  若外部平台要求登入、授權或填寫資料，請先確認網域、用途與隱私政策；不確定時可以先暫停。
+                </p>
+              </div>
+              <div class="faq-item">
+                <h4 data-i18n="faqThreeQuestion">
+                  Q: 使用外部連結前需要注意什麼？
+                </h4>
+                <p data-i18n="faqThreeAnswer">
+                  請確認連結來源與頁面網域；若外部服務要求提供個人資料，請先閱讀該服務的隱私政策與使用條款。
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button
+            id="modalConfirmBtn"
+            class="modal-btn-primary"
+            data-i18n="modalConfirm"
+          >
+            我知道了
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="legalModal"
+      class="modal-backdrop"
+      aria-hidden="true"
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="legalModalTitle"
+    >
+      <div class="modal-content legal-modal-content">
+        <div class="modal-header">
+          <h2 id="legalModalTitle">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span id="legalModalTitleText" data-i18n="privacyTitle"
+              >隱私權政策</span
+            >
+          </h2>
+          <button
+            id="closeLegalModalBtn"
+            class="modal-close-icon-btn"
+            aria-label="關閉視窗"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="modal-body legal-body">
+          <section
+            id="privacy"
+            class="modal-section legal-panel"
+            data-legal-panel="privacy"
+          >
+            <p class="legal-updated" data-i18n="legalUpdated">
+              最後更新：2026 年 5 月 30 日
+            </p>
+            <h3 data-i18n="privacySectionScope">我們如何保護你的資料</h3>
+            <p data-i18n="privacyScopeText">
+              NVD
+              NVD 協會網站是純前端靜態網站。本網站不要求註冊帳號，也不會主動收集你的姓名、電子郵件、檔案內容或付款資料。
+            </p>
+
+            <h3 data-i18n="privacySectionStorage">本機儲存資料</h3>
+            <p data-i18n="privacyStorageText">
+              網站會在你的瀏覽器 localStorage
+              中保存語言、深淺色主題與收藏清單，僅用於維持你的使用偏好。你可以隨時透過瀏覽器清除網站資料。
+            </p>
+
+            <h3 data-i18n="privacySectionThirdParty">第三方服務</h3>
+            <p data-i18n="privacyThirdPartyText">
+              本網站透過 GitHub Pages 提供頁面，並可能載入 Google Fonts、Font
+              Awesome 與 Google Drive
+              外部社群與協作連結。這些服務可能依各自政策處理基本連線紀錄。
+            </p>
+
+            <h3 data-i18n="privacySectionDownloads">外部連結與協作服務</h3>
+            <p data-i18n="privacyDownloadsText">
+              本網站可能連結至社群平台、協作表單或第三方資訊頁。離開本站後的資料處理方式，請以該服務提供者的政策為準。
+            </p>
+          </section>
+
+          <section
+            id="terms"
+            class="modal-section legal-panel"
+            data-legal-panel="terms"
+            hidden
+          >
+            <p class="legal-updated" data-i18n="legalUpdated">
+              最後更新：2026 年 5 月 30 日
+            </p>
+            <h3 data-i18n="termsSectionService">服務內容</h3>
+            <p data-i18n="termsServiceText">
+              本網站提供 NVD 協會理念、道路回饋與修復行動、參與共創與相關資源整理。部分連結可能導向第三方網站或社群平台。
+            </p>
+
+            <h3 data-i18n="termsSectionUse">使用責任</h3>
+            <p data-i18n="termsUseText">
+              使用者應自行確認外部服務是否符合需求，並遵守所在地法律與第三方服務規範。請勿使用本網站或相關資源處理、散布或侵害他人權利的內容。
+            </p>
+
+            <h3 data-i18n="termsSectionDownloads">外部連結提醒</h3>
+            <p data-i18n="termsDownloadsText">
+              本站會盡力維護連結與說明的正確性，但無法保證所有第三方網站、社群平台或外部資源永久可用或完全無風險。使用外部服務前，請自行確認其條款與隱私政策。
+            </p>
+
+            <h3 data-i18n="termsSectionChanges">內容異動</h3>
+            <p data-i18n="termsChangesText">
+              我們可能依專案進度調整行動資訊、連結、政策與條款。更新後的內容會公布於本頁，繼續使用網站即代表你了解並接受更新內容。
+            </p>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button
+            id="legalModalConfirmBtn"
+            class="modal-btn-primary"
+            data-i18n="modalConfirm"
+          >
+            我知道了
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js?v=20260604-1"></script>
+  </body>
+</html>
