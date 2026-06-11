@@ -5229,11 +5229,11 @@ body[data-theme="dark"] .toast {
 .step-bar-container .demo-step-button.active,
 .step-bar-container .demo-step-button.active-step {
   color: #052e2b;
-  background: linear-gradient(135deg, #d1fae5, #99f6e4);
-  border-color: rgba(16, 185, 129, 0.48);
+  background: linear-gradient(135deg, #f97316 0%, #5eead4 100%);
+  border-color: rgba(249, 115, 22, 0.42);
   box-shadow:
-    0 0 0 1px rgba(16, 185, 129, 0.22),
-    0 12px 28px rgba(16, 185, 129, 0.2);
+    0 0 0 1px rgba(249, 115, 22, 0.18),
+    0 12px 28px rgba(249, 115, 22, 0.2);
 }
 
 .nvd-demo-stage {
@@ -5501,6 +5501,33 @@ body[data-theme="dark"] .toast {
 
 .phone-map-card > div:last-child > span {
   color: #047857;
+}
+
+.phone-status-list {
+  display: grid;
+  gap: 7px;
+  margin: -2px 0 0;
+}
+
+.phone-status-list span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 27px;
+  padding: 6px 10px;
+  color: #064e3b;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  background: rgba(240, 253, 250, 0.88);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: 9px;
+}
+
+.phone-status-list i {
+  width: 13px;
+  color: #f97316;
+  text-align: center;
 }
 
 .nvd-demo-stage[data-step="1"] .phone-map-card,
@@ -5885,8 +5912,8 @@ body[data-theme="dark"] .step-bar-container .demo-step-button:hover,
 body[data-theme="dark"] .step-bar-container .demo-step-button.active,
 body[data-theme="dark"] .step-bar-container .demo-step-button.active-step {
   color: #052e2b;
-  background: linear-gradient(135deg, #5eead4, #fbbf24);
-  border-color: rgba(94, 234, 212, 0.5);
+  background: linear-gradient(135deg, #f97316 0%, #5eead4 100%);
+  border-color: rgba(249, 115, 22, 0.48);
 }
 
 body[data-theme="dark"] .pixel-shell {
@@ -5905,6 +5932,7 @@ body[data-theme="dark"] .phone-screen {
 
 body[data-theme="dark"] .detection-readout,
 body[data-theme="dark"] .phone-map-card,
+body[data-theme="dark"] .phone-status-list span,
 body[data-theme="dark"] .detection-result-card,
 body[data-theme="dark"] .phone-submit-hint {
   color: #f8fafc;
@@ -5920,6 +5948,7 @@ body[data-theme="dark"] .detection-result-card {
 
 body[data-theme="dark"] .detection-readout small,
 body[data-theme="dark"] .phone-map-card > div:last-child > span,
+body[data-theme="dark"] .phone-status-list i,
 body[data-theme="dark"] .detection-result-card strong,
 body[data-theme="dark"] .dashboard-metric-list strong,
 body[data-theme="dark"] .score-card strong,

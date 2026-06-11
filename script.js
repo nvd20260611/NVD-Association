@@ -149,34 +149,34 @@ const translations = {
     favoriteRemoved: "已將 {name} 從我的收藏移除！",
     emptyTitle: "沒有找到符合條件的行動入口",
     emptyText: "換個關鍵字或切回全部分類試試看。",
-    resilienceEyebrow: "Project B Simulation",
-    resilienceTitle: "社會韌性友善專案模擬區",
+    resilienceEyebrow: "NVD ACTION HUB",
+    resilienceTitle: "讓道路問題被看見 讓修復行動被串起",
     resilienceLead:
-      "我們想做的不只是地圖，而是一套讓城市障礙被看見的公民科技系統。把生活中的障礙，變成可以被標記、被理解、被改善的資料。",
+      "從一鍵回報到資料彙整，NVD 把日常通行阻礙轉成可理解、可追蹤、可協作的公共訊號。",
     resiliencePointOne: "群眾回報高低差、騎樓障礙與不友善動線。",
     resiliencePointTwo: "用模擬數據呈現熱區、改善點與參與節點。",
     resiliencePointThree: "讓同學、師資與種子使用者一起測試與微調。",
-    dashboardTitle: "友善道路即時數據沙盤",
-    metricParticipants: "市民參與數",
-    metricReports: "障礙回報",
-    metricImprovements: "促成改善點",
-    metricHotspots: "熱區分布",
-    metricHotspotsValue: "三民區 32%",
-    demoFrontLabel: "Front-end Civic Capture",
-    demoFrontTitle: "真實視角障礙回報端",
-    demoGpsTitle: "自動抓取 GIS 座標中",
+    dashboardTitle: "道路回饋行動中樞",
+    metricParticipants: "參與人次",
+    metricReports: "回報節點",
+    metricImprovements: "改善追蹤",
+    metricHotspots: "目前熱區",
+    metricHotspotsValue: "高雄市三民區",
+    demoFrontLabel: "NVD Lens｜現場回報端",
+    demoFrontTitle: "友善道路現場回報",
+    demoGpsTitle: "自動定位回報位置",
     demoTagHeight: "高低差",
     demoTagParking: "違停",
     demoTagGravel: "碎石",
-    demoSubmit: "發起友善道路回報",
-    demoStatusDetecting: "🔍 正在自動偵測周遭環境風險...",
-    demoStatusLocation: "📍 鎖定位置：高雄市三民區",
-    demoStatusLabel: "⚠️ 偵測到路面狀況：【高低落差】",
-    demoStatusReady: "正在將現場數據 ➔ 轉化為社會韌性資產...",
-    demoStatusEncrypting: "正在將現場數據 ➔ 轉化為社會韌性資產...",
-    demoBackendStatus: "GIS Monitor / Kaohsiung Node",
-    demoScoreLabel: "Social Resilience Score",
-    demoSuccess: "現場數據已轉化為社會韌性資產",
+    demoSubmit: "一鍵送出回報",
+    demoStatusDetecting: "正在辨識現場道路狀況...",
+    demoStatusLocation: "定位完成：高雄市三民區",
+    demoStatusLabel: "偵測到路面狀況：高低落差",
+    demoStatusReady: "正在整理照片、位置與補充說明...",
+    demoStatusEncrypting: "正在建立回報節點與追蹤紀錄...",
+    demoBackendStatus: "道路資料中心 / 高雄節點",
+    demoScoreLabel: "回饋追蹤指標",
+    demoSuccess: "回報已送出，進入追蹤與協作流程。",
     loopEyebrow: "Friendly Tech Loop",
     loopTitle: "從回饋到修復：NVD 的友善道路循環",
     loopLead: "不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。",
@@ -454,38 +454,38 @@ const translations = {
     favoriteRemoved: "Removed {name} from your favorites!",
     emptyTitle: "No matching tools found",
     emptyText: "Try another keyword or switch back to all categories.",
-    resilienceEyebrow: "Project B Simulation",
-    resilienceTitle: "Social Resilience Friendly Project Simulation",
+    resilienceEyebrow: "NVD ACTION HUB",
+    resilienceTitle: "Make road issues visible, then connect repair action",
     resilienceLead:
-      "We are not trying to build just another map. We are imagining a civic tech system that makes city barriers visible, understandable, and improvable.",
+      "From one-tap reporting to organized public signals, NVD turns daily road barriers into information people can understand, track, and improve together.",
     resiliencePointOne:
       "Crowdsourced reports for level differences, sidewalk barriers, and unfriendly routes.",
     resiliencePointTwo:
       "Simulated metrics for hotspots, improvements, and participation nodes.",
     resiliencePointThree:
       "Classmates, mentors, and seed users can test and tune the concept together.",
-    dashboardTitle: "Friendly Road Live Data Sandbox",
-    metricParticipants: "Citizen participants",
-    metricReports: "Barrier reports",
-    metricImprovements: "Improvements sparked",
-    metricHotspots: "Hotspot split",
-    metricHotspotsValue: "Sanmin 32%",
-    demoFrontLabel: "Front-end Civic Capture",
-    demoFrontTitle: "Street-level barrier report terminal",
-    demoGpsTitle: "Capturing GIS coordinates",
+    dashboardTitle: "Road Feedback Action Hub",
+    metricParticipants: "Participants",
+    metricReports: "Report nodes",
+    metricImprovements: "Tracked improvements",
+    metricHotspots: "Current hotspot",
+    metricHotspotsValue: "Kaohsiung Sanmin",
+    demoFrontLabel: "NVD Lens | Field reporting",
+    demoFrontTitle: "Friendly road field report",
+    demoGpsTitle: "Auto-locating report point",
     demoTagHeight: "Height gap",
     demoTagParking: "Illegal parking",
     demoTagGravel: "Loose gravel",
-    demoSubmit: "Report friendly road issue",
-    demoStatusDetecting: "🔍 Auto-detecting nearby accessibility risks...",
-    demoStatusLocation: "📍 Location locked: Sanmin District, Kaohsiung",
-    demoStatusLabel: "⚠️ Road condition detected: height gap",
-    demoStatusReady: "Turning field data into a social resilience asset...",
+    demoSubmit: "Submit road report",
+    demoStatusDetecting: "Reading field road conditions...",
+    demoStatusLocation: "Location locked: Sanmin District, Kaohsiung",
+    demoStatusLabel: "Road condition detected: height gap",
+    demoStatusReady: "Organizing photo, location, and notes...",
     demoStatusEncrypting:
-      "Turning field data into a social resilience asset...",
-    demoBackendStatus: "GIS Monitor / Kaohsiung Node",
-    demoScoreLabel: "Social Resilience Score",
-    demoSuccess: "Field data converted into a social resilience asset.",
+      "Creating report node and tracking record...",
+    demoBackendStatus: "Road Data Center / Kaohsiung Node",
+    demoScoreLabel: "Feedback Tracking Index",
+    demoSuccess: "Report submitted for tracking and collaboration.",
     loopEyebrow: "Friendly Tech Loop",
     loopTitle: "從回饋到修復：NVD 的友善道路循環",
     loopLead: "不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。",
@@ -1125,7 +1125,7 @@ function triggerAutoDetection() {
   demoStage?.classList.add("scanning");
   miniDataOverlay?.classList.add("is-active");
   statusText.innerHTML =
-    '<span class="animate-pulse">🔍 正在自動辨識現場空間特徵...</span>';
+    '<span class="animate-pulse">正在辨識現場道路狀況...</span>';
 
   const updateMiniData = () => {
     if (!miniDataOverlay) return;
@@ -1149,10 +1149,10 @@ function triggerAutoDetection() {
         "LAT: 22.639, LNG: 120.327<br>DEPTH: 16.8cm<br>CONFIDENCE: 98.7%";
     }
     statusText.innerHTML =
-      '⚠️ 偵測到路面狀況：<span class="font-bold text-[#10b981]">【斜坡太靠近道路】</span>';
+      '偵測到路面狀況：<span class="font-bold text-[#10b981]">高低落差</span>';
     step03Label.classList.add("active-step");
     resultCard?.classList.add("is-visible");
-    showToast("📍 空間座標已鎖定：自動標記【斜坡太靠近道路】");
+    showToast("定位完成：已建立高低落差回報節點");
   }, 1500);
 }
 
@@ -1319,17 +1319,17 @@ function updateResilienceDemoReadout(step, overrideText) {
   if (!demoStatusPrimary || !demoStatusSecondary) return;
 
   const primaryTexts = [
-    "🔍 正在自動偵測周遭環境風險...",
-    "📍 鎖定位置：高雄市三民區",
-    "⚠️ 偵測到路面狀況：【斜坡太靠近道路】",
-    "正在將現場數據 ➔ 轉化為社會韌性資產...",
-    "✅ 已安全寫入友善道路資料庫",
+    "正在辨識現場道路狀況...",
+    "定位完成：高雄市三民區",
+    "偵測到路面狀況：高低落差",
+    "正在建立回報節點與追蹤紀錄...",
+    "回報已送出，進入追蹤與協作流程。",
   ];
   const secondaryTexts = [
-    "點擊下方按鈕開始回報",
+    "點擊下方按鈕建立道路回報",
     "GIS 座標已取得，正在比對道路特徵",
     "已完成現場狀況判讀",
-    "資料正在送往 GIS 控制中心",
+    "資料正在送往道路資料中心",
     "高雄三民節點已完成同步",
   ];
 
@@ -1338,7 +1338,7 @@ function updateResilienceDemoReadout(step, overrideText) {
   demoStatusSecondary.textContent = secondaryTexts[step] || secondaryTexts[0];
 
   if (demoSubmitHint) {
-    demoSubmitHint.textContent = "正在將現場數據 ➔ 轉化為社會韌性資產...";
+    demoSubmitHint.textContent = "正在整理照片、位置與補充說明...";
   }
 }
 
@@ -1383,7 +1383,7 @@ function triggerAutoDetection() {
   demoStage?.classList.add("scanning");
   miniDataOverlay?.classList.add("is-active");
   statusText.innerHTML =
-    '<span class="animate-pulse">🔍 正在自動偵測周遭環境風險...</span>';
+    '<span class="animate-pulse">正在辨識現場道路狀況...</span>';
 
   const updateMiniData = () => {
     if (!miniDataOverlay) return;
@@ -1406,10 +1406,10 @@ function triggerAutoDetection() {
         "LAT: 22.639, LNG: 120.327<br>DEPTH: 16.8cm<br>CONFIDENCE: 98.7%";
     }
     statusText.innerHTML =
-      '⚠️ 偵測到路面狀況：<span class="font-bold text-[#10b981]">【斜坡太靠近道路】</span>';
+      '偵測到路面狀況：<span class="font-bold text-[#10b981]">高低落差</span>';
     resultCard?.classList.add("is-visible");
     if (typeof showToast === "function") {
-      showToast("📍 空間座標已鎖定：自動標記【斜坡太靠近道路】");
+      showToast("定位完成：已建立高低落差回報節點");
     }
   }, 1500);
 }
@@ -1450,12 +1450,12 @@ function triggerResilienceSubmit() {
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(2);
-    addLogLine("[系統] 現場狀況已判讀：斜坡太靠近道路");
+    addLogLine("[系統] 現場狀況已判讀：高低落差");
   }, 3000);
 
   queueResilienceTimeline(() => {
-    runResilienceTimelineStep(3, "正在將現場數據 ➔ 轉化為社會韌性資產...");
-    addLogLine("[系統] 現場資料打包傳送至 GIS 控制中心");
+    runResilienceTimelineStep(3, "正在建立回報節點與追蹤紀錄...");
+    addLogLine("[系統] 現場資料傳送至道路資料中心");
   }, 4500);
 
   queueResilienceTimeline(() => {
@@ -1463,7 +1463,7 @@ function triggerResilienceSubmit() {
     resilienceDemo.classList.remove("scanning");
     resilienceDemo.classList.add("show-receipt");
     typeReceiptHash();
-    addLogLine("[系統] 安全寫入完成：STATUS ENCRYPTED");
+    addLogLine("[系統] 追蹤紀錄已建立");
 
     queueResilienceTimeline(() => {
       resilienceDemo.classList.remove("show-receipt");

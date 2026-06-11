@@ -10,13 +10,13 @@
     <title>NVD 協會｜道路回饋與修復行動</title>
     <meta
       name="description"
-      content="透過 NVD 社會韌性友善專案模擬區，查看道路障礙如何從現場回報轉成 GIS 資料、友善道路節點與可協作的改善行動。"
+      content="透過 NVD 道路回饋行動中樞，查看道路問題如何從現場回報轉成可定位、可追蹤、可協作的修復行動。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="NVD 協會｜道路回饋與修復行動" />
     <meta
       property="og:description"
-      content="透過 NVD 社會韌性友善專案模擬區，查看道路障礙如何從現場回報轉成 GIS 資料、友善道路節點與可協作的改善行動。"
+      content="透過 NVD 道路回饋行動中樞，查看道路問題如何從現場回報轉成可定位、可追蹤、可協作的修復行動。"
     />
     <meta
       property="og:url"
@@ -42,7 +42,7 @@
       integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css?v=20260611-8" />
+    <link rel="stylesheet" href="styles.css?v=20260611-9" />
   </head>
   <body>
     <header class="site-header">
@@ -142,10 +142,10 @@
         <div class="container">
           <div class="resilience-demo-header">
             <div class="resilience-copy">
-              <p class="eyebrow">Project B Simulation</p>
-              <h1>社會韌性友善專案模擬區</h1>
+              <p class="eyebrow">NVD ACTION HUB</p>
+              <h1>讓道路問題被看見<br />讓修復行動被串起</h1>
               <p>
-                用一個手機回報，示範現場障礙如何轉成可定位、可追蹤、可協作的友善道路資料。
+                從一鍵回報到資料彙整，NVD 把日常通行阻礙轉成可理解、可追蹤、可協作的公共訊號。
               </p>
             </div>
             <div
@@ -157,19 +157,19 @@
                 type="button"
                 data-demo-step="0"
               >
-                01 現場直擊
+                01 發現問題
               </button>
               <button class="demo-step-button" type="button" data-demo-step="1">
                 02 自動定位
               </button>
               <button class="demo-step-button" type="button" data-demo-step="2">
-                03 狀況回報
+                03 補充狀況
               </button>
               <button class="demo-step-button" type="button" data-demo-step="3">
-                04 打包傳送
+                04 送出回報
               </button>
               <button class="demo-step-button" type="button" data-demo-step="4">
-                05 安全寫入
+                05 進入追蹤
               </button>
             </div>
           </div>
@@ -180,7 +180,7 @@
                 <span class="demo-status-dot"></span>
                 <div>
                   <span>NVD Lens</span>
-                  <strong>友善道路現場回報端</strong>
+                  <strong>現場回報端</strong>
                 </div>
               </div>
 
@@ -191,7 +191,7 @@
                     <div class="screen-content">
                       <div class="phone-topbar">
                         <span>NVD Lens</span>
-                        <strong>LIVE</strong>
+                        <strong>協作中</strong>
                       </div>
                       <div
                         class="street-frame"
@@ -214,10 +214,10 @@
                       <div class="phone-ui">
                         <div class="detection-readout step-card">
                           <strong id="demoStatusPrimary" class="status-text"
-                            >🔍 正在自動偵測周遭環境風險...</strong
+                            >正在辨識現場道路狀況...</strong
                           >
                           <small id="demoStatusSecondary"
-                            >點擊下方按鈕開始回報</small
+                            >點擊下方按鈕建立道路回報</small
                           >
                         </div>
                         <div class="phone-map-card step-card">
@@ -234,14 +234,28 @@
                             <div class="gis-progress"><span></span></div>
                           </div>
                         </div>
+                        <div class="phone-status-list" aria-label="回報狀態">
+                          <span>
+                            <i class="fa-solid fa-road-barrier"></i>
+                            路面高低差
+                          </span>
+                          <span>
+                            <i class="fa-solid fa-person-walking"></i>
+                            行人動線受阻
+                          </span>
+                          <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            已建立回報節點
+                          </span>
+                        </div>
                         <div class="detection-result-card">
-                          ⚠️ 偵測到路面狀況：<strong>【斜坡太靠近道路】</strong>
+                          偵測到路面狀況：<strong>高低落差</strong>
                         </div>
                         <p class="phone-submit-hint" id="demoSubmitHint">
-                          正在將現場數據 ➔ 轉化為社會韌性資產...
+                          正在整理照片、位置與補充說明...
                         </p>
                         <button class="phone-submit" type="button">
-                          <span>發起友善道路回報 ➔</span>
+                          <span>一鍵送出回報</span>
                         </button>
                       </div>
                     </div>
@@ -281,17 +295,17 @@
             <div class="nvd-demo-panel nvd-demo-backend">
               <div
                 class="resilience-dashboard"
-                aria-label="GIS 社會韌性控制中心"
+                aria-label="道路資料中心"
               >
                 <div class="dashboard-header">
                   <span class="pulse-dot"></span>
-                  <strong>GIS Control Center</strong>
-                  <small>Kaohsiung Friendly Road Node</small>
+                  <strong>道路資料中心</strong>
+                  <small>NVD GIS Control Center / Kaohsiung Node</small>
                 </div>
 
                 <div class="backend-screen">
                   <div class="score-card dashboard-score-card">
-                    <span>Social Resilience Score</span>
+                    <span>回饋追蹤指標</span>
                     <strong id="resilienceScore">92.21</strong>
                   </div>
 
@@ -314,19 +328,19 @@
                     </svg>
                     <div class="dashboard-metric-list">
                       <div>
-                        <span>Citizens Participated</span>
+                        <span>參與人次</span>
                         <strong>13,786</strong>
                       </div>
                       <div>
-                        <span>Barriers Captured</span>
+                        <span>回報節點</span>
                         <strong>46,931</strong>
                       </div>
                       <div>
-                        <span>Improvements Triggered</span>
+                        <span>改善追蹤</span>
                         <strong>147</strong>
                       </div>
                       <div>
-                        <span>Current Hotspot</span>
+                        <span>目前熱區</span>
                         <strong>高雄市三民區</strong>
                       </div>
                     </div>
@@ -348,16 +362,16 @@
                     </div>
                     <div class="backend-toast">
                       <i class="fa-solid fa-circle-check"></i>
-                      <span>現場回報已安全寫入友善道路資料庫</span>
+                      <span>現場回報已建立追蹤紀錄</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="receipt-modal" aria-hidden="true">
-                  <span class="receipt-kicker">ASSET RECEIPT</span>
+                  <span class="receipt-kicker">回報收件紀錄</span>
                   <strong id="receiptHash">HASH: 0x9f82...</strong>
-                  <span class="receipt-proof">STATUS: ENCRYPTED</span>
-                  <em>VERIFIED</em>
+                  <span class="receipt-proof">狀態：已建立追蹤</span>
+                  <em>已確認</em>
                 </div>
 
                 <div class="log-stream" aria-label="系統同步紀錄">
@@ -722,6 +736,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=20260611-3"></script>
+    <script src="script.js?v=20260611-4"></script>
   </body>
 </html>
