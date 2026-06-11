@@ -8,6 +8,7 @@ This file tracks public-facing visual assets and their origin.
 | `assets/technology-friction-original.svg` | Hand-authored SVG in this repository | Project-original | Replaces unknown-source technology friction imagery. |
 | `assets/life-stages-original.svg` | Hand-authored SVG in this repository | Project-original | Replaces stock/watermarked life-stage imagery. |
 | `assets/og-image.jpg` | Project-owned Open Graph image | Project asset | Created for NVD site branding. |
+| `assets/og-image-association.png` | Browser-rendered Open Graph image created from project logo and brand copy | Project-original | Current social sharing thumbnail for NVD Association pages. |
 | `assets/nvd-logo-horizontal.png` | User-provided NVD brand reference image, cropped without redesign | Project brand asset | Horizontal logo for light backgrounds. |
 | `assets/nvd-logo-horizontal-transparent.png` | Derived from user-provided NVD horizontal logo by removing the white background | Project brand asset | Transparent color logo for consistent headers across themes; no logo redesign. |
 | `assets/nvd-logo-horizontal-dark-transparent.png` | Derived from user-provided NVD horizontal logo by removing the white background and adapting navy marks for dark-background legibility | Project brand asset | Same-size transparent logo for dark headers; no logo redesign. |
