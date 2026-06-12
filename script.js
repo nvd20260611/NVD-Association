@@ -154,7 +154,7 @@ const translations = {
     resilienceLead:
       "從一鍵回報到資料彙整，NVD 把日常通行阻礙轉成可理解、可追蹤、可協作的公共訊號。",
     resiliencePointOne: "群眾回報高低差、騎樓障礙與不友善動線。",
-    resiliencePointTwo: "用模擬數據呈現熱區、改善點與參與節點。",
+    resiliencePointTwo: "用模擬資料呈現熱區、改善點與參與節點。",
     resiliencePointThree: "讓同學、師資與種子使用者一起測試與微調。",
     dashboardTitle: "道路回饋行動中樞",
     metricParticipants: "參與人次",
@@ -207,7 +207,7 @@ const translations = {
     manifestoNatureSymbol: "N (Nature) —— 天生、本然、無所畏懼。",
     manifestoNatureTitle: "天生玩家",
     manifestoNatureText:
-      "生命不是一場等待被拯救的苦旅，而是一場頂級的硬核遊戲。打破體制設定的局限，我們以天生的姿態，在社會韌性的沙盒中重新定義玩法。我們是規則的打破者，也是全新賽道的定義者。",
+      "生命不是一場等待被拯救的苦旅，而是一場頂級的硬核遊戲。打破體制設定的局限，我們以天生的姿態，在社會韌性的沙盒中重新定義玩法。我們是規則的打破者，也是全新路徑的開路者。",
     manifestoValueSymbol: "V (Value) —— 本我價值、不容置疑。",
     manifestoValueTitle: "本我定值",
     manifestoValueText:
@@ -240,7 +240,7 @@ const translations = {
     footerGuideQuickStart: "核心主權宣言",
     footerGuideRightClick: "科技摩擦",
     footerGuideSlides: "友善科技循環",
-    footerGuideFriction: "NVD 生態入口",
+    footerGuideFriction: "NVD 協作入口",
     footerGuidePrivacy: "降低數位摩擦",
     footerGuideElderFriendly: "友善設計理念",
     footerCompareTitle: "專案",
@@ -653,7 +653,7 @@ const brandVoiceContent = {
       footerGuideQuickStart: "核心主張",
       footerGuideRightClick: "科技摩擦",
       footerGuideSlides: "友善科技循環",
-      footerGuideFriction: "NVD 生態入口",
+      footerGuideFriction: "NVD 協作入口",
       footerGuidePrivacy: "降低數位摩擦",
       footerGuideElderFriendly: "友善設計理念",
       footerCompareTitle: "專案",
@@ -710,7 +710,7 @@ const brandVoiceContent = {
       footerGuideQuickStart: "主張架構",
       footerGuideRightClick: "科技摩擦",
       footerGuideSlides: "友善科技循環",
-      footerGuideFriction: "NVD 生態入口",
+      footerGuideFriction: "NVD 協作入口",
       footerGuidePrivacy: "降低數位摩擦",
       footerGuideElderFriendly: "友善設計原則",
       footerCompareTitle: "專案機制",
@@ -814,7 +814,7 @@ const manifestoModeContent = [
   {
     hardcore: "拒絕標籤...我們將被動的弱勢逆向轉譯，奪回價值的終極定價權。",
     human:
-      "輪椅族不是負擔，而是城市裡最強的『無礙測試員』。我們的數據就是最高級的資產。",
+      "輪椅族不是負擔，而是城市裡最強的『無礙測試員』。我們累積的資料，是推動公共改善的重要資產。",
   },
   {
     hardcore: "這是一場跨越時間軸的社會韌性工程...擁有所向披靡的永恆日常。",
@@ -824,7 +824,7 @@ const manifestoModeContent = [
   {
     hardcore: "率先踏入高階資產工程學的實踐場...為全人類提前建構防線。",
     human:
-      "這不是同情做善事，而是用科技提前幫全台灣打造一條『不會讓人受傷』的安全防線。",
+      "這不是同情做善事，而是用科技提前為全台灣建立一條『不會讓人受傷』的安全防線。",
   },
   {
     hardcore: "我們用跨域邏輯進行結構性壓制...NVD是未來社會運行的頂層協議。",
@@ -1030,7 +1030,7 @@ function addCrowdPulse() {
   pulse.style.left = `${28 + Math.random() * 48}%`;
   pulse.style.top = `${18 + Math.random() * 62}%`;
   taiwanMap.appendChild(pulse);
-  addLogLine(`[系統] ${city} 數據同步中...`);
+  addLogLine(`[系統] ${city} 資料同步中...`);
   pulse.addEventListener("animationend", () => pulse.remove(), { once: true });
 }
 
@@ -1197,7 +1197,7 @@ function triggerResilienceSubmit() {
     if (demoSubmitHint) {
       demoSubmitHint.textContent = t("demoStatusEncrypting");
     }
-    addLogLine("[系統] 高雄三民區現場數據上傳中...");
+    addLogLine("[系統] 高雄三民區現場資料上傳中...");
   }, 1540);
 
   queueResilienceTimeline(() => {
@@ -1288,7 +1288,7 @@ function addCrowdPulse() {
   pulse.style.left = `${28 + Math.random() * 48}%`;
   pulse.style.top = `${18 + Math.random() * 62}%`;
   taiwanMap.appendChild(pulse);
-  addLogLine(`[系統] ${city} 數據同步中...`);
+  addLogLine(`[系統] ${city} 資料同步中...`);
   pulse.addEventListener("animationend", () => pulse.remove(), { once: true });
 }
 
