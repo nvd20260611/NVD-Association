@@ -9,6 +9,8 @@ codex_ai_collaboration_profile.json
 implementation-process.local.md
 backup.ps1
 GEMINI.md
+.codexrules
+.cursorrules
 
 *.local.*
 *.log
@@ -17,4 +19,3 @@ GEMINI.md
 *.7z
 
 assets/*check*.png
-

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nvd20260611.github.io/NVD-Association/sitemap.xml
