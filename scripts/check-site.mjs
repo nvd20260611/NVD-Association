@@ -5,6 +5,8 @@ import { spawnSync } from "node:child_process";
 const root = process.cwd();
 const htmlFiles = ["index.html", "resilience.html", "manifesto.html", "join.html"];
 const siteBaseUrl = "https://nvd20260611.github.io/NVD-Association/";
+const ogImagePath = "assets/og-image-association-20260614.png";
+const ogImageUrl = `${siteBaseUrl}${ogImagePath}`;
 const requiredMeta = [
   { label: "description", pattern: /<meta\s+name="description"\s+content="[^"]+"\s*\/?>/i },
   { label: "robots", pattern: /<meta\s+name="robots"\s+content="[^"]+"\s*\/?>/i },
@@ -14,11 +16,12 @@ const requiredMeta = [
   { label: "og:title", pattern: /<meta\s+property="og:title"\s+content="[^"]+"\s*\/?>/i },
   { label: "og:description", pattern: /<meta\s+property="og:description"\s+content="[^"]+"\s*\/?>/i },
   { label: "og:url", pattern: /<meta\s+property="og:url"\s+content="https:\/\/nvd20260611\.github\.io\/NVD-Association\/[^"]*"\s*\/?>/i },
-  { label: "og:image", pattern: /<meta\s+property="og:image"\s+content="https:\/\/nvd20260611\.github\.io\/NVD-Association\/assets\/og-image-association\.png"\s*\/?>/i },
+  { label: "og:image", pattern: new RegExp(`<meta\\s+property="og:image"\\s+content="${ogImageUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"\\s*\\/?>`, "i") },
+  { label: "og:image:secure_url", pattern: new RegExp(`<meta\\s+property="og:image:secure_url"\\s+content="${ogImageUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"\\s*\\/?>`, "i") },
   { label: "twitter:card", pattern: /<meta\s+name="twitter:card"\s+content="summary_large_image"\s*\/?>/i },
   { label: "twitter:title", pattern: /<meta\s+name="twitter:title"\s+content="[^"]+"\s*\/?>/i },
   { label: "twitter:description", pattern: /<meta\s+name="twitter:description"\s+content="[^"]+"\s*\/?>/i },
-  { label: "twitter:image", pattern: /<meta\s+name="twitter:image"\s+content="https:\/\/nvd20260611\.github\.io\/NVD-Association\/assets\/og-image-association\.png"\s*\/?>/i },
+  { label: "twitter:image", pattern: new RegExp(`<meta\\s+name="twitter:image"\\s+content="${ogImageUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"\\s*\\/?>`, "i") },
 ];
 
 const failures = [];
@@ -93,6 +96,7 @@ if (!robots.includes(`Sitemap: ${siteBaseUrl}sitemap.xml`)) {
 }
 
 const sitemap = read("sitemap.xml");
+if (!exists(ogImagePath)) fail(ogImagePath, "missing versioned social preview image");
 for (const file of htmlFiles) {
   const url = file === "index.html" ? siteBaseUrl : `${siteBaseUrl}${file}`;
   if (!sitemap.includes(`<loc>${url}</loc>`)) fail("sitemap.xml", `missing ${url}`);
