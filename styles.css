@@ -4589,10 +4589,10 @@ body[data-theme="dark"] .footer-logo {
   }
 
   .container {
-    width: calc(100vw - 28px);
-    max-width: 330px;
-    margin-right: 14px;
-    margin-left: 14px;
+    width: min(calc(100vw - 28px), 430px);
+    max-width: var(--max-width);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .site-header .container {
@@ -4666,12 +4666,13 @@ body[data-theme="dark"] .footer-logo {
   }
 
   .hero-inner {
-    width: min(calc(100dvw - 56px), 286px);
+    width: min(100%, 430px);
+    margin-inline: auto;
   }
 
   .hero h1 {
     width: 100%;
-    max-width: min(100%, 286px);
+    max-width: min(100%, 360px);
     margin-inline: auto;
     margin-top: 18px;
     font-size: clamp(1.72rem, 8vw, 2.05rem);
@@ -4696,14 +4697,14 @@ body[data-theme="dark"] .footer-logo {
 
   .hero-subtitle,
   .section-lead {
-    max-width: min(100%, 286px);
+    max-width: min(100%, 370px);
     margin-inline: auto;
     overflow-wrap: anywhere;
     word-break: break-all;
   }
 
   .hero-subtitle .tagline {
-    max-width: 280px;
+    max-width: 360px;
     margin-inline: auto;
     overflow-wrap: anywhere;
     word-break: break-all;
@@ -4740,8 +4741,9 @@ body[data-theme="dark"] .footer-logo {
 
   .dual-friction-section .container,
   .friction-section .container {
-    width: min(100%, 330px);
-    max-width: calc(100vw - 28px);
+    width: min(calc(100vw - 28px), 430px);
+    max-width: var(--max-width);
+    margin-inline: auto;
   }
 
   .dual-friction-section h1,
