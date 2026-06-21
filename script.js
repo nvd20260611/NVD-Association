@@ -23,6 +23,16 @@ const translations = {
     searchLabel: "搜尋道路行動、理念或參與方式",
     searchPlaceholder: "搜尋道路行動、理念或參與方式...",
     statsProcessedFiles: "友善行動節點",
+    reportStatusValue: "持續累積中",
+    reportStatusLabel: "道路回報資料",
+    dashboardStatusTitle: "資料累積狀態",
+    dashboardStatusValue: "整理中",
+    dashboardStatusBadge: "進行中",
+    dashboardReportValue: "持續累積中",
+    dashboardReportLabel: "市民回報資料",
+    dashboardPublishValue: "依實際成果公開",
+    dashboardPublishNote:
+      "NVD 正在建立道路障礙回報流程，後續將依實際回報狀況公開整理成果。",
     homePrimaryCta: "查看道路行動",
     homeSecondaryCta: "了解 NVD",
     homeTertiaryCta: "查看團隊介紹",
@@ -73,7 +83,8 @@ const translations = {
     gatewayLead:
       "NVD 不是先要求認同，而是先提供可感受到的幫助，再把幫助轉成理解與參與。",
     gatewaySoftwareTitle: "認識 NVD 協會",
-    gatewaySoftwareText: "以友善通行、即時回饋、修復行動與智慧協作為核心，建立更安全的道路公共信任。",
+    gatewaySoftwareText:
+      "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
     gatewayResilienceTitle: "社會韌性友善專案",
     gatewayResilienceText:
       "用模擬資料盤呈現城市障礙如何被標記、被理解，並走向可協作的改善。",
@@ -297,10 +308,35 @@ const translations = {
     footerCompanyUpdates: "更新日誌",
     footerCompanyPrivacy: "隱私權政策",
     footerCompanyTerms: "服務條款",
+    footerAboutTitle: "認識 NVD",
+    footerAboutLink: "關於 NVD",
+    footerMissionLink: "使命與方向",
+    footerGatewayLink: "三個入口",
+    footerActionTitle: "行動與回報",
+    footerReportLink: "道路障礙回報",
+    footerDashboardLink: "資料累積狀態",
+    footerParticipateLink: "參與共創",
+    footerIdeasTitle: "理念",
+    footerMobilityLink: "移動主權",
+    footerResilienceLink: "社會韌性",
+    footerFrictionLink: "降低操作與溝通阻礙",
+    footerSiteTitle: "網站資訊",
     modalTitle: "使用說明手冊",
     privacyTitle: "隱私權政策",
     termsTitle: "服務條款",
-    legalUpdated: "最後更新：2026 年 5 月 30 日",
+    legalUpdated: "最後更新：2026 年 6 月 22 日",
+    privacySectionCollection: "資料蒐集範圍",
+    privacyCollectionText:
+      "本網站為靜態網站，不要求註冊帳號，也不會主動蒐集姓名、電子郵件、付款資料或其他可直接識別個人的資料。",
+    privacySectionPurpose: "資料使用目的",
+    privacyPurposeText:
+      "瀏覽器可能保存語言、主題與閱讀模式偏好，僅用於維持網站顯示設定，不會用於廣告投放或身分分析。",
+    privacySectionProtection: "個人資料保護",
+    privacyProtectionText:
+      "NVD 不會出售或交換個人資料。若未來新增表單或合作聯絡功能，將於蒐集前說明用途、保存方式與聯絡窗口。",
+    privacySectionChanges: "政策調整",
+    privacyChangesText:
+      "隱私權政策如有調整，將更新本頁內容與日期。重大變更會以清楚方式說明。",
     privacySectionScope: "我們如何保護你的資料",
     privacyScopeText:
       "NVD 協會網站是純前端靜態網站。本網站不要求註冊帳號，也不會主動收集你的姓名、電子郵件、檔案內容或付款資料。",
@@ -309,7 +345,7 @@ const translations = {
       "網站會在你的瀏覽器 localStorage 中保存語言、深淺色主題與收藏清單，僅用於維持你的使用偏好。你可以隨時透過瀏覽器清除網站資料。",
     privacySectionThirdParty: "第三方服務",
     privacyThirdPartyText:
-      "本網站透過 GitHub Pages 提供頁面，並可能載入 Google Fonts、Font Awesome 與 Google Drive 理解連結。這些服務可能依各自政策處理基本連線紀錄。",
+      "本網站透過 GitHub Pages 提供頁面，並載入 Google Fonts 與 Font Awesome。第三方服務可能依其政策處理必要的連線紀錄。",
     privacySectionDownloads: "外部連結與協作服務",
     privacyDownloadsText: "本網站可能連結至社群平台、協作表單或第三方資訊頁。離開本站後的資料處理方式，請以該服務提供者的政策為準。",
     termsSectionService: "服務內容",
@@ -321,9 +357,21 @@ const translations = {
     termsSectionDownloads: "外部連結提醒",
     termsDownloadsText:
       "本站會盡力維護連結與說明的正確性，但無法保證所有第三方網站、社群平台或外部資源永久可用或完全無風險。使用外部服務前，請自行確認其條款與隱私政策。",
-    termsSectionChanges: "內容異動",
+    termsSectionChanges: "條款調整",
     termsChangesText:
-      "我們可能依專案進度調整行動資訊、連結、政策與條款。更新後的內容會公布於本頁，繼續使用網站即代表你了解並接受更新內容。",
+      "服務條款如有調整，將更新本頁內容與日期。繼續使用網站代表已閱讀更新後的條款。",
+    termsSectionPurpose: "服務目的",
+    termsPurposeText:
+      "本網站提供 NVD 理念、道路回饋與修復行動、團隊介紹及參與方式，協助社會大眾理解並參與友善通行倡議。",
+    termsSectionResponsibility: "使用者責任",
+    termsResponsibilityText:
+      "使用者應遵守所在地法律與第三方服務規範，不得利用本網站連結或內容侵害他人權利、散布不實資訊或從事違法行為。",
+    termsSectionContent: "內容使用",
+    termsContentText:
+      "官網公開文字可於合理引用範圍內使用，引用時請標示 NVD 與原始連結。品牌識別、圖片及其他素材的使用應先取得同意。",
+    termsSectionLimitations: "服務限制",
+    termsLimitationsText:
+      "本站會盡力維護內容與連結，但無法保證第三方服務永久可用。外部網站的內容與資料處理由各服務提供者負責。",
     modalStepsTitle: "極簡 3 步驟輕鬆上手",
     stepOneTitle: "認識行動入口",
     stepOneText: "從首頁、道路行動、品牌理念或加入共創頁面，選擇最符合您需求的參與入口。",
@@ -363,6 +411,16 @@ const translations = {
     searchLabel: "Search by tool name, tag, or pain point",
     searchPlaceholder: "Search by tool name, tag, or pain point...",
     statsProcessedFiles: "friendly action nodes",
+    reportStatusValue: "In progress",
+    reportStatusLabel: "road feedback records",
+    dashboardStatusTitle: "Record status",
+    dashboardStatusValue: "Being organized",
+    dashboardStatusBadge: "In progress",
+    dashboardReportValue: "Continuously growing",
+    dashboardReportLabel: "community feedback records",
+    dashboardPublishValue: "Published from verified results",
+    dashboardPublishNote:
+      "NVD is establishing a road-barrier reporting process. Organized results will be published according to actual submissions.",
     homePrimaryCta: "View road action",
     homeSecondaryCta: "About NVD",
     homeTertiaryCta: "Meet the Team",
@@ -413,7 +471,8 @@ const translations = {
     gatewayLead:
       "NVD does not demand belief first. It offers tangible help, then turns help into understanding and participation.",
     gatewaySoftwareTitle: "認識 NVD 協會",
-    gatewaySoftwareText: "以友善通行、即時回饋、修復行動與智慧協作為核心，建立更安全的道路公共信任。",
+    gatewaySoftwareText:
+      "Start with one community report, see how road barriers affect wheelchair users, people pushing strollers, and pedestrians, and turn lived experience into a starting point for city improvement.",
     gatewayResilienceTitle: "Social Resilience Friendly Project",
     gatewayResilienceText:
       "Use a simulated data board to show how city barriers can be marked, understood, and improved collaboratively.",
@@ -647,10 +706,35 @@ const translations = {
     footerCompanyUpdates: "Changelog",
     footerCompanyPrivacy: "Privacy Policy",
     footerCompanyTerms: "Terms of Service",
+    footerAboutTitle: "About NVD",
+    footerAboutLink: "About NVD",
+    footerMissionLink: "Mission and Direction",
+    footerGatewayLink: "Three Gateways",
+    footerActionTitle: "Action and Reporting",
+    footerReportLink: "Report Road Barriers",
+    footerDashboardLink: "Record Status",
+    footerParticipateLink: "Participate",
+    footerIdeasTitle: "Ideas",
+    footerMobilityLink: "Mobility Autonomy",
+    footerResilienceLink: "Social Resilience",
+    footerFrictionLink: "Reduce Operational and Communication Barriers",
+    footerSiteTitle: "Website Information",
     modalTitle: "User Guide",
     privacyTitle: "Privacy Policy",
     termsTitle: "Terms of Service",
-    legalUpdated: "Last updated: May 30, 2026",
+    legalUpdated: "Last updated: June 22, 2026",
+    privacySectionCollection: "Data Collection Scope",
+    privacyCollectionText:
+      "This is a static website. It does not require registration and does not actively collect names, email addresses, payment information, or other directly identifying personal data.",
+    privacySectionPurpose: "Purpose of Data Use",
+    privacyPurposeText:
+      "Your browser may save language, theme, and reading-mode preferences only to preserve display settings. They are not used for advertising or identity profiling.",
+    privacySectionProtection: "Personal Data Protection",
+    privacyProtectionText:
+      "NVD does not sell or exchange personal data. If forms or collaboration contact features are added later, their purpose, storage method, and contact point will be explained before collection.",
+    privacySectionChanges: "Policy Changes",
+    privacyChangesText:
+      "If this policy changes, the content and date on this page will be updated. Material changes will be explained clearly.",
     privacySectionScope: "How we protect your data",
     privacyScopeText:
       "The NVD Association website is a static front-end website. This site does not require an account and does not actively collect your name, email address, file contents, or payment information.",
@@ -671,9 +755,21 @@ const translations = {
     termsSectionDownloads: "外部連結提醒",
     termsDownloadsText:
       "We try to keep links and descriptions accurate, but cannot guarantee that every third-party website will remain available or risk-free. Please review external sites under their own terms and policies.",
-    termsSectionChanges: "Changes",
+    termsSectionChanges: "Changes to These Terms",
     termsChangesText:
-      "We may update association information, links, policies, and terms as the project evolves. Updated content will be posted on this page. Continued use of the site means you understand and accept the updates.",
+      "If these terms change, the content and date on this page will be updated. Continued use of the website means you have read the updated terms.",
+    termsSectionPurpose: "Service Purpose",
+    termsPurposeText:
+      "This website presents NVD's ideas, road feedback and repair action, team introduction, and participation paths so the public can understand and join the accessible mobility initiative.",
+    termsSectionResponsibility: "User Responsibility",
+    termsResponsibilityText:
+      "Users must follow applicable laws and third-party service rules. Do not use this website's links or content to infringe rights, distribute false information, or engage in unlawful activity.",
+    termsSectionContent: "Content Use",
+    termsContentText:
+      "Public website text may be used within reasonable quotation limits with attribution to NVD and the original link. Permission is required before using brand identity, images, or other materials.",
+    termsSectionLimitations: "Service Limitations",
+    termsLimitationsText:
+      "We work to maintain accurate content and links but cannot guarantee permanent availability of third-party services. External providers are responsible for their own content and data handling.",
     modalStepsTitle: "Get started in 3 simple steps",
     stepOneTitle: "認識行動入口",
     stepOneText:
@@ -719,7 +815,7 @@ const brandVoiceContent = {
         "NVD 把現場回饋、友善通行、資料整理與協作流程接在一起，讓一般人也能用簡單方式參與公共改善。",
       gatewaySoftwareTitle: "認識 NVD 協會",
       gatewaySoftwareText:
-        "我們關心的不只是科技，而是科技能不能讓人更省力、更安全、更有尊嚴地生活。",
+        "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
       gatewayResilienceTitle: "道路回饋與修復行動",
       gatewayResilienceText:
         "從一個現場回報開始，把道路問題整理成可追蹤的資訊，讓改善不再只靠抱怨或等待。",
@@ -776,7 +872,7 @@ const brandVoiceContent = {
         "NVD 整合使用者回饋、道路風險辨識、資料彙整與多方協作，協助形成具可讀性、可追蹤性與可治理性的友善通行資料基礎。",
       gatewaySoftwareTitle: "協會定位",
       gatewaySoftwareText:
-        "NVD 關注科技、生活與公共治理之交會，致力降低數位與空間摩擦，提升民眾參與公共改善的可近性。",
+        "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
       gatewayResilienceTitle: "道路治理行動",
       gatewayResilienceText:
         "透過標準化回饋流程，將道路現場問題轉化為可追蹤資料，作為後續協調、溝通與改善倡議之基礎。",
@@ -816,11 +912,6 @@ const brandVoiceContent = {
 
 const tools = [];
 
-const simulatedStats = {
-  processedFilesBase: 1312619,
-  dailyIncrement: 173,
-};
-
 const iconThemeCount = 4;
 
 const savedFavorites = localStorage.getItem("nvd-favorites");
@@ -843,7 +934,6 @@ const state = {
 const toolGrid = document.querySelector("#toolGrid");
 const emptyState = document.querySelector("#emptyState");
 const searchInput = document.querySelector("#searchInput");
-const processedFilesCount = document.querySelector("#processedFilesCount");
 const resultCount = document.querySelector("#resultCount");
 const categoryTabs = document.querySelectorAll(".category-tab");
 const languageMenu = document.querySelector("#languageMenu");
@@ -866,6 +956,12 @@ const closeLegalModalBtn = document.querySelector("#closeLegalModalBtn");
 const legalModalConfirmBtn = document.querySelector("#legalModalConfirmBtn");
 const legalLinks = document.querySelectorAll("[data-legal-modal]");
 const legalPanels = document.querySelectorAll("[data-legal-panel]");
+const privacyModal = document.querySelector("#privacy-modal");
+const termsModal = document.querySelector("#terms-modal");
+const closePrivacyModalBtn = document.querySelector("#closePrivacyModalBtn");
+const closeTermsModalBtn = document.querySelector("#closeTermsModalBtn");
+const privacyModalConfirmBtn = document.querySelector("#privacyModalConfirmBtn");
+const termsModalConfirmBtn = document.querySelector("#termsModalConfirmBtn");
 const resilienceDemo = document.querySelector("#resilienceDemo");
 const demoStepButtons = document.querySelectorAll("[data-demo-step]");
 const demoCoordinates = document.querySelector("#demoCoordinates");
@@ -881,7 +977,6 @@ const receiptHash = document.querySelector("#receiptHash");
 const manifestoModeToggle = document.querySelector("#manifestoModeToggle");
 const manifestoGrid = document.querySelector("#manifestoGrid");
 const manifestoCards = document.querySelectorAll("[data-manifesto-card]");
-let processedFilesTimerId;
 let resilienceScoreFrameId;
 let resilienceResetTimerId;
 let crowdSyncTimerId;
@@ -953,92 +1048,6 @@ function escapeHTML(value) {
 
 function normalizeText(text) {
   return String(text).trim().toLowerCase();
-}
-
-function getSimulatedProcessedFiles() {
-  const launchDate = new Date("2026-05-30T00:00:00+08:00");
-  const elapsedDays = Math.max(
-    0,
-    Math.floor((Date.now() - launchDate.getTime()) / 86400000),
-  );
-  const sessionBoost =
-    Number(sessionStorage.getItem("nvd-session-stat-boost")) ||
-    Math.floor(Math.random() * 28);
-  sessionStorage.setItem("nvd-session-stat-boost", String(sessionBoost));
-
-  return (
-    simulatedStats.processedFilesBase +
-    elapsedDays * simulatedStats.dailyIncrement +
-    sessionBoost
-  );
-}
-
-function getCurrentProcessedFilesValue() {
-  return (
-    Number(processedFilesCount?.dataset.currentValue) ||
-    getSimulatedProcessedFiles()
-  );
-}
-
-function formatNumber(value) {
-  const locale = state.language === "zh" ? "zh-TW" : "en-US";
-  return new Intl.NumberFormat(locale).format(value);
-}
-
-function animateNumber(element, targetValue) {
-  if (!element) return;
-
-  const startValue =
-    Number(element.dataset.currentValue) || Math.max(0, targetValue - 820);
-  const duration = 900;
-  const startTime = performance.now();
-
-  function tick(currentTime) {
-    const progress = Math.min((currentTime - startTime) / duration, 1);
-    const easedProgress = 1 - Math.pow(1 - progress, 3);
-    const currentValue = Math.round(
-      startValue + (targetValue - startValue) * easedProgress,
-    );
-    element.textContent = formatNumber(currentValue);
-
-    if (progress < 1) {
-      requestAnimationFrame(tick);
-      return;
-    }
-
-    element.dataset.currentValue = String(targetValue);
-  }
-
-  requestAnimationFrame(tick);
-}
-
-function renderSimulatedStats(shouldAnimate = false) {
-  const processedFiles = getCurrentProcessedFilesValue();
-
-  if (shouldAnimate) {
-    animateNumber(processedFilesCount, processedFiles);
-    return;
-  }
-
-  if (processedFilesCount) {
-    processedFilesCount.textContent = formatNumber(processedFiles);
-    processedFilesCount.dataset.currentValue = String(processedFiles);
-  }
-}
-
-function incrementProcessedFiles() {
-  if (!processedFilesCount) return;
-
-  const nextValue =
-    getCurrentProcessedFilesValue() + Math.floor(Math.random() * 4) + 1;
-  processedFilesCount.dataset.currentValue = String(nextValue);
-  processedFilesCount.textContent = formatNumber(nextValue);
-}
-
-function startProcessedFilesTicker() {
-  if (!processedFilesCount || processedFilesTimerId) return;
-
-  processedFilesTimerId = window.setInterval(incrementProcessedFiles, 2600);
 }
 
 function clearResilienceTimeline() {
@@ -1727,6 +1736,7 @@ function setLanguage(language) {
     const isActive = option.dataset.language === state.language;
     option.classList.toggle("active", isActive);
     option.setAttribute("aria-selected", String(isActive));
+    option.setAttribute("aria-pressed", String(isActive));
   });
 
   applyTranslations();
@@ -1745,6 +1755,7 @@ function setBrandVoice(voice, shouldPersist = true) {
 
   if (brandVoiceToggle) {
     brandVoiceToggle.classList.toggle("is-official", isOfficial);
+    brandVoiceToggle.setAttribute("aria-pressed", String(!isOfficial));
     brandVoiceToggle.setAttribute(
       "aria-label",
       isOfficial ? "切換為白話版" : "切換為治理版",
@@ -2053,28 +2064,55 @@ function closeModal() {
   }
 }
 
+let activeLegalTrigger = null;
+
+function getLegalModal(type) {
+  if (type === "terms" && termsModal) return termsModal;
+  if (type !== "terms" && privacyModal) return privacyModal;
+  return legalModal;
+}
+
 function openLegalModal(type, event) {
   if (event) event.preventDefault();
   const activeType = type === "terms" ? "terms" : "privacy";
+  const targetModal = getLegalModal(activeType);
+  if (!targetModal) return;
 
-  legalPanels.forEach((panel) => {
-    panel.hidden = panel.dataset.legalPanel !== activeType;
-  });
+  activeLegalTrigger = event?.currentTarget || null;
 
-  const titleKey = activeType === "terms" ? "termsTitle" : "privacyTitle";
-  legalModalTitleText.dataset.i18n = titleKey;
-  legalModalTitleText.textContent = t(titleKey);
+  if (targetModal === legalModal) {
+    legalPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.legalPanel !== activeType;
+    });
 
-  legalModal.classList.add("active");
-  legalModal.setAttribute("aria-hidden", "false");
+    const titleKey = activeType === "terms" ? "termsTitle" : "privacyTitle";
+    if (legalModalTitleText) {
+      legalModalTitleText.dataset.i18n = titleKey;
+      legalModalTitleText.textContent = t(titleKey);
+    }
+  }
+
+  targetModal.classList.add("active");
+  targetModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
-  closeLegalModalBtn.focus();
+  targetModal.querySelector(".modal-close-icon-btn")?.focus();
 }
 
-function closeLegalModal() {
-  legalModal.classList.remove("active");
-  legalModal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
+function closeLegalModal(targetModal = legalModal) {
+  if (!targetModal) return;
+
+  targetModal.classList.remove("active");
+  targetModal.setAttribute("aria-hidden", "true");
+
+  const hasOpenLegalModal = [legalModal, privacyModal, termsModal].some(
+    (modal) => modal?.classList.contains("active"),
+  );
+  if (!hasOpenLegalModal) {
+    document.body.classList.remove("modal-open");
+  }
+
+  activeLegalTrigger?.focus();
+  activeLegalTrigger = null;
 }
 
 if (openGuideBtn && guideModal) {
@@ -2100,37 +2138,45 @@ if (openGuideBtn && guideModal) {
   });
 }
 
+legalLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    openLegalModal(link.dataset.legalModal, event);
+  });
+});
+
 if (legalModal) {
-  legalLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      openLegalModal(link.dataset.legalModal, event);
-    });
-  });
-
-  closeLegalModalBtn.addEventListener("click", closeLegalModal);
-  legalModalConfirmBtn.addEventListener("click", closeLegalModal);
-
+  closeLegalModalBtn?.addEventListener("click", () => closeLegalModal(legalModal));
+  legalModalConfirmBtn?.addEventListener("click", () => closeLegalModal(legalModal));
   legalModal.addEventListener("click", (event) => {
-    if (event.target === legalModal) {
-      closeLegalModal();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && legalModal.classList.contains("active")) {
-      closeLegalModal();
-    }
+    if (event.target === legalModal) closeLegalModal(legalModal);
   });
 }
+
+[
+  [privacyModal, closePrivacyModalBtn, privacyModalConfirmBtn],
+  [termsModal, closeTermsModalBtn, termsModalConfirmBtn],
+].forEach(([modal, closeButton, confirmButton]) => {
+  if (!modal) return;
+
+  closeButton?.addEventListener("click", () => closeLegalModal(modal));
+  confirmButton?.addEventListener("click", () => closeLegalModal(modal));
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeLegalModal(modal);
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  const activeModal = [legalModal, privacyModal, termsModal].find((modal) =>
+    modal?.classList.contains("active"),
+  );
+  if (activeModal) closeLegalModal(activeModal);
+});
 
 setLanguage(state.language);
 setBrandVoice(state.brandVoice, false);
 setTheme(state.theme, Boolean(savedTheme));
 renderManifestoMode(manifestoMode);
-if (processedFilesCount) {
-  delete processedFilesCount.dataset.currentValue;
-  renderSimulatedStats(true);
-  startProcessedFilesTicker();
-}
 setResilienceDemoStep(0);
 startCrowdSync();

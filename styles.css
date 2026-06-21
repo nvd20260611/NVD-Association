@@ -352,6 +352,43 @@ body[data-theme="dark"] .nav-links a:hover {
   background: var(--primary-orange);
 }
 
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface-main);
+  border: 1px solid var(--border-main);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(45, 49, 66, 0.04);
+}
+
+.language-switcher .lang-btn {
+  width: auto;
+  min-height: 34px;
+  padding: 0 11px;
+  justify-content: center;
+  color: var(--text-main);
+  text-align: center;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.language-switcher .language-option:hover,
+.language-switcher .language-option.active {
+  color: var(--text-inverse);
+  background: var(--primary-orange);
+}
+
+.language-switcher .brand-voice-toggle:hover {
+  border: 0;
+  transform: none;
+}
+
 .theme-toggle {
   width: 42px;
   height: 42px;
@@ -1257,6 +1294,14 @@ body[data-theme="dark"] .hero-stats strong {
   display: block;
   color: var(--text-main);
   font-size: 1.35rem;
+}
+
+.hub-score-metrics small {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
 body[data-theme="dark"] .hub-phone-card,
@@ -4778,6 +4823,19 @@ body[data-theme="dark"] .footer-logo {
 
   .header-actions .language-menu {
     display: none;
+  }
+
+  .language-switcher {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .language-switcher .lang-btn,
+  .language-switcher .brand-voice-toggle {
+    min-height: 32px;
+    display: flex;
+    padding-inline: 7px;
+    font-size: 0.72rem;
   }
 
   .submit-btn {
