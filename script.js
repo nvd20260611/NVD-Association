@@ -13,7 +13,7 @@ const translations = {
     navManifesto: "品牌理念",
     navLoop: "加入共創",
     navGuide: "使用說明",
-    navCommunity: "社群",
+    navCommunity: "關於 NVD",
     languageLabel: "選擇語言",
     themeLightLabel: "切換為淺色主題",
     themeDarkLabel: "切換為深色主題",
@@ -24,8 +24,50 @@ const translations = {
     searchPlaceholder: "搜尋道路行動、理念或參與方式...",
     statsProcessedFiles: "友善行動節點",
     homePrimaryCta: "查看道路行動",
-    homeSecondaryCta: "認識 NVD 協會",
-    homeTertiaryCta: "參與共創",
+    homeSecondaryCta: "了解 NVD",
+    homeTertiaryCta: "查看團隊介紹",
+    aboutEyebrow: "About NVD",
+    aboutTitle: "關於 NVD",
+    aboutParagraphOne:
+      "NVD 是一個以「移動主權」與「社會韌性」為核心的行動倡議，關注輪椅使用者、嬰兒車推行者、高齡者、照顧者與所有行人在城市中的真實移動經驗。",
+    aboutParagraphTwo:
+      "我們相信，無障礙不只是硬體改善，也不只是少數族群的需求，而是每個人都會在生命不同階段遇到的公共議題。從嬰兒車、行李箱、助行器到電動輪椅，城市道路是否平整、動線是否友善、空間是否能被安全使用，最終都會影響全民的生活品質。",
+    aboutParagraphThree:
+      "NVD 透過使用者經驗、現場觀察、路徑紀錄與資料整理，將日常移動中看似微小的障礙，轉化為可被理解、討論與改善的公共資訊。我們希望連結使用者、社區、政府、企業與專業團隊，共同建立更具韌性的城市環境。",
+    aboutParagraphFour:
+      "我們的目標不是把障礙者放在被照顧的位置，而是重新定義他們的專業價值：身體經驗本身，就是理解城市缺口的重要感測器。NVD 希望讓這些經驗被看見、被尊重，並成為推動未來公共空間改善的重要依據。",
+    aboutFocusEyebrow: "Our Focus",
+    aboutFocusTitle: "我們關心什麼",
+    focusMobilityTitle: "移動主權",
+    focusMobilityText:
+      "每個人都應該能安心、穩定、有尊嚴地出門，不因身體狀態或輔具使用而被城市排除。",
+    focusResilienceTitle: "社會韌性",
+    focusResilienceText:
+      "高齡化、照顧需求與行動輔具使用會成為日常，友善的道路與空間，是未來城市的基本能力。",
+    focusExperienceTitle: "真實經驗",
+    focusExperienceText:
+      "輪椅、嬰兒車、助行器與行人日常遇到的阻礙，是改善公共空間的重要線索。",
+    focusCollaborationTitle: "公共協作",
+    focusCollaborationText:
+      "NVD 希望連結使用者、社區、政府、企業與專業者，讓改善不只停留在抱怨，而能形成具體行動。",
+    teamEyebrow: "Team",
+    teamTitle: "團隊介紹",
+    teamLead:
+      "NVD 的團隊介紹不只是傳統履歷，而是呈現每位成員如何從自身經驗、專業能力與公共參與出發，回應城市移動與社會韌性的需求。",
+    founderRoleEyebrow: "Founder",
+    founderNameRole: "陳怡安｜NVD 發起人",
+    founderParagraphOne:
+      "陳怡安為 NVD 發起人，長期以電動輪椅作為主要移動工具，具備資訊管理背景與行政實務經驗。因自身在城市移動、公共空間與無障礙環境中的長期觀察，逐步形成以「移動主權」與「社會韌性」為核心的倡議方向。",
+    founderParagraphTwo:
+      "他相信，障礙者的日常經驗不是被動等待協助的故事，而是一種能夠發現城市問題、回饋公共設計、協助社會提前面對高齡化挑戰的重要能力。NVD 便是從這樣的觀點出發，嘗試將輪椅使用者、嬰兒車推行者、高齡者與照顧者的移動經驗，轉化為可被討論、整理與改善的公共資料。",
+    founderParagraphThree:
+      "在 NVD 中，陳怡安主要負責整體理念建構、專案方向規劃、無障礙議題觀察、官網內容設計與外部溝通。他希望透過 NVD，讓更多人理解：真正友善的城市，不是只為少數人加裝設施，而是讓每個人在不同人生階段，都能保有安心出門的尊嚴。",
+    founderWebsiteCta: "查看個人網站",
+    officialProfileEyebrow: "Official Profile",
+    officialProfileTitle: "官方簡介",
+    officialProfileLead: "可供履歷、提案、媒體與社群引用。",
+    officialProfileText:
+      "NVD 是一個以移動主權與社會韌性為核心的行動倡議，關注輪椅使用者、嬰兒車推行者、高齡者、照顧者與一般行人在城市中的真實移動經驗。NVD 透過現場觀察、路徑紀錄與資料整理，將日常移動中遇到的障礙轉化為可被理解、討論與改善的公共資訊，並希望連結使用者、社區、政府、企業與專業團隊，共同推動更友善、更具韌性的城市環境。",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "三個入口，對應同一個使命",
     gatewayLead:
@@ -250,7 +292,7 @@ const translations = {
     footerComparePptx: "種子測試",
     footerCompareWorkflow: "回饋與協作",
     footerCompanyTitle: "公司",
-    footerCompanyAbout: "關於 NVD 協會",
+    footerCompanyAbout: "關於 NVD",
     footerCompanyFaq: "常見問題",
     footerCompanyUpdates: "更新日誌",
     footerCompanyPrivacy: "隱私權政策",
@@ -311,7 +353,7 @@ const translations = {
     navManifesto: "Brand Belief",
     navLoop: "Join Us",
     navGuide: "Guide",
-    navCommunity: "Community",
+    navCommunity: "About NVD",
     languageLabel: "Choose language",
     themeLightLabel: "Switch to light mode",
     themeDarkLabel: "Switch to dark mode",
@@ -322,8 +364,50 @@ const translations = {
     searchPlaceholder: "Search by tool name, tag, or pain point...",
     statsProcessedFiles: "friendly action nodes",
     homePrimaryCta: "View road action",
-    homeSecondaryCta: "認識 NVD 協會",
-    homeTertiaryCta: "Join co-creation",
+    homeSecondaryCta: "About NVD",
+    homeTertiaryCta: "Meet the Team",
+    aboutEyebrow: "About NVD",
+    aboutTitle: "About NVD",
+    aboutParagraphOne:
+      "NVD is an action initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and all pedestrians.",
+    aboutParagraphTwo:
+      "We believe accessibility is not only about physical infrastructure or the needs of a small group. It is a public issue that everyone may encounter at different stages of life. From strollers and luggage to walkers and powered wheelchairs, road conditions, accessible routes, and safe public spaces affect everyone's quality of life.",
+    aboutParagraphThree:
+      "Through lived experience, field observation, route records, and organized information, NVD turns small everyday mobility barriers into public information that can be understood, discussed, and improved. We seek to connect community members, local communities, government, businesses, and professional teams to support more resilient cities.",
+    aboutParagraphFour:
+      "Our goal is not to place disabled people only in the position of receiving care. We recognize the professional value of embodied experience: it is an important sensor for understanding gaps in the city. NVD works to make these experiences visible and respected, and to establish them as meaningful evidence for improving future public spaces.",
+    aboutFocusEyebrow: "Our Focus",
+    aboutFocusTitle: "What We Care About",
+    focusMobilityTitle: "Mobility Autonomy",
+    focusMobilityText:
+      "Everyone should be able to leave home safely, steadily, and with dignity, without being excluded by the city because of physical condition or mobility aid use.",
+    focusResilienceTitle: "Social Resilience",
+    focusResilienceText:
+      "Ageing, care needs, and mobility aid use will become part of everyday life. Accessible roads and spaces are a basic capability of future cities.",
+    focusExperienceTitle: "Lived Experience",
+    focusExperienceText:
+      "The barriers encountered by wheelchair users, people pushing strollers, walker users, and pedestrians are important clues for improving public space.",
+    focusCollaborationTitle: "Public Collaboration",
+    focusCollaborationText:
+      "NVD connects community members, local communities, government, businesses, and professionals so that concerns can lead to concrete action.",
+    teamEyebrow: "Team",
+    teamTitle: "Team",
+    teamLead:
+      "NVD team profiles go beyond conventional resumes. They show how each member brings lived experience, professional capability, and public participation to the needs of urban mobility and social resilience.",
+    founderRoleEyebrow: "Founder",
+    founderNameRole: "Yi-An Chen | NVD Initiator",
+    founderParagraphOne:
+      "Yi-An Chen is the initiator of NVD. A long-term powered wheelchair user, he has a background in information management and administrative practice. Years of observing urban mobility, public space, and accessibility shaped his advocacy around mobility autonomy and social resilience.",
+    founderParagraphTwo:
+      "He believes the daily experience of disabled people is not a passive story of waiting for assistance. It is a capability for identifying urban problems, informing public design, and helping society prepare for ageing. NVD translates the mobility experiences of wheelchair users, people pushing strollers, older adults, and caregivers into public information that can be discussed, organized, and improved.",
+    founderParagraphThree:
+      "At NVD, Yi-An leads the overall vision, project direction, accessibility observation, website content design, and external communication. He hopes NVD will help more people understand that a truly accessible city is not one that adds facilities only for a minority, but one that protects everyone's dignity to go out safely throughout different stages of life.",
+    founderWebsiteCta: "View Personal Website",
+    officialProfileEyebrow: "Official Profile",
+    officialProfileTitle: "Official Profile",
+    officialProfileLead: "For use in resumes, proposals, media, and social profiles.",
+    officialProfileText:
+      "NVD is an action initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and pedestrians. Through field observation, route records, and organized information, NVD turns everyday mobility barriers into public information that can be understood, discussed, and improved. We seek to connect community members, local communities, government, businesses, and professional teams to advance more accessible and resilient cities.",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "Three gateways, one mission",
     gatewayLead:
@@ -558,7 +642,7 @@ const translations = {
     footerComparePptx: "Seed testing",
     footerCompareWorkflow: "Feedback and collaboration",
     footerCompanyTitle: "Company",
-    footerCompanyAbout: "About NVD Association",
+    footerCompanyAbout: "About NVD",
     footerCompanyFaq: "FAQ",
     footerCompanyUpdates: "Changelog",
     footerCompanyPrivacy: "Privacy Policy",
@@ -622,14 +706,14 @@ const brandVoiceContent = {
       navManifesto: "品牌理念",
       navLoop: "參與流程",
       navGuide: "使用說明",
-      navCommunity: "社群",
+      navCommunity: "關於 NVD",
       heroKicker: "NVD 協會｜道路回饋與修復行動",
       heroTitle: "把路上的問題，變成可以被看見、被追蹤、被改善的行動",
       heroSubtitle:
         "<strong>NVD 協會從日常通行出發</strong>，讓坑洞、障礙、危險路段與不友善設計，不再只是個人的困擾，而是可以整理成資料、串起協作、推動修復的公共訊號。<span class='tagline'>Better Roads, Better Together.</span>",
       homePrimaryCta: "查看道路行動",
-      homeSecondaryCta: "認識 NVD 協會",
-      homeTertiaryCta: "加入共創",
+      homeSecondaryCta: "了解 NVD",
+      homeTertiaryCta: "查看團隊介紹",
       gatewayTitle: "先讓問題被看見，再讓更多人一起修復",
       gatewayLead:
         "NVD 把現場回饋、友善通行、資料整理與協作流程接在一起，讓一般人也能用簡單方式參與公共改善。",
@@ -663,7 +747,7 @@ const brandVoiceContent = {
       footerComparePptx: "種子測試",
       footerCompareWorkflow: "回饋與協作",
       footerCompanyTitle: "公司",
-      footerCompanyAbout: "關於 NVD 協會",
+      footerCompanyAbout: "關於 NVD",
       footerCompanyFaq: "常見問題",
       footerCompanyUpdates: "更新日誌",
       footerCompanyPrivacy: "隱私權政策",
@@ -679,14 +763,14 @@ const brandVoiceContent = {
       navManifesto: "品牌論述",
       navLoop: "參與機制",
       navGuide: "操作指引",
-      navCommunity: "協作網絡",
+      navCommunity: "關於 NVD",
       heroKicker: "NVD 協會｜友善通行與道路回饋治理",
       heroTitle: "建構道路回饋、資料整合與修復協作之社會韌性機制",
       heroSubtitle:
         "<strong>NVD 協會以友善通行、即時回饋、資料化整理與跨域協作為核心</strong>，將道路障礙與通行風險轉化為可辨識、可追蹤、可協調之公共治理訊號，促進道路安全與城市友善環境之持續改善。<span class='tagline'>Better Roads, Better Together.</span>",
       homePrimaryCta: "查看治理行動",
-      homeSecondaryCta: "了解協會定位",
-      homeTertiaryCta: "參與協作機制",
+      homeSecondaryCta: "了解 NVD",
+      homeTertiaryCta: "查看團隊介紹",
       gatewayTitle: "建立由現場回饋到修復協作的公共價值流程",
       gatewayLead:
         "NVD 整合使用者回饋、道路風險辨識、資料彙整與多方協作，協助形成具可讀性、可追蹤性與可治理性的友善通行資料基礎。",
@@ -720,7 +804,7 @@ const brandVoiceContent = {
       footerComparePptx: "種子測試",
       footerCompareWorkflow: "回饋與協作流程",
       footerCompanyTitle: "組織資訊",
-      footerCompanyAbout: "關於 NVD 協會",
+      footerCompanyAbout: "關於 NVD",
       footerCompanyFaq: "常見問題",
       footerCompanyUpdates: "更新紀錄",
       footerCompanyPrivacy: "隱私權政策",
