@@ -57,11 +57,11 @@ const translations = {
     founderRoleEyebrow: "Founder",
     founderNameRole: "陳怡安｜NVD 發起人",
     founderParagraphOne:
-      "陳怡安為 NVD 發起人，長期以電動輪椅作為主要移動工具，具備資訊管理背景與行政實務經驗。因自身在城市移動、公共空間與無障礙環境中的長期觀察，逐步形成以「移動主權」與「社會韌性」為核心的倡議方向。",
+      "我是陳怡安，NVD 發起人。長期以電動輪椅作為主要移動工具，也因此更直接地感受到城市道路、公共空間與無障礙環境中的細節問題。",
     founderParagraphTwo:
-      "他相信，障礙者的日常經驗不是被動等待協助的故事，而是一種能夠發現城市問題、回饋公共設計、協助社會提前面對高齡化挑戰的重要能力。NVD 便是從這樣的觀點出發，嘗試將輪椅使用者、嬰兒車推行者、高齡者與照顧者的移動經驗，轉化為可被討論、整理與改善的公共資料。",
+      "我具備資訊管理背景與行政實務經驗，習慣用系統化的方式整理問題。對我來說，障礙者的日常經驗不只是被照顧的故事，也是一種能夠看見城市缺口、回饋公共設計，並協助社會提前面對高齡化挑戰的重要能力。",
     founderParagraphThree:
-      "在 NVD 中，陳怡安主要負責整體理念建構、專案方向規劃、無障礙議題觀察、官網內容設計與外部溝通。他希望透過 NVD，讓更多人理解：真正友善的城市，不是只為少數人加裝設施，而是讓每個人在不同人生階段，都能保有安心出門的尊嚴。",
+      "在 NVD 中，我主要負責理念建構、專案方向規劃、無障礙議題觀察、官網內容設計與外部溝通。我希望透過 NVD，讓更多人理解：真正友善的城市，是讓每個人在不同人生階段，都能保有安心出門的尊嚴。",
     founderWebsiteCta: "查看個人網站",
     officialProfileEyebrow: "Official Profile",
     officialProfileTitle: "官方簡介",
@@ -397,11 +397,11 @@ const translations = {
     founderRoleEyebrow: "Founder",
     founderNameRole: "Yi-An Chen | NVD Initiator",
     founderParagraphOne:
-      "Yi-An Chen is the initiator of NVD. A long-term powered wheelchair user, he has a background in information management and administrative practice. Years of observing urban mobility, public space, and accessibility shaped his advocacy around mobility autonomy and social resilience.",
+      "I am Yi-An Chen, the initiator of NVD. I have long used a powered wheelchair as my primary means of mobility, which has given me a direct understanding of the details that shape city roads, public spaces, and accessible environments.",
     founderParagraphTwo:
-      "He believes the daily experience of disabled people is not a passive story of waiting for assistance. It is a capability for identifying urban problems, informing public design, and helping society prepare for ageing. NVD translates the mobility experiences of wheelchair users, people pushing strollers, older adults, and caregivers into public information that can be discussed, organized, and improved.",
+      "I have a background in information management and administrative practice, and I tend to organize problems systematically. To me, the daily experience of disabled people is not only a story of receiving care. It is an important capability for seeing gaps in the city, informing public design, and helping society prepare for the challenges of ageing.",
     founderParagraphThree:
-      "At NVD, Yi-An leads the overall vision, project direction, accessibility observation, website content design, and external communication. He hopes NVD will help more people understand that a truly accessible city is not one that adds facilities only for a minority, but one that protects everyone's dignity to go out safely throughout different stages of life.",
+      "At NVD, I am responsible for developing the vision, planning project direction, observing accessibility issues, designing website content, and handling external communication. Through NVD, I hope more people will understand that a truly accessible city allows everyone to retain the dignity of going out safely at every stage of life.",
     founderWebsiteCta: "View Personal Website",
     officialProfileEyebrow: "Official Profile",
     officialProfileTitle: "Official Profile",
