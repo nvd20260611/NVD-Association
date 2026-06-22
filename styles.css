@@ -4762,7 +4762,7 @@ body[data-theme="dark"] .footer-logo {
 }
 
 @media (max-width: 768px) {
-  .home-page .header-actions {
+  .header-actions {
     display: none;
   }
 

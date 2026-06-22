@@ -1604,7 +1604,6 @@ function applyTranslations() {
     resultCount.textContent = t("resultCount", { count });
   }
 
-  renderSimulatedStats();
   if (resilienceDemo) {
     updateResilienceDemoReadout(Number(resilienceDemo.dataset.step) || 0);
   }
