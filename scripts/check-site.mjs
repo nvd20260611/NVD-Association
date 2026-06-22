@@ -3,7 +3,24 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
-const htmlFiles = ["index.html", "resilience.html", "manifesto.html", "join.html"];
+const htmlFiles = [
+  "index.html",
+  "about.html",
+  "report.html",
+  "privacy.html",
+  "terms.html",
+  "join.html",
+  "manifesto.html",
+  "resilience.html",
+];
+const sitemapFiles = [
+  "index.html",
+  "about.html",
+  "report.html",
+  "privacy.html",
+  "terms.html",
+  "join.html",
+];
 const siteBaseUrl = "https://nvd20260611.github.io/NVD-Association/";
 const ogImagePath = "assets/og-image-association-20260614.png";
 const ogImageUrl = `${siteBaseUrl}${ogImagePath}`;
@@ -97,7 +114,7 @@ if (!robots.includes(`Sitemap: ${siteBaseUrl}sitemap.xml`)) {
 
 const sitemap = read("sitemap.xml");
 if (!exists(ogImagePath)) fail(ogImagePath, "missing versioned social preview image");
-for (const file of htmlFiles) {
+for (const file of sitemapFiles) {
   const url = file === "index.html" ? siteBaseUrl : `${siteBaseUrl}${file}`;
   if (!sitemap.includes(`<loc>${url}</loc>`)) fail("sitemap.xml", `missing ${url}`);
 }

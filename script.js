@@ -966,22 +966,6 @@ const themeToggle = document.querySelector("#themeToggle");
 const mobileNavToggle = document.querySelector("#mobileNavToggle");
 const siteHeader = document.querySelector(".site-header");
 const primaryNav = document.querySelector("#primaryNav");
-const openGuideBtn = document.querySelector("#openGuideBtn");
-const guideModal = document.querySelector("#guideModal");
-const closeModalBtn = document.querySelector("#closeModalBtn");
-const modalConfirmBtn = document.querySelector("#modalConfirmBtn");
-const legalModal = document.querySelector("#legalModal");
-const legalModalTitleText = document.querySelector("#legalModalTitleText");
-const closeLegalModalBtn = document.querySelector("#closeLegalModalBtn");
-const legalModalConfirmBtn = document.querySelector("#legalModalConfirmBtn");
-const legalLinks = document.querySelectorAll("[data-legal-modal]");
-const legalPanels = document.querySelectorAll("[data-legal-panel]");
-const privacyModal = document.querySelector("#privacy-modal");
-const termsModal = document.querySelector("#terms-modal");
-const closePrivacyModalBtn = document.querySelector("#closePrivacyModalBtn");
-const closeTermsModalBtn = document.querySelector("#closeTermsModalBtn");
-const privacyModalConfirmBtn = document.querySelector("#privacyModalConfirmBtn");
-const termsModalConfirmBtn = document.querySelector("#termsModalConfirmBtn");
 const resilienceDemo = document.querySelector("#resilienceDemo");
 const demoStepButtons = document.querySelectorAll("[data-demo-step]");
 const demoCoordinates = document.querySelector("#demoCoordinates");
@@ -2080,132 +2064,10 @@ if (typeof systemThemeQuery.addEventListener === "function") {
   systemThemeQuery.addListener(handleSystemThemeChange);
 }
 
-function openModal(event) {
-  if (event) event.preventDefault();
-
-  guideModal.classList.add("active");
-  guideModal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-open");
-  closeModalBtn.focus();
-}
-
-function closeModal() {
-  guideModal.classList.remove("active");
-  guideModal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
-  if (openGuideBtn) {
-    openGuideBtn.focus();
-  }
-}
-
-let activeLegalTrigger = null;
-
-function getLegalModal(type) {
-  if (type === "terms" && termsModal) return termsModal;
-  if (type !== "terms" && privacyModal) return privacyModal;
-  return legalModal;
-}
-
-function openLegalModal(type, event) {
-  if (event) event.preventDefault();
-  const activeType = type === "terms" ? "terms" : "privacy";
-  const targetModal = getLegalModal(activeType);
-  if (!targetModal) return;
-
-  activeLegalTrigger = event?.currentTarget || null;
-
-  if (targetModal === legalModal) {
-    legalPanels.forEach((panel) => {
-      panel.hidden = panel.dataset.legalPanel !== activeType;
-    });
-
-    const titleKey = activeType === "terms" ? "termsTitle" : "privacyTitle";
-    if (legalModalTitleText) {
-      legalModalTitleText.dataset.i18n = titleKey;
-      legalModalTitleText.textContent = t(titleKey);
-    }
-  }
-
-  targetModal.classList.add("active");
-  targetModal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-open");
-  targetModal.querySelector(".modal-close-icon-btn")?.focus();
-}
-
-function closeLegalModal(targetModal = legalModal) {
-  if (!targetModal) return;
-
-  targetModal.classList.remove("active");
-  targetModal.setAttribute("aria-hidden", "true");
-
-  const hasOpenLegalModal = [legalModal, privacyModal, termsModal].some(
-    (modal) => modal?.classList.contains("active"),
-  );
-  if (!hasOpenLegalModal) {
-    document.body.classList.remove("modal-open");
-  }
-
-  activeLegalTrigger?.focus();
-  activeLegalTrigger = null;
-}
-
-if (openGuideBtn && guideModal) {
-  openGuideBtn.addEventListener("click", openModal);
-  closeModalBtn.addEventListener("click", closeModal);
-  modalConfirmBtn.addEventListener("click", closeModal);
-
-  guideModal.addEventListener("click", (event) => {
-    if (event.target === guideModal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && languageMenu?.classList.contains("open")) {
-      closeLanguageMenu();
-      languageToggle?.focus();
-    }
-
-    if (event.key === "Escape" && guideModal.classList.contains("active")) {
-      closeModal();
-    }
-  });
-}
-
-legalLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    openLegalModal(link.dataset.legalModal, event);
-  });
-});
-
-if (legalModal) {
-  closeLegalModalBtn?.addEventListener("click", () => closeLegalModal(legalModal));
-  legalModalConfirmBtn?.addEventListener("click", () => closeLegalModal(legalModal));
-  legalModal.addEventListener("click", (event) => {
-    if (event.target === legalModal) closeLegalModal(legalModal);
-  });
-}
-
-[
-  [privacyModal, closePrivacyModalBtn, privacyModalConfirmBtn],
-  [termsModal, closeTermsModalBtn, termsModalConfirmBtn],
-].forEach(([modal, closeButton, confirmButton]) => {
-  if (!modal) return;
-
-  closeButton?.addEventListener("click", () => closeLegalModal(modal));
-  confirmButton?.addEventListener("click", () => closeLegalModal(modal));
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) closeLegalModal(modal);
-  });
-});
-
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
-
-  const activeModal = [legalModal, privacyModal, termsModal].find((modal) =>
-    modal?.classList.contains("active"),
-  );
-  if (activeModal) closeLegalModal(activeModal);
+  closeLanguageMenu();
+  closeMobileNav();
 });
 
 initializeTeamPhotoFallbacks();
