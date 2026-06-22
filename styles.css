@@ -4803,7 +4803,7 @@ body[data-theme="dark"] .footer-logo {
     display: none;
   }
 
-  .home-page .mobile-language-controls {
+  :is(.home-page, .site-page) .mobile-language-controls {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
@@ -4813,7 +4813,7 @@ body[data-theme="dark"] .footer-logo {
     border-top: 1px solid var(--border-main);
   }
 
-  .home-page .mobile-language-options {
+  :is(.home-page, .site-page) .mobile-language-options {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
@@ -4826,7 +4826,7 @@ body[data-theme="dark"] .footer-logo {
     box-shadow: none;
   }
 
-  .home-page .mobile-language-options .mobile-lang-btn {
+  :is(.home-page, .site-page) .mobile-language-options .mobile-lang-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4841,12 +4841,12 @@ body[data-theme="dark"] .footer-logo {
     font-size: 0.78rem;
   }
 
-  .home-page .mobile-language-options .mobile-lang-btn + .mobile-lang-btn {
+  :is(.home-page, .site-page) .mobile-language-options .mobile-lang-btn + .mobile-lang-btn {
     border-left: 1px solid rgba(226, 232, 240, 0.45);
   }
 
-  .home-page .mobile-language-options .mobile-lang-btn:hover,
-  .home-page .mobile-language-options .language-option.active {
+  :is(.home-page, .site-page) .mobile-language-options .mobile-lang-btn:hover,
+  :is(.home-page, .site-page) .mobile-language-options .language-option.active {
     color: var(--primary-orange);
     background: transparent;
   }

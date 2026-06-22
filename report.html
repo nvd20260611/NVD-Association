@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; form-action 'none'; upgrade-insecure-requests" />
+    <title>道路回報｜NVD ROAD HUB</title>
+    <meta name="description" content="透過 NVD ROAD HUB 了解道路問題如何從現場回報轉成可定位、可追蹤、可協作的修復行動。" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <link rel="canonical" href="https://nvd20260611.github.io/NVD-Association/report.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="道路回報｜NVD ROAD HUB" />
+    <meta property="og:description" content="讓道路問題從現場回報走向追蹤與協作。" />
+    <meta property="og:url" content="https://nvd20260611.github.io/NVD-Association/report.html" />
+    <meta property="og:image" content="https://nvd20260611.github.io/NVD-Association/assets/og-image-association-20260614.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="道路回報｜NVD ROAD HUB" />
+    <meta name="twitter:description" content="讓道路問題從現場回報走向追蹤與協作。" />
+    <meta name="twitter:image" content="https://nvd20260611.github.io/NVD-Association/assets/og-image-association-20260614.png" />
+    <link rel="icon" type="image/png" href="assets/nvd-logo-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css?v=20260622-10" />
+  </head>
+  <body class="site-page report-page">
+    <header class="site-header">
+      <nav class="navbar container" aria-label="主要導覽">
+        <a class="brand" href="index.html" aria-label="NVD 協會首頁"><img class="brand-logo brand-logo-light" src="assets/nvd-logo-horizontal-transparent.png" alt="NVD 協會" width="950" height="318" /><img class="brand-logo brand-logo-dark" src="assets/nvd-logo-horizontal-dark-transparent.png" alt="NVD 協會" width="950" height="318" /><span class="brand-text" data-i18n="brandName">NVD 協會</span></a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="開啟網站選單" aria-controls="primaryNav" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="primaryNav" aria-label="網站選單">
+          <a href="index.html" data-i18n="navHome">首頁</a><a href="about.html" data-i18n="navCommunity">關於 NVD</a><a class="active" href="report.html" data-i18n="navReport">道路回報</a><a href="join.html" data-i18n="navLoop">加入共創</a><a href="report.html" data-i18n="navReportNow">立即回報</a>
+          <div class="mobile-language-controls mobile-language-row"><span class="mobile-language-label" data-i18n="mobileLanguageLabel">語言：</span><div class="language-switcher mobile-language-options" aria-label="手機版語言與閱讀模式切換"><button class="language-option lang-btn mobile-lang-btn active" type="button" data-language="zh" aria-pressed="true">中文</button><button class="language-option lang-btn mobile-lang-btn" type="button" data-language="en" aria-pressed="false">EN</button><button class="brand-voice-toggle lang-btn mobile-lang-btn" type="button" data-brand-voice-toggle aria-label="切換為治理版" aria-pressed="false"><span data-brand-voice-label>白話</span></button></div></div>
+        </div>
+        <div class="header-actions"><div class="language-switcher" aria-label="語言與閱讀模式切換"><button class="language-option lang-btn active" type="button" data-language="zh" aria-pressed="true">中文</button><button class="language-option lang-btn" type="button" data-language="en" aria-pressed="false">EN</button><button class="brand-voice-toggle lang-btn" type="button" data-brand-voice-toggle aria-label="切換為治理版" aria-pressed="false"><span data-brand-voice-label>白話</span></button></div><button id="themeToggle" class="theme-toggle" type="button" aria-label="切換深淺色主題"><i class="fa-solid fa-moon"></i></button></div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="resilience" class="resilience-section page-section nvd-demo-section">
+        <div class="container">
+          <div class="resilience-demo-header">
+            <div class="resilience-copy"><p class="eyebrow">NVD ROAD HUB</p><h1>讓道路問題被看見<br />讓修復行動被串起</h1><p>從一鍵回報到資料彙整，NVD 把日常通行阻礙轉成可理解、可追蹤、可協作的公共訊號。</p></div>
+            <div class="demo-step-controls step-bar-container" aria-label="模擬流程">
+              <button class="demo-step-button active" type="button" data-demo-step="0">01 發現問題</button><button class="demo-step-button" type="button" data-demo-step="1">02 自動定位</button><button class="demo-step-button" type="button" data-demo-step="2">03 補充狀況</button><button class="demo-step-button" type="button" data-demo-step="3">04 送出回報</button><button class="demo-step-button" type="button" data-demo-step="4">05 進入追蹤</button>
+            </div>
+          </div>
+
+          <div class="nvd-demo-stage" id="resilienceDemo" data-step="0">
+            <div class="nvd-demo-panel nvd-demo-front">
+              <div class="demo-panel-heading"><span class="demo-status-dot"></span><div><span>NVD Lens</span><strong>現場回報端</strong></div></div>
+              <div class="nvd-mockup-container">
+                <div class="pixel-shell" aria-label="行動裝置模擬畫面">
+                  <div class="camera-hole" aria-hidden="true"></div>
+                  <div class="phone-screen"><div class="screen-content">
+                    <div class="phone-topbar"><span>NVD Lens</span><strong>協作中</strong></div>
+                    <div class="street-frame" role="img" aria-label="高雄市三民區道路現場影像"></div><div class="lidar-scan" aria-hidden="true"></div><div class="scan-line" aria-hidden="true"></div>
+                    <div class="target-box target-lock" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                    <div class="mini-data-overlay" aria-live="polite">LAT: --.---, LNG: ---.---<br />DEPTH: --.-cm<br />CONFIDENCE: --.-%</div>
+                    <div class="phone-ui">
+                      <div class="detection-readout step-card"><strong id="demoStatusPrimary" class="status-text">正在辨識現場道路狀況...</strong><small id="demoStatusSecondary">點擊下方按鈕建立道路回報</small></div>
+                      <div class="phone-map-card step-card"><div class="mini-map" aria-hidden="true"><span class="map-node"></span><span class="map-route route-a"></span><span class="map-route route-b"></span></div><div><strong>自動定位</strong><span id="demoCoordinates">22.6273°N, 120.3014°E</span><div class="gis-progress"><span></span></div></div></div>
+                      <div class="phone-status-list" aria-label="回報狀態"><span><i class="fa-solid fa-road-barrier"></i>路面高低差</span><span><i class="fa-solid fa-person-walking"></i>行人動線受阻</span><span><i class="fa-solid fa-location-dot"></i>已建立回報節點</span></div>
+                      <div class="detection-result-card">偵測到路面狀況：<strong>高低落差</strong></div><p class="phone-submit-hint" id="demoSubmitHint">正在整理照片、位置與補充說明...</p><button class="phone-submit" type="button"><span>一鍵送出回報</span></button>
+                    </div>
+                  </div></div>
+                </div>
+              </div>
+            </div>
+
+            <svg class="data-beam-layer" viewBox="0 0 1000 520" aria-hidden="true" preserveAspectRatio="none"><path class="beam beam-main" d="M185 302 C345 150 615 138 848 248" /><path class="beam beam-secondary" d="M195 350 C398 448 620 114 862 205" /><circle class="beam-particle particle-a" cx="185" cy="302" r="5" /><circle class="beam-particle particle-b" cx="195" cy="350" r="4" /></svg>
+
+            <div class="nvd-demo-panel nvd-demo-backend">
+              <div class="resilience-dashboard" aria-label="道路資料中心">
+                <div class="dashboard-header"><span class="pulse-dot"></span><strong>道路資料中心</strong><small>NVD GIS Control Center / Kaohsiung Node</small></div>
+                <div class="backend-screen">
+                  <div class="score-card dashboard-score-card"><span>回饋追蹤指標</span><strong id="resilienceScore">92.21</strong></div>
+                  <div class="resilience-radar-card">
+                    <svg class="radar-vector-chart" viewBox="0 0 260 260" role="img" aria-label="結構向量雷達圖"><circle cx="130" cy="130" r="102"></circle><circle cx="130" cy="130" r="72"></circle><circle cx="130" cy="130" r="42"></circle><path d="M130 28V232M28 130H232M58 58 202 202M202 58 58 202"></path><polygon points="130,42 207,112 178,205 84,196 54,112"></polygon></svg>
+                    <div class="dashboard-metric-list"><div><span>回報資料</span><strong>持續累積中</strong></div><div><span>整理狀態</span><strong>整理中</strong></div><div><span>成果公開</span><strong>依實際成果</strong></div><div><span>示範區域</span><strong>高雄市三民區</strong></div></div>
+                  </div>
+                  <div class="dashboard-map-card"><div class="taiwan-map" aria-hidden="true"><svg viewBox="0 0 220 320"><path class="taiwan-shape" d="M121 13C95 35 80 70 76 109c-5 45-27 72-36 111-8 38 8 75 43 89 31 12 62-10 77-40 19-39 16-83 30-121 11-31 25-68 7-102-14-26-45-50-76-33Z" /><path class="taiwan-grid" d="M92 64h77M80 121h104M56 184h119M70 248h83M122 19v278M82 88l92 160M174 76 71 260" /></svg><span class="kaohsiung-node"></span></div><div class="backend-toast"><i class="fa-solid fa-circle-check"></i><span>現場回報已建立追蹤紀錄</span></div></div>
+                </div>
+                <div class="receipt-modal" aria-hidden="true"><span class="receipt-kicker">回報收件紀錄</span><strong id="receiptHash">HASH: 0x9f82...</strong><span class="receipt-proof">狀態：已建立追蹤</span><em>已確認</em></div>
+                <div class="log-stream" aria-label="系統同步紀錄"><span>[系統] 高雄節點待命中...</span><span>[系統] 台中資料同步中...</span><span>[系統] 台北資料同步中...</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="loop" class="loop-section container" aria-labelledby="loopTitle">
+        <div class="section-heading centered-heading"><div><p class="eyebrow" data-i18n="loopEyebrow">Friendly Tech Loop</p><h2 id="loopTitle" data-i18n="loopTitle">從回饋到修復：NVD 的友善道路循環</h2><p class="section-lead" data-i18n="loopLead">NVD 不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。</p></div></div>
+        <div class="loop-grid"><article class="loop-card"><span>01</span><h3 data-i18n="loopUseTitle">現場回饋</h3><p data-i18n="loopUseText">從道路阻礙、通行風險與日常不便開始，讓真實需求被看見。</p></article><article class="loop-card"><span>02</span><h3 data-i18n="loopTrustTitle">建立認同</h3><p data-i18n="loopTrustText">回饋被整理、被標記、被理解，才有機會成為修復行動的起點。</p></article><article class="loop-card"><span>03</span><h3 data-i18n="loopCoCreateTitle">參與共創</h3><p data-i18n="loopCoCreateText">邀請居民、專業者、企業與公共部門共同參與，讓下一次通行更安全。</p></article></div>
+      </section>
+    </main>
+
+    <footer id="footer" class="site-footer"><div class="container"><div class="footer-top"><div class="footer-grid" aria-label="頁尾導覽">
+      <section class="footer-column"><h2 data-i18n="footerAboutTitle">認識 NVD</h2><ul><li><a href="about.html#about" data-i18n="footerAboutLink">關於 NVD</a></li><li><a href="about.html#mission" data-i18n="aboutFocusTitle">我們關心什麼</a></li><li><a href="about.html#team" data-i18n="teamTitle">團隊介紹</a></li></ul></section>
+      <section class="footer-column"><h2 data-i18n="footerActionTitle">行動</h2><ul><li><a href="report.html" data-i18n="navReport">道路回報</a></li><li><a href="report.html#loop" data-i18n="footerFeedbackFlow">回饋流程</a></li><li><a href="join.html" data-i18n="navLoop">加入共創</a></li></ul></section>
+      <section class="footer-column"><h2 data-i18n="footerSiteTitle">網站資訊</h2><ul><li><a href="privacy.html" data-i18n="privacyTitle">隱私權政策</a></li><li><a href="terms.html" data-i18n="termsTitle">服務條款</a></li></ul></section>
+    </div></div><div class="footer-bottom"><div class="footer-brand"><span class="footer-logo" aria-hidden="true"><img class="footer-logo-img" src="assets/nvd-logo-icon.png" alt="" /></span><p data-i18n="footerCopy">© 2026 NVD 協會. Road Feedback & Repair Action.</p></div></div></div></footer>
+    <script src="script.js?v=20260622-10"></script>
+  </body>
+</html>
