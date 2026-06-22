@@ -261,6 +261,23 @@ body[data-theme="dark"] .brand-logo-dark {
   font-weight: 900;
 }
 
+.nav-links .nav-report-cta {
+  min-height: 38px;
+  justify-content: center;
+  padding: 0 18px;
+  color: #fff;
+  border-color: var(--brand-orange);
+  border-radius: 999px;
+  background: var(--brand-orange);
+  box-shadow: 0 8px 18px rgba(242, 140, 56, 0.22);
+}
+
+.nav-links .nav-report-cta:hover {
+  color: #fff;
+  border-color: var(--brand-orange-dark);
+  background: var(--brand-orange-dark);
+}
+
 body[data-theme="dark"] .nav-links a.active {
   color: #ffffff;
 }
@@ -4675,6 +4692,13 @@ body[data-theme="dark"] .footer-logo {
   .nav-links a.active {
     color: var(--accent-teal);
     background: rgba(24, 169, 153, 0.1);
+  }
+
+  .nav-links .nav-report-cta {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+    border-radius: 12px;
   }
 
   .tool-grid {

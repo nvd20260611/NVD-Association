@@ -23,7 +23,7 @@ Navbar 主選單固定為：
 - 關於 NVD → `about.html`
 - 道路回報 → `report.html`
 - 加入共創 → `join.html`
-- 立即回報 → `report.html`
+- 立即回報 → `report.html#dashboard`
 
 Footer 固定為：
 
