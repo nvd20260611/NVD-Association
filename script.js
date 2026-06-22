@@ -15,6 +15,7 @@ const translations = {
     navGuide: "使用說明",
     navCommunity: "關於 NVD",
     languageLabel: "選擇語言",
+    mobileLanguageLabel: "語言與閱讀模式",
     themeLightLabel: "切換為淺色主題",
     themeDarkLabel: "切換為深色主題",
     heroKicker: "NVD 協會｜Road Feedback & Repair",
@@ -403,6 +404,7 @@ const translations = {
     navGuide: "Guide",
     navCommunity: "About NVD",
     languageLabel: "Choose language",
+    mobileLanguageLabel: "Language and Reading Mode",
     themeLightLabel: "Switch to light mode",
     themeDarkLabel: "Switch to dark mode",
     heroKicker: "NVD Association｜Road Feedback & Repair",
@@ -940,8 +942,8 @@ const languageMenu = document.querySelector("#languageMenu");
 const languageToggle = document.querySelector("#languageToggle");
 const languageOptions = document.querySelectorAll(".language-option");
 const currentLanguageLabel = document.querySelector("#currentLanguageLabel");
-const brandVoiceToggle = document.querySelector("#brandVoiceToggle");
-const currentBrandVoiceLabel = document.querySelector("#currentBrandVoiceLabel");
+const brandVoiceToggles = document.querySelectorAll("[data-brand-voice-toggle]");
+const brandVoiceLabels = document.querySelectorAll("[data-brand-voice-label]");
 const themeToggle = document.querySelector("#themeToggle");
 const mobileNavToggle = document.querySelector("#mobileNavToggle");
 const siteHeader = document.querySelector(".site-header");
@@ -1753,18 +1755,18 @@ function setBrandVoice(voice, shouldPersist = true) {
 
   const isOfficial = state.brandVoice === "official";
 
-  if (brandVoiceToggle) {
-    brandVoiceToggle.classList.toggle("is-official", isOfficial);
-    brandVoiceToggle.setAttribute("aria-pressed", String(!isOfficial));
-    brandVoiceToggle.setAttribute(
+  brandVoiceToggles.forEach((toggle) => {
+    toggle.classList.toggle("is-official", isOfficial);
+    toggle.setAttribute("aria-pressed", String(!isOfficial));
+    toggle.setAttribute(
       "aria-label",
       isOfficial ? "切換為白話版" : "切換為治理版",
     );
-  }
+  });
 
-  if (currentBrandVoiceLabel) {
-    currentBrandVoiceLabel.textContent = isOfficial ? "治理" : "白話";
-  }
+  brandVoiceLabels.forEach((label) => {
+    label.textContent = isOfficial ? "治理" : "白話";
+  });
 
   applyTranslations();
   renderTools();
@@ -2017,11 +2019,11 @@ if (themeToggle) {
   });
 }
 
-if (brandVoiceToggle) {
-  brandVoiceToggle.addEventListener("click", () => {
+brandVoiceToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
     setBrandVoice(state.brandVoice === "official" ? "plain" : "official");
   });
-}
+});
 
 if (manifestoModeToggle) {
   manifestoModeToggle.addEventListener("click", () => {

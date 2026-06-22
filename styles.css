@@ -389,6 +389,16 @@ body[data-theme="dark"] .nav-links a:hover {
   transform: none;
 }
 
+.mobile-language-controls {
+  display: none;
+}
+
+.mobile-language-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
 .theme-toggle {
   width: 42px;
   height: 42px;
@@ -4748,6 +4758,25 @@ body[data-theme="dark"] .footer-logo {
 
   .backend-screen {
     grid-template-columns: minmax(180px, 0.72fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .header-actions {
+    display: none;
+  }
+
+  .home-page .mobile-language-controls {
+    display: grid;
+    gap: 8px;
+    margin-top: 4px;
+    padding: 12px;
+    border-top: 1px solid var(--border-main);
+  }
+
+  .home-page .mobile-language-controls .language-switcher {
+    width: fit-content;
+    max-width: 100%;
   }
 }
 

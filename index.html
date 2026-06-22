@@ -60,9 +60,9 @@
       integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css?v=20260622-1" />
+    <link rel="stylesheet" href="styles.css?v=20260622-2" />
   </head>
-  <body>
+  <body class="home-page">
     <header class="site-header">
       <nav class="navbar container" aria-label="主要導覽">
         <a class="brand" href="index.html" aria-label="NVD 協會首頁">
@@ -90,6 +90,41 @@
           <a href="manifesto.html" data-i18n="navManifesto">品牌理念</a>
           <a href="join.html" data-i18n="navLoop">加入共創</a>
           <a href="#about" data-i18n="navCommunity">關於 NVD</a>
+          <div class="mobile-language-controls">
+            <span class="mobile-language-label" data-i18n="mobileLanguageLabel"
+              >語言與閱讀模式</span
+            >
+            <div
+              class="language-switcher"
+              aria-label="手機版語言與閱讀模式切換"
+            >
+              <button
+                class="language-option lang-btn active"
+                type="button"
+                data-language="zh"
+                aria-pressed="true"
+              >
+                中文
+              </button>
+              <button
+                class="language-option lang-btn"
+                type="button"
+                data-language="en"
+                aria-pressed="false"
+              >
+                EN
+              </button>
+              <button
+                class="brand-voice-toggle lang-btn"
+                type="button"
+                data-brand-voice-toggle
+                aria-label="切換為治理版"
+                aria-pressed="false"
+              >
+                <span data-brand-voice-label>白話</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="header-actions">
@@ -117,10 +152,11 @@
               id="brandVoiceToggle"
               class="brand-voice-toggle lang-btn"
               type="button"
+              data-brand-voice-toggle
               aria-label="切換為治理版"
               aria-pressed="false"
             >
-              <span id="currentBrandVoiceLabel">白話</span>
+              <span id="currentBrandVoiceLabel" data-brand-voice-label>白話</span>
             </button>
           </div>
 
@@ -865,6 +901,6 @@
       </div>
     </div>
 
-    <script src="script.js?v=20260622-1"></script>
+    <script src="script.js?v=20260622-2"></script>
   </body>
 </html>
