@@ -1021,6 +1021,43 @@ body[data-theme="dark"] .hero-stats strong {
   margin-bottom: 4px;
 }
 
+.team-card__avatar {
+  position: relative;
+  width: 88px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--primary-orange);
+  background: var(--surface-soft);
+  border: 1px solid var(--border-main);
+  border-radius: 8px;
+}
+
+.team-card__placeholder {
+  display: none;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.team-card__avatar--placeholder .team-card__placeholder {
+  display: block;
+}
+
+.team-card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card__photo[hidden] {
+  display: none;
+}
+
 .team-member-icon {
   width: 54px;
   height: 54px;
