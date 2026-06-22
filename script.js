@@ -1578,29 +1578,19 @@ function getToolText(tool) {
   return tool.i18n[state.language] || tool.i18n.zh;
 }
 
-function loadTeamPhotos() {
-  document
-    .querySelectorAll(".team-card__avatar[data-photo]")
-    .forEach((avatar) => {
-      const photo = avatar.dataset.photo;
-      if (!photo) return;
+function initializeTeamPhotoFallbacks() {
+  document.querySelectorAll(".team-card__photo").forEach((image) => {
+    const showPlaceholder = () => {
+      image.hidden = true;
+      image.parentElement?.classList.add("team-card__avatar--placeholder");
+    };
 
-      const image = new Image();
-      image.alt = avatar.dataset.photoAlt || "";
-      image.className = "team-card__photo";
-      image.loading = "lazy";
+    image.addEventListener("error", showPlaceholder);
 
-      image.addEventListener("load", () => {
-        avatar.classList.remove("team-card__avatar--placeholder");
-        avatar.append(image);
-      });
-
-      image.addEventListener("error", () => {
-        avatar.classList.add("team-card__avatar--placeholder");
-      });
-
-      image.src = photo;
-    });
+    if (image.complete && image.naturalWidth === 0) {
+      showPlaceholder();
+    }
+  });
 }
 
 function applyTranslations() {
@@ -2200,7 +2190,7 @@ document.addEventListener("keydown", (event) => {
   if (activeModal) closeLegalModal(activeModal);
 });
 
-loadTeamPhotos();
+initializeTeamPhotoFallbacks();
 setLanguage(state.language);
 setBrandVoice(state.brandVoice, false);
 setTheme(state.theme, Boolean(savedTheme));
