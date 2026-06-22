@@ -4767,16 +4767,45 @@ body[data-theme="dark"] .footer-logo {
   }
 
   .home-page .mobile-language-controls {
-    display: grid;
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
     margin-top: 4px;
-    padding: 12px;
+    padding: 8px 4px;
     border-top: 1px solid var(--border-main);
   }
 
   .home-page .mobile-language-controls .language-switcher {
-    width: fit-content;
+    width: auto;
     max-width: 100%;
+    gap: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .home-page .mobile-language-controls .lang-btn {
+    min-height: 32px;
+    padding: 0 7px;
+    color: var(--text-main);
+    background: transparent;
+    border-radius: 0;
+    font-size: 0.78rem;
+  }
+
+  .home-page .mobile-language-controls .lang-btn:hover,
+  .home-page .mobile-language-controls .language-option.active {
+    color: var(--primary-orange);
+    background: transparent;
+  }
+
+  .home-page .mobile-language-controls .lang-btn + .lang-btn::before {
+    content: "｜";
+    margin-right: 7px;
+    color: var(--border-strong);
+    font-weight: 400;
   }
 }
 
