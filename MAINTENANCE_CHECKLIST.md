@@ -30,6 +30,10 @@
 - [ ] 全站只有一份完整道路回報步驟列表。
 - [ ] 首頁 CTA 連到 `report.html#dashboard`。
 - [ ] ROAD HUB 仍為前端模擬，沒有新增 `fetch`、XHR、`FormData` 或後端端點。
+- [ ] ROAD HUB 有可見的「流程示意，不會傳送或保存資料」聲明。
+- [ ] ROAD HUB 沒有看似真實成果的精確數字、HASH、信心值或精準座標。
+- [ ] ROAD HUB 沒有「已受理、已轉交、已確認、同步政府」等可能造成誤解的文字。
+- [ ] 提交前已確認 staged 檔案不含內部提示、blueprint 或協作規則。
 - [ ] `assets/team/yian-chen.jpg` 未被修改。
 - [ ] 手機版 Navbar 正常。
 - [ ] 桌機版 Navbar 正常。

@@ -230,15 +230,15 @@ const translations = {
     demoTagHeight: "高低差",
     demoTagParking: "違停",
     demoTagGravel: "碎石",
-    demoSubmit: "一鍵送出回報",
-    demoStatusDetecting: "正在辨識現場道路狀況...",
-    demoStatusLocation: "定位完成：高雄市三民區",
-    demoStatusLabel: "偵測到路面狀況：高低落差",
-    demoStatusReady: "正在整理照片、位置與補充說明...",
-    demoStatusEncrypting: "正在建立回報節點與追蹤紀錄...",
-    demoBackendStatus: "道路資料中心 / 高雄節點",
-    demoScoreLabel: "回饋追蹤指標",
-    demoSuccess: "回報已送出，進入追蹤與協作流程。",
+    demoSubmit: "開始體驗流程",
+    demoStatusDetecting: "正在顯示道路狀況辨識流程...",
+    demoStatusLocation: "位置描述示意",
+    demoStatusLabel: "路面狀況標記示意",
+    demoStatusReady: "僅供流程體驗，不會傳送或保存資料。",
+    demoStatusEncrypting: "正在示意整理回報內容...",
+    demoBackendStatus: "道路流程示意區",
+    demoScoreLabel: "流程狀態",
+    demoSuccess: "流程示意完成，未正式送出或受理。",
     loopEyebrow: "Friendly Tech Loop",
     loopTitle: "從回饋到修復：NVD 的友善道路循環",
     loopLead: "不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。",
@@ -638,16 +638,15 @@ const translations = {
     demoTagHeight: "Height gap",
     demoTagParking: "Illegal parking",
     demoTagGravel: "Loose gravel",
-    demoSubmit: "Submit road report",
-    demoStatusDetecting: "Reading field road conditions...",
-    demoStatusLocation: "Location locked: Sanmin District, Kaohsiung",
-    demoStatusLabel: "Road condition detected: height gap",
-    demoStatusReady: "Organizing photo, location, and notes...",
-    demoStatusEncrypting:
-      "Creating report node and tracking record...",
-    demoBackendStatus: "Road Data Center / Kaohsiung Node",
-    demoScoreLabel: "Feedback Tracking Index",
-    demoSuccess: "Report submitted for tracking and collaboration.",
+    demoSubmit: "Start demo flow",
+    demoStatusDetecting: "Showing the road-condition review flow...",
+    demoStatusLocation: "Location description demo",
+    demoStatusLabel: "Road-condition marking demo",
+    demoStatusReady: "Demo only. No data is transmitted or stored.",
+    demoStatusEncrypting: "Organizing demo report content...",
+    demoBackendStatus: "Road flow demo",
+    demoScoreLabel: "Demo status",
+    demoSuccess: "Demo complete. Nothing was submitted or accepted.",
     loopEyebrow: "Friendly Tech Loop",
     loopTitle: "從回饋到修復：NVD 的友善道路循環",
     loopLead: "不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。",
@@ -1084,17 +1083,15 @@ function setResilienceDemoStep(step) {
   });
 
   if (demoCoordinates) {
-    const coordinateOffset = activeStep * 0.0007;
-    demoCoordinates.textContent = `${(22.6273 + coordinateOffset).toFixed(4)}°N, ${(120.3014 + coordinateOffset * 1.3).toFixed(4)}°E`;
+    demoCoordinates.textContent =
+      activeStep >= 1 ? "位置描述示意" : "尚未提供位置";
   }
 
   updateResilienceDemoReadout(activeStep);
 
-  if (activeStep === 4) {
-    animateResilienceScore(92.21, 92.5);
-  } else if (resilienceScore) {
+  if (resilienceScore) {
     cancelAnimationFrame(resilienceScoreFrameId);
-    resilienceScore.textContent = "92.21";
+    resilienceScore.textContent = activeStep === 4 ? "示意完成" : "示意中";
   }
 }
 
@@ -1120,14 +1117,14 @@ function addLogLine(text) {
 function addCrowdPulse() {
   if (!taiwanMap || resilienceDemo?.classList.contains("is-submitting")) return;
 
-  const cities = ["台北", "台中", "台南", "桃園", "新竹", "屏東"];
-  const city = cities[Math.floor(Math.random() * cities.length)];
+  const demoItems = ["位置描述", "通行影響", "障礙類型", "照片資訊"];
+  const demoItem = demoItems[Math.floor(Math.random() * demoItems.length)];
   const pulse = document.createElement("span");
   pulse.className = "crowd-pulse";
   pulse.style.left = `${28 + Math.random() * 48}%`;
   pulse.style.top = `${18 + Math.random() * 62}%`;
   taiwanMap.appendChild(pulse);
-  addLogLine(`[系統] ${city} 資料同步中...`);
+  addLogLine(`[示意] ${demoItem}整理中...`);
   pulse.addEventListener("animationend", () => pulse.remove(), { once: true });
 }
 
@@ -1142,7 +1139,7 @@ function typeReceiptHash() {
   if (!receiptHash) return;
 
   window.clearInterval(receiptTypingTimerId);
-  const hash = `HASH 0x${Math.random().toString(16).slice(2, 10).toUpperCase()}${Date.now().toString(16).slice(-8).toUpperCase()}`;
+  const hash = "示意編號：不產生正式紀錄";
   let index = 0;
   receiptHash.textContent = "";
   receiptTypingTimerId = window.setInterval(() => {
@@ -1227,10 +1224,8 @@ function triggerAutoDetection() {
   const updateMiniData = () => {
     if (!miniDataOverlay) return;
 
-    const lngNoise = Math.floor(Math.random() * 900) + 100;
-    const depth = (10 + Math.random() * 8).toFixed(1);
-    const confidence = (90 + Math.random() * 8.9).toFixed(1);
-    miniDataOverlay.innerHTML = `LAT: 22.639, LNG: 120.${lngNoise}<br>DEPTH: ${depth}cm<br>CONFIDENCE: ${confidence}%`;
+    miniDataOverlay.innerHTML =
+      "位置描述：示意中<br>路面狀況：示意中<br>僅供流程體驗";
   };
 
   updateMiniData();
@@ -1243,13 +1238,13 @@ function triggerAutoDetection() {
     demoStage?.classList.remove("scanning");
     if (miniDataOverlay) {
       miniDataOverlay.innerHTML =
-        "LAT: 22.639, LNG: 120.327<br>DEPTH: 16.8cm<br>CONFIDENCE: 98.7%";
+        "位置描述：示意完成<br>路面狀況：示意完成<br>不會保存資料";
     }
     statusText.innerHTML =
       '偵測到路面狀況：<span class="font-bold text-[#10b981]">高低落差</span>';
     step03Label.classList.add("active-step");
     resultCard?.classList.add("is-visible");
-    showToast("定位完成：已建立高低落差回報節點");
+    showToast("示意標記完成，未傳送或保存資料");
   }, 1500);
 }
 
@@ -1281,12 +1276,12 @@ function triggerResilienceSubmit() {
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(1);
-    addLogLine("[系統] 自動定位高雄市三民區...");
+    addLogLine("[示意] 位置描述整理中...");
   }, 420);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(2);
-    addLogLine("[系統] 偵測到高低落差...");
+    addLogLine("[示意] 路面狀況標記中...");
   }, 980);
 
   queueResilienceTimeline(() => {
@@ -1294,12 +1289,12 @@ function triggerResilienceSubmit() {
     if (demoSubmitHint) {
       demoSubmitHint.textContent = t("demoStatusEncrypting");
     }
-    addLogLine("[系統] 高雄三民區現場資料上傳中...");
+    addLogLine("[示意] 回報內容整理中，未傳送資料...");
   }, 1540);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(4);
-    addLogLine("[系統] 高雄節點已精準定位...");
+    addLogLine("[示意] 流程展示完成，未建立正式紀錄...");
 
     queueResilienceTimeline(() => {
       resilienceDemo.classList.add("show-receipt");
@@ -1341,16 +1336,14 @@ function setResilienceDemoStep(step) {
 
   if (demoCoordinates) {
     demoCoordinates.textContent =
-      activeStep >= 1 ? "22.6390°N, 120.3270°E" : "22.6273°N, 120.3014°E";
+      activeStep >= 1 ? "位置描述示意" : "尚未提供位置";
   }
 
   updateResilienceDemoReadout(activeStep);
 
-  if (activeStep === 4) {
-    animateResilienceScore(92.21, 92.5);
-  } else if (resilienceScore) {
+  if (resilienceScore) {
     cancelAnimationFrame(resilienceScoreFrameId);
-    resilienceScore.textContent = "92.21";
+    resilienceScore.textContent = activeStep === 4 ? "示意完成" : "示意中";
   }
 }
 
@@ -1378,14 +1371,14 @@ function addLogLine(text) {
 function addCrowdPulse() {
   if (!taiwanMap || resilienceDemo?.classList.contains("is-submitting")) return;
 
-  const cities = ["台北", "台中", "台南", "高雄", "新竹", "屏東"];
-  const city = cities[Math.floor(Math.random() * cities.length)];
+  const demoItems = ["位置描述", "通行影響", "障礙類型", "照片資訊"];
+  const demoItem = demoItems[Math.floor(Math.random() * demoItems.length)];
   const pulse = document.createElement("span");
   pulse.className = "crowd-pulse";
   pulse.style.left = `${28 + Math.random() * 48}%`;
   pulse.style.top = `${18 + Math.random() * 62}%`;
   taiwanMap.appendChild(pulse);
-  addLogLine(`[系統] ${city} 資料同步中...`);
+  addLogLine(`[示意] ${demoItem}整理中...`);
   pulse.addEventListener("animationend", () => pulse.remove(), { once: true });
 }
 
@@ -1400,7 +1393,7 @@ function typeReceiptHash() {
   if (!receiptHash) return;
 
   window.clearInterval(receiptTypingTimerId);
-  const hash = `HASH: 0x9f82${Math.random().toString(16).slice(2, 10).toUpperCase()}${Date.now().toString(16).slice(-6).toUpperCase()}`;
+  const hash = "示意編號：不產生正式紀錄";
   let index = 0;
   receiptHash.textContent = "";
   receiptTypingTimerId = window.setInterval(() => {
@@ -1416,18 +1409,18 @@ function updateResilienceDemoReadout(step, overrideText) {
   if (!demoStatusPrimary || !demoStatusSecondary) return;
 
   const primaryTexts = [
-    "正在辨識現場道路狀況...",
-    "定位完成：高雄市三民區",
-    "偵測到路面狀況：高低落差",
-    "正在建立回報節點與追蹤紀錄...",
-    "回報已送出，進入追蹤與協作流程。",
+    "正在顯示道路狀況辨識流程...",
+    "位置描述示意",
+    "路面狀況標記示意",
+    "正在示意整理回報內容...",
+    "流程示意完成，未正式送出或受理。",
   ];
   const secondaryTexts = [
-    "點擊下方按鈕建立道路回報",
-    "GIS 座標已取得，正在比對道路特徵",
-    "已完成現場狀況判讀",
-    "資料正在送往道路資料中心",
-    "高雄三民節點已完成同步",
+    "點擊下方按鈕體驗道路回報流程",
+    "位置資訊僅為介面示意",
+    "此判讀結果僅供流程展示",
+    "不會傳送或保存任何資料",
+    "未建立正式紀錄",
   ];
 
   demoStatusPrimary.textContent =
@@ -1435,7 +1428,7 @@ function updateResilienceDemoReadout(step, overrideText) {
   demoStatusSecondary.textContent = secondaryTexts[step] || secondaryTexts[0];
 
   if (demoSubmitHint) {
-    demoSubmitHint.textContent = "正在整理照片、位置與補充說明...";
+    demoSubmitHint.textContent = "僅供流程體驗，不會傳送或保存資料。";
   }
 }
 
@@ -1485,10 +1478,8 @@ function triggerAutoDetection() {
   const updateMiniData = () => {
     if (!miniDataOverlay) return;
 
-    const lngNoise = Math.floor(Math.random() * 900) + 100;
-    const depth = (10 + Math.random() * 8).toFixed(1);
-    const confidence = (90 + Math.random() * 8.9).toFixed(1);
-    miniDataOverlay.innerHTML = `LAT: 22.639, LNG: 120.${lngNoise}<br>DEPTH: ${depth}cm<br>CONFIDENCE: ${confidence}%`;
+    miniDataOverlay.innerHTML =
+      "位置描述：示意中<br>路面狀況：示意中<br>僅供流程體驗";
   };
 
   updateMiniData();
@@ -1500,13 +1491,13 @@ function triggerAutoDetection() {
     targetBox.classList.add("target-locked");
     if (miniDataOverlay) {
       miniDataOverlay.innerHTML =
-        "LAT: 22.639, LNG: 120.327<br>DEPTH: 16.8cm<br>CONFIDENCE: 98.7%";
+        "位置描述：示意完成<br>路面狀況：示意完成<br>不會保存資料";
     }
     statusText.innerHTML =
       '偵測到路面狀況：<span class="font-bold text-[#10b981]">高低落差</span>';
     resultCard?.classList.add("is-visible");
     if (typeof showToast === "function") {
-      showToast("定位完成：已建立高低落差回報節點");
+      showToast("示意標記完成，未傳送或保存資料");
     }
   }, 1500);
 }
@@ -1522,7 +1513,7 @@ function resetAutoDetectionUi() {
     .querySelector(".detection-result-card")
     ?.classList.remove("is-visible");
   if (receiptHash) {
-    receiptHash.textContent = "HASH: 0x9f82...";
+    receiptHash.textContent = "示意編號：不產生正式紀錄";
   }
 }
 
@@ -1542,17 +1533,17 @@ function triggerResilienceSubmit() {
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(1);
-    addLogLine("[系統] 高雄市三民區 GIS 座標鎖定中...");
+    addLogLine("[示意] 位置描述整理中...");
   }, 1500);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(2);
-    addLogLine("[系統] 現場狀況已判讀：高低落差");
+    addLogLine("[示意] 路面狀況標記中...");
   }, 3000);
 
   queueResilienceTimeline(() => {
-    runResilienceTimelineStep(3, "正在建立回報節點與追蹤紀錄...");
-    addLogLine("[系統] 現場資料傳送至道路資料中心");
+    runResilienceTimelineStep(3, "正在示意整理回報內容...");
+    addLogLine("[示意] 回報內容整理中，未傳送資料...");
   }, 4500);
 
   queueResilienceTimeline(() => {
@@ -1560,7 +1551,7 @@ function triggerResilienceSubmit() {
     resilienceDemo.classList.remove("scanning");
     resilienceDemo.classList.add("show-receipt");
     typeReceiptHash();
-    addLogLine("[系統] 追蹤紀錄已建立");
+    addLogLine("[示意] 流程展示完成，未建立正式紀錄");
 
     queueResilienceTimeline(() => {
       resilienceDemo.classList.remove("show-receipt");

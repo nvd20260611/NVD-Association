@@ -46,7 +46,7 @@
           <div class="resilience-demo-header">
             <div class="resilience-copy"><p class="eyebrow">NVD ROAD HUB</p><h1>讓道路問題被看見<br />讓修復行動被串起</h1><p>從一鍵回報到資料彙整，NVD 把日常通行阻礙轉成可理解、可追蹤、可協作的公共訊號。</p></div>
             <div class="demo-step-controls step-bar-container" aria-label="模擬流程">
-              <button class="demo-step-button active" type="button" data-demo-step="0">01 發現問題</button><button class="demo-step-button" type="button" data-demo-step="1">02 自動定位</button><button class="demo-step-button" type="button" data-demo-step="2">03 補充狀況</button><button class="demo-step-button" type="button" data-demo-step="3">04 送出回報</button><button class="demo-step-button" type="button" data-demo-step="4">05 進入追蹤</button>
+              <button class="demo-step-button active" type="button" data-demo-step="0">01 發現問題</button><button class="demo-step-button" type="button" data-demo-step="1">02 位置示意</button><button class="demo-step-button" type="button" data-demo-step="2">03 補充狀況</button><button class="demo-step-button" type="button" data-demo-step="3">04 示意整理</button><button class="demo-step-button" type="button" data-demo-step="4">05 查看示意</button>
             </div>
           </div>
 
@@ -54,6 +54,7 @@
             <div class="report-action-card__content">
               <p class="eyebrow">回報前準備</p>
               <h2 class="report-action-card__title">拍照、定位、補充說明</h2>
+              <p class="report-action-card__desc" role="note"><strong>流程示意：目前此區不會傳送、保存或正式受理任何資料。正式回報管道將依 NVD 後續作業流程逐步開放。</strong></p>
               <p class="report-action-card__desc">把你遇到的道路障礙，整理成可以被理解、討論與改善的公共資訊。</p>
               <ul class="report-steps" aria-label="道路障礙回報步驟">
                 <li>拍下障礙照片</li>
@@ -61,7 +62,7 @@
                 <li>補充通行影響</li>
               </ul>
             </div>
-            <a class="primary-link-btn report-action-card__cta" href="report.html#dashboard" aria-label="立即回報道路障礙">立即回報 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="primary-link-btn report-action-card__cta" href="report.html#resilienceDemo" aria-label="體驗道路回報流程示意">體驗回報流程 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
 
           <div class="nvd-demo-stage" id="resilienceDemo" data-step="0">
@@ -71,15 +72,15 @@
                 <div class="pixel-shell" aria-label="行動裝置模擬畫面">
                   <div class="camera-hole" aria-hidden="true"></div>
                   <div class="phone-screen"><div class="screen-content">
-                    <div class="phone-topbar"><span>NVD Lens</span><strong>協作中</strong></div>
-                    <div class="street-frame" role="img" aria-label="高雄市三民區道路現場影像"></div><div class="lidar-scan" aria-hidden="true"></div><div class="scan-line" aria-hidden="true"></div>
+                    <div class="phone-topbar"><span>NVD Lens</span><strong>流程示意</strong></div>
+                    <div class="street-frame" role="img" aria-label="道路現場示意影像"></div><div class="lidar-scan" aria-hidden="true"></div><div class="scan-line" aria-hidden="true"></div>
                     <div class="target-box target-lock" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-                    <div class="mini-data-overlay" aria-live="polite">LAT: --.---, LNG: ---.---<br />DEPTH: --.-cm<br />CONFIDENCE: --.-%</div>
+                    <div class="mini-data-overlay" aria-live="polite">位置描述：示意中<br />路面狀況：示意中<br />僅供流程體驗</div>
                     <div class="phone-ui">
                       <div class="detection-readout step-card"><strong id="demoStatusPrimary" class="status-text">正在辨識現場道路狀況...</strong><small id="demoStatusSecondary">點擊下方按鈕建立道路回報</small></div>
-                      <div class="phone-map-card step-card"><div class="mini-map" aria-hidden="true"><span class="map-node"></span><span class="map-route route-a"></span><span class="map-route route-b"></span></div><div><strong>自動定位</strong><span id="demoCoordinates">22.6273°N, 120.3014°E</span><div class="gis-progress"><span></span></div></div></div>
-                      <div class="phone-status-list" aria-label="回報狀態"><span><i class="fa-solid fa-road-barrier"></i>路面高低差</span><span><i class="fa-solid fa-person-walking"></i>行人動線受阻</span><span><i class="fa-solid fa-location-dot"></i>已建立回報節點</span></div>
-                      <div class="detection-result-card">偵測到路面狀況：<strong>高低落差</strong></div><p class="phone-submit-hint" id="demoSubmitHint">正在整理照片、位置與補充說明...</p><button class="phone-submit" type="button"><span>一鍵送出回報</span></button>
+                      <div class="phone-map-card step-card"><div class="mini-map" aria-hidden="true"><span class="map-node"></span><span class="map-route route-a"></span><span class="map-route route-b"></span></div><div><strong>位置描述</strong><span id="demoCoordinates">位置描述示意</span><div class="gis-progress"><span></span></div></div></div>
+                      <div class="phone-status-list" aria-label="流程示意狀態"><span><i class="fa-solid fa-road-barrier"></i>路面高低差示意</span><span><i class="fa-solid fa-person-walking"></i>通行影響示意</span><span><i class="fa-solid fa-location-dot"></i>未建立正式紀錄</span></div>
+                      <div class="detection-result-card">路面狀況標記：<strong>示意內容</strong></div><p class="phone-submit-hint" id="demoSubmitHint">僅供流程體驗，不會傳送或保存資料。</p><button class="phone-submit" type="button"><span>開始體驗流程</span></button>
                     </div>
                   </div></div>
                 </div>
@@ -89,18 +90,18 @@
             <svg class="data-beam-layer" viewBox="0 0 1000 520" aria-hidden="true" preserveAspectRatio="none"><path class="beam beam-main" d="M185 302 C345 150 615 138 848 248" /><path class="beam beam-secondary" d="M195 350 C398 448 620 114 862 205" /><circle class="beam-particle particle-a" cx="185" cy="302" r="5" /><circle class="beam-particle particle-b" cx="195" cy="350" r="4" /></svg>
 
             <div class="nvd-demo-panel nvd-demo-backend">
-              <div id="dashboard" class="resilience-dashboard" aria-label="道路資料中心">
-                <div class="dashboard-header"><span class="pulse-dot"></span><strong>道路資料中心</strong><small>NVD GIS Control Center / Kaohsiung Node</small></div>
+              <div id="dashboard" class="resilience-dashboard" aria-label="道路流程示意區">
+                <div class="dashboard-header"><span class="pulse-dot"></span><strong>道路流程示意區</strong><small>NVD ROAD HUB / FLOW DEMO</small></div>
                 <div class="backend-screen">
-                  <div class="score-card dashboard-score-card"><span>回饋追蹤指標</span><strong id="resilienceScore">92.21</strong></div>
+                  <div class="score-card dashboard-score-card"><span>流程狀態</span><strong id="resilienceScore">示意中</strong></div>
                   <div class="resilience-radar-card">
                     <svg class="radar-vector-chart" viewBox="0 0 260 260" role="img" aria-label="結構向量雷達圖"><circle cx="130" cy="130" r="102"></circle><circle cx="130" cy="130" r="72"></circle><circle cx="130" cy="130" r="42"></circle><path d="M130 28V232M28 130H232M58 58 202 202M202 58 58 202"></path><polygon points="130,42 207,112 178,205 84,196 54,112"></polygon></svg>
-                    <div class="dashboard-metric-list"><div><span>回報資料</span><strong>持續累積中</strong></div><div><span>整理狀態</span><strong>整理中</strong></div><div><span>成果公開</span><strong>依實際成果</strong></div><div><span>示範區域</span><strong>高雄市三民區</strong></div></div>
+                    <div class="dashboard-metric-list"><div><span>資料狀態</span><strong>不保存資料</strong></div><div><span>整理狀態</span><strong>示意整理</strong></div><div><span>受理狀態</span><strong>未正式受理</strong></div><div><span>位置資訊</span><strong>位置描述示意</strong></div></div>
                   </div>
-                  <div class="dashboard-map-card"><div class="taiwan-map" aria-hidden="true"><svg viewBox="0 0 220 320"><path class="taiwan-shape" d="M121 13C95 35 80 70 76 109c-5 45-27 72-36 111-8 38 8 75 43 89 31 12 62-10 77-40 19-39 16-83 30-121 11-31 25-68 7-102-14-26-45-50-76-33Z" /><path class="taiwan-grid" d="M92 64h77M80 121h104M56 184h119M70 248h83M122 19v278M82 88l92 160M174 76 71 260" /></svg><span class="kaohsiung-node"></span></div><div class="backend-toast"><i class="fa-solid fa-circle-check"></i><span>現場回報已建立追蹤紀錄</span></div></div>
+                  <div class="dashboard-map-card"><div class="taiwan-map" aria-hidden="true"><svg viewBox="0 0 220 320"><path class="taiwan-shape" d="M121 13C95 35 80 70 76 109c-5 45-27 72-36 111-8 38 8 75 43 89 31 12 62-10 77-40 19-39 16-83 30-121 11-31 25-68 7-102-14-26-45-50-76-33Z" /><path class="taiwan-grid" d="M92 64h77M80 121h104M56 184h119M70 248h83M122 19v278M82 88l92 160M174 76 71 260" /></svg><span class="kaohsiung-node"></span></div><div class="backend-toast"><i class="fa-solid fa-circle-check"></i><span>流程示意已完成，未建立正式紀錄</span></div></div>
                 </div>
-                <div class="receipt-modal" aria-hidden="true"><span class="receipt-kicker">回報收件紀錄</span><strong id="receiptHash">HASH: 0x9f82...</strong><span class="receipt-proof">狀態：已建立追蹤</span><em>已確認</em></div>
-                <div class="log-stream" aria-label="系統同步紀錄"><span>[系統] 高雄節點待命中...</span><span>[系統] 台中資料同步中...</span><span>[系統] 台北資料同步中...</span></div>
+                <div class="receipt-modal" aria-hidden="true"><span class="receipt-kicker">流程示意紀錄</span><strong id="receiptHash">示意編號：不產生正式紀錄</strong><span class="receipt-proof">狀態：僅供體驗</span><em>示意狀態</em></div>
+                <div class="log-stream" aria-label="流程示意整理紀錄"><span>[示意] 流程待命中...</span><span>[示意] 通行影響整理中...</span><span>[示意] 位置描述整理中...</span></div>
               </div>
             </div>
           </div>
@@ -119,6 +120,6 @@
       <section class="footer-column"><h2 data-i18n="footerActionTitle">行動</h2><ul><li><a href="report.html" data-i18n="navReport">道路回報</a></li><li><a href="report.html#loop" data-i18n="footerFeedbackFlow">回饋流程</a></li><li><a href="join.html" data-i18n="navLoop">加入共創</a></li></ul></section>
       <section class="footer-column"><h2 data-i18n="footerSiteTitle">網站資訊</h2><ul><li><a href="privacy.html" data-i18n="privacyTitle">隱私權政策</a></li><li><a href="terms.html" data-i18n="termsTitle">服務條款</a></li></ul></section>
     </div></div><div class="footer-bottom"><div class="footer-brand"><span class="footer-logo" aria-hidden="true"><img class="footer-logo-img" src="assets/nvd-logo-icon.png" alt="" /></span><p data-i18n="footerCopy">© 2026 NVD 協會. Road Feedback & Repair Action.</p></div></div></div></footer>
-    <script src="script.js?v=20260622-12"></script>
+    <script src="script.js?v=20260623-14"></script>
   </body>
 </html>
