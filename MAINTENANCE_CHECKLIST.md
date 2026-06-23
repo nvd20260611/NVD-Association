@@ -30,6 +30,7 @@
 - [ ] 全站只有一份完整道路回報步驟列表。
 - [ ] 首頁 CTA 連到 `report.html#dashboard`。
 - [ ] ROAD HUB 仍為前端模擬，沒有新增 `fetch`、XHR、`FormData` 或後端端點。
+- [ ] `script.js` 沒有重複的 ROAD HUB 頂層函式宣告。
 - [ ] ROAD HUB 有可見的「流程示意，不會傳送或保存資料」聲明。
 - [ ] ROAD HUB 沒有看似真實成果的精確數字、HASH、信心值或精準座標。
 - [ ] ROAD HUB 沒有「已受理、已轉交、已確認、同步政府」等可能造成誤解的文字。
