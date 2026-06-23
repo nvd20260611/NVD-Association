@@ -80,6 +80,14 @@ Footer 固定為：
 4. 未來新增正式表單時，需同步檢查 CSP 的 `form-action`。
 5. 未來新增送件端點前，需先補齊隱私權政策、服務條款與個人資料告知流程。
 
+### 道路回報內容維護規則
+
+- `index.html` 只維護道路回報入口摘要，不放完整回報流程。
+- `report.html` 是完整道路回報流程、道路回報行動卡與 ROAD HUB 的主要維護頁。
+- 不要把完整回報流程複製回 `index.html`。
+- 「拍照、定位、補充說明」等流程內容只在 `report.html` 修改。
+- 首頁 CTA 統一連到 `report.html#dashboard`。
+
 ## 部署與檢查
 
 GitHub Pages 建議設定：

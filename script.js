@@ -28,7 +28,7 @@ const translations = {
       "NVD 以移動主權與社會韌性為核心，把真實通行經驗轉化為可理解、可追蹤、可改善的公共訊號。",
     homeReportTitle: "從一次道路回報開始",
     homeReportLead:
-      "看見道路障礙如何影響輪椅、嬰兒車與行人，並了解 NVD 如何整理回饋、建立追蹤與推動改善。",
+      "看見道路障礙如何影響輪椅、嬰兒車與行人，並前往道路回報頁了解流程。",
     searchLabel: "搜尋道路行動、理念或參與方式",
     searchPlaceholder: "搜尋道路行動、理念或參與方式...",
     statsProcessedFiles: "友善行動節點",
@@ -426,7 +426,7 @@ const translations = {
       "NVD centers mobility autonomy and social resilience, turning lived travel experiences into public signals that can be understood, tracked, and improved.",
     homeReportTitle: "Start with one road report",
     homeReportLead:
-      "See how road barriers affect wheelchair users, strollers, and pedestrians, and how NVD organizes feedback for tracking and improvement.",
+      "See how road barriers affect wheelchair users, strollers, and pedestrians, then visit the road report page to learn about the process.",
     searchLabel: "Search by tool name, tag, or pain point",
     searchPlaceholder: "Search by tool name, tag, or pain point...",
     statsProcessedFiles: "friendly action nodes",

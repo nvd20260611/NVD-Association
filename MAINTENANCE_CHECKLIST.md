@@ -24,6 +24,11 @@
 - [ ] 服務條款連到 `terms.html`。
 - [ ] `report.html#dashboard` 可定位。
 - [ ] `report.html#loop` 可定位。
+- [ ] `index.html` 沒有完整道路回報流程，只保留入口摘要。
+- [ ] `report.html` 保留完整道路回報行動卡。
+- [ ] 全站只有一張「拍照、定位、補充說明」卡片。
+- [ ] 全站只有一份完整道路回報步驟列表。
+- [ ] 首頁 CTA 連到 `report.html#dashboard`。
 - [ ] ROAD HUB 仍為前端模擬，沒有新增 `fetch`、XHR、`FormData` 或後端端點。
 - [ ] `assets/team/yian-chen.jpg` 未被修改。
 - [ ] 手機版 Navbar 正常。

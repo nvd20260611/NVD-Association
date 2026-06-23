@@ -1124,6 +1124,54 @@ body[data-theme="dark"] .hero-stats strong {
   line-height: 1.9;
 }
 
+.report-action-card {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+  margin: 32px 0 40px;
+}
+
+.report-action-card__title {
+  margin: 8px 0 10px;
+  color: var(--text-main);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+}
+
+.report-action-card__desc {
+  color: var(--text-muted);
+}
+
+.report-steps {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.report-steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.report-steps li::before {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  content: "";
+  border-radius: 50%;
+  background: var(--brand-orange);
+}
+
+.report-action-card__cta {
+  white-space: nowrap;
+}
+
 .hub-dashboard-section {
   padding: 96px 0;
 }
@@ -4823,6 +4871,15 @@ body[data-theme="dark"] .footer-logo {
 }
 
 @media (max-width: 768px) {
+
+  .report-action-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .report-action-card__cta {
+    width: 100%;
+  }
   .header-actions {
     display: none;
   }
