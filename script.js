@@ -497,32 +497,6 @@ const translations = {
     frictionCardThreeTitle: "每個人都會走向不同階段",
     frictionCardThreeText:
       "當我們走到生命後半段，難道就注定被現代科技拋棄，只能對著電腦發愁嗎？",
-    manifestoEyebrow: "The Sovereign Manifesto",
-    manifestoTitle: "核心主權宣言",
-    manifestoQuote: "「現在的我們，就是未來的你們。」",
-    manifestoLead:
-      "我們不是在乞求同情，而是在以全人先驅者的姿態，為人類提前建設「社會友善韌性工程」。當世界還在討論被動扶助，NVD 已經在定義規則。",
-    manifestoNatureSymbol: "N (Nature) —— 天生、本然、無所畏懼。",
-    manifestoNatureTitle: "天生玩家",
-    manifestoNatureText:
-      "生命不是一場等待被拯救的苦旅，而是一場頂級的硬核遊戲。打破體制設定的局限，我們以天生的姿態，在社會韌性的沙盒中重新定義玩法。我們是規則的打破者，也是全新路徑的開路者。",
-    manifestoValueSymbol: "V (Value) —— 本我價值、不容置疑。",
-    manifestoValueTitle: "本我定值",
-    manifestoValueText:
-      "拒絕標籤，拒絕被社會殘留的估值系統定義。我們的存在，本身就是最高級別的資產。在集體意識共鳴的浪潮中，我們將被動的弱勢逆向轉譯，奪回價值的終極定價權。",
-    manifestoDaysSymbol: "D (Days) —— 跨越過去、現在與未來的日子。",
-    manifestoDaysTitle: "無礙永日",
-    manifestoDaysText:
-      "這不是一場短期的倡議，而是一場跨越時間軸的社會韌性工程。我們所建造的未來，是讓每一個推著嬰兒車的母親、意外受傷的強者、以及終將老去的靈魂，都能在時間的流逝中，擁有無所阻礙的永恆日常。",
-    manifestoLogicSymbol: "Sovereign Logic —— 規則定義者。",
-    manifestoLogicTitle: "全人先驅",
-    manifestoLogicText:
-      "領先時代的步伐，我們率先踏入高階資產工程學的實踐場。以傲然的姿態，站在人類集體演化的前沿。這不是為了特定族群而做的妥協，這是為全人類提前建構的社會韌性防線。",
-    manifestoResilienceSymbol:
-      "Social Resilience Engineering —— 社會韌性工程。",
-    manifestoResilienceTitle: "韌性架構",
-    manifestoResilienceText:
-      "拒絕溫吞的文青呢喃，我們用跨域邏輯進行結構性壓制。將傳統公益的碎步，升級為系統化的社會韌性架構。NVD 是地基、是框架、是未來社會運行的頂層協議。",
     visitSite: "直達網站",
     favoriteTool: "收藏 {name}",
     footerCopy:
@@ -1160,31 +1134,6 @@ const translations = {
     frictionCardThreeTitle: "Everyone Journeys Through Different Stages",
     frictionCardThreeText:
       "As we reach the later stages of life, are we destined to be abandoned by modern tech, left to struggle in front of a computer screen?",
-    manifestoEyebrow: "The Sovereign Manifesto",
-    manifestoTitle: "Core Sovereign Manifesto",
-    manifestoQuote: '"Who we are now is who you will become."',
-    manifestoLead:
-      "We are not asking for sympathy. We stand as whole-person pioneers, building social-friendly resilience engineering ahead of time. While the world still discusses passive support, NVD is already defining the rules.",
-    manifestoNatureSymbol: "N (Nature) — innate, original, fearless.",
-    manifestoNatureTitle: "Born Players",
-    manifestoNatureText:
-      "Life is not a bitter path waiting for rescue. It is a high-level hard-mode game. By breaking the limits of default systems, we redefine play inside the sandbox of social resilience. We are rule breakers and builders of a new track.",
-    manifestoValueSymbol: "V (Value) — inherent value beyond dispute.",
-    manifestoValueTitle: "Intrinsic Value",
-    manifestoValueText:
-      "We reject labels and refuse to be priced by outdated social valuation systems. Our existence is already a high-level asset. Through shared consciousness, we reverse passive disadvantage and reclaim the ultimate right to define value.",
-    manifestoDaysSymbol: "D (Days) — days across past, present, and future.",
-    manifestoDaysTitle: "Barrier-Free Days",
-    manifestoDaysText:
-      "This is not a short-term campaign. It is a social resilience project across time. The future we build lets mothers with strollers, strong people facing injury, and every aging soul keep an everyday life without barriers.",
-    manifestoLogicSymbol: "Sovereign Logic — rule definers.",
-    manifestoLogicTitle: "Whole-Person Pioneers",
-    manifestoLogicText:
-      "Ahead of our era, we enter the practice field of advanced asset engineering. This is not a compromise for a specific group. It is a social resilience defense line built early for all humanity.",
-    manifestoResilienceSymbol: "Social Resilience Engineering.",
-    manifestoResilienceTitle: "Resilience Architecture",
-    manifestoResilienceText:
-      "We move beyond gentle slogans and use cross-domain logic to reshape structures. We upgrade scattered charity into a systematic architecture for social resilience. NVD is the foundation, framework, and future protocol for society.",
     visitSite: "Visit site",
     favoriteTool: "Save {name}",
     footerCopy:
@@ -1503,15 +1452,11 @@ const roadHubPhoneImpact = document.querySelector('[data-i18n="demoPhoneImpactVa
 const roadHubLatestObservation = document.querySelector('[data-i18n="demoLatestObservation"]');
 const roadHubLatestCard = document.querySelector(".dashboard-map-card");
 const roadHubListItems = document.querySelectorAll(".hub-demo-list-grid li");
-const manifestoModeToggle = document.querySelector("#manifestoModeToggle");
-const manifestoGrid = document.querySelector("#manifestoGrid");
-const manifestoCards = document.querySelectorAll("[data-manifesto-card]");
 let resilienceScoreFrameId;
 let resilienceResetTimerId;
 let crowdSyncTimerId;
 let receiptTypingTimerId;
 let resilienceTimelineTimers = [];
-let manifestoMode = "hardcore";
 let roadHubObservationIndex = 0;
 const roadHubDemoCountKey = "nvdRoadHubDemoCount";
 const roadHubDemoBaseCount = 12846;
@@ -1594,34 +1539,6 @@ const roadHubObservationSamples = [
     },
     barrierKey: "demoBarrierOther",
     districtKey: "demoBarrierOther",
-  },
-];
-
-const manifestoModeContent = [
-  {
-    hardcore: "打破體制設定的局限，在社會韌性的沙盒中重新定義玩法...",
-    human:
-      "我們不只抱怨路不平，而是把路上的障礙整理成可被看見、可被追蹤的公共資料。",
-  },
-  {
-    hardcore: "拒絕標籤...我們將被動的弱勢逆向轉譯，奪回價值的終極定價權。",
-    human:
-      "輪椅族不是負擔，而是城市裡最強的『無礙測試員』。我們累積的資料，是推動公共改善的重要資產。",
-  },
-  {
-    hardcore: "這是一場跨越時間軸的社會韌性工程...擁有所向披靡的永恆日常。",
-    human:
-      "今天我們幫推輪椅的人開路，明天就是幫推嬰兒車的父母、以及終將老去的你我鋪路。",
-  },
-  {
-    hardcore: "率先踏入高階資產工程學的實踐場...為全人類提前建構防線。",
-    human:
-      "這不是同情做善事，而是用科技提前為全台灣建立一條『不會讓人受傷』的安全防線。",
-  },
-  {
-    hardcore: "我們用跨域邏輯進行結構性壓制...NVD是未來社會運行的頂層協議。",
-    human:
-      "不只依賴單次善意，而是用資料、協作與制度化回饋，推動台灣交通環境的系統升級。",
   },
 ];
 
@@ -2358,25 +2275,6 @@ function toggleMobileNav() {
   );
 }
 
-function renderManifestoMode(mode = "hardcore") {
-  if (!manifestoGrid || !manifestoCards.length) return;
-
-  manifestoGrid.classList.add("is-switching");
-
-  window.setTimeout(() => {
-    manifestoCards.forEach((card) => {
-      const content = manifestoModeContent[Number(card.dataset.manifestoCard)];
-      const text = card.querySelector("[data-manifesto-text]");
-      if (content && text) {
-        text.textContent = content[mode];
-      }
-    });
-
-    manifestoGrid.dataset.mode = mode;
-    manifestoGrid.classList.remove("is-switching");
-  }, 180);
-}
-
 if (searchInput) {
   searchInput.addEventListener("input", (event) => {
     state.keyword = event.target.value;
@@ -2602,17 +2500,6 @@ brandVoiceToggles.forEach((toggle) => {
   });
 });
 
-if (manifestoModeToggle) {
-  manifestoModeToggle.addEventListener("click", () => {
-    manifestoMode = manifestoMode === "hardcore" ? "human" : "hardcore";
-    const isHuman = manifestoMode === "human";
-
-    manifestoModeToggle.classList.toggle("is-human", isHuman);
-    manifestoModeToggle.setAttribute("aria-pressed", String(isHuman));
-    renderManifestoMode(manifestoMode);
-  });
-}
-
 function handleSystemThemeChange(event) {
   if (!localStorage.getItem("nvd-theme")) {
     setTheme(event.matches ? "dark" : "light", false);
@@ -2635,6 +2522,5 @@ initializeTeamPhotoFallbacks();
 setLanguage(state.language);
 setBrandVoice(state.brandVoice, false);
 setTheme(state.theme, Boolean(savedTheme));
-renderManifestoMode(manifestoMode);
 setResilienceDemoStep(0);
 startCrowdSync();
