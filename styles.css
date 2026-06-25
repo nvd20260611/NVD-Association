@@ -6772,6 +6772,7 @@ body[data-theme="dark"] .receipt-modal {
 /* ROAD HUB immersive phone-to-dashboard flow. */
 .report-page .nvd-demo-section {
   color: #f8faf7;
+  overflow: visible;
   background:
     radial-gradient(circle at 18% 22%, rgba(110, 231, 216, 0.12), transparent 26%),
     radial-gradient(circle at 74% 28%, rgba(99, 200, 77, 0.1), transparent 30%),
@@ -6813,8 +6814,8 @@ body[data-theme="dark"] .receipt-modal {
   grid-template-columns: minmax(390px, 0.32fr) minmax(230px, 0.16fr) minmax(670px, 0.52fr);
   gap: clamp(18px, 2.2vw, 34px);
   align-items: center;
-  width: min(1360px, calc(100vw - 48px));
-  margin-inline: calc((100% - min(1360px, calc(100vw - 48px))) / 2);
+  width: min(1360px, calc(100vw - 32px));
+  margin-inline: calc((100% - min(1360px, calc(100vw - 32px))) / 2);
   min-width: 0;
 }
 
@@ -6852,8 +6853,8 @@ body[data-theme="dark"] .receipt-modal {
   display: block;
   visibility: visible;
   width: min(100%, 390px);
-  height: clamp(640px, 76vh, 760px);
-  min-height: 640px;
+  height: clamp(620px, 70vh, 700px);
+  min-height: 620px;
   color: #f8faf7;
   background: linear-gradient(180deg, rgba(12, 26, 40, 0.98), rgba(5, 12, 22, 0.98));
   border: 1px solid rgba(110, 231, 216, 0.28);
@@ -6881,12 +6882,12 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .phone-photo-card {
-  inset: 78px 20px auto;
+  inset: 70px 20px auto;
   height: auto;
   display: grid;
-  gap: 8px;
+  gap: 6px;
   align-items: start;
-  padding: 12px;
+  padding: 10px;
   color: #f8faf7;
   background: rgba(10, 24, 38, 0.82);
   border: 1px solid rgba(110, 231, 216, 0.28);
@@ -6924,7 +6925,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .roadhub-phone-photo {
   display: block;
   width: 100%;
-  height: 112px;
+  height: 82px;
   object-fit: cover;
   border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
@@ -6940,7 +6941,7 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .mini-data-overlay {
-  top: 218px;
+  top: 178px;
   color: rgba(248, 250, 247, 0.72);
   background: rgba(10, 24, 38, 0.82);
   border-color: rgba(110, 231, 216, 0.2);
@@ -6951,8 +6952,8 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .phone-ui {
   display: grid;
   visibility: visible;
-  inset: 258px 20px 22px;
-  gap: 10px;
+  inset: 202px 20px 18px;
+  gap: 6px;
   opacity: 1;
 }
 
@@ -6974,17 +6975,17 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .detection-readout {
-  padding: 12px 14px;
+  padding: 9px 12px;
 }
 
 .report-page .phone-map-card {
   grid-template-columns: 56px minmax(0, 1fr);
-  padding: 12px;
+  padding: 9px 10px;
 }
 
 .report-page .phone-map-card small {
   display: block;
-  margin-top: 8px;
+  margin-top: 5px;
   color: rgba(248, 250, 247, 0.72);
   font-size: 0.68rem;
   font-weight: 800;
@@ -6992,14 +6993,14 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .phone-status-list {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .report-page .phone-status-list > span {
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  min-height: 38px;
-  padding: 8px 10px;
+  min-height: 31px;
+  padding: 5px 8px;
 }
 
 .report-page .phone-status-list strong {
@@ -7016,12 +7017,12 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .detection-result-card {
-  padding: 10px 12px;
+  padding: 7px 10px;
 }
 
 .report-page .phone-submit-hint {
   margin: 0;
-  padding: 8px 10px;
+  padding: 6px 10px;
   text-align: center;
 }
 
@@ -7033,7 +7034,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .phone-capture,
 .report-page .phone-submit {
-  min-height: 46px;
+  min-height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7063,7 +7064,7 @@ body[data-theme="dark"] .receipt-modal {
   gap: 16px;
   justify-items: center;
   align-content: center;
-  min-height: 330px;
+  min-height: 340px;
   color: rgba(248, 250, 247, 0.72);
   text-align: center;
 }
@@ -7084,7 +7085,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .roadhub-flow-line {
   position: relative;
-  width: min(100%, 300px);
+  width: min(100%, 340px);
   height: 22px;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(110, 231, 216, 0.16), rgba(99, 200, 77, 0.32), rgba(110, 231, 216, 0.16));
@@ -7351,7 +7352,22 @@ body[data-theme="dark"] .receipt-modal {
   }
 
   to {
-    transform: translateX(232px);
+    transform: translateX(272px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .report-page .nvd-demo-stage {
+    grid-template-columns: minmax(360px, 0.9fr) minmax(290px, 0.65fr) minmax(720px, 1.65fr);
+    gap: clamp(14px, 1.4vw, 22px);
+    width: min(1640px, calc(100vw - 20px));
+    margin-inline: calc((100% - min(1640px, calc(100vw - 20px))) / 2);
+  }
+}
+
+@media (min-width: 1580px) {
+  .report-page .nvd-demo-stage {
+    grid-template-columns: minmax(390px, 0.9fr) minmax(310px, 0.65fr) minmax(780px, 1.65fr);
   }
 }
 
