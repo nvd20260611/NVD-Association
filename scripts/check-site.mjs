@@ -475,6 +475,13 @@ for (const text of requiredRoadHubDashboardText) {
   }
 }
 
+if (!exists("assets/road-hub/road-photo-01.jpg")) {
+  fail("assets/road-hub/road-photo-01.jpg", "ROAD HUB field photo asset is missing");
+}
+if (!htmlByFile["report.html"].includes("assets/road-hub/")) {
+  fail("report.html", "ROAD HUB phone preview must reference an assets/road-hub/ photo");
+}
+
 const requiredRoadHubEnglishText = [
   "Field reporting view",
   "Photo record",
@@ -517,9 +524,16 @@ const backendPatterns = [
   ["getUserMedia", /getUserMedia/],
   ["navigator.mediaDevices", /navigator\.mediaDevices/],
   ["WebSocket", /WebSocket/],
+  ['input type="file"', /input\s+type=["']file["']/i],
 ];
 for (const [label, pattern] of backendPatterns) {
   if (pattern.test(script)) fail("script.js", `formal submission code is forbidden: ${label}`);
+}
+
+for (const [label, pattern] of backendPatterns) {
+  if (pattern.test(htmlByFile["report.html"])) {
+    fail("report.html", `formal submission or upload UI is forbidden: ${label}`);
+  }
 }
 
 const roadHubSources = {

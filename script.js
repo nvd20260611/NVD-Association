@@ -318,6 +318,7 @@ const translations = {
     demoProcessLabel: "拍照紀錄",
     demoDeviceAria: "行動裝置流程體驗畫面",
     demoStreetAria: "道路障礙照片",
+    demoPhonePhotoAlt: "道路障礙照片",
     demoOverlayPositionInitial: "現場觀察資料",
     demoOverlayRoadInitial: "拍照紀錄已建立",
     demoOverlayPositionComplete: "現場觀察資料",
@@ -972,6 +973,7 @@ const translations = {
     demoProcessLabel: "Photo record",
     demoDeviceAria: "Mobile process-demo screen",
     demoStreetAria: "Road barrier photo",
+    demoPhonePhotoAlt: "Road barrier photo",
     demoOverlayPositionInitial: "Field observation data",
     demoOverlayRoadInitial: "Photo record created",
     demoOverlayPositionComplete: "Field observation data",
@@ -1982,6 +1984,10 @@ function applyTranslations() {
 
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
     element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    element.setAttribute("alt", t(element.dataset.i18nAlt));
   });
 
   applySharedAccessibilityText();
