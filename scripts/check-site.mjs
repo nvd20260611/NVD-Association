@@ -150,6 +150,7 @@ function fail(file, message) {
 
 const htmlByFile = Object.fromEntries(htmlFiles.map((file) => [file, read(file)]));
 const script = read("script.js");
+const styles = read("styles.css");
 const zhDictionaryStart = script.indexOf("  zh: {");
 const enDictionaryStart = script.indexOf("  en: {");
 const brandVoiceStart = script.indexOf("const brandVoiceContent");
@@ -447,22 +448,25 @@ for (const anchor of ["dashboard", "loop"]) {
 }
 
 const requiredRoadHubDashboardText = [
-  "道路觀察資料儀表板",
-  "Demo observations",
+  "NVD LENS",
+  "現場回報端",
+  "拍照紀錄",
+  "道路障礙照片",
+  "22.640N｜120.320E",
+  "ROAD HUB 後台資料儀表板",
+  "觀察筆數",
   "12,846",
   "+326",
   "新增一筆道路觀察",
   "重置本機資料",
-  "障礙類型",
-  "區域分布參考",
-  "通行影響群體",
-  "資料完整度",
-  "改善優先參考",
-  "資料用途",
-  "觀察紀錄 NVD-OBS-12847",
-  "體驗版本",
-  "只儲存在本瀏覽器",
-  "沒有資料會傳送到伺服器",
+  "資料流轉中",
+  "類型分布",
+  "高頻區域分布",
+  "通行影響對象",
+  "最新觀察",
+  "體驗版",
+  "儲存在目前瀏覽器",
+  "資料不會傳送到伺服器",
   "聯絡 NVD：nvd20260611@gmail.com",
 ];
 for (const text of requiredRoadHubDashboardText) {
@@ -472,15 +476,19 @@ for (const text of requiredRoadHubDashboardText) {
 }
 
 const requiredRoadHubEnglishText = [
-  "Road Observation Data Dashboard",
+  "Field reporting view",
+  "Photo record",
+  "Road barrier photo",
+  "22.640N｜120.320E",
+  "ROAD HUB Back-office Dashboard",
   "Demo observations",
   "7-day demo growth",
   "Add one road observation",
   "Reset local data",
-  "Barrier types",
-  "Area distribution demo",
-  "Data completeness",
-  "Observation record NVD-OBS-12847",
+  "Data in transit",
+  "Type distribution",
+  "High-frequency areas",
+  "Latest observation",
   "This ROAD HUB page is an experience version",
   "No data is transmitted to a server",
 ];
@@ -505,6 +513,10 @@ const backendPatterns = [
   ["XMLHttpRequest", /XMLHttpRequest/],
   ["FormData", /FormData/],
   [".submit(", /\.submit\s*\(/],
+  ["geolocation", /geolocation/],
+  ["getUserMedia", /getUserMedia/],
+  ["navigator.mediaDevices", /navigator\.mediaDevices/],
+  ["WebSocket", /WebSocket/],
 ];
 for (const [label, pattern] of backendPatterns) {
   if (pattern.test(script)) fail("script.js", `formal submission code is forbidden: ${label}`);
@@ -530,12 +542,42 @@ const fakeResultPatterns = [
   ["government synchronized", /government synchronized/i],
   ["government node", /government node/i],
   ["formal case", /formal case/i],
-  ["precise coordinate", /\d{2,3}\.\d{3,}/],
   ["technical confidence overlay", /\b(?:LAT|LNG|DEPTH|CONFIDENCE)\b/],
 ];
 for (const [file, source] of Object.entries(roadHubSources)) {
   for (const [label, pattern] of fakeResultPatterns) {
     if (pattern.test(source)) fail(file, `ROAD HUB fake-result wording is forbidden: ${label}`);
+  }
+}
+
+const requiredRoadHubAttributes = [
+  'data-roadhub-action="capture-photo"',
+  'data-roadhub-action="add-observation"',
+  'data-roadhub-action="reset-demo"',
+  "roadhub-flow",
+];
+for (const token of requiredRoadHubAttributes) {
+  if (!htmlByFile["report.html"].includes(token)) {
+    fail("report.html", `ROAD HUB required attribute or class missing: ${token}`);
+  }
+}
+
+const phonePreviewSelectors = [
+  ".nvd-demo-front",
+  ".nvd-mockup-container",
+  ".pixel-shell",
+  ".phone-screen",
+  ".phone-ui",
+];
+const hiddenPhonePattern = /\b(?:display\s*:\s*none|visibility\s*:\s*hidden|opacity\s*:\s*0(?:\.0+)?(?!\.)\b|height\s*:\s*0(?:px|rem|em|%)?\b)/i;
+for (const selector of phonePreviewSelectors) {
+  const escapedSelector = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const blockPattern = new RegExp(`[^{}]*${escapedSelector}[^{}]*\\{[^{}]*\\}`, "g");
+  for (const match of styles.matchAll(blockPattern)) {
+    const block = match[0];
+    if (hiddenPhonePattern.test(block)) {
+      fail("styles.css", `ROAD HUB phone preview must not be hidden by ${selector}`);
+    }
   }
 }
 

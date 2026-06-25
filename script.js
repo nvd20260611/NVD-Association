@@ -293,17 +293,17 @@ const translations = {
     demoTagHeight: "高低差",
     demoTagParking: "違停",
     demoTagGravel: "碎石",
-    demoSubmit: "開始體驗流程",
-    demoStatusDetecting: "正在顯示道路狀況辨識流程...",
-    demoStatusLocation: "位置描述參考",
+    demoSubmit: "新增一筆道路觀察",
+    demoStatusDetecting: "拍照紀錄已建立",
+    demoStatusLocation: "22.640N｜120.320E",
     demoStatusLabel: "路面狀況標記",
     demoStatusReady: "僅供流程體驗，不會傳送或保存資料。",
     demoStatusEncrypting: "正在整理回報內容...",
-    demoBackendStatus: "道路觀察資料儀表板",
-    demoScoreLabel: "Demo observations",
+    demoBackendStatus: "ROAD HUB 後台資料儀表板",
+    demoScoreLabel: "觀察筆數",
     demoObservationCount: "12,846",
     demoObservationLabel: "道路觀察資料",
-    demoGrowthLabel: "近 7 日 Demo 增量",
+    demoGrowthLabel: "近 7 日成長",
     demoGrowthValue: "+326",
     demoGrowthNote: "以道路觀察資料呈現累積感",
     demoControlsAria: "ROAD HUB 道路觀察資料控制",
@@ -315,27 +315,44 @@ const translations = {
       "NVD ROAD HUB 將道路觀察資料整理為障礙類型、區域分布、通行影響與改善優先參考，協助社區、校園與組織看見友善道路行動的資料價值。",
     demoSuccess: "流程體驗完成；未傳送、保存或建立正式送件。",
     demoFieldPanelTitle: "現場回報端",
-    demoProcessLabel: "流程體驗",
+    demoProcessLabel: "拍照紀錄",
     demoDeviceAria: "行動裝置流程體驗畫面",
-    demoStreetAria: "道路現場參考影像",
-    demoOverlayPositionInitial: "位置描述：體驗中",
-    demoOverlayRoadInitial: "路面狀況：體驗中",
-    demoOverlayPositionComplete: "位置描述：體驗完成",
-    demoOverlayRoadComplete: "路面狀況：體驗完成",
-    demoExperienceOnly: "僅供流程體驗",
-    demoHintStart: "點擊下方按鈕體驗道路回報流程",
+    demoStreetAria: "道路障礙照片",
+    demoOverlayPositionInitial: "現場觀察資料",
+    demoOverlayRoadInitial: "拍照紀錄已建立",
+    demoOverlayPositionComplete: "現場觀察資料",
+    demoOverlayRoadComplete: "已加入後台資料儀表板",
+    demoExperienceOnly: "本機資料體驗",
+    demoHintStart: "新增一筆道路觀察",
     demoHintLocation: "位置資訊僅為介面參考",
     demoHintAssessment: "此判讀結果僅供流程體驗",
     demoHintNoData: "不會傳送或保存任何資料",
     demoHintNoRecord: "未建立正式紀錄",
-    demoPositionLabel: "位置描述",
+    demoPositionLabel: "定位座標",
     demoLocationUnavailable: "尚未提供位置",
-    demoStatusListAria: "流程體驗狀態",
-    demoObstacleHeightLabel: "路面高低差",
+    demoStatusListAria: "道路觀察資料狀態",
+    demoObstacleHeightLabel: "人行道阻斷",
     demoImpactLabel: "通行影響",
     demoNoFormalRecord: "未建立正式紀錄",
     demoResultLabel: "路面狀況標記：",
-    demoResultContent: "體驗內容",
+    demoResultContent: "已加入後台資料儀表板",
+    demoPhonePhotoTitle: "道路障礙照片",
+    demoPhonePhotoNote: "拍照紀錄已建立",
+    demoPhoneNoUpload: "未使用相機或上傳功能",
+    demoPhoneAreaLabel: "區域",
+    demoPhoneAreaValue: "三民區",
+    demoPhoneLocationLabel: "定位座標",
+    demoPhoneLocationValue: "22.640N｜120.320E",
+    demoPhoneBarrierLabel: "障礙類型",
+    demoPhoneBarrierValue: "人行道阻斷",
+    demoPhoneImpactLabel: "通行影響",
+    demoPhoneImpactValue: "輪椅｜嬰兒車｜行人",
+    demoPhoneAddedLabel: "狀態",
+    demoPhoneAddedValue: "已加入後台資料儀表板",
+    demoCapturePhoto: "拍照",
+    demoFlowTransferAria: "道路觀察資料流轉",
+    demoFlowTransferTitle: "資料流轉中",
+    demoFlowTransferText: "現場觀察即時傳送至後台，轉化為可分析的公共資料",
     demoDashboardAria: "道路流程體驗區",
     demoRadarAria: "結構向量參考圖",
     demoStateInProgress: "體驗中",
@@ -355,14 +372,15 @@ const translations = {
     demoNotFormalSubmission: "非正式送件",
     demoLocationInfoLabel: "位置資訊",
     demoToastComplete: "流程體驗已完成，未建立正式紀錄",
-    demoBarrierCategoryTitle: "障礙類型",
-    demoBarrierOne: "人行道阻塞",
-    demoBarrierTwo: "坡道高低差",
+    demoBarrierCategoryTitle: "類型分布",
+    demoBarrierOne: "人行道阻斷",
+    demoBarrierTwo: "路口坡道受阻",
     demoBarrierThree: "騎樓障礙",
     demoBarrierFour: "路口高差",
     demoBarrierFive: "臨停阻礙",
     demoBarrierSix: "標線或號誌不友善",
-    demoDistrictTitle: "區域分布參考",
+    demoBarrierOther: "其他",
+    demoDistrictTitle: "高頻區域分布",
     demoDistrictOne: "三民區",
     demoDistrictTwo: "左營區",
     demoDistrictThree: "鼓山區",
@@ -371,7 +389,7 @@ const translations = {
     demoDistrictSix: "鳳山區",
     demoTimeTitle: "高頻時段",
     demoTimeValue: "上午通勤、午間移動、傍晚返家",
-    demoAffectedTitle: "通行影響群體",
+    demoAffectedTitle: "通行影響對象",
     demoAffectedValue:
       "輪椅使用者、嬰兒車使用者、高齡行人、暫時受傷者、視障者、一般行人",
     demoImpactLevelTitle: "通行影響程度",
@@ -388,11 +406,14 @@ const translations = {
     demoFlowThree: "標記通行影響",
     demoFlowFour: "整理倡議資料",
     demoFlowFive: "顯示於儀表板",
+    demoLatestTitle: "最新觀察",
+    demoLatestObservation: "三民區｜人行道阻斷｜輪椅、嬰兒車、行人",
+    demoJustAdded: "剛剛新增",
     demoRecordTitle: "觀察紀錄 NVD-OBS-12847",
     demoRecordBody:
       "區域：三民區｜類型：人行道阻塞｜影響：輪椅使用者、嬰兒車使用者、行人｜狀態：加入儀表板｜備註：此紀錄僅供流程預覽，未傳送、保存或正式受理。",
     demoDashboardDisclaimer:
-      "這個 ROAD HUB 頁面是體驗版本。觀察筆數只儲存在本瀏覽器，用來呈現資料累積效果；不代表 NVD 正式案件受理或政府紀錄。沒有資料會傳送到伺服器，也不會保存個人資料。",
+      "本頁為 ROAD HUB 體驗版；觀察筆數儲存在目前瀏覽器，用於呈現資料累積效果，不代表 NVD 正式受理數或政府案件紀錄。資料不會傳送到伺服器，也不保存個人資料。",
     demoContactPrompt: "想把這套流程帶進社區、校園或企業合作？",
     demoContactLink: "聯絡 NVD：nvd20260611@gmail.com",
     demoObservationAdded: "已新增一筆道路觀察資料",
@@ -925,13 +946,13 @@ const translations = {
     demoTagHeight: "Height gap",
     demoTagParking: "Illegal parking",
     demoTagGravel: "Loose gravel",
-    demoSubmit: "Start demo flow",
-    demoStatusDetecting: "Showing the road-condition review flow...",
-    demoStatusLocation: "Location description demo",
+    demoSubmit: "Add one road observation",
+    demoStatusDetecting: "Photo record created",
+    demoStatusLocation: "22.640N?120.320E",
     demoStatusLabel: "Road-condition marking demo",
     demoStatusReady: "Demo only. No data is transmitted or stored.",
     demoStatusEncrypting: "Organizing demo report content...",
-    demoBackendStatus: "Road Observation Data Dashboard",
+    demoBackendStatus: "ROAD HUB Back-office Dashboard",
     demoScoreLabel: "Demo observations",
     demoObservationCount: "12,846",
     demoObservationLabel: "road-observation demo data",
@@ -947,28 +968,45 @@ const translations = {
       "NVD ROAD HUB organizes road-observation data into barrier types, area distribution, access impact, and improvement-priority references to help communities, campuses, and organizations see the data value of accessible-road action.",
     demoSuccess:
       "Process demo complete. No data was transmitted or stored, and no formal submission was created.",
-    demoFieldPanelTitle: "Field demo",
-    demoProcessLabel: "Process demo",
+    demoFieldPanelTitle: "Field reporting view",
+    demoProcessLabel: "Photo record",
     demoDeviceAria: "Mobile process-demo screen",
-    demoStreetAria: "Illustrative road scene",
-    demoOverlayPositionInitial: "Location description: demo in progress",
-    demoOverlayRoadInitial: "Road condition: demo in progress",
-    demoOverlayPositionComplete: "Location description: demo complete",
-    demoOverlayRoadComplete: "Road condition: demo complete",
-    demoExperienceOnly: "For demonstration only",
-    demoHintStart: "Select the button below to try the road-report flow",
+    demoStreetAria: "Road barrier photo",
+    demoOverlayPositionInitial: "Field observation data",
+    demoOverlayRoadInitial: "Photo record created",
+    demoOverlayPositionComplete: "Field observation data",
+    demoOverlayRoadComplete: "Added to back-office dashboard",
+    demoExperienceOnly: "Local data experience",
+    demoHintStart: "Add one road observation",
     demoHintLocation: "Location information is illustrative only",
     demoHintAssessment: "This assessment is part of the process demo",
     demoHintNoData: "No data is transmitted or stored",
     demoHintNoRecord: "No formal record is created",
-    demoPositionLabel: "Location description",
+    demoPositionLabel: "Location",
     demoLocationUnavailable: "No location provided",
-    demoStatusListAria: "Process-demo status",
-    demoObstacleHeightLabel: "Level-difference demo",
-    demoImpactLabel: "Access-impact demo",
+    demoStatusListAria: "Road observation data status",
+    demoObstacleHeightLabel: "Sidewalk blockage",
+    demoImpactLabel: "Access impact",
     demoNoFormalRecord: "No formal record created",
     demoResultLabel: "Road-condition marker: ",
-    demoResultContent: "Demo content",
+    demoResultContent: "Added to back-office dashboard",
+    demoPhonePhotoTitle: "Road barrier photo",
+    demoPhonePhotoNote: "Photo record created",
+    demoPhoneNoUpload: "No camera or upload feature is used",
+    demoPhoneAreaLabel: "Area",
+    demoPhoneAreaValue: "Sanmin",
+    demoPhoneLocationLabel: "Location",
+    demoPhoneLocationValue: "22.640N?120.320E",
+    demoPhoneBarrierLabel: "Barrier type",
+    demoPhoneBarrierValue: "Sidewalk blockage",
+    demoPhoneImpactLabel: "Access impact",
+    demoPhoneImpactValue: "Wheelchair?Stroller?Pedestrian",
+    demoPhoneAddedLabel: "Status",
+    demoPhoneAddedValue: "Added to back-office dashboard",
+    demoCapturePhoto: "Photo",
+    demoFlowTransferAria: "Road observation data flow",
+    demoFlowTransferTitle: "Data in transit",
+    demoFlowTransferText: "Field observations flow into the dashboard and become civic data insights",
     demoDashboardAria: "Road-process demo area",
     demoRadarAria: "Illustrative structure chart",
     demoStateInProgress: "Demo in progress",
@@ -988,14 +1026,15 @@ const translations = {
     demoNotFormalSubmission: "Not a formal submission",
     demoLocationInfoLabel: "Location information",
     demoToastComplete: "Process demo complete; no formal record was created",
-    demoBarrierCategoryTitle: "Barrier types",
+    demoBarrierCategoryTitle: "Type distribution",
     demoBarrierOne: "Sidewalk blockage",
-    demoBarrierTwo: "Ramp-level mismatch",
+    demoBarrierTwo: "Blocked curb ramp",
     demoBarrierThree: "Arcade obstruction",
     demoBarrierFour: "Intersection height gap",
-    demoBarrierFive: "Temporary parking obstruction",
+    demoBarrierFive: "Illegal parking",
     demoBarrierSix: "Unfriendly markings or signals",
-    demoDistrictTitle: "Area distribution demo",
+    demoBarrierOther: "Other",
+    demoDistrictTitle: "High-frequency areas",
     demoDistrictOne: "Sanmin",
     demoDistrictTwo: "Zuoying",
     demoDistrictThree: "Gushan",
@@ -1023,6 +1062,9 @@ const translations = {
     demoFlowThree: "Tag access impact",
     demoFlowFour: "Organize advocacy data",
     demoFlowFive: "Display on dashboard",
+    demoLatestTitle: "Latest observation",
+    demoLatestObservation: "Sanmin?Sidewalk blockage?Wheelchair, stroller, pedestrian",
+    demoJustAdded: "Just added",
     demoRecordTitle: "Observation record NVD-OBS-12847",
     demoRecordBody:
       "Area: Sanmin | Type: Sidewalk blockage | Impact: wheelchair users, stroller users, pedestrians | Status: Added to dashboard | Note: This record is for process preview only. No data is transmitted, stored, or formally accepted.",
@@ -1445,8 +1487,10 @@ const logStream = document.querySelector(".log-stream");
 const receiptModal = document.querySelector(".receipt-modal");
 const receiptHash = document.querySelector("#receiptHash");
 const demoObservationCount = document.querySelector("#resilienceScore");
+const demoGrowthCount = document.querySelector("#demoGrowthValue");
 const demoAddObservationButton = document.querySelector(".hub-demo-add");
 const demoResetLocalDataButton = document.querySelector(".hub-demo-reset");
+const roadHubCaptureButton = document.querySelector('[data-roadhub-action="capture-photo"]');
 const manifestoModeToggle = document.querySelector("#manifestoModeToggle");
 const manifestoGrid = document.querySelector("#manifestoGrid");
 const manifestoCards = document.querySelectorAll("[data-manifesto-card]");
@@ -1548,13 +1592,20 @@ function formatRoadHubDemoCount(count) {
 
 function updateRoadHubDemoCount() {
   if (!demoObservationCount) return;
-  demoObservationCount.textContent = formatRoadHubDemoCount(getRoadHubDemoCount());
+  const currentCount = getRoadHubDemoCount();
+  const localIncrement = currentCount - roadHubDemoBaseCount;
+  demoObservationCount.textContent = formatRoadHubDemoCount(currentCount);
+  if (demoGrowthCount) {
+    demoGrowthCount.textContent = `+${formatRoadHubDemoCount(326 + localIncrement)}`;
+  }
 }
 
 function addRoadHubDemoObservation() {
   const nextCount = getRoadHubDemoCount() + 1;
   localStorage.setItem(roadHubDemoCountKey, String(nextCount));
   updateRoadHubDemoCount();
+  resilienceDemo?.classList.add("is-flowing");
+  window.setTimeout(() => resilienceDemo?.classList.remove("is-flowing"), 900);
   addLogLine(t("demoLogRoadCondition"));
   if (typeof showToast === "function") {
     showToast(t("demoObservationAdded"));
@@ -2194,15 +2245,31 @@ demoStepButtons.forEach((button) => {
 });
 
 if (phoneSubmitButton) {
-  phoneSubmitButton.addEventListener("click", triggerResilienceSubmit);
+  phoneSubmitButton.addEventListener("click", () => {
+    addRoadHubDemoObservation();
+    triggerResilienceSubmit();
+  });
 }
 
 if (demoAddObservationButton) {
-  demoAddObservationButton.addEventListener("click", addRoadHubDemoObservation);
+  demoAddObservationButton.addEventListener("click", () => {
+    addRoadHubDemoObservation();
+    triggerResilienceSubmit();
+  });
 }
 
 if (demoResetLocalDataButton) {
   demoResetLocalDataButton.addEventListener("click", resetRoadHubDemoData);
+}
+
+if (roadHubCaptureButton) {
+  roadHubCaptureButton.addEventListener("click", () => {
+    resilienceDemo?.classList.add("is-flowing");
+    window.setTimeout(() => resilienceDemo?.classList.remove("is-flowing"), 600);
+    if (typeof showToast === "function") {
+      showToast(t("demoPhonePhotoNote"));
+    }
+  });
 }
 
 function showToast(message, type = "success") {
