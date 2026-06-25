@@ -457,9 +457,10 @@ const requiredRoadHubDashboardText = [
   "觀察筆數",
   "12,846",
   "+326",
-  "新增一筆道路觀察",
+  "定位座標",
   "重置本機資料",
   "資料流轉中",
+  "資料分析",
   "類型分布",
   "高頻區域分布",
   "通行影響對象",
@@ -490,9 +491,9 @@ const requiredRoadHubEnglishText = [
   "ROAD HUB Back-office Dashboard",
   "Demo observations",
   "7-day demo growth",
-  "Add one road observation",
   "Reset local data",
   "Data in transit",
+  "Data analysis",
   "Type distribution",
   "High-frequency areas",
   "Latest observation",
@@ -566,7 +567,6 @@ for (const [file, source] of Object.entries(roadHubSources)) {
 
 const requiredRoadHubAttributes = [
   'data-roadhub-action="capture-photo"',
-  'data-roadhub-action="add-observation"',
   'data-roadhub-action="reset-demo"',
   "roadhub-flow",
 ];
@@ -574,6 +574,16 @@ for (const token of requiredRoadHubAttributes) {
   if (!htmlByFile["report.html"].includes(token)) {
     fail("report.html", `ROAD HUB required attribute or class missing: ${token}`);
   }
+}
+
+for (const text of ["新增一筆道路觀察", "Add one road observation"]) {
+  if (htmlByFile["report.html"].includes(text)) {
+    fail("report.html", `ROAD HUB phone or dashboard should not expose secondary add action: ${text}`);
+  }
+}
+
+if (htmlByFile["report.html"].includes('data-roadhub-action="add-observation"')) {
+  fail("report.html", "ROAD HUB capture flow should not expose a separate add-observation action");
 }
 
 const phonePreviewSelectors = [

@@ -269,7 +269,7 @@ const translations = {
     reportActionEyebrow: "回報前準備",
     reportActionTitle: "拍照、定位、補充說明",
     reportDemoNotice:
-      "流程體驗：目前此區不會傳送或保存資料，不會形成正式送件，也不是政府通報管道。正式回報管道將依 NVD 後續作業流程逐步開放。",
+      "流程體驗：目前此區不會傳送或保存資料，不會形成正式紀錄，也不是政府通報管道。正式回報管道將依 NVD 後續作業流程逐步開放。",
     reportActionDescription:
       "把你遇到的道路障礙，整理成可以被理解、討論與改善的公共資訊。",
     reportStepsLabel: "道路障礙回報步驟",
@@ -293,7 +293,7 @@ const translations = {
     demoTagHeight: "高低差",
     demoTagParking: "違停",
     demoTagGravel: "碎石",
-    demoSubmit: "新增一筆道路觀察",
+    demoSubmit: "拍照",
     demoStatusDetecting: "拍照紀錄已建立",
     demoStatusLocation: "22.640N｜120.320E",
     demoStatusLabel: "路面狀況標記",
@@ -302,18 +302,19 @@ const translations = {
     demoBackendStatus: "ROAD HUB 後台資料儀表板",
     demoScoreLabel: "觀察筆數",
     demoObservationCount: "12,846",
-    demoObservationLabel: "道路觀察資料",
+    demoObservationLabel: "現場觀察已轉入後台統計",
     demoGrowthLabel: "近 7 日成長",
     demoGrowthValue: "+326",
     demoGrowthNote: "以道路觀察資料呈現累積感",
     demoControlsAria: "ROAD HUB 道路觀察資料控制",
-    demoAddObservation: "新增一筆道路觀察",
-    demoAddObservationAria: "新增一筆道路觀察資料",
+    demoAddObservation: "拍照",
+    demoAddObservationAria: "以拍照建立一筆道路觀察資料",
     demoResetLocalData: "重置本機資料",
     demoResetLocalDataAria: "重置 ROAD HUB 本機道路觀察資料",
     demoDashboardSummary:
       "NVD ROAD HUB 將道路觀察資料整理為障礙類型、區域分布、通行影響與改善優先參考，協助社區、校園與組織看見友善道路行動的資料價值。",
-    demoSuccess: "流程體驗完成；未傳送、保存或建立正式送件。",
+    demoAnalysisTitle: "資料分析",
+    demoSuccess: "流程體驗完成；未傳送、保存或建立正式紀錄。",
     demoFieldPanelTitle: "現場回報端",
     demoProcessLabel: "拍照紀錄",
     demoDeviceAria: "行動裝置流程體驗畫面",
@@ -324,7 +325,7 @@ const translations = {
     demoOverlayPositionComplete: "現場觀察資料",
     demoOverlayRoadComplete: "已加入後台資料儀表板",
     demoExperienceOnly: "本機資料體驗",
-    demoHintStart: "新增一筆道路觀察",
+    demoHintStart: "拍照建立現場觀察",
     demoHintLocation: "位置資訊僅為介面參考",
     demoHintAssessment: "此判讀結果僅供流程體驗",
     demoHintNoData: "不會傳送或保存任何資料",
@@ -369,8 +370,8 @@ const translations = {
     demoDataPurposeValue: "公共倡議參考",
     demoOrganizeStatusLabel: "整理狀態",
     demoOrganizing: "資料整理",
-    demoSubmissionStatusLabel: "送件狀態",
-    demoNotFormalSubmission: "非正式送件",
+    demoSubmissionStatusLabel: "紀錄狀態",
+    demoNotFormalSubmission: "非正式紀錄",
     demoLocationInfoLabel: "位置資訊",
     demoToastComplete: "流程體驗已完成，未建立正式紀錄",
     demoBarrierCategoryTitle: "類型分布",
@@ -417,7 +418,7 @@ const translations = {
       "本頁為 ROAD HUB 體驗版；觀察筆數儲存在目前瀏覽器，用於呈現資料累積效果，不代表 NVD 正式受理數或政府案件紀錄。資料不會傳送到伺服器，也不保存個人資料。",
     demoContactPrompt: "想把這套流程帶進社區、校園或企業合作？",
     demoContactLink: "聯絡 NVD：nvd20260611@gmail.com",
-    demoObservationAdded: "已新增一筆道路觀察資料",
+    demoObservationAdded: "現場觀察已轉入後台統計",
     demoObservationReset: "已重置本機觀察資料",
     demoReceiptTitle: "流程體驗紀錄",
     demoReceiptId: "觀察編號：不產生正式紀錄",
@@ -947,7 +948,7 @@ const translations = {
     demoTagHeight: "Height gap",
     demoTagParking: "Illegal parking",
     demoTagGravel: "Loose gravel",
-    demoSubmit: "Add one road observation",
+    demoSubmit: "Photo",
     demoStatusDetecting: "Photo record created",
     demoStatusLocation: "22.640N?120.320E",
     demoStatusLabel: "Road-condition marking demo",
@@ -956,17 +957,18 @@ const translations = {
     demoBackendStatus: "ROAD HUB Back-office Dashboard",
     demoScoreLabel: "Demo observations",
     demoObservationCount: "12,846",
-    demoObservationLabel: "road-observation demo data",
+    demoObservationLabel: "Field observation added to dashboard",
     demoGrowthLabel: "7-day demo growth",
     demoGrowthValue: "+326",
     demoGrowthNote: "A demo-only accumulation effect",
     demoControlsAria: "ROAD HUB demo data controls",
-    demoAddObservation: "Add one road observation",
-    demoAddObservationAria: "Add one road-observation data point",
+    demoAddObservation: "Photo",
+    demoAddObservationAria: "Create one road observation with the photo action",
     demoResetLocalData: "Reset local data",
     demoResetLocalDataAria: "Reset local ROAD HUB demo data",
     demoDashboardSummary:
       "NVD ROAD HUB organizes road-observation data into barrier types, area distribution, access impact, and improvement-priority references to help communities, campuses, and organizations see the data value of accessible-road action.",
+    demoAnalysisTitle: "Data analysis",
     demoSuccess:
       "Process demo complete. No data was transmitted or stored, and no formal submission was created.",
     demoFieldPanelTitle: "Field reporting view",
@@ -979,7 +981,7 @@ const translations = {
     demoOverlayPositionComplete: "Field observation data",
     demoOverlayRoadComplete: "Added to back-office dashboard",
     demoExperienceOnly: "Local data experience",
-    demoHintStart: "Add one road observation",
+    demoHintStart: "Photo creates a field observation",
     demoHintLocation: "Location information is illustrative only",
     demoHintAssessment: "This assessment is part of the process demo",
     demoHintNoData: "No data is transmitted or stored",
@@ -998,7 +1000,7 @@ const translations = {
     demoPhoneAreaLabel: "Area",
     demoPhoneAreaValue: "Sanmin",
     demoPhoneLocationLabel: "Location",
-    demoPhoneLocationValue: "22.640N?120.320E",
+    demoPhoneLocationValue: "22.640N｜120.320E",
     demoPhoneBarrierLabel: "Barrier type",
     demoPhoneBarrierValue: "Sidewalk blockage",
     demoPhoneImpactLabel: "Access impact",
@@ -1065,7 +1067,7 @@ const translations = {
     demoFlowFour: "Organize advocacy data",
     demoFlowFive: "Display on dashboard",
     demoLatestTitle: "Latest observation",
-    demoLatestObservation: "Sanmin?Sidewalk blockage?Wheelchair, stroller, pedestrian",
+    demoLatestObservation: "Sanmin｜Sidewalk blockage｜Wheelchair, stroller, pedestrian",
     demoJustAdded: "Just added",
     demoRecordTitle: "Observation record NVD-OBS-12847",
     demoRecordBody:
@@ -1075,7 +1077,7 @@ const translations = {
     demoContactPrompt:
       "Interested in bringing this workflow into a community, campus, or corporate collaboration?",
     demoContactLink: "Contact NVD: nvd20260611@gmail.com",
-    demoObservationAdded: "One road-observation demo point was added",
+    demoObservationAdded: "Field observation added to dashboard",
     demoObservationReset: "Local demo data has been reset",
     demoReceiptTitle: "Demo record",
     demoReceiptId: "Demo ID: no formal record is generated",
@@ -2270,11 +2272,8 @@ if (demoResetLocalDataButton) {
 
 if (roadHubCaptureButton) {
   roadHubCaptureButton.addEventListener("click", () => {
-    resilienceDemo?.classList.add("is-flowing");
-    window.setTimeout(() => resilienceDemo?.classList.remove("is-flowing"), 600);
-    if (typeof showToast === "function") {
-      showToast(t("demoPhonePhotoNote"));
-    }
+    addRoadHubDemoObservation();
+    triggerResilienceSubmit();
   });
 }
 
