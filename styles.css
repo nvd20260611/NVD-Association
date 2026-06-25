@@ -6810,9 +6810,11 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .nvd-demo-stage {
   display: grid;
-  grid-template-columns: minmax(260px, 0.28fr) minmax(180px, 0.16fr) minmax(540px, 0.56fr);
-  gap: clamp(18px, 2.6vw, 38px);
+  grid-template-columns: minmax(390px, 0.32fr) minmax(230px, 0.16fr) minmax(670px, 0.52fr);
+  gap: clamp(18px, 2.2vw, 34px);
   align-items: center;
+  width: min(1360px, calc(100vw - 48px));
+  margin-inline: calc((100% - min(1360px, calc(100vw - 48px))) / 2);
   min-width: 0;
 }
 
@@ -6820,7 +6822,7 @@ body[data-theme="dark"] .receipt-modal {
   display: grid;
   visibility: visible;
   width: 100%;
-  max-width: 340px;
+  max-width: 430px;
   justify-self: center;
   opacity: 1;
 }
@@ -6849,9 +6851,9 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .pixel-shell {
   display: block;
   visibility: visible;
-  width: min(100%, 320px);
-  height: min(680px, 78vh);
-  min-height: 560px;
+  width: min(100%, 390px);
+  height: clamp(640px, 76vh, 760px);
+  min-height: 640px;
   color: #f8faf7;
   background: linear-gradient(180deg, rgba(12, 26, 40, 0.98), rgba(5, 12, 22, 0.98));
   border: 1px solid rgba(110, 231, 216, 0.28);
@@ -6879,7 +6881,7 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .phone-photo-card {
-  inset: 74px 18px auto;
+  inset: 78px 20px auto;
   height: auto;
   display: grid;
   gap: 8px;
@@ -6922,7 +6924,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .roadhub-phone-photo {
   display: block;
   width: 100%;
-  height: 96px;
+  height: 112px;
   object-fit: cover;
   border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
@@ -6938,7 +6940,7 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .mini-data-overlay {
-  top: 196px;
+  top: 218px;
   color: rgba(248, 250, 247, 0.72);
   background: rgba(10, 24, 38, 0.82);
   border-color: rgba(110, 231, 216, 0.2);
@@ -6949,7 +6951,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .phone-ui {
   display: grid;
   visibility: visible;
-  inset: 230px 18px 18px;
+  inset: 258px 20px 22px;
   gap: 10px;
   opacity: 1;
 }
@@ -7058,8 +7060,10 @@ body[data-theme="dark"] .receipt-modal {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 12px;
+  gap: 16px;
   justify-items: center;
+  align-content: center;
+  min-height: 330px;
   color: rgba(248, 250, 247, 0.72);
   text-align: center;
 }
@@ -7067,20 +7071,21 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .roadhub-flow p {
   margin: 0;
   color: #40f0de;
-  font-size: 1.08rem;
+  font-size: clamp(1.2rem, 1.55vw, 1.5rem);
   font-weight: 900;
+  text-shadow: 0 0 18px rgba(64, 240, 222, 0.24);
 }
 
 .report-page .roadhub-flow span {
-  max-width: 18rem;
-  font-size: 0.9rem;
+  max-width: 20rem;
+  font-size: clamp(0.94rem, 1vw, 1.05rem);
   line-height: 1.6;
 }
 
 .report-page .roadhub-flow-line {
   position: relative;
-  width: min(100%, 210px);
-  height: 18px;
+  width: min(100%, 300px);
+  height: 22px;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(110, 231, 216, 0.16), rgba(99, 200, 77, 0.32), rgba(110, 231, 216, 0.16));
 }
@@ -7109,8 +7114,8 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .roadhub-flow-pulse {
   position: absolute;
-  inset: 4px auto 4px 4px;
-  width: 42px;
+  inset: 5px auto 5px 5px;
+  width: 54px;
   border-radius: 999px;
   background: #40f0de;
   box-shadow: 0 0 20px rgba(64, 240, 222, 0.44);
@@ -7119,6 +7124,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .resilience-dashboard {
   min-height: auto;
+  width: 100%;
   color: #f8faf7;
   background: rgba(7, 17, 31, 0.78);
   border: 1px solid rgba(110, 231, 216, 0.22);
@@ -7142,7 +7148,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .backend-screen {
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px;
   align-items: stretch;
 }
 
@@ -7187,7 +7193,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .score-card strong {
   color: #63c84d;
-  font-size: clamp(2.6rem, 4.4vw, 4.5rem);
+  font-size: clamp(3.1rem, 4.8vw, 5.1rem);
   line-height: 1;
   text-shadow: none;
 }
@@ -7284,10 +7290,16 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .hub-demo-insights {
   display: grid;
+  grid-column: span 6;
+  grid-template-columns: 1fr;
 }
 
-.report-page .hub-demo-insights section:nth-child(n + 4) {
+.report-page .hub-demo-insights section {
   display: none;
+}
+
+.report-page .hub-demo-insights section:nth-child(2) {
+  display: grid;
 }
 
 .report-page .hub-demo-flow {
@@ -7300,6 +7312,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .dashboard-map-card {
   display: grid;
+  grid-column: span 6;
   gap: 14px;
 }
 
@@ -7338,13 +7351,13 @@ body[data-theme="dark"] .receipt-modal {
   }
 
   to {
-    transform: translateX(160px);
+    transform: translateX(232px);
   }
 }
 
 @media (max-width: 1180px) {
   .report-page .nvd-demo-stage {
-    grid-template-columns: minmax(260px, 0.38fr) minmax(0, 0.62fr);
+    grid-template-columns: minmax(320px, 0.38fr) minmax(0, 0.62fr);
   }
 
   .report-page .roadhub-flow {
@@ -7366,11 +7379,23 @@ body[data-theme="dark"] .receipt-modal {
   }
 
   .report-page .nvd-demo-front {
-    max-width: 320px;
+    max-width: min(390px, 100%);
+  }
+
+  .report-page .pixel-shell {
+    width: min(100%, 340px);
+    min-height: 610px;
+    height: min(680px, 178vw);
+  }
+
+  .report-page .roadhub-flow {
+    min-height: 210px;
   }
 
   .report-page .hub-demo-count-card,
-  .report-page .dashboard-growth-card {
+  .report-page .dashboard-growth-card,
+  .report-page .dashboard-map-card,
+  .report-page .hub-demo-insights {
     grid-column: 1 / -1;
   }
 
