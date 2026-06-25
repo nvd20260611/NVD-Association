@@ -6773,6 +6773,8 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .nvd-demo-section {
   color: #f8faf7;
   overflow: visible;
+  padding-top: clamp(42px, 5vh, 64px);
+  padding-bottom: clamp(42px, 5vh, 64px);
   background:
     radial-gradient(circle at 18% 22%, rgba(110, 231, 216, 0.12), transparent 26%),
     radial-gradient(circle at 74% 28%, rgba(99, 200, 77, 0.1), transparent 30%),
@@ -6813,7 +6815,7 @@ body[data-theme="dark"] .receipt-modal {
   display: grid;
   grid-template-columns: minmax(390px, 0.32fr) minmax(230px, 0.16fr) minmax(670px, 0.52fr);
   gap: clamp(18px, 2.2vw, 34px);
-  align-items: center;
+  align-items: start;
   width: min(1360px, calc(100vw - 32px));
   margin-inline: calc((100% - min(1360px, calc(100vw - 32px))) / 2);
   min-width: 0;
@@ -6822,9 +6824,11 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .nvd-demo-front {
   display: grid;
   visibility: visible;
+  gap: clamp(16px, 2vh, 24px);
   width: 100%;
   max-width: 430px;
   justify-self: center;
+  align-self: start;
   opacity: 1;
 }
 
@@ -6842,19 +6846,19 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .demo-panel-heading > div > span {
   color: #40f0de;
-  font-size: clamp(1rem, 1.6vw, 1.32rem);
+  font-size: clamp(0.98rem, 1.35vw, 1.22rem);
 }
 
 .report-page .demo-panel-heading strong {
-  font-size: clamp(1.12rem, 1.8vw, 1.42rem);
+  font-size: clamp(1.08rem, 1.5vw, 1.3rem);
 }
 
 .report-page .pixel-shell {
   display: block;
   visibility: visible;
   width: min(100%, 390px);
-  height: clamp(620px, 70vh, 700px);
-  min-height: 620px;
+  height: clamp(640px, 62vh, 680px);
+  min-height: 640px;
   color: #f8faf7;
   background: linear-gradient(180deg, rgba(12, 26, 40, 0.98), rgba(5, 12, 22, 0.98));
   border: 1px solid rgba(110, 231, 216, 0.28);
@@ -6882,12 +6886,12 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .phone-photo-card {
-  inset: 70px 20px auto;
+  inset: 64px 18px auto;
   height: auto;
   display: grid;
   gap: 6px;
   align-items: start;
-  padding: 10px;
+  padding: 9px;
   color: #f8faf7;
   background: rgba(10, 24, 38, 0.82);
   border: 1px solid rgba(110, 231, 216, 0.28);
@@ -6925,7 +6929,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .roadhub-phone-photo {
   display: block;
   width: 100%;
-  height: 82px;
+  height: 70px;
   object-fit: cover;
   border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
@@ -6941,7 +6945,7 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .mini-data-overlay {
-  top: 178px;
+  top: 154px;
   color: rgba(248, 250, 247, 0.72);
   background: rgba(10, 24, 38, 0.82);
   border-color: rgba(110, 231, 216, 0.2);
@@ -6952,8 +6956,8 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .phone-ui {
   display: grid;
   visibility: visible;
-  inset: 202px 20px 18px;
-  gap: 6px;
+  inset: 178px 18px 16px;
+  gap: 5px;
   opacity: 1;
 }
 
@@ -6975,17 +6979,17 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .detection-readout {
-  padding: 9px 12px;
+  padding: 8px 10px;
 }
 
 .report-page .phone-map-card {
-  grid-template-columns: 56px minmax(0, 1fr);
-  padding: 9px 10px;
+  grid-template-columns: 48px minmax(0, 1fr);
+  padding: 8px 10px;
 }
 
 .report-page .phone-map-card small {
   display: block;
-  margin-top: 5px;
+  margin-top: 4px;
   color: rgba(248, 250, 247, 0.72);
   font-size: 0.68rem;
   font-weight: 800;
@@ -6999,14 +7003,14 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .phone-status-list > span {
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  min-height: 31px;
-  padding: 5px 8px;
+  min-height: 28px;
+  padding: 4px 8px;
 }
 
 .report-page .phone-status-list strong {
   grid-column: 2;
   color: rgba(248, 250, 247, 0.72);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
 }
 
 .report-page .detection-readout small,
@@ -7017,24 +7021,24 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .detection-result-card {
-  padding: 7px 10px;
+  padding: 6px 10px;
 }
 
 .report-page .phone-submit-hint {
   margin: 0;
-  padding: 6px 10px;
+  padding: 5px 10px;
   text-align: center;
 }
 
 .report-page .phone-action-row {
   display: grid;
   grid-template-columns: 0.74fr 1.26fr;
-  gap: 10px;
+  gap: 8px;
 }
 
 .report-page .phone-capture,
 .report-page .phone-submit {
-  min-height: 38px;
+  min-height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7064,7 +7068,7 @@ body[data-theme="dark"] .receipt-modal {
   gap: 16px;
   justify-items: center;
   align-content: center;
-  min-height: 340px;
+  min-height: 300px;
   color: rgba(248, 250, 247, 0.72);
   text-align: center;
 }
@@ -7126,6 +7130,8 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .resilience-dashboard {
   min-height: auto;
   width: 100%;
+  scroll-margin-top: clamp(56px, 6vh, 72px);
+  padding: clamp(18px, 1.6vw, 24px);
   color: #f8faf7;
   background: rgba(7, 17, 31, 0.78);
   border: 1px solid rgba(110, 231, 216, 0.22);
@@ -7135,12 +7141,12 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .dashboard-header {
   grid-template-columns: auto auto 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 
 .report-page .dashboard-header strong {
   color: #f8faf7;
-  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  font-size: clamp(1.02rem, 1.45vw, 1.34rem);
 }
 
 .report-page .dashboard-header small {
@@ -7149,7 +7155,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .backend-screen {
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
   align-items: stretch;
 }
 
@@ -7194,7 +7200,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .score-card strong {
   color: #63c84d;
-  font-size: clamp(3.1rem, 4.8vw, 5.1rem);
+  font-size: clamp(2.7rem, 4.1vw, 4.5rem);
   line-height: 1;
   text-shadow: none;
 }
@@ -7238,13 +7244,13 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .hub-demo-list-grid ul {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .report-page .hub-demo-list-grid li {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(110px, 0.7fr) auto;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -7314,7 +7320,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .dashboard-map-card {
   display: grid;
   grid-column: span 6;
-  gap: 14px;
+  gap: 10px;
 }
 
 .report-page .dashboard-map-card h3 {
