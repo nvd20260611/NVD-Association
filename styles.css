@@ -7545,6 +7545,7 @@ body.report-page:not([data-theme="dark"]) .resilience-demo-header,
 body.report-page:not([data-theme="dark"]) .report-action-card,
 body.report-page:not([data-theme="dark"]) .resilience-dashboard,
 body.report-page:not([data-theme="dark"]) .score-card,
+body.report-page:not([data-theme="dark"]) .resilience-radar-card,
 body.report-page:not([data-theme="dark"]) .dashboard-map-card,
 body.report-page:not([data-theme="dark"]) .hub-demo-insights section,
 body.report-page:not([data-theme="dark"]) .hub-demo-disclaimer {
@@ -7642,6 +7643,56 @@ body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.is-highlighted 
 body.report-page:not([data-theme="dark"]) .hub-demo-controls .text-link {
   color: #667085;
   border-color: rgba(13, 35, 64, 0.12);
+}
+
+body.report-page:not([data-theme="dark"]) .resilience-radar-card {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid h3,
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li span,
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li b {
+  color: #202434;
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li::before {
+  background: linear-gradient(90deg, #10b981 42%, rgba(15, 118, 110, 0.12) 42%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-31::before {
+  background: linear-gradient(90deg, #10b981 31%, rgba(15, 118, 110, 0.12) 31%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-27::before {
+  background: linear-gradient(90deg, #10b981 27%, rgba(15, 118, 110, 0.12) 27%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-26::before {
+  background: linear-gradient(90deg, #10b981 26%, rgba(15, 118, 110, 0.12) 26%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-24::before {
+  background: linear-gradient(90deg, #10b981 24%, rgba(15, 118, 110, 0.12) 24%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-19::before {
+  background: linear-gradient(90deg, #10b981 19%, rgba(15, 118, 110, 0.12) 19%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-18::before {
+  background: linear-gradient(90deg, #10b981 18%, rgba(15, 118, 110, 0.12) 18%);
+}
+
+body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li.bar-13::before {
+  background: linear-gradient(90deg, #10b981 13%, rgba(15, 118, 110, 0.12) 13%);
+}
+
+body.report-page:not([data-theme="dark"]) .roadhub-phone-photo {
+  filter: saturate(1.04) contrast(1.08) brightness(0.98);
+}
+
+body.report-page:not([data-theme="dark"]) .roadhub-phone-photo-wrap::after {
+  background: linear-gradient(180deg, rgba(7, 17, 31, 0), rgba(7, 17, 31, 0.18));
 }
 
 body[data-theme="dark"].report-page .resilience-demo-header,
