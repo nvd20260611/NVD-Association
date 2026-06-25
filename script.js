@@ -385,7 +385,7 @@ const translations = {
     demoDistrictTitle: "高頻區域分布",
     demoDistrictOne: "三民區",
     demoDistrictTwo: "左營區",
-    demoDistrictThree: "鼓山區",
+    demoDistrictThree: "苓雅區",
     demoDistrictFour: "苓雅區",
     demoDistrictFive: "前鎮區",
     demoDistrictSix: "鳳山區",
@@ -1041,7 +1041,7 @@ const translations = {
     demoDistrictTitle: "High-frequency areas",
     demoDistrictOne: "Sanmin",
     demoDistrictTwo: "Zuoying",
-    demoDistrictThree: "Gushan",
+    demoDistrictThree: "Lingya",
     demoDistrictFour: "Lingya",
     demoDistrictFive: "Qianzhen",
     demoDistrictSix: "Fengshan",
@@ -1495,6 +1495,14 @@ const demoGrowthCount = document.querySelector("#demoGrowthValue");
 const demoAddObservationButton = document.querySelector(".hub-demo-add");
 const demoResetLocalDataButton = document.querySelector(".hub-demo-reset");
 const roadHubCaptureButton = document.querySelector('[data-roadhub-action="capture-photo"]');
+const roadHubPhonePhoto = document.querySelector(".roadhub-phone-photo");
+const roadHubPhoneArea = document.querySelector('[data-i18n="demoPhoneAreaValue"]');
+const roadHubPhoneLocation = document.querySelector('[data-i18n="demoPhoneLocationValue"]');
+const roadHubPhoneBarrier = document.querySelector('[data-i18n="demoPhoneBarrierValue"]');
+const roadHubPhoneImpact = document.querySelector('[data-i18n="demoPhoneImpactValue"]');
+const roadHubLatestObservation = document.querySelector('[data-i18n="demoLatestObservation"]');
+const roadHubLatestCard = document.querySelector(".dashboard-map-card");
+const roadHubListItems = document.querySelectorAll(".hub-demo-list-grid li");
 const manifestoModeToggle = document.querySelector("#manifestoModeToggle");
 const manifestoGrid = document.querySelector("#manifestoGrid");
 const manifestoCards = document.querySelectorAll("[data-manifesto-card]");
@@ -1504,8 +1512,90 @@ let crowdSyncTimerId;
 let receiptTypingTimerId;
 let resilienceTimelineTimers = [];
 let manifestoMode = "hardcore";
+let roadHubObservationIndex = 0;
 const roadHubDemoCountKey = "nvdRoadHubDemoCount";
 const roadHubDemoBaseCount = 12846;
+
+const roadHubObservationSamples = [
+  {
+    photo: "assets/road-hub/road-photo-01.jpg",
+    area: { zh: "三民區", en: "Sanmin" },
+    location: "22.640N｜120.320E",
+    barrier: { zh: "人行道阻斷", en: "Sidewalk blockage" },
+    impact: { zh: "輪椅｜嬰兒車｜行人", en: "Wheelchair｜Stroller｜Pedestrian" },
+    latest: {
+      zh: "三民區｜人行道阻斷｜輪椅、嬰兒車、行人",
+      en: "Sanmin｜Sidewalk blockage｜Wheelchair, stroller, pedestrian",
+    },
+    barrierKey: "demoBarrierOne",
+    districtKey: "demoDistrictOne",
+  },
+  {
+    photo: "assets/road-hub/road-photo-02.jpg",
+    area: { zh: "前鎮區", en: "Cianjhen" },
+    location: "22.590N｜120.309E",
+    barrier: { zh: "路口坡道受阻", en: "Blocked curb ramp" },
+    impact: { zh: "輪椅｜高齡行人", en: "Wheelchair｜Older pedestrian" },
+    latest: {
+      zh: "前鎮區｜路口坡道受阻｜輪椅、高齡行人",
+      en: "Cianjhen｜Blocked curb ramp｜Wheelchair, older pedestrian",
+    },
+    barrierKey: "demoBarrierTwo",
+    districtKey: "demoBarrierOther",
+  },
+  {
+    photo: "assets/road-hub/road-photo-03.jpg",
+    area: { zh: "苓雅區", en: "Lingya" },
+    location: "22.623N｜120.318E",
+    barrier: { zh: "騎樓障礙", en: "Arcade obstruction" },
+    impact: { zh: "視障者｜行人", en: "Visually impaired pedestrian｜Pedestrian" },
+    latest: {
+      zh: "苓雅區｜騎樓障礙｜視障者、行人",
+      en: "Lingya｜Arcade obstruction｜Visually impaired pedestrian, pedestrian",
+    },
+    barrierKey: "demoBarrierThree",
+    districtKey: "demoDistrictThree",
+  },
+  {
+    photo: "assets/road-hub/road-photo-04.jpg",
+    area: { zh: "左營區", en: "Zuoying" },
+    location: "22.686N｜120.292E",
+    barrier: { zh: "臨停占用通道", en: "Temporary parking blocking access" },
+    impact: { zh: "嬰兒車｜行人", en: "Stroller｜Pedestrian" },
+    latest: {
+      zh: "左營區｜臨停占用通道｜嬰兒車、行人",
+      en: "Zuoying｜Temporary parking blocking access｜Stroller, pedestrian",
+    },
+    barrierKey: "demoBarrierOther",
+    districtKey: "demoDistrictTwo",
+  },
+  {
+    photo: "assets/road-hub/road-photo-05.jpg",
+    area: { zh: "鼓山區", en: "Gushan" },
+    location: "22.651N｜120.281E",
+    barrier: { zh: "路面高低差", en: "Uneven pavement" },
+    impact: { zh: "輪椅｜暫時受傷者", en: "Wheelchair｜Temporarily injured person" },
+    latest: {
+      zh: "鼓山區｜路面高低差｜輪椅、暫時受傷者",
+      en: "Gushan｜Uneven pavement｜Wheelchair, temporarily injured person",
+    },
+    barrierKey: "demoBarrierOther",
+    districtKey: "demoBarrierOther",
+  },
+  {
+    photo: "assets/road-hub/road-photo-06.jpg",
+    area: { zh: "新興區", en: "Sinsing" },
+    location: "22.628N｜120.302E",
+    barrier: { zh: "施工圍籬阻礙", en: "Construction barrier blocking access" },
+    impact: { zh: "行人｜高齡行人", en: "Pedestrian｜Older pedestrian" },
+    latest: {
+      zh: "新興區｜施工圍籬阻礙｜行人、高齡行人",
+      en: "Sinsing｜Construction barrier blocking access｜Pedestrian, older pedestrian",
+    },
+    barrierKey: "demoBarrierOther",
+    districtKey: "demoBarrierOther",
+  },
+];
 
 const manifestoModeContent = [
   {
@@ -1604,7 +1694,72 @@ function updateRoadHubDemoCount() {
   }
 }
 
+function getRoadHubObservationText(value) {
+  if (!value || typeof value !== "object") return "";
+  return value[state.language] || value.zh || "";
+}
+
+function clearRoadHubHighlights() {
+  roadHubLatestCard?.classList.remove("is-updated");
+  roadHubListItems.forEach((item) => item.classList.remove("is-highlighted"));
+}
+
+function highlightRoadHubObservation(observation) {
+  window.clearTimeout(highlightRoadHubObservation.timerId);
+  clearRoadHubHighlights();
+  roadHubLatestCard?.classList.add("is-updated");
+  roadHubListItems.forEach((item) => {
+    const key = item.querySelector("[data-i18n]")?.dataset.i18n;
+    const sectionKey = item.closest("section")?.querySelector("h3[data-i18n]")?.dataset.i18n;
+    const isBarrierMatch =
+      sectionKey === "demoBarrierCategoryTitle" && key === observation.barrierKey;
+    const isDistrictMatch =
+      sectionKey === "demoDistrictTitle" && key === observation.districtKey;
+    if (isBarrierMatch || isDistrictMatch) {
+      item.classList.add("is-highlighted");
+    }
+  });
+  highlightRoadHubObservation.timerId = window.setTimeout(clearRoadHubHighlights, 1200);
+}
+
+function updateRoadHubObservationView(shouldHighlight = false) {
+  if (!roadHubObservationSamples.length) return;
+  const observation =
+    roadHubObservationSamples[
+      ((roadHubObservationIndex % roadHubObservationSamples.length) +
+        roadHubObservationSamples.length) %
+        roadHubObservationSamples.length
+    ];
+
+  if (roadHubPhonePhoto) {
+    roadHubPhonePhoto.src = observation.photo;
+    roadHubPhonePhoto.alt =
+      state.language === "en" ? "Road barrier photo" : "道路障礙照片";
+  }
+  if (roadHubPhoneArea) {
+    roadHubPhoneArea.textContent = getRoadHubObservationText(observation.area);
+  }
+  if (roadHubPhoneLocation) {
+    roadHubPhoneLocation.textContent = observation.location;
+  }
+  if (roadHubPhoneBarrier) {
+    roadHubPhoneBarrier.textContent = getRoadHubObservationText(observation.barrier);
+  }
+  if (roadHubPhoneImpact) {
+    roadHubPhoneImpact.textContent = getRoadHubObservationText(observation.impact);
+  }
+  if (roadHubLatestObservation) {
+    roadHubLatestObservation.textContent = getRoadHubObservationText(observation.latest);
+  }
+  if (shouldHighlight) {
+    highlightRoadHubObservation(observation);
+  }
+}
+
 function addRoadHubDemoObservation() {
+  roadHubObservationIndex =
+    (roadHubObservationIndex + 1) % roadHubObservationSamples.length;
+  updateRoadHubObservationView(true);
   const nextCount = getRoadHubDemoCount() + 1;
   localStorage.setItem(roadHubDemoCountKey, String(nextCount));
   updateRoadHubDemoCount();
@@ -1618,6 +1773,8 @@ function addRoadHubDemoObservation() {
 
 function resetRoadHubDemoData() {
   localStorage.removeItem(roadHubDemoCountKey);
+  roadHubObservationIndex = 0;
+  updateRoadHubObservationView();
   updateRoadHubDemoCount();
   resetAutoDetectionUi();
   setResilienceDemoStep(0);
@@ -1644,12 +1801,8 @@ function setResilienceDemoStep(step) {
     );
   });
 
-  if (demoCoordinates) {
-    demoCoordinates.textContent =
-      activeStep >= 1 ? t("demoStatusLocation") : t("demoLocationUnavailable");
-  }
-
   updateResilienceDemoReadout(activeStep);
+  updateRoadHubObservationView();
 
   updateRoadHubDemoCount();
 }
@@ -2001,6 +2154,7 @@ function applyTranslations() {
 
   if (resilienceDemo) {
     updateResilienceDemoReadout(Number(resilienceDemo.dataset.step) || 0);
+    updateRoadHubObservationView();
     updateRoadHubDemoCount();
   }
 }
