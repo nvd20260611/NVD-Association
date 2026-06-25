@@ -6875,11 +6875,24 @@ body[data-theme="dark"] .receipt-modal {
   display: block;
   visibility: visible;
   color: #f8faf7;
-  background: rgba(7, 17, 31, 0.96);
+  background:
+    linear-gradient(180deg, rgba(12, 26, 40, 0.96), rgba(7, 17, 31, 0.98));
   opacity: 1;
 }
 
+.report-page .screen-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 18px 16px 14px;
+}
+
+.report-page .screen-content::before {
+  display: none;
+}
+
 .report-page .phone-topbar {
+  position: static;
   color: #f8faf7;
 }
 
@@ -6889,18 +6902,20 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .phone-photo-card {
-  inset: 64px 18px auto;
+  position: static;
+  inset: auto;
   height: auto;
   display: grid;
   gap: 6px;
   align-items: start;
   padding: 9px;
   color: #f8faf7;
-  background: rgba(10, 24, 38, 0.82);
-  border: 1px solid rgba(110, 231, 216, 0.28);
+  background: rgba(10, 24, 38, 0.86);
+  border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
   filter: none;
   opacity: 1;
+  transform: none;
 }
 
 .report-page .phone-photo-card::before,
@@ -6911,6 +6926,33 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .phone-photo-card span {
   color: #f8faf7;
   font-weight: 900;
+}
+
+.report-page .roadhub-phone-photo-status,
+.report-page .roadhub-phone-helper {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0;
+  line-height: 1.25;
+  text-shadow: none;
+}
+
+.report-page .roadhub-phone-photo-status {
+  padding: 3px 8px;
+  color: #63c84d;
+  font-size: 0.72rem;
+  font-weight: 900;
+  background: rgba(99, 200, 77, 0.1);
+  border: 1px solid rgba(99, 200, 77, 0.24);
+  border-radius: 999px;
+}
+
+.report-page .roadhub-phone-helper {
+  color: rgba(248, 250, 247, 0.58);
+  font-size: 0.64rem;
+  font-weight: 700;
 }
 
 .report-page .roadhub-phone-photo-wrap {
@@ -6932,7 +6974,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .roadhub-phone-photo {
   display: block;
   width: 100%;
-  height: 68px;
+  height: 72px;
   object-fit: cover;
   border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
@@ -6948,19 +6990,16 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .mini-data-overlay {
-  top: 154px;
-  color: rgba(248, 250, 247, 0.72);
-  background: rgba(10, 24, 38, 0.82);
-  border-color: rgba(110, 231, 216, 0.2);
-  opacity: 1;
-  transform: none;
+  display: none;
 }
 
 .report-page .phone-ui {
-  display: grid;
+  position: static;
+  display: flex;
+  flex-direction: column;
   visibility: visible;
-  inset: 178px 18px 16px;
-  gap: 5px;
+  inset: auto;
+  gap: 7px;
   opacity: 1;
 }
 
@@ -6973,8 +7012,8 @@ body[data-theme="dark"] .receipt-modal {
   display: grid;
   visibility: visible;
   color: #f8faf7;
-  background: rgba(10, 24, 38, 0.82);
-  border: 1px solid rgba(110, 231, 216, 0.2);
+  background: rgba(10, 24, 38, 0.86);
+  border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
   box-shadow: none;
   opacity: 1;
@@ -7000,20 +7039,27 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .phone-status-list {
   display: grid;
-  gap: 6px;
+  gap: 7px;
 }
 
 .report-page .phone-status-list > span {
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  min-height: 28px;
-  padding: 4px 8px;
+  min-height: 38px;
+  padding: 7px 10px;
+}
+
+.report-page .phone-status-list > span > span {
+  color: rgba(248, 250, 247, 0.62);
+  font-size: 0.68rem;
+  font-weight: 800;
 }
 
 .report-page .phone-status-list strong {
   grid-column: 2;
-  color: rgba(248, 250, 247, 0.72);
-  font-size: 0.68rem;
+  color: #f8faf7;
+  font-size: 0.82rem;
+  font-weight: 900;
 }
 
 .report-page .detection-readout small,
@@ -7029,7 +7075,11 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .phone-submit-hint {
   margin: 0;
-  padding: 5px 10px;
+  padding: 0 4px;
+  color: rgba(248, 250, 247, 0.54);
+  font-size: 0.64rem;
+  background: transparent;
+  border: 0;
   text-align: center;
 }
 
@@ -7042,7 +7092,7 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .phone-capture {
   position: static;
-  min-height: 34px;
+  min-height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
