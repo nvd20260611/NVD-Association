@@ -6853,6 +6853,37 @@ body[data-theme="dark"] .receipt-modal {
   font-size: clamp(1.08rem, 1.5vw, 1.3rem);
 }
 
+.report-page .nvd-demo-section {
+  color: #f8faf7;
+}
+
+.report-page .nvd-demo-section .resilience-copy h1,
+.report-page .nvd-demo-section .resilience-copy p,
+.report-page .report-action-card__title,
+.report-page .report-action-card__desc,
+.report-page .report-steps li {
+  color: #f8faf7;
+}
+
+.report-page .nvd-demo-section .resilience-copy .eyebrow,
+.report-page .report-action-card .eyebrow,
+.report-page .report-demo-notice strong,
+.report-page .report-action-card__desc strong {
+  color: #f28c38;
+}
+
+.report-page .nvd-demo-section .resilience-copy p:not(.eyebrow),
+.report-page .report-action-card__desc,
+.report-page .report-steps li {
+  color: rgba(248, 250, 247, 0.74);
+}
+
+.report-page .report-action-card {
+  color: #f8faf7;
+  background: rgba(7, 17, 31, 0.76);
+  border-color: rgba(110, 231, 216, 0.22);
+}
+
 .report-page .pixel-shell {
   display: block;
   visibility: visible;
