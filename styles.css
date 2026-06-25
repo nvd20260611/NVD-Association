@@ -6826,7 +6826,7 @@ body[data-theme="dark"] .receipt-modal {
   visibility: visible;
   gap: clamp(16px, 2vh, 24px);
   width: 100%;
-  max-width: 430px;
+  max-width: 340px;
   justify-self: center;
   align-self: start;
   opacity: 1;
@@ -6856,9 +6856,12 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .pixel-shell {
   display: block;
   visibility: visible;
-  width: min(100%, 390px);
-  height: clamp(640px, 62vh, 680px);
-  min-height: 640px;
+  width: clamp(300px, 21vw, 340px);
+  max-width: 340px;
+  min-width: 300px;
+  aspect-ratio: 9 / 16;
+  height: clamp(590px, 68vh, 650px);
+  min-height: 590px;
   color: #f8faf7;
   background: linear-gradient(180deg, rgba(12, 26, 40, 0.98), rgba(5, 12, 22, 0.98));
   border: 1px solid rgba(110, 231, 216, 0.28);
@@ -6929,7 +6932,7 @@ body[data-theme="dark"] .receipt-modal {
 .report-page .roadhub-phone-photo {
   display: block;
   width: 100%;
-  height: 70px;
+  height: 68px;
   object-fit: cover;
   border: 1px solid rgba(110, 231, 216, 0.22);
   border-radius: 14px;
@@ -7031,12 +7034,14 @@ body[data-theme="dark"] .receipt-modal {
 }
 
 .report-page .phone-action-row {
+  position: static;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
 }
 
 .report-page .phone-capture {
+  position: static;
   min-height: 34px;
   display: flex;
   align-items: center;
@@ -7247,6 +7252,23 @@ body[data-theme="dark"] .receipt-modal {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.report-page .hub-demo-analysis-title {
+  grid-column: 1 / -1;
+  width: auto;
+  min-width: max-content;
+}
+
+.report-page .hub-demo-analysis-title span {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-width: max-content;
+  white-space: nowrap;
+  color: #40f0de;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
 .report-page .hub-demo-list-grid ul {
   display: grid;
   gap: 8px;
@@ -7406,7 +7428,7 @@ body[data-theme="dark"] .receipt-modal {
   }
 
   .report-page .nvd-demo-front {
-    max-width: min(390px, 100%);
+    max-width: min(340px, 100%);
   }
 
   .report-page .pixel-shell {
