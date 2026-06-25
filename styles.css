@@ -7152,6 +7152,10 @@ body[data-theme="dark"] .receipt-modal {
   box-shadow: 0 12px 26px rgba(99, 200, 77, 0.2);
 }
 
+.report-page .phone-capture i {
+  display: none;
+}
+
 .report-page .phone-submit {
   color: #07111f;
   background: #63c84d;
