@@ -1,4 +1,4 @@
-# NVD 協會官方網站
+﻿# NVD 協會官方網站
 
 NVD Road Feedback & Repair 官方靜態網站，部署於 GitHub Pages。專案維持純 HTML、CSS 與 JavaScript，不使用框架、SPA 或建置系統。
 
@@ -79,7 +79,19 @@ Footer 固定為：
 3. 不新增假回報數字。
 4. 未來新增正式表單時，需同步檢查 CSP 的 `form-action`。
 5. 未來新增送件端點前，需先補齊隱私權政策、服務條款與個人資料告知流程。
-6. ROAD HUB 只能作為流程示意；正式回報管道開放前，不得使用正式受理、案件確認、政府同步或真實成果數字等表述。
+6. ROAD HUB 只能作為流程體驗；正式回報管道開放前，不得使用正式受理、案件確認、政府同步或真實成果數字等表述。
+7. ROAD HUB 的觀察筆數屬於體驗版儀表板效果，只能使用瀏覽器本機 `nvdRoadHubDemoCount`，不得保存姓名、Email、電話、GPS、照片或正式案件資料。
+8. ROAD HUB 可以呈現 `12,846` 作為 Demo 起始筆數與 `+326` 作為 Demo 增量，但必須清楚標示為 Demo / 體驗版本，不得宣稱為正式成果。
+
+## 多語系維護規則
+
+1. 新增或調整 `data-i18n`、`data-i18n-placeholder`、`data-i18n-aria-label` 時，繁中與英文辭典必須同步補齊。
+2. ROAD HUB 的可見聲明、按鈕、時間軸與動態狀態必須使用同一套翻譯鍵；英文模式不得回退成中文，也不得產生正式送件或政府受理的誤解。
+3. 白話模式可以沿用繁中正式版聲明，但不得省略「不傳送、不保存、非正式送件」等限制。
+4. `manifesto.html` 與 `resilience.html` 的短移轉說明需維持繁中與英文版本。
+5. `privacy.html` 與 `terms.html` 必須保留繁體中文版本為準的可見聲明。
+6. 每個公開頁面的繁中與英文 title、meta description、Open Graph、Twitter 文案必須同步維護；語言切換後由 `script.js` 更新瀏覽器分頁與可更新的社群 metadata。
+7. Header logo、主要操作與頁面專屬圖片的 alt／ARIA 文字需同步提供繁中與英文，不可只翻譯畫面文字。
 
 ### 道路回報內容維護規則
 

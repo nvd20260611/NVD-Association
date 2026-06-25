@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 
@@ -125,15 +125,217 @@ function collectJavaScriptStrings(source) {
     .join("\n");
 }
 
+function collectDictionaryKeys(source) {
+  return new Set(
+    [...source.matchAll(/^\s{4}([A-Za-z][\w]*):/gm)].map((match) => match[1]),
+  );
+}
+
+function collectDictionaryValues(source) {
+  return [...source.matchAll(/^\s{4}[A-Za-z][\w]*:\s*(?:\r?\n\s*)?"((?:\\.|[^"\\])*)",/gm)].map(
+    (match) => match[1],
+  );
+}
+
+function dictionaryValue(source, key) {
+  const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return source.match(
+    new RegExp(`^\\s{4}${escapedKey}:\\s*(?:\\r?\\n\\s*)?"((?:\\\\.|[^"\\\\])*)",`, "m"),
+  )?.[1];
+}
+
 function fail(file, message) {
   failures.push(`${file}: ${message}`);
 }
 
 const htmlByFile = Object.fromEntries(htmlFiles.map((file) => [file, read(file)]));
 const script = read("script.js");
+const zhDictionaryStart = script.indexOf("  zh: {");
+const enDictionaryStart = script.indexOf("  en: {");
+const brandVoiceStart = script.indexOf("const brandVoiceContent");
+const zhDictionarySource = script.slice(zhDictionaryStart, enDictionaryStart);
+const enDictionarySource = script.slice(enDictionaryStart, brandVoiceStart);
+const zhDictionaryKeys = collectDictionaryKeys(zhDictionarySource);
+const enDictionaryKeys = collectDictionaryKeys(enDictionarySource);
 const anchorsByFile = Object.fromEntries(
   htmlFiles.map((file) => [file, collectAnchors(htmlByFile[file])]),
 );
+
+for (const [file, html] of Object.entries(htmlByFile)) {
+  const i18nKeys = new Set(
+    [...html.matchAll(/data-i18n(?:-placeholder|-aria-label)?=["']([^"']+)["']/g)].map(
+      (match) => match[1],
+    ),
+  );
+  for (const key of i18nKeys) {
+    if (!zhDictionaryKeys.has(key)) fail(file, `data-i18n key missing from Traditional Chinese dictionary: ${key}`);
+    if (!enDictionaryKeys.has(key)) fail(file, `data-i18n key missing from English dictionary: ${key}`);
+  }
+}
+
+const englishValuesWithHan = collectDictionaryValues(enDictionarySource).filter((value) =>
+  /[\u3400-\u9fff]/u.test(value),
+);
+if (englishValuesWithHan.length > 30) {
+  fail(
+    "script.js",
+    `English dictionary contains too many values with Chinese characters: ${englishValuesWithHan.length}`,
+  );
+}
+
+const roadHubEnglishKeys = [
+  "reportHeroTitleOne",
+  "reportHeroTitleTwo",
+  "reportDemoNotice",
+  "reportActionCta",
+  "demoStatusDetecting",
+  "demoStatusLocation",
+  "demoStatusLabel",
+  "demoStatusEncrypting",
+  "demoSuccess",
+  "demoHintNoData",
+  "demoHintNoRecord",
+  "demoReceiptId",
+  "demoLogLocation",
+  "demoLogRoadCondition",
+  "demoLogReport",
+  "demoLogComplete",
+  "demoDetectionScanning",
+  "demoDetectionFound",
+  "demoToastMarked",
+  "loopTitle",
+  "loopLead",
+];
+for (const key of roadHubEnglishKeys) {
+  const value = dictionaryValue(enDictionarySource, key);
+  if (!value) {
+    fail("script.js", `English ROAD HUB translation missing: ${key}`);
+  } else if (/[\u3400-\u9fff]/u.test(value)) {
+    fail("script.js", `English ROAD HUB translation contains Chinese text: ${key}`);
+  }
+}
+
+const reportSafetyNotice = dictionaryValue(enDictionarySource, "reportDemoNotice") || "";
+for (const phrase of [
+  "Process demo",
+  "No data is transmitted or stored",
+  "formal submission",
+  "case-acceptance process",
+  "government reporting channel",
+]) {
+  if (!reportSafetyNotice.includes(phrase)) {
+    fail("script.js", `English ROAD HUB safety notice missing phrase: ${phrase}`);
+  }
+}
+
+for (const [file, keys] of Object.entries({
+  "manifesto.html": ["manifestoMovedTitle", "manifestoMovedText", "manifestoMovedCta"],
+  "resilience.html": [
+    "resilienceMovedTitle",
+    "resilienceMovedText",
+    "resilienceMovedCta",
+    "resilienceMovedSecondaryCta",
+  ],
+})) {
+  for (const key of keys) {
+    if (!htmlByFile[file].includes(`data-i18n="${key}"`)) {
+      fail(file, `migration-page translation binding missing: ${key}`);
+    }
+    const value = dictionaryValue(enDictionarySource, key);
+    if (!value || /[\u3400-\u9fff]/u.test(value)) {
+      fail("script.js", `English migration-page translation is missing or mixed-language: ${key}`);
+    }
+  }
+}
+
+for (const file of ["privacy.html", "terms.html"]) {
+  if (!htmlByFile[file].includes('data-i18n="legalLanguageAuthority"')) {
+    fail(file, "missing visible legal-language authority statement");
+  }
+}
+
+const metadataI18nByFile = {
+  "index.html": ["indexPageTitle", "indexPageDescription"],
+  "about.html": ["aboutPageTitle", "aboutPageDescription"],
+  "report.html": ["reportPageTitle", "reportPageDescription"],
+  "join.html": ["joinPageTitle", "joinPageDescription"],
+  "privacy.html": ["privacyPageTitle", "privacyPageDescription"],
+  "terms.html": ["termsPageTitle", "termsPageDescription"],
+  "manifesto.html": ["manifestoPageTitle", "manifestoPageDescription"],
+  "resilience.html": ["resiliencePageTitle", "resiliencePageDescription"],
+};
+for (const [file, [titleKey, descriptionKey]] of Object.entries(metadataI18nByFile)) {
+  const zhTitle = dictionaryValue(zhDictionarySource, titleKey);
+  const enTitle = dictionaryValue(enDictionarySource, titleKey);
+  const zhDescription = dictionaryValue(zhDictionarySource, descriptionKey);
+  const enDescription = dictionaryValue(enDictionarySource, descriptionKey);
+  const html = htmlByFile[file];
+
+  if (!zhTitle || !enTitle || /[\u3400-\u9fff]/u.test(enTitle)) {
+    fail("script.js", `page title translations are incomplete: ${file}`);
+  }
+  if (!zhDescription || !enDescription || /[\u3400-\u9fff]/u.test(enDescription)) {
+    fail("script.js", `page description translations are incomplete: ${file}`);
+  }
+  if (zhTitle && !html.includes(`<title>${zhTitle}</title>`)) {
+    fail(file, "static Traditional Chinese title does not match its i18n value");
+  }
+  for (const attribute of [
+    `name="description" content="${zhDescription}"`,
+    `property="og:title" content="${zhTitle}"`,
+    `property="og:description" content="${zhDescription}"`,
+    `name="twitter:title" content="${zhTitle}"`,
+    `name="twitter:description" content="${zhDescription}"`,
+  ]) {
+    if (zhTitle && zhDescription && !html.includes(attribute)) {
+      fail(file, `static metadata does not match i18n value: ${attribute.split(" content=")[0]}`);
+    }
+  }
+  if (!script.includes(`"${file}": ["${titleKey}", "${descriptionKey}"]`)) {
+    fail("script.js", `page metadata mapping missing: ${file}`);
+  }
+}
+
+const accessibilityI18nKeys = [
+  "primaryNavigationAria",
+  "brandHomeAria",
+  "headerLogoAlt",
+  "mobileMenuOpenAria",
+  "mobileMenuCloseAria",
+  "siteMenuAria",
+  "reportNowAria",
+  "mobileLanguageAria",
+  "languageReadingAria",
+  "brandVoiceGovernanceAria",
+  "brandVoicePlainAria",
+  "footerNavigationAria",
+  "founderWebsiteAria",
+  "founderPhotoAlt",
+  "joinEmailAria",
+];
+for (const key of accessibilityI18nKeys) {
+  const zhValue = dictionaryValue(zhDictionarySource, key);
+  const enValue = dictionaryValue(enDictionarySource, key);
+  if (!zhValue || !enValue) {
+    fail("script.js", `accessibility translation missing: ${key}`);
+  } else if (/[\u3400-\u9fff]/u.test(enValue)) {
+    fail("script.js", `English accessibility translation contains Chinese text: ${key}`);
+  }
+}
+
+const joinContactNoticeEnglish =
+  dictionaryValue(enDictionarySource, "joinContactNotice") || "";
+for (const phrase of ["general contact only", "not treated as formal submissions"]) {
+  if (!joinContactNoticeEnglish.includes(phrase)) {
+    fail("script.js", `English join-page contact notice missing phrase: ${phrase}`);
+  }
+}
+
+const legalAuthorityEnglish =
+  dictionaryValue(enDictionarySource, "legalLanguageAuthority") || "";
+if (!legalAuthorityEnglish.includes("Traditional Chinese version prevails")) {
+  fail("script.js", "English legal-language authority statement is incomplete");
+}
 
 for (const file of htmlFiles) {
   const html = htmlByFile[file];
@@ -227,7 +429,7 @@ for (const text of reportRequiredText) {
 }
 
 const reportDisclaimerGroups = [
-  ["流程示意"],
+  ["流程體驗"],
   ["不會傳送"],
   ["不會保存", "保存"],
   ["正式受理", "正式回報"],
@@ -241,6 +443,60 @@ for (const alternatives of reportDisclaimerGroups) {
 for (const anchor of ["dashboard", "loop"]) {
   if (!anchorsByFile["report.html"].has(anchor)) {
     fail("report.html", `required anchor missing: id="${anchor}"`);
+  }
+}
+
+const requiredRoadHubDashboardText = [
+  "道路觀察資料儀表板",
+  "Demo observations",
+  "12,846",
+  "+326",
+  "新增一筆道路觀察",
+  "重置本機資料",
+  "障礙類型",
+  "區域分布參考",
+  "通行影響群體",
+  "資料完整度",
+  "改善優先參考",
+  "資料用途",
+  "觀察紀錄 NVD-OBS-12847",
+  "體驗版本",
+  "只儲存在本瀏覽器",
+  "沒有資料會傳送到伺服器",
+  "聯絡 NVD：nvd20260611@gmail.com",
+];
+for (const text of requiredRoadHubDashboardText) {
+  if (!reportText.includes(text)) {
+    fail("report.html", `ROAD HUB dashboard text missing: ${text}`);
+  }
+}
+
+const requiredRoadHubEnglishText = [
+  "Road Observation Data Dashboard",
+  "Demo observations",
+  "7-day demo growth",
+  "Add one road observation",
+  "Reset local data",
+  "Barrier types",
+  "Area distribution demo",
+  "Data completeness",
+  "Observation record NVD-OBS-12847",
+  "This ROAD HUB page is an experience version",
+  "No data is transmitted to a server",
+];
+for (const text of requiredRoadHubEnglishText) {
+  if (!script.includes(text)) {
+    fail("script.js", `English ROAD HUB dashboard text missing: ${text}`);
+  }
+}
+
+if (!script.includes("nvdRoadHubDemoCount")) {
+  fail("script.js", "ROAD HUB demo count must use localStorage key nvdRoadHubDemoCount");
+}
+
+for (const match of script.matchAll(/localStorage\.(?:getItem|setItem|removeItem)\(["']([^"']*nvdRoadHub[^"']*)["']/g)) {
+  if (match[1] !== "nvdRoadHubDemoCount") {
+    fail("script.js", `unexpected ROAD HUB localStorage key: ${match[1]}`);
   }
 }
 
@@ -268,6 +524,12 @@ const fakeResultPatterns = [
   ["政府同步", /政府同步/],
   ["同步政府", /同步政府/],
   ["正式送出", /(?<!未)正式送出/],
+  ["officially submitted", /officially submitted/i],
+  ["accepted case", /accepted case/i],
+  ["confirmed case", /confirmed case/i],
+  ["government synchronized", /government synchronized/i],
+  ["government node", /government node/i],
+  ["formal case", /formal case/i],
   ["precise coordinate", /\d{2,3}\.\d{3,}/],
   ["technical confidence overlay", /\b(?:LAT|LNG|DEPTH|CONFIDENCE)\b/],
 ];

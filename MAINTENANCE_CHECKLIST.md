@@ -1,4 +1,4 @@
-# NVD 官網維護檢查清單
+﻿# NVD 官網維護檢查清單
 
 ## 改版前
 
@@ -31,9 +31,18 @@
 - [ ] 首頁 CTA 連到 `report.html#dashboard`。
 - [ ] ROAD HUB 仍為前端模擬，沒有新增 `fetch`、XHR、`FormData` 或後端端點。
 - [ ] `script.js` 沒有重複的 ROAD HUB 頂層函式宣告。
-- [ ] ROAD HUB 有可見的「流程示意，不會傳送或保存資料」聲明。
+- [ ] ROAD HUB 有可見的「流程體驗，不會傳送或保存資料」聲明。
 - [ ] ROAD HUB 沒有看似真實成果的精確數字、HASH、信心值或精準座標。
 - [ ] ROAD HUB 沒有「已受理、已轉交、已確認、同步政府」等可能造成誤解的文字。
+- [ ] ROAD HUB 觀察筆數只使用本機 `nvdRoadHubDemoCount`，沒有保存姓名、Email、電話、GPS、照片或正式案件資料。
+- [ ] ROAD HUB 的 `12,846`、`+326` 與 `NVD-OBS` 均清楚維持 Demo / 體驗版語境。
+- [ ] ROAD HUB 的英文可見聲明與動態狀態沒有混入中文。
+- [ ] ROAD HUB 的繁中、英文與白話模式都保留「不傳送、不保存、非正式送件」的限制。
+- [ ] `manifesto.html` 與 `resilience.html` 的英文移轉說明可正常顯示。
+- [ ] `privacy.html` 與 `terms.html` 顯示繁體中文版本為準的聲明。
+- [ ] 所有 HTML 使用的 `data-i18n`、placeholder 與 aria-label 翻譯鍵在繁中、英文辭典均存在。
+- [ ] 8 個公開頁面的 title、meta description、OG title/description 與 Twitter title/description 可隨語言切換。
+- [ ] Header logo alt、主要導覽、手機選單、CTA、Email 與創辦人照片的 ARIA／alt 可隨語言切換。
 - [ ] `join.html` 沒有未完成治理與告知流程的正式報名表。
 - [ ] `join.html` 沒有收集表單個人資料。
 - [ ] Email 聯絡窗口有可見的用途與限制聲明。

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * NVD 協會
  * 功能：協會官網互動、深淺色主題、多語言切換、使用說明 Modal。
  */
@@ -7,6 +7,49 @@ const translations = {
   zh: {
     brandName: "NVD 協會",
     pageTitle: "NVD 協會｜道路回饋與修復行動",
+    indexPageTitle: "NVD 協會｜移動主權與友善道路行動",
+    indexPageDescription:
+      "NVD 協會關注移動主權、無障礙空間與友善道路行動，透過道路回報流程與公共倡議，協助社會看見日常通行中的障礙。",
+    aboutPageTitle: "關於 NVD｜理念與團隊",
+    aboutPageDescription:
+      "了解 NVD 的理念、發起背景、團隊角色與移動主權倡議，認識我們如何從日常通行經驗出發，推動友善道路討論。",
+    reportPageTitle: "道路回報｜NVD ROAD HUB",
+    reportPageDescription:
+      "查看 NVD ROAD HUB 的道路回報流程體驗，了解如何以拍照、定位與補充說明整理道路障礙資訊。本頁目前不會傳送、保存或正式受理資料。",
+    joinPageTitle: "加入 NVD 共創行動｜參與方式",
+    joinPageDescription:
+      "了解加入 NVD 共創行動的參與方向，包括行動夥伴、道路觀察、設計技術支援與合作詢問。本頁目前不提供正式報名表。",
+    privacyPageTitle: "隱私權政策｜NVD 協會",
+    privacyPageDescription:
+      "閱讀 NVD 協會網站的隱私權政策，了解目前網站功能、資料使用原則與未來正式表單開放前的個資處理說明。",
+    termsPageTitle: "服務條款｜NVD 協會",
+    termsPageDescription:
+      "閱讀 NVD 協會網站服務條款，了解網站使用、內容限制、流程體驗與責任範圍。",
+    manifestoPageTitle: "品牌理念已移至關於 NVD",
+    manifestoPageDescription:
+      "NVD 品牌理念內容已移至關於 NVD 頁面，請前往新的介紹頁閱讀目前版本。",
+    resiliencePageTitle: "道路回報已移至新頁面",
+    resiliencePageDescription:
+      "NVD 道路回報內容已移至道路回報頁，請前往新的 ROAD HUB 頁面查看目前流程。",
+    primaryNavigationAria: "主要導覽",
+    brandHomeAria: "NVD 協會首頁",
+    headerLogoAlt: "NVD 協會",
+    mobileMenuOpenAria: "開啟網站選單",
+    mobileMenuCloseAria: "關閉網站選單",
+    siteMenuAria: "網站選單",
+    reportNowAria: "立即回報道路障礙",
+    mobileLanguageAria: "手機版語言與閱讀模式切換",
+    languageReadingAria: "語言與閱讀模式切換",
+    brandVoiceGovernanceAria: "切換為治理版",
+    brandVoicePlainAria: "切換為白話版",
+    brandVoiceGovernanceLabel: "治理",
+    brandVoicePlainLabel: "白話",
+    footerNavigationAria: "頁尾導覽",
+    heroStatsAria: "友善行動計數",
+    homeReportCtaAria: "前往道路障礙回報頁",
+    founderWebsiteAria: "查看陳怡安的個人網站",
+    founderPhotoAlt: "陳怡安，NVD 發起人",
+    joinEmailAria: "寄信至 NVD 初步聯絡信箱",
     navHome: "首頁",
     navValues: "核心理念",
         navResilience: "道路行動",
@@ -215,6 +258,26 @@ const translations = {
     resilienceTitle: "讓道路問題被看見 讓修復行動被串起",
     resilienceLead:
       "從一鍵回報到資料彙整，NVD 把日常通行阻礙轉成可理解、可追蹤、可協作的公共訊號。",
+    reportHeroTitleOne: "讓道路問題被看見",
+    reportHeroTitleTwo: "讓修復行動被串起",
+    reportTimelineLabel: "道路回報流程體驗",
+    reportStepOne: "01 發現問題",
+    reportStepTwo: "02 位置描述",
+    reportStepThree: "03 補充狀況",
+    reportStepFour: "04 資料整理",
+    reportStepFive: "05 查看結果",
+    reportActionEyebrow: "回報前準備",
+    reportActionTitle: "拍照、定位、補充說明",
+    reportDemoNotice:
+      "流程體驗：目前此區不會傳送或保存資料，不會形成正式送件，也不是政府通報管道。正式回報管道將依 NVD 後續作業流程逐步開放。",
+    reportActionDescription:
+      "把你遇到的道路障礙，整理成可以被理解、討論與改善的公共資訊。",
+    reportStepsLabel: "道路障礙回報步驟",
+    reportActionStepPhoto: "拍下障礙照片",
+    reportActionStepLocation: "標記地點或描述位置",
+    reportActionStepImpact: "補充通行影響",
+    reportActionCta: "體驗回報流程",
+    reportActionCtaAria: "體驗道路回報流程",
     resiliencePointOne: "群眾回報高低差、騎樓障礙與不友善動線。",
     resiliencePointTwo: "用模擬資料呈現熱區、改善點與參與節點。",
     resiliencePointThree: "讓同學、師資與種子使用者一起測試與微調。",
@@ -232,13 +295,128 @@ const translations = {
     demoTagGravel: "碎石",
     demoSubmit: "開始體驗流程",
     demoStatusDetecting: "正在顯示道路狀況辨識流程...",
-    demoStatusLocation: "位置描述示意",
-    demoStatusLabel: "路面狀況標記示意",
+    demoStatusLocation: "位置描述參考",
+    demoStatusLabel: "路面狀況標記",
     demoStatusReady: "僅供流程體驗，不會傳送或保存資料。",
-    demoStatusEncrypting: "正在示意整理回報內容...",
-    demoBackendStatus: "道路流程示意區",
-    demoScoreLabel: "流程狀態",
-    demoSuccess: "流程示意完成，未正式送出或受理。",
+    demoStatusEncrypting: "正在整理回報內容...",
+    demoBackendStatus: "道路觀察資料儀表板",
+    demoScoreLabel: "Demo observations",
+    demoObservationCount: "12,846",
+    demoObservationLabel: "道路觀察資料",
+    demoGrowthLabel: "近 7 日 Demo 增量",
+    demoGrowthValue: "+326",
+    demoGrowthNote: "以道路觀察資料呈現累積感",
+    demoControlsAria: "ROAD HUB 道路觀察資料控制",
+    demoAddObservation: "新增一筆道路觀察",
+    demoAddObservationAria: "新增一筆道路觀察資料",
+    demoResetLocalData: "重置本機資料",
+    demoResetLocalDataAria: "重置 ROAD HUB 本機道路觀察資料",
+    demoDashboardSummary:
+      "NVD ROAD HUB 將道路觀察資料整理為障礙類型、區域分布、通行影響與改善優先參考，協助社區、校園與組織看見友善道路行動的資料價值。",
+    demoSuccess: "流程體驗完成；未傳送、保存或建立正式送件。",
+    demoFieldPanelTitle: "現場回報端",
+    demoProcessLabel: "流程體驗",
+    demoDeviceAria: "行動裝置流程體驗畫面",
+    demoStreetAria: "道路現場參考影像",
+    demoOverlayPositionInitial: "位置描述：體驗中",
+    demoOverlayRoadInitial: "路面狀況：體驗中",
+    demoOverlayPositionComplete: "位置描述：體驗完成",
+    demoOverlayRoadComplete: "路面狀況：體驗完成",
+    demoExperienceOnly: "僅供流程體驗",
+    demoHintStart: "點擊下方按鈕體驗道路回報流程",
+    demoHintLocation: "位置資訊僅為介面參考",
+    demoHintAssessment: "此判讀結果僅供流程體驗",
+    demoHintNoData: "不會傳送或保存任何資料",
+    demoHintNoRecord: "未建立正式紀錄",
+    demoPositionLabel: "位置描述",
+    demoLocationUnavailable: "尚未提供位置",
+    demoStatusListAria: "流程體驗狀態",
+    demoObstacleHeightLabel: "路面高低差",
+    demoImpactLabel: "通行影響",
+    demoNoFormalRecord: "未建立正式紀錄",
+    demoResultLabel: "路面狀況標記：",
+    demoResultContent: "體驗內容",
+    demoDashboardAria: "道路流程體驗區",
+    demoRadarAria: "結構向量參考圖",
+    demoStateInProgress: "體驗中",
+    demoStateComplete: "體驗完成",
+    demoDataStatusLabel: "資料狀態",
+    demoDataStatusValue: "道路觀察資料",
+    demoNoStorage: "不保存資料",
+    demoBarrierTypeLabel: "障礙類型",
+    demoBarrierTypeValue: "6 類",
+    demoImpactGroupLabel: "通行影響群體",
+    demoImpactGroupValue: "6 組",
+    demoDataPurposeLabel: "資料用途",
+    demoDataPurposeValue: "公共倡議參考",
+    demoOrganizeStatusLabel: "整理狀態",
+    demoOrganizing: "資料整理",
+    demoSubmissionStatusLabel: "送件狀態",
+    demoNotFormalSubmission: "非正式送件",
+    demoLocationInfoLabel: "位置資訊",
+    demoToastComplete: "流程體驗已完成，未建立正式紀錄",
+    demoBarrierCategoryTitle: "障礙類型",
+    demoBarrierOne: "人行道阻塞",
+    demoBarrierTwo: "坡道高低差",
+    demoBarrierThree: "騎樓障礙",
+    demoBarrierFour: "路口高差",
+    demoBarrierFive: "臨停阻礙",
+    demoBarrierSix: "標線或號誌不友善",
+    demoDistrictTitle: "區域分布參考",
+    demoDistrictOne: "三民區",
+    demoDistrictTwo: "左營區",
+    demoDistrictThree: "鼓山區",
+    demoDistrictFour: "苓雅區",
+    demoDistrictFive: "前鎮區",
+    demoDistrictSix: "鳳山區",
+    demoTimeTitle: "高頻時段",
+    demoTimeValue: "上午通勤、午間移動、傍晚返家",
+    demoAffectedTitle: "通行影響群體",
+    demoAffectedValue:
+      "輪椅使用者、嬰兒車使用者、高齡行人、暫時受傷者、視障者、一般行人",
+    demoImpactLevelTitle: "通行影響程度",
+    demoImpactLevelValue: "高、中、低",
+    demoCompletenessTitle: "資料完整度",
+    demoCompletenessValue: "照片、區域、障礙類型、受影響群體、補充說明",
+    demoPriorityTitle: "改善優先參考",
+    demoPriorityValue: "優先觀察：人行道阻塞、坡道高低差、路口高差",
+    demoUseTitle: "資料用途",
+    demoUseValue: "公共倡議、校園合作、企業 ESG、地方改善參考、無障礙教育",
+    demoFlowAria: "道路觀察資料流程",
+    demoFlowOne: "新增道路觀察",
+    demoFlowTwo: "分類障礙類型",
+    demoFlowThree: "標記通行影響",
+    demoFlowFour: "整理倡議資料",
+    demoFlowFive: "顯示於儀表板",
+    demoRecordTitle: "觀察紀錄 NVD-OBS-12847",
+    demoRecordBody:
+      "區域：三民區｜類型：人行道阻塞｜影響：輪椅使用者、嬰兒車使用者、行人｜狀態：加入儀表板｜備註：此紀錄僅供流程預覽，未傳送、保存或正式受理。",
+    demoDashboardDisclaimer:
+      "這個 ROAD HUB 頁面是體驗版本。觀察筆數只儲存在本瀏覽器，用來呈現資料累積效果；不代表 NVD 正式案件受理或政府紀錄。沒有資料會傳送到伺服器，也不會保存個人資料。",
+    demoContactPrompt: "想把這套流程帶進社區、校園或企業合作？",
+    demoContactLink: "聯絡 NVD：nvd20260611@gmail.com",
+    demoObservationAdded: "已新增一筆道路觀察資料",
+    demoObservationReset: "已重置本機觀察資料",
+    demoReceiptTitle: "流程體驗紀錄",
+    demoReceiptId: "觀察編號：不產生正式紀錄",
+    demoReceiptStatus: "狀態：僅供體驗",
+    demoStatusLabelShort: "體驗狀態",
+    demoLogAria: "流程體驗整理紀錄",
+    demoLogIdle: "[體驗] 流程待命中...",
+    demoLogImpact: "[體驗] 通行影響整理中...",
+    demoLogLocation: "[體驗] 位置描述整理中...",
+    demoLogRoadCondition: "[體驗] 路面狀況標記中...",
+    demoLogReport: "[體驗] 回報內容整理中，未傳送資料...",
+    demoLogComplete: "[體驗] 流程體驗完成，未建立正式紀錄",
+    demoLogItemPosition: "位置描述",
+    demoLogItemImpact: "通行影響",
+    demoLogItemObstacle: "障礙類型",
+    demoLogItemPhoto: "照片資訊",
+    demoLogOrganizing: "[體驗] {item}整理中...",
+    demoDetectionScanning: "正在辨識現場道路狀況...",
+    demoDetectionFound: "偵測到路面狀況：",
+    demoObstacleHeight: "高低落差",
+    demoToastMarked: "體驗標記完成，未傳送或保存資料",
     loopEyebrow: "Friendly Tech Loop",
     loopTitle: "從回饋到修復：NVD 的友善道路循環",
     loopLead: "不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。",
@@ -370,6 +548,17 @@ const translations = {
     privacyTitle: "隱私權政策",
     termsTitle: "服務條款",
     legalUpdated: "最後更新：2026 年 6 月 22 日",
+    legalLanguageAuthority:
+      "本頁法律文字以繁體中文版本為準；若翻譯或語言切換內容與繁體中文版本有差異，請以繁體中文版本為準。",
+    manifestoMovedTitle: "品牌理念已移至關於 NVD",
+    manifestoMovedText:
+      "NVD 的品牌理念、移動主權、社會韌性與團隊介紹，已整理至「關於 NVD」頁面。",
+    manifestoMovedCta: "前往關於 NVD",
+    resilienceMovedTitle: "道路回報已移至新頁面",
+    resilienceMovedText:
+      "NVD ROAD HUB 與道路障礙回報入口，已整理至「道路回報」頁面。",
+    resilienceMovedCta: "前往道路回報",
+    resilienceMovedSecondaryCta: "了解 NVD 理念",
     privacySectionCollection: "資料蒐集範圍",
     privacyCollectionText:
       "本網站為靜態網站，不要求註冊帳號，也不會主動蒐集姓名、電子郵件、付款資料或其他可直接識別個人的資料。",
@@ -440,6 +629,49 @@ const translations = {
   en: {
     brandName: "NVD Association",
     pageTitle: "NVD Association｜Road Feedback & Repair",
+    indexPageTitle: "NVD Association｜Mobility Sovereignty and Accessible Roads",
+    indexPageDescription:
+      "NVD Association focuses on mobility sovereignty, accessible spaces, and civic road-barrier awareness through a transparent road-report flow and public advocacy.",
+    aboutPageTitle: "About NVD｜Mission and Team",
+    aboutPageDescription:
+      "Learn about NVD’s mission, founding background, team roles, and mobility-sovereignty advocacy rooted in everyday accessibility experiences.",
+    reportPageTitle: "Road Report｜NVD ROAD HUB",
+    reportPageDescription:
+      "View the NVD ROAD HUB process demo for organizing road-barrier observations with photos, location context, and notes. This page does not transmit, store, or formally accept data.",
+    joinPageTitle: "Join NVD｜Ways to Participate",
+    joinPageDescription:
+      "Explore ways to participate in NVD, including action partners, road observation, design and technical support, and collaboration inquiries. This page does not provide a formal application form.",
+    privacyPageTitle: "Privacy Policy｜NVD Association",
+    privacyPageDescription:
+      "Read the NVD Association website privacy policy, including current site functions, data-use principles, and privacy notes before any future formal form is opened.",
+    termsPageTitle: "Terms of Use｜NVD Association",
+    termsPageDescription:
+      "Read the NVD Association website terms of use, including site usage, content limitations, process demos, and scope of responsibility.",
+    manifestoPageTitle: "Moved｜About NVD",
+    manifestoPageDescription:
+      "The NVD brand-manifesto content has moved to the About NVD page. Please continue there to read the current version.",
+    resiliencePageTitle: "Moved｜Road Report",
+    resiliencePageDescription:
+      "The NVD road-report content has moved to the Road Report page. Please continue there to view the current ROAD HUB process.",
+    primaryNavigationAria: "Primary navigation",
+    brandHomeAria: "NVD Association home",
+    headerLogoAlt: "NVD Association",
+    mobileMenuOpenAria: "Open site menu",
+    mobileMenuCloseAria: "Close site menu",
+    siteMenuAria: "Site menu",
+    reportNowAria: "Report a road barrier",
+    mobileLanguageAria: "Mobile language and reading-mode switcher",
+    languageReadingAria: "Language and reading-mode switcher",
+    brandVoiceGovernanceAria: "Switch to governance mode",
+    brandVoicePlainAria: "Switch to plain-language mode",
+    brandVoiceGovernanceLabel: "Governance",
+    brandVoicePlainLabel: "Plain",
+    footerNavigationAria: "Footer navigation",
+    heroStatsAria: "Accessible-action status",
+    homeReportCtaAria: "Go to the road-report page",
+    founderWebsiteAria: "Visit Yi-An Chen’s personal website",
+    founderPhotoAlt: "Yi-An Chen, founder of NVD",
+    joinEmailAria: "Email NVD’s initial contact address",
     navHome: "Home",
     navValues: "Values",
         navResilience: "Road Action",
@@ -459,7 +691,7 @@ const translations = {
     homeIdeaTitle: "Helping everyone travel with confidence",
     homeIdeaLead:
       "NVD centers mobility autonomy and social resilience, turning lived travel experiences into public signals that can be understood, tracked, and improved.",
-    homeReportTitle: "Start with one road report",
+    homeReportTitle: "Start with one road-barrier report",
     homeReportLead:
       "See how road barriers affect wheelchair users, strollers, and pedestrians, then visit the road report page to learn about the process.",
     searchLabel: "Search by tool name, tag, or pain point",
@@ -481,7 +713,7 @@ const translations = {
     aboutEyebrow: "About NVD",
     aboutTitle: "About NVD",
     aboutParagraphOne:
-      "NVD is an action initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and all pedestrians.",
+      "NVD is a civic initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and all pedestrians.",
     aboutParagraphTwo:
       "We believe accessibility is not only about physical infrastructure or the needs of a small group. It is a public issue that everyone may encounter at different stages of life. From strollers and luggage to walkers and powered wheelchairs, road conditions, accessible routes, and safe public spaces affect everyone's quality of life.",
     aboutParagraphThree:
@@ -507,7 +739,7 @@ const translations = {
     teamLead:
       "NVD team profiles go beyond conventional resumes. They show how each member brings lived experience, professional capability, and public participation to the needs of urban mobility and social resilience.",
     founderRoleEyebrow: "Founder",
-    founderNameRole: "Yi-An Chen | NVD Initiator",
+    founderNameRole: "Yi-An Chen | NVD Founder",
     founderParagraphOne:
       "I am Yi-An Chen, the initiator of NVD. I have long used a powered wheelchair as my primary means of mobility, which has given me a direct understanding of the details that shape city roads, public spaces, and accessible environments.",
     founderParagraphTwo:
@@ -519,7 +751,7 @@ const translations = {
     officialProfileTitle: "Official Profile",
     officialProfileLead: "For use in resumes, proposals, media, and social profiles.",
     officialProfileText:
-      "NVD is an action initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and pedestrians. Through field observation, route records, and organized information, NVD turns everyday mobility barriers into public information that can be understood, discussed, and improved. We seek to connect community members, local communities, government, businesses, and professional teams to advance more accessible and resilient cities.",
+      "NVD is a civic initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and pedestrians. Through field observation, route records, and organized information, NVD turns everyday mobility barriers into public information that can be understood, discussed, and improved. We seek to connect community members, local communities, government, businesses, and professional teams to advance more accessible and resilient cities.",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "Three gateways, one mission",
     gatewayLead:
@@ -654,7 +886,27 @@ const translations = {
     resilienceEyebrow: "NVD ACTION HUB",
     resilienceTitle: "Make road issues visible, then connect repair action",
     resilienceLead:
-      "From one-tap reporting to organized public signals, NVD turns daily road barriers into information people can understand, track, and improve together.",
+      "This process demo shows how daily road barriers can be organized into public information that people can understand, discuss, and improve together.",
+    reportHeroTitleOne: "Make road barriers visible",
+    reportHeroTitleTwo: "Connect the work of improving them",
+    reportTimelineLabel: "Road-report process demo",
+    reportStepOne: "01 Notice a barrier",
+    reportStepTwo: "02 Describe the location",
+    reportStepThree: "03 Add context",
+    reportStepFour: "04 Organize the demo",
+    reportStepFive: "05 Review the demo",
+    reportActionEyebrow: "Before trying the demo",
+    reportActionTitle: "Take a photo, note the location, and add context",
+    reportDemoNotice:
+      "Process demo: No data is transmitted or stored. Nothing entered here becomes a formal submission, no case-acceptance process takes place here, and this is not a government reporting channel.",
+    reportActionDescription:
+      "Organize a road barrier you encounter into public information that can be understood, discussed, and improved.",
+    reportStepsLabel: "Road-barrier demo steps",
+    reportActionStepPhoto: "Take a photo of the barrier",
+    reportActionStepLocation: "Mark or describe the location",
+    reportActionStepImpact: "Describe how it affects access",
+    reportActionCta: "Try the demo flow",
+    reportActionCtaAria: "Try the road-report process demo",
     resiliencePointOne:
       "Crowdsourced reports for level differences, sidewalk barriers, and unfriendly routes.",
     resiliencePointTwo:
@@ -679,20 +931,143 @@ const translations = {
     demoStatusLabel: "Road-condition marking demo",
     demoStatusReady: "Demo only. No data is transmitted or stored.",
     demoStatusEncrypting: "Organizing demo report content...",
-    demoBackendStatus: "Road flow demo",
-    demoScoreLabel: "Demo status",
-    demoSuccess: "Demo complete. Nothing was submitted or accepted.",
+    demoBackendStatus: "Road Observation Data Dashboard",
+    demoScoreLabel: "Demo observations",
+    demoObservationCount: "12,846",
+    demoObservationLabel: "road-observation demo data",
+    demoGrowthLabel: "7-day demo growth",
+    demoGrowthValue: "+326",
+    demoGrowthNote: "A demo-only accumulation effect",
+    demoControlsAria: "ROAD HUB demo data controls",
+    demoAddObservation: "Add one road observation",
+    demoAddObservationAria: "Add one road-observation data point",
+    demoResetLocalData: "Reset local data",
+    demoResetLocalDataAria: "Reset local ROAD HUB demo data",
+    demoDashboardSummary:
+      "NVD ROAD HUB organizes road-observation data into barrier types, area distribution, access impact, and improvement-priority references to help communities, campuses, and organizations see the data value of accessible-road action.",
+    demoSuccess:
+      "Process demo complete. No data was transmitted or stored, and no formal submission was created.",
+    demoFieldPanelTitle: "Field demo",
+    demoProcessLabel: "Process demo",
+    demoDeviceAria: "Mobile process-demo screen",
+    demoStreetAria: "Illustrative road scene",
+    demoOverlayPositionInitial: "Location description: demo in progress",
+    demoOverlayRoadInitial: "Road condition: demo in progress",
+    demoOverlayPositionComplete: "Location description: demo complete",
+    demoOverlayRoadComplete: "Road condition: demo complete",
+    demoExperienceOnly: "For demonstration only",
+    demoHintStart: "Select the button below to try the road-report flow",
+    demoHintLocation: "Location information is illustrative only",
+    demoHintAssessment: "This assessment is part of the process demo",
+    demoHintNoData: "No data is transmitted or stored",
+    demoHintNoRecord: "No formal record is created",
+    demoPositionLabel: "Location description",
+    demoLocationUnavailable: "No location provided",
+    demoStatusListAria: "Process-demo status",
+    demoObstacleHeightLabel: "Level-difference demo",
+    demoImpactLabel: "Access-impact demo",
+    demoNoFormalRecord: "No formal record created",
+    demoResultLabel: "Road-condition marker: ",
+    demoResultContent: "Demo content",
+    demoDashboardAria: "Road-process demo area",
+    demoRadarAria: "Illustrative structure chart",
+    demoStateInProgress: "Demo in progress",
+    demoStateComplete: "Demo complete",
+    demoDataStatusLabel: "Data status",
+    demoDataStatusValue: "Demo data",
+    demoNoStorage: "Not stored",
+    demoBarrierTypeLabel: "Barrier types",
+    demoBarrierTypeValue: "6 categories",
+    demoImpactGroupLabel: "Access-impact groups",
+    demoImpactGroupValue: "6 groups",
+    demoDataPurposeLabel: "Data purpose",
+    demoDataPurposeValue: "Public-advocacy reference",
+    demoOrganizeStatusLabel: "Organization status",
+    demoOrganizing: "Demo organization",
+    demoSubmissionStatusLabel: "Submission status",
+    demoNotFormalSubmission: "Not a formal submission",
+    demoLocationInfoLabel: "Location information",
+    demoToastComplete: "Process demo complete; no formal record was created",
+    demoBarrierCategoryTitle: "Barrier types",
+    demoBarrierOne: "Sidewalk blockage",
+    demoBarrierTwo: "Ramp-level mismatch",
+    demoBarrierThree: "Arcade obstruction",
+    demoBarrierFour: "Intersection height gap",
+    demoBarrierFive: "Temporary parking obstruction",
+    demoBarrierSix: "Unfriendly markings or signals",
+    demoDistrictTitle: "Area distribution demo",
+    demoDistrictOne: "Sanmin",
+    demoDistrictTwo: "Zuoying",
+    demoDistrictThree: "Gushan",
+    demoDistrictFour: "Lingya",
+    demoDistrictFive: "Qianzhen",
+    demoDistrictSix: "Fengshan",
+    demoTimeTitle: "High-frequency time periods",
+    demoTimeValue: "Morning commute, midday trips, evening return",
+    demoAffectedTitle: "Access-impact groups",
+    demoAffectedValue:
+      "Wheelchair users, stroller users, older pedestrians, temporarily injured pedestrians, people with visual impairments, general pedestrians",
+    demoImpactLevelTitle: "Access-impact level",
+    demoImpactLevelValue: "High, medium, low",
+    demoCompletenessTitle: "Data completeness",
+    demoCompletenessValue: "Photo, area, barrier type, affected group, notes",
+    demoPriorityTitle: "Improvement priority reference",
+    demoPriorityValue:
+      "Priority focus: sidewalk blockage, ramp-level mismatch, intersection height gap",
+    demoUseTitle: "Data use",
+    demoUseValue:
+      "Public advocacy, campus collaboration, corporate ESG, local improvement reference, accessibility education",
+    demoFlowAria: "Road-observation data flow",
+    demoFlowOne: "Add road observation",
+    demoFlowTwo: "Classify barrier type",
+    demoFlowThree: "Tag access impact",
+    demoFlowFour: "Organize advocacy data",
+    demoFlowFive: "Display on dashboard",
+    demoRecordTitle: "Observation record NVD-OBS-12847",
+    demoRecordBody:
+      "Area: Sanmin | Type: Sidewalk blockage | Impact: wheelchair users, stroller users, pedestrians | Status: Added to dashboard | Note: This record is for process preview only. No data is transmitted, stored, or formally accepted.",
+    demoDashboardDisclaimer:
+      "This ROAD HUB page is an experience version. The observation count is stored only in this browser to present a data-accumulation effect. It does not represent formal NVD case acceptance or government records. No data is transmitted to a server, and no personal data is stored.",
+    demoContactPrompt:
+      "Interested in bringing this workflow into a community, campus, or corporate collaboration?",
+    demoContactLink: "Contact NVD: nvd20260611@gmail.com",
+    demoObservationAdded: "One road-observation demo point was added",
+    demoObservationReset: "Local demo data has been reset",
+    demoReceiptTitle: "Demo record",
+    demoReceiptId: "Demo ID: no formal record is generated",
+    demoReceiptStatus: "Status: demonstration only",
+    demoStatusLabelShort: "Demo status",
+    demoLogAria: "Process-demo activity log",
+    demoLogIdle: "[Demo] Waiting to begin...",
+    demoLogImpact: "[Demo] Organizing access impact...",
+    demoLogLocation: "[Demo] Organizing location description...",
+    demoLogRoadCondition: "[Demo] Marking the road condition...",
+    demoLogReport: "[Demo] Organizing content; no data transmitted...",
+    demoLogComplete: "[Demo] Process complete; no formal record created",
+    demoLogItemPosition: "location description",
+    demoLogItemImpact: "access impact",
+    demoLogItemObstacle: "barrier type",
+    demoLogItemPhoto: "photo information",
+    demoLogOrganizing: "[Demo] Organizing {item}...",
+    demoDetectionScanning: "Reviewing the illustrative road scene...",
+    demoDetectionFound: "Illustrative road condition: ",
+    demoObstacleHeight: "level difference",
+    demoToastMarked: "Demo marker complete; no data transmitted or stored",
     loopEyebrow: "Friendly Tech Loop",
-    loopTitle: "從回饋到修復：NVD 的友善道路循環",
-    loopLead: "不是停留在口號，而是把現場回饋整理成可被追蹤、可被討論、可被改善的公共訊號。",
-    loopUseTitle: "現場回饋",
-    loopUseText: "從道路阻礙、通行風險與日常不便開始，讓真實需求被看見。",
+    loopTitle: "From observation to improvement: NVD's accessible-road cycle",
+    loopLead:
+      "The goal is to organize field observations into public information that can be understood, discussed, and improved.",
+    loopUseTitle: "Field observation",
+    loopUseText:
+      "Start with road barriers, access risks, and everyday travel difficulties so real needs can be understood.",
     loopTrustTitle: "Build trust",
-    loopTrustText: "回饋被整理、被標記、被理解，才有機會成為修復行動的起點。",
+    loopTrustText:
+      "Organized and clearly described observations can become a starting point for improvement.",
     loopCoCreateTitle: "Co-create",
-    loopCoCreateText: "邀請居民、專業者、企業與公共部門共同參與，讓下一次通行更安全。",
+    loopCoCreateText:
+      "Residents, professionals, businesses, and public-sector partners can help make future travel safer.",
     joinEyebrow: "JOIN NVD",
-    joinTitle: "Join the NVD co-creation initiative",
+    joinTitle: "Join NVD's collaborative initiative",
     joinLead:
       "NVD is organizing participation paths for road observation, public advocacy, design and technology, and community collaboration. Until the formal participation process opens, this page explains how you can understand and take part in the initiative.",
     joinPathsEyebrow: "Participation Paths",
@@ -721,7 +1096,7 @@ const translations = {
     joinEmailLabel: "Email:",
     joinEmailCta: "Email NVD",
     joinContactNotice:
-      "This email is currently for NVD collaboration questions, participation information, and general contact only. It is not a channel for formal road complaints, emergency reports, or government case acceptance. If NVD later opens a formal form or collaboration application, we will explain the purpose, storage method, and scope of responses.",
+      "This email is currently for NVD collaboration questions, participation information, and general contact only. It is not a road-complaint or emergency-reporting channel, and messages sent here are not treated as formal submissions. If NVD later opens a formal form or collaboration application, we will explain the purpose, storage method, and scope of responses.",
     joinNextTitle: "Continue exploring NVD",
     joinAboutCta: "Learn about NVD's ideas",
     joinReportCta: "View the road-reporting process",
@@ -812,6 +1187,17 @@ const translations = {
     privacyTitle: "Privacy Policy",
     termsTitle: "Terms of Service",
     legalUpdated: "Last updated: June 22, 2026",
+    legalLanguageAuthority:
+      "The Traditional Chinese version of this legal page is the authoritative version. If there is any difference between translations or language-switching text and the Traditional Chinese version, the Traditional Chinese version prevails.",
+    manifestoMovedTitle: "The brand manifesto has moved to About NVD",
+    manifestoMovedText:
+      "The brand manifesto has moved to the About NVD page. Please continue to the About page to read the current introduction.",
+    manifestoMovedCta: "Continue to About NVD",
+    resilienceMovedTitle: "The road-report flow has moved",
+    resilienceMovedText:
+      "The road-report flow has moved to the Road Report page. Please continue to the Road Report page to view the current process.",
+    resilienceMovedCta: "Continue to Road Reports",
+    resilienceMovedSecondaryCta: "Learn about NVD's ideas",
     privacySectionCollection: "Data Collection Scope",
     privacyCollectionText:
       "This is a static website. It does not require registration and does not actively collect names, email addresses, payment information, or other directly identifying personal data.",
@@ -1020,6 +1406,17 @@ const state = {
   favorites: new Set(parseStoredFavorites(savedFavorites)),
 };
 
+const pageMetadataKeys = {
+  "index.html": ["indexPageTitle", "indexPageDescription"],
+  "about.html": ["aboutPageTitle", "aboutPageDescription"],
+  "report.html": ["reportPageTitle", "reportPageDescription"],
+  "join.html": ["joinPageTitle", "joinPageDescription"],
+  "privacy.html": ["privacyPageTitle", "privacyPageDescription"],
+  "terms.html": ["termsPageTitle", "termsPageDescription"],
+  "manifesto.html": ["manifestoPageTitle", "manifestoPageDescription"],
+  "resilience.html": ["resiliencePageTitle", "resiliencePageDescription"],
+};
+
 const toolGrid = document.querySelector("#toolGrid");
 const emptyState = document.querySelector("#emptyState");
 const searchInput = document.querySelector("#searchInput");
@@ -1047,6 +1444,9 @@ const taiwanMap = document.querySelector(".taiwan-map");
 const logStream = document.querySelector(".log-stream");
 const receiptModal = document.querySelector(".receipt-modal");
 const receiptHash = document.querySelector("#receiptHash");
+const demoObservationCount = document.querySelector("#resilienceScore");
+const demoAddObservationButton = document.querySelector(".hub-demo-add");
+const demoResetLocalDataButton = document.querySelector(".hub-demo-reset");
 const manifestoModeToggle = document.querySelector("#manifestoModeToggle");
 const manifestoGrid = document.querySelector("#manifestoGrid");
 const manifestoCards = document.querySelectorAll("[data-manifesto-card]");
@@ -1056,6 +1456,8 @@ let crowdSyncTimerId;
 let receiptTypingTimerId;
 let resilienceTimelineTimers = [];
 let manifestoMode = "hardcore";
+const roadHubDemoCountKey = "nvdRoadHubDemoCount";
+const roadHubDemoBaseCount = 12846;
 
 const manifestoModeContent = [
   {
@@ -1133,6 +1535,42 @@ function queueResilienceTimeline(callback, delay) {
   resilienceTimelineTimers.push(timerId);
 }
 
+function getRoadHubDemoCount() {
+  const storedCount = Number(localStorage.getItem(roadHubDemoCountKey));
+  return Number.isFinite(storedCount) && storedCount >= roadHubDemoBaseCount
+    ? Math.floor(storedCount)
+    : roadHubDemoBaseCount;
+}
+
+function formatRoadHubDemoCount(count) {
+  return new Intl.NumberFormat(state.language === "en" ? "en-US" : "zh-TW").format(count);
+}
+
+function updateRoadHubDemoCount() {
+  if (!demoObservationCount) return;
+  demoObservationCount.textContent = formatRoadHubDemoCount(getRoadHubDemoCount());
+}
+
+function addRoadHubDemoObservation() {
+  const nextCount = getRoadHubDemoCount() + 1;
+  localStorage.setItem(roadHubDemoCountKey, String(nextCount));
+  updateRoadHubDemoCount();
+  addLogLine(t("demoLogRoadCondition"));
+  if (typeof showToast === "function") {
+    showToast(t("demoObservationAdded"));
+  }
+}
+
+function resetRoadHubDemoData() {
+  localStorage.removeItem(roadHubDemoCountKey);
+  updateRoadHubDemoCount();
+  resetAutoDetectionUi();
+  setResilienceDemoStep(0);
+  if (typeof showToast === "function") {
+    showToast(t("demoObservationReset"), "info");
+  }
+}
+
 function setResilienceDemoStep(step) {
   if (!resilienceDemo) return;
 
@@ -1153,15 +1591,12 @@ function setResilienceDemoStep(step) {
 
   if (demoCoordinates) {
     demoCoordinates.textContent =
-      activeStep >= 1 ? "位置描述示意" : "尚未提供位置";
+      activeStep >= 1 ? t("demoStatusLocation") : t("demoLocationUnavailable");
   }
 
   updateResilienceDemoReadout(activeStep);
 
-  if (resilienceScore) {
-    cancelAnimationFrame(resilienceScoreFrameId);
-    resilienceScore.textContent = activeStep === 4 ? "示意完成" : "示意中";
-  }
+  updateRoadHubDemoCount();
 }
 
 function runResilienceTimelineStep(step, overrideText) {
@@ -1188,14 +1623,19 @@ function addLogLine(text) {
 function addCrowdPulse() {
   if (!taiwanMap || resilienceDemo?.classList.contains("is-submitting")) return;
 
-  const demoItems = ["位置描述", "通行影響", "障礙類型", "照片資訊"];
+  const demoItems = [
+    t("demoLogItemPosition"),
+    t("demoLogItemImpact"),
+    t("demoLogItemObstacle"),
+    t("demoLogItemPhoto"),
+  ];
   const demoItem = demoItems[Math.floor(Math.random() * demoItems.length)];
   const pulse = document.createElement("span");
   pulse.className = "crowd-pulse";
   pulse.style.left = `${28 + Math.random() * 48}%`;
   pulse.style.top = `${18 + Math.random() * 62}%`;
   taiwanMap.appendChild(pulse);
-  addLogLine(`[示意] ${demoItem}整理中...`);
+  addLogLine(t("demoLogOrganizing", { item: demoItem }));
   pulse.addEventListener("animationend", () => pulse.remove(), { once: true });
 }
 
@@ -1210,7 +1650,7 @@ function typeReceiptHash() {
   if (!receiptHash) return;
 
   window.clearInterval(receiptTypingTimerId);
-  const hash = "示意編號：不產生正式紀錄";
+  const hash = t("demoReceiptId");
   let index = 0;
   receiptHash.textContent = "";
   receiptTypingTimerId = window.setInterval(() => {
@@ -1226,18 +1666,18 @@ function updateResilienceDemoReadout(step, overrideText) {
   if (!demoStatusPrimary || !demoStatusSecondary) return;
 
   const primaryTexts = [
-    "正在顯示道路狀況辨識流程...",
-    "位置描述示意",
-    "路面狀況標記示意",
-    "正在示意整理回報內容...",
-    "流程示意完成，未正式送出或受理。",
+    t("demoStatusDetecting"),
+    t("demoStatusLocation"),
+    t("demoStatusLabel"),
+    t("demoStatusEncrypting"),
+    t("demoSuccess"),
   ];
   const secondaryTexts = [
-    "點擊下方按鈕體驗道路回報流程",
-    "位置資訊僅為介面示意",
-    "此判讀結果僅供流程展示",
-    "不會傳送或保存任何資料",
-    "未建立正式紀錄",
+    t("demoHintStart"),
+    t("demoHintLocation"),
+    t("demoHintAssessment"),
+    t("demoHintNoData"),
+    t("demoHintNoRecord"),
   ];
 
   demoStatusPrimary.textContent =
@@ -1245,7 +1685,7 @@ function updateResilienceDemoReadout(step, overrideText) {
   demoStatusSecondary.textContent = secondaryTexts[step] || secondaryTexts[0];
 
   if (demoSubmitHint) {
-    demoSubmitHint.textContent = "僅供流程體驗，不會傳送或保存資料。";
+    demoSubmitHint.textContent = t("demoStatusReady");
   }
 }
 
@@ -1289,14 +1729,12 @@ function triggerAutoDetection() {
   targetBox.classList.add("scanning-active");
   demoStage?.classList.add("scanning");
   miniDataOverlay?.classList.add("is-active");
-  statusText.innerHTML =
-    '<span class="animate-pulse">正在辨識現場道路狀況...</span>';
+  statusText.innerHTML = `<span class="animate-pulse">${t("demoDetectionScanning")}</span>`;
 
   const updateMiniData = () => {
     if (!miniDataOverlay) return;
 
-    miniDataOverlay.innerHTML =
-      "位置描述：示意中<br>路面狀況：示意中<br>僅供流程體驗";
+    miniDataOverlay.innerHTML = `${t("demoOverlayPositionInitial")}<br>${t("demoOverlayRoadInitial")}<br>${t("demoExperienceOnly")}`;
   };
 
   updateMiniData();
@@ -1307,14 +1745,12 @@ function triggerAutoDetection() {
     targetBox.classList.remove("scanning-active");
     targetBox.classList.add("target-locked");
     if (miniDataOverlay) {
-      miniDataOverlay.innerHTML =
-        "位置描述：示意完成<br>路面狀況：示意完成<br>不會保存資料";
+      miniDataOverlay.innerHTML = `${t("demoOverlayPositionComplete")}<br>${t("demoOverlayRoadComplete")}<br>${t("demoNoStorage")}`;
     }
-    statusText.innerHTML =
-      '偵測到路面狀況：<span class="font-bold text-[#10b981]">高低落差</span>';
+    statusText.innerHTML = `${t("demoDetectionFound")}<span class="font-bold text-[#10b981]">${t("demoObstacleHeight")}</span>`;
     resultCard?.classList.add("is-visible");
     if (typeof showToast === "function") {
-      showToast("示意標記完成，未傳送或保存資料");
+      showToast(t("demoToastMarked"));
     }
   }, 1500);
 }
@@ -1330,7 +1766,7 @@ function resetAutoDetectionUi() {
     .querySelector(".detection-result-card")
     ?.classList.remove("is-visible");
   if (receiptHash) {
-    receiptHash.textContent = "示意編號：不產生正式紀錄";
+    receiptHash.textContent = t("demoReceiptId");
   }
 }
 
@@ -1350,17 +1786,17 @@ function triggerResilienceSubmit() {
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(1);
-    addLogLine("[示意] 位置描述整理中...");
+    addLogLine(t("demoLogLocation"));
   }, 1500);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(2);
-    addLogLine("[示意] 路面狀況標記中...");
+    addLogLine(t("demoLogRoadCondition"));
   }, 3000);
 
   queueResilienceTimeline(() => {
-    runResilienceTimelineStep(3, "正在示意整理回報內容...");
-    addLogLine("[示意] 回報內容整理中，未傳送資料...");
+    runResilienceTimelineStep(3, t("demoStatusEncrypting"));
+    addLogLine(t("demoLogReport"));
   }, 4500);
 
   queueResilienceTimeline(() => {
@@ -1368,7 +1804,7 @@ function triggerResilienceSubmit() {
     resilienceDemo.classList.remove("scanning");
     resilienceDemo.classList.add("show-receipt");
     typeReceiptHash();
-    addLogLine("[示意] 流程展示完成，未建立正式紀錄");
+    addLogLine(t("demoLogComplete"));
 
     queueResilienceTimeline(() => {
       resilienceDemo.classList.remove("show-receipt");
@@ -1403,12 +1839,81 @@ function initializeTeamPhotoFallbacks() {
   });
 }
 
+function applyPageMetadata() {
+  const pageName = window.location.pathname.split("/").pop() || "index.html";
+  const [titleKey, descriptionKey] =
+    pageMetadataKeys[pageName] || pageMetadataKeys["index.html"];
+  const title = t(titleKey);
+  const description = t(descriptionKey);
+
+  document.title = title;
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute("content", description);
+  document
+    .querySelector('meta[property="og:title"]')
+    ?.setAttribute("content", title);
+  document
+    .querySelector('meta[property="og:description"]')
+    ?.setAttribute("content", description);
+  document
+    .querySelector('meta[property="og:image:alt"]')
+    ?.setAttribute("content", title);
+  document
+    .querySelector('meta[name="twitter:title"]')
+    ?.setAttribute("content", title);
+  document
+    .querySelector('meta[name="twitter:description"]')
+    ?.setAttribute("content", description);
+}
+
+function applySharedAccessibilityText() {
+  document
+    .querySelector(".navbar")
+    ?.setAttribute("aria-label", t("primaryNavigationAria"));
+  document
+    .querySelector(".brand")
+    ?.setAttribute("aria-label", t("brandHomeAria"));
+  document.querySelectorAll(".brand-logo").forEach((image) => {
+    image.setAttribute("alt", t("headerLogoAlt"));
+  });
+  mobileNavToggle?.setAttribute(
+    "aria-label",
+    t(siteHeader?.classList.contains("nav-open") ? "mobileMenuCloseAria" : "mobileMenuOpenAria"),
+  );
+  primaryNav?.setAttribute("aria-label", t("siteMenuAria"));
+  document.querySelectorAll(".nav-report-cta").forEach((link) => {
+    link.setAttribute("aria-label", t("reportNowAria"));
+  });
+  document
+    .querySelector(".mobile-language-options")
+    ?.setAttribute("aria-label", t("mobileLanguageAria"));
+  document
+    .querySelector(".header-actions .language-switcher")
+    ?.setAttribute("aria-label", t("languageReadingAria"));
+  document.querySelectorAll(".footer-grid").forEach((footerNavigation) => {
+    footerNavigation.setAttribute("aria-label", t("footerNavigationAria"));
+  });
+  document
+    .querySelector(".hero-stats")
+    ?.setAttribute("aria-label", t("heroStatsAria"));
+  document
+    .querySelector('main a[href="report.html#dashboard"]')
+    ?.setAttribute("aria-label", t("homeReportCtaAria"));
+  document
+    .querySelector(".team-member-link")
+    ?.setAttribute("aria-label", t("founderWebsiteAria"));
+  document
+    .querySelector('.team-card__photo[src="assets/team/yian-chen.jpg"]')
+    ?.setAttribute("alt", t("founderPhotoAlt"));
+  document
+    .querySelector('a[href="mailto:nvd20260611@gmail.com"]')
+    ?.setAttribute("aria-label", t("joinEmailAria"));
+}
+
 function applyTranslations() {
   document.documentElement.lang = state.language === "zh" ? "zh-Hant" : "en";
-  const pageTitle = document.querySelector(
-    'meta[property="og:title"]',
-  )?.content;
-  document.title = pageTitle || t("pageTitle");
+  applyPageMetadata();
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
@@ -1424,6 +1929,12 @@ function applyTranslations() {
     element.setAttribute("placeholder", t(element.dataset.i18nPlaceholder));
   });
 
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
+  });
+
+  applySharedAccessibilityText();
+
   if (resultCount) {
     const count = getFilteredTools().length;
     resultCount.textContent = t("resultCount", { count });
@@ -1431,6 +1942,7 @@ function applyTranslations() {
 
   if (resilienceDemo) {
     updateResilienceDemoReadout(Number(resilienceDemo.dataset.step) || 0);
+    updateRoadHubDemoCount();
   }
 }
 
@@ -1584,12 +2096,14 @@ function setBrandVoice(voice, shouldPersist = true) {
     toggle.setAttribute("aria-pressed", String(!isOfficial));
     toggle.setAttribute(
       "aria-label",
-      isOfficial ? "切換為白話版" : "切換為治理版",
+      t(isOfficial ? "brandVoicePlainAria" : "brandVoiceGovernanceAria"),
     );
   });
 
   brandVoiceLabels.forEach((label) => {
-    label.textContent = isOfficial ? "治理" : "白話";
+    label.textContent = t(
+      isOfficial ? "brandVoiceGovernanceLabel" : "brandVoicePlainLabel",
+    );
   });
 
   applyTranslations();
@@ -1616,6 +2130,7 @@ function closeMobileNav() {
 
   siteHeader.classList.remove("nav-open");
   mobileNavToggle.setAttribute("aria-expanded", "false");
+  mobileNavToggle.setAttribute("aria-label", t("mobileMenuOpenAria"));
 }
 
 function toggleMobileNav() {
@@ -1624,6 +2139,10 @@ function toggleMobileNav() {
   const shouldOpen = !siteHeader.classList.contains("nav-open");
   siteHeader.classList.toggle("nav-open", shouldOpen);
   mobileNavToggle.setAttribute("aria-expanded", String(shouldOpen));
+  mobileNavToggle.setAttribute(
+    "aria-label",
+    t(shouldOpen ? "mobileMenuCloseAria" : "mobileMenuOpenAria"),
+  );
 }
 
 function renderManifestoMode(mode = "hardcore") {
@@ -1676,6 +2195,14 @@ demoStepButtons.forEach((button) => {
 
 if (phoneSubmitButton) {
   phoneSubmitButton.addEventListener("click", triggerResilienceSubmit);
+}
+
+if (demoAddObservationButton) {
+  demoAddObservationButton.addEventListener("click", addRoadHubDemoObservation);
+}
+
+if (demoResetLocalDataButton) {
+  demoResetLocalDataButton.addEventListener("click", resetRoadHubDemoData);
 }
 
 function showToast(message, type = "success") {
