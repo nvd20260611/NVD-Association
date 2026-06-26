@@ -504,9 +504,6 @@ const translations = {
     favoriteTool: "收藏 {name}",
     footerCopy:
       "© 2026 NVD 協會. Road Feedback & Repair Action.",
-    footerIntroTitle: "把複雜科技，折成一鍵生活。",
-    footerIntroText:
-      "為台灣專業前輩與企業領袖整理更低摩擦的公共協作入口，讓每一次理解、參與與支持都更安心、更體面。",
     footerProductsTitle: "協會行動",
     footerProductTools: "道路回饋與修復行動",
     footerProductConverter: "加入共創",
@@ -532,19 +529,12 @@ const translations = {
     footerCompanyTerms: "服務條款",
     footerAboutTitle: "認識 NVD",
     footerAboutLink: "關於 NVD",
-    footerMissionLink: "使命與方向",
-    footerGatewayLink: "三個入口",
     footerActionTitle: "行動與回報",
     footerReportLink: "道路障礙回報",
     footerDashboardLink: "資料累積狀態",
     footerParticipateLink: "參與共創",
     footerFeedbackFlow: "回饋流程",
-    footerIdeasTitle: "理念",
-    footerMobilityLink: "移動主權",
-    footerResilienceLink: "社會韌性",
-    footerFrictionLink: "降低操作與溝通阻礙",
     footerSiteTitle: "網站資訊",
-    modalTitle: "使用說明手冊",
     privacyTitle: "隱私權政策",
     termsTitle: "服務條款",
     legalUpdated: "最後更新：2026 年 6 月 22 日",
@@ -606,7 +596,6 @@ const translations = {
     termsSectionLimitations: "服務限制",
     termsLimitationsText:
       "本站會盡力維護內容與連結，但無法保證第三方服務永久可用。外部網站的內容與資料處理由各服務提供者負責。",
-    modalStepsTitle: "極簡 3 步驟輕鬆上手",
     stepOneTitle: "認識行動入口",
     stepOneText: "從首頁、道路行動、品牌理念或加入共創頁面，選擇最符合您需求的參與入口。",
     stepTwoTitle: "送出友善回饋",
@@ -624,7 +613,6 @@ const translations = {
       "若外部平台要求登入、授權或填寫資料，請先確認網域、用途與隱私政策；不確定時可以先暫停。",
     faqThreeQuestion: "Q: 使用外部連結前需要注意什麼？",
     faqThreeAnswer: "請確認連結來源與頁面網域；若外部服務要求提供個人資料，請先閱讀該服務的隱私政策與使用條款。",
-    modalConfirm: "我知道了",
   },
   en: {
     brandName: "NVD Association",
@@ -1144,9 +1132,6 @@ const translations = {
     favoriteTool: "Save {name}",
     footerCopy:
       "© 2026 NVD Association. Road Feedback & Repair Action.",
-    footerIntroTitle: "Fold complex technology into one-click living.",
-    footerIntroText:
-      "An association website for road feedback, repair action, and civic resilience collaboration.",
     footerProductsTitle: "協會行動",
     footerProductTools: "道路回饋與修復行動",
     footerProductConverter: "加入共創",
@@ -1172,19 +1157,12 @@ const translations = {
     footerCompanyTerms: "Terms of Service",
     footerAboutTitle: "About NVD",
     footerAboutLink: "About NVD",
-    footerMissionLink: "Mission and Direction",
-    footerGatewayLink: "Three Gateways",
     footerActionTitle: "Action and Reporting",
     footerReportLink: "Report Road Barriers",
     footerDashboardLink: "Record Status",
     footerParticipateLink: "Participate",
     footerFeedbackFlow: "Feedback Process",
-    footerIdeasTitle: "Ideas",
-    footerMobilityLink: "Mobility Autonomy",
-    footerResilienceLink: "Social Resilience",
-    footerFrictionLink: "Reduce Operational and Communication Barriers",
     footerSiteTitle: "Website Information",
-    modalTitle: "User Guide",
     privacyTitle: "Privacy Policy",
     termsTitle: "Terms of Service",
     legalUpdated: "Last updated: June 22, 2026",
@@ -1246,7 +1224,6 @@ const translations = {
     termsSectionLimitations: "Service Limitations",
     termsLimitationsText:
       "We work to maintain accurate content and links but cannot guarantee permanent availability of third-party services. External providers are responsible for their own content and data handling.",
-    modalStepsTitle: "Get started in 3 simple steps",
     stepOneTitle: "認識行動入口",
     stepOneText:
       "Read the association mission, road feedback flow, and current collaboration direction.",
@@ -1265,7 +1242,6 @@ const translations = {
       "It is being prepared as the public-facing NVD Association website. Content and links should be reviewed before formal public launch.",
     faqThreeQuestion: "Q: 使用外部連結前需要注意什麼？",
     faqThreeAnswer: "請確認連結來源與頁面網域；若外部服務要求提供個人資料，請先閱讀該服務的隱私政策與使用條款。",
-    modalConfirm: "Got it",
   },
 };
 

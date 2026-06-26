@@ -4559,30 +4559,29 @@ body[data-theme="dark"] .footer-logo {
 
   .hero h1 {
     width: 100%;
-    max-width: min(100%, 360px);
+    max-width: min(100%, 340px);
     margin-inline: auto;
     margin-top: 18px;
-    font-size: clamp(1.72rem, 8vw, 2.05rem);
-    line-height: 1.18;
+    font-size: clamp(1.58rem, 7.2vw, 1.96rem);
+    line-height: 1.2;
     white-space: normal;
-    line-break: anywhere;
-    overflow-wrap: anywhere;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .hero-subtitle,
   .section-lead {
     max-width: min(100%, 370px);
     margin-inline: auto;
-    overflow-wrap: anywhere;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .hero-subtitle .tagline {
     max-width: 360px;
     margin-inline: auto;
-    overflow-wrap: anywhere;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .hero-kicker {
@@ -4627,9 +4626,8 @@ body[data-theme="dark"] .footer-logo {
     max-width: 300px;
     margin-inline: auto;
     white-space: normal;
-    line-break: anywhere;
-    overflow-wrap: anywhere;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .dual-friction-grid,
@@ -7175,8 +7173,81 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
 }
 
 @media (max-width: 760px) {
+  .report-page .nvd-demo-section {
+    overflow-x: clip;
+  }
+
+  .report-page .nvd-demo-section .container,
+  .report-page .resilience-demo-header,
+  .report-page .report-action-card,
+  .report-page .nvd-demo-stage,
+  .report-page .nvd-demo-backend,
+  .report-page .resilience-dashboard {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .report-page .nvd-demo-stage {
+    width: 100%;
+    margin-inline: 0;
+    gap: 28px;
+  }
+
+  .report-page .resilience-demo-header,
+  .report-page .report-action-card {
+    margin-inline: 0;
+    padding-inline: 22px;
+  }
+
+  .report-page .report-action-card > * {
+    min-width: 0;
+  }
+
+  .report-page .nvd-demo-section .resilience-copy h1 {
+    max-width: min(100%, 330px);
+    margin-inline: auto;
+    font-size: clamp(1.72rem, 8.4vw, 2.2rem);
+    line-height: 1.16;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .report-page .nvd-demo-section .resilience-copy p,
+  .report-page .report-action-card__desc {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .report-page .report-action-card__desc {
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .report-page .report-action-card__desc strong {
+    display: block;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .report-page .report-action-card__cta {
+    display: inline-flex;
+    justify-content: center;
+    justify-self: stretch;
+    box-sizing: border-box;
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+    margin-inline: auto;
+    min-height: 48px;
+    padding-inline: 16px;
+    white-space: normal;
+    text-align: center;
+  }
+
   .report-page .nvd-demo-stage,
   .report-page .backend-screen,
+  .report-page .hub-demo-analysis-grid,
   .report-page .hub-demo-list-grid,
   .report-page .hub-demo-insights {
     grid-template-columns: 1fr;
@@ -7187,7 +7258,8 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
   }
 
   .report-page .pixel-shell {
-    width: min(100%, 340px);
+    width: min(100%, calc(100vw - 58px), 328px);
+    min-width: 0;
     min-height: 610px;
     height: min(680px, 178vw);
   }
@@ -7199,11 +7271,51 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
   .report-page .hub-demo-count-card,
   .report-page .dashboard-growth-card,
   .report-page .dashboard-map-card,
-  .report-page .hub-demo-insights {
+  .report-page .hub-demo-insights,
+  .report-page .hub-demo-analysis-grid,
+  .report-page .resilience-radar-card,
+  .report-page .resilience-radar-card section {
     grid-column: 1 / -1;
+    min-width: 0;
+    width: 100%;
   }
 
   .report-page .hub-demo-list-grid li {
-    grid-template-columns: minmax(0, 1fr) minmax(90px, 0.8fr) auto;
+    grid-template-columns: minmax(112px, 1.15fr) minmax(86px, 0.85fr) 44px;
+    gap: 8px;
+    font-size: 0.76rem;
+  }
+
+  .report-page .hub-demo-list-grid li span {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .report-page .resilience-radar-card section,
+  .report-page .dashboard-map-card,
+  .report-page .hub-demo-insights section {
+    padding: 14px 12px;
+  }
+
+  .report-page .hub-impact-list li {
+    grid-template-columns: minmax(0, 1fr) 44px;
+  }
+}
+
+@media (max-width: 430px) {
+  .report-page .hub-demo-list-grid li {
+    grid-template-columns: minmax(0, 1fr) minmax(70px, 0.72fr) 40px;
+    gap: 7px;
+    font-size: 0.72rem;
+  }
+
+  .report-page .hub-demo-list-grid li::before {
+    height: 7px;
+  }
+
+  .report-page .hub-demo-list-grid li b,
+  .report-page .hub-impact-list b {
+    font-size: 0.76rem;
   }
 }
