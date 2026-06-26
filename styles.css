@@ -6092,6 +6092,14 @@ body[data-theme="dark"] .receipt-modal {
   animation: none !important;
 }
 
+.report-page .nvd-demo-stage .data-beam-layer,
+.report-page .nvd-demo-stage[data-step="3"] .data-beam-layer,
+.report-page .nvd-demo-stage[data-step="4"] .data-beam-layer {
+  display: none !important;
+  opacity: 0 !important;
+  animation: none !important;
+}
+
 .report-page .nvd-demo-stage .target-box {
   display: none;
   opacity: 0 !important;
@@ -6297,7 +6305,8 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .roadhub-flow-line {
   position: relative;
-  width: min(100%, 360px);
+  width: min(520px, calc(100% + 130px));
+  max-width: none;
   height: 40px;
   border-radius: 999px;
   background: transparent;
@@ -6529,12 +6538,19 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .hub-demo-list-grid li {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(72px, 0.72fr) 38px;
+  grid-template-columns: minmax(0, 1.24fr) minmax(68px, 0.62fr) 36px;
   gap: 8px;
   align-items: center;
   color: rgba(248, 250, 247, 0.84);
-  font-size: 0.77rem;
+  font-size: 0.74rem;
   line-height: 1.18;
+}
+
+.report-page .hub-demo-list-grid li span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .report-page .hub-demo-list-grid li::before {
@@ -6836,7 +6852,7 @@ body.report-page:not([data-theme="dark"]) .roadhub-flow span {
 }
 
 body.report-page:not([data-theme="dark"]) .roadhub-flow-line {
-  background: linear-gradient(90deg, rgba(15, 118, 110, 0.12), rgba(99, 200, 77, 0.28), rgba(15, 118, 110, 0.12));
+  background: transparent;
 }
 
 body.report-page:not([data-theme="dark"]) .score-card strong {
