@@ -6370,6 +6370,9 @@ body[data-theme="dark"] .receipt-modal {
   justify-items: center;
   align-content: center;
   min-height: 300px;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
   color: rgba(248, 250, 247, 0.72);
   text-align: center;
 }
@@ -6390,8 +6393,8 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .roadhub-flow-line {
   position: relative;
-  width: min(520px, calc(100% + 130px));
-  max-width: none;
+  width: min(390px, 100%);
+  max-width: calc(100% - 34px);
   height: 40px;
   border-radius: 999px;
   background: transparent;
