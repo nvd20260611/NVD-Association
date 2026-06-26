@@ -1214,6 +1214,36 @@ body[data-theme="dark"] .join-contact-address a {
   margin-top: 22px;
 }
 
+.join-link-group a {
+  min-height: 44px;
+  padding: 0 4px;
+  color: var(--brand-navy);
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans TC",
+    sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+body[data-theme="dark"] .join-link-group a {
+  color: #ffb06b;
+}
+
+.join-link-group a:hover,
+.join-link-group a:focus-visible {
+  color: var(--brand-orange-dark);
+  opacity: 0.82;
+  transform: translateX(4px);
+}
+
 .report-action-card {
   max-width: none;
   display: grid;
