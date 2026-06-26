@@ -4168,17 +4168,17 @@ body[data-theme="dark"] .footer-bottom {
   place-items: center;
   flex: 0 0 auto;
   color: #fff;
-  background: #ffffff;
-  border: 1px solid rgba(13, 35, 64, 0.1);
-  border-radius: 14px;
-  box-shadow: 0 12px 26px rgba(13, 35, 64, 0.12);
-  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
 }
 
 body[data-theme="dark"] .footer-logo {
-  background: rgba(5, 36, 65, 0.82);
-  border-color: rgba(125, 184, 228, 0.2);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .footer-logo-img {
