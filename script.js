@@ -160,10 +160,10 @@ const translations = {
     founderParagraphOne:
       "我是陳怡安，NVD 發起人。長期以電動輪椅作為主要移動工具，也因此更直接地感受到城市道路、公共空間與無障礙環境中的細節問題。",
     founderParagraphTwo:
-      "我具備資訊管理背景與行政實務經驗，習慣用系統化的方式整理問題。對我來說，障礙者的日常經驗不只是被照顧的故事，也是一種能夠看見城市缺口、回饋公共設計，並協助社會提前面對高齡化挑戰的重要能力。",
+      "我具備資訊管理背景與行政實務經驗，習慣用系統化的方式整理問題、建立流程，並把日常經驗轉化為可以被討論、被追蹤、被改善的公共資料。",
     founderParagraphThree:
-      "在 NVD 中，我主要負責理念建構、專案方向規劃、無障礙議題觀察、官網內容設計與外部溝通。我希望透過 NVD，讓更多人理解：真正友善的城市，是讓每個人在不同人生階段，都能保有安心出門的尊嚴。",
-    founderWebsiteCta: "查看個人網站",
+      "在 NVD 中，我主要負責理念建構、需求整理、資料倡議與對外溝通。我希望透過 NVD，讓更多人理解：真正友善的城市，不只是讓少數人勉強通過，而是讓每個人在不同人生階段，都能保有安心出門的尊嚴。",
+    founderWebsiteCta: "了解更多經歷",
     officialProfileEyebrow: "Official Profile",
     officialProfileTitle: "官方簡介",
     officialProfileLead: "可供履歷、提案、媒體與社群引用。",
@@ -809,12 +809,12 @@ const translations = {
     founderRoleEyebrow: "Founder",
     founderNameRole: "Yi-An Chen | NVD Founder",
     founderParagraphOne:
-      "I am Yi-An Chen, the initiator of NVD. I have long used a powered wheelchair as my primary means of mobility, which has given me a direct understanding of the details that shape city roads, public spaces, and accessible environments.",
+      "I am Yi-An Chen, founder of NVD. I have long used a powered wheelchair as my main way of moving, which has made me more directly aware of the details in city streets, public spaces, and accessible environments.",
     founderParagraphTwo:
-      "I have a background in information management and administrative practice, and I tend to organize problems systematically. To me, the daily experience of disabled people is not only a story of receiving care. It is an important capability for seeing gaps in the city, informing public design, and helping society prepare for the challenges of ageing.",
+      "With a background in information management and administrative practice, I am used to organizing issues and building processes systematically, turning everyday experience into public information that can be discussed, tracked, and improved.",
     founderParagraphThree:
-      "At NVD, I am responsible for developing the vision, planning project direction, observing accessibility issues, designing website content, and handling external communication. Through NVD, I hope more people will understand that a truly accessible city allows everyone to retain the dignity of going out safely at every stage of life.",
-    founderWebsiteCta: "View Personal Website",
+      "At NVD, I focus on shaping the core ideas, organizing needs, advancing public data advocacy, and communicating with external partners. Through NVD, I hope more people can understand that a truly friendly city is not one where a few people barely get through, but one where everyone can keep the dignity of going out with confidence at different stages of life.",
+    founderWebsiteCta: "Learn more about my experience",
     officialProfileEyebrow: "Official Profile",
     officialProfileTitle: "Official Profile",
     officialProfileLead: "For use in resumes, proposals, media, and social profiles.",
