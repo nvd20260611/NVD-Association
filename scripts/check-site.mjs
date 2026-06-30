@@ -26,8 +26,9 @@ const navbarLinks = [
   "index.html",
   "about.html",
   "report.html",
+  "resilience.html",
   "join.html",
-  "report.html#dashboard",
+  "join.html#contact",
 ];
 const footerLinks = ["privacy.html", "terms.html", "report.html#loop"];
 const forbiddenWords = [
