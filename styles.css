@@ -164,7 +164,7 @@ button {
 
 .brand {
   min-width: 0;
-  gap: 0;
+  gap: 12px;
   padding: 0;
   border-radius: 12px;
   font-size: 1.18rem;
@@ -177,10 +177,15 @@ button {
 
 .brand-logo {
   display: block;
-  width: clamp(154px, 16vw, 210px);
-  height: auto;
-  max-height: 52px;
+  width: 40px;
+  height: 40px;
+  max-height: 40px;
   object-fit: contain;
+  padding: 5px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.86);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
 body[data-theme="dark"] .brand {
@@ -201,13 +206,21 @@ body[data-theme="dark"] .brand-logo-dark {
 }
 
 .brand-text {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
   white-space: nowrap;
+  color: var(--text-main);
+  font-size: clamp(1.08rem, 1.2vw, 1.22rem);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+body[data-theme="dark"] .brand-text {
+  color: #f8fafc;
 }
 
 .brand-mark {
@@ -4046,7 +4059,7 @@ body[data-theme="dark"] .manifesto-card {
 }
 
 .site-footer {
-  padding: clamp(38px, 6vw, 56px) 0 clamp(28px, 4vw, 34px);
+  padding: clamp(34px, 5vw, 48px) 0 clamp(22px, 3vw, 28px);
   color: var(--footer-text);
   background:
     radial-gradient(
@@ -4202,9 +4215,9 @@ body[data-theme="dark"] .footer-social__link:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-top: 34px;
-  padding-top: 24px;
+  gap: 0;
+  margin-top: 24px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-main);
   text-align: center;
 }
@@ -4220,7 +4233,8 @@ body[data-theme="dark"] .footer-bottom {
   gap: 14px;
 }
 
-.footer-brand p {
+.footer-brand p,
+.footer-bottom > p {
   color: var(--text-muted);
   margin: 0;
   line-height: 1.6;
@@ -4552,8 +4566,10 @@ body[data-theme="dark"] .footer-logo {
   }
 
   .brand-logo {
-    width: clamp(136px, 34vw, 168px);
-    max-height: 46px;
+    width: 38px;
+    height: 38px;
+    max-height: 38px;
+    padding: 4px;
   }
 
   .brand-mark {

@@ -28,9 +28,9 @@ const translations = {
     manifestoPageTitle: "品牌理念已移至關於 NVD",
     manifestoPageDescription:
       "NVD 品牌理念內容已移至關於 NVD 頁面，請前往新的介紹頁閱讀目前版本。",
-    resiliencePageTitle: "道路回報已移至新頁面",
+    resiliencePageTitle: "資料倡議與公共需求整理｜NVD 協會",
     resiliencePageDescription:
-      "NVD 道路回報內容已移至道路回報頁，請前往新的 ROAD HUB 頁面查看目前流程。",
+      "NVD 將民眾在日常生活中遇到的移動困難、空間阻礙與服務缺口，整理成可以被理解、追蹤與討論的公共資料。",
     primaryNavigationAria: "主要導覽",
     brandHomeAria: "NVD 協會首頁",
     headerLogoAlt: "NVD 協會",
@@ -542,7 +542,7 @@ const translations = {
     visitSite: "直達網站",
     favoriteTool: "收藏 {name}",
     footerCopy:
-      "© 2026 NVD 協會. Road Feedback & Repair Action.",
+      "© 2026 NVD 協會",
     footerProductsTitle: "協會行動",
     footerProductTools: "道路回饋與修復行動",
     footerProductConverter: "加入共創",
@@ -583,11 +583,11 @@ const translations = {
     manifestoMovedText:
       "NVD 的品牌理念、移動主權、社會韌性與團隊介紹，已整理至「關於 NVD」頁面。",
     manifestoMovedCta: "前往關於 NVD",
-    resilienceMovedTitle: "道路回報已移至新頁面",
+    resilienceMovedTitle: "資料倡議與公共需求整理",
     resilienceMovedText:
-      "NVD ROAD HUB 與道路障礙回報入口，已整理至「道路回報」頁面。",
-    resilienceMovedCta: "前往道路回報",
-    resilienceMovedSecondaryCta: "了解 NVD 理念",
+      "將民眾在日常生活中遇到的移動困難、空間阻礙與服務缺口，整理成可以被理解、追蹤與討論的公共資料。",
+    resilienceMovedCta: "查看行動專案",
+    resilienceMovedSecondaryCta: "前往道路回報",
     privacySectionCollection: "資料蒐集範圍",
     privacyCollectionText:
       "本網站為靜態網站，不要求註冊帳號，也不會主動蒐集姓名、電子郵件、付款資料或其他可直接識別個人的資料。",
@@ -677,9 +677,9 @@ const translations = {
     manifestoPageTitle: "Moved｜About NVD",
     manifestoPageDescription:
       "The NVD brand-manifesto content has moved to the About NVD page. Please continue there to read the current version.",
-    resiliencePageTitle: "Moved｜Road Report",
+    resiliencePageTitle: "Data Advocacy｜NVD Association",
     resiliencePageDescription:
-      "The NVD road-report content has moved to the Road Report page. Please continue there to view the current ROAD HUB process.",
+      "NVD organizes everyday mobility difficulties, access barriers, and service gaps into public information that can be understood, tracked, and discussed.",
     primaryNavigationAria: "Primary navigation",
     brandHomeAria: "NVD Association home",
     headerLogoAlt: "NVD Association",
@@ -981,7 +981,7 @@ const translations = {
       "Simulated metrics for hotspots, improvements, and participation nodes.",
     resiliencePointThree:
       "Classmates, mentors, and seed users can test and tune the concept together.",
-    dashboardTitle: "Road Feedback Action Hub",
+    dashboardTitle: "ROAD HUB Data Dashboard",
     metricParticipants: "Participants",
     metricReports: "Report nodes",
     metricImprovements: "Tracked improvements",
@@ -1211,7 +1211,7 @@ const translations = {
     visitSite: "Visit site",
     favoriteTool: "Save {name}",
     footerCopy:
-      "© 2026 NVD Association. Road Feedback & Repair Action.",
+      "© 2026 NVD Association",
     footerProductsTitle: "協會行動",
     footerProductTools: "道路回饋與修復行動",
     footerProductConverter: "加入共創",
@@ -1252,11 +1252,11 @@ const translations = {
     manifestoMovedText:
       "The brand manifesto has moved to the About NVD page. Please continue to the About page to read the current introduction.",
     manifestoMovedCta: "Continue to About NVD",
-    resilienceMovedTitle: "The road-report flow has moved",
+    resilienceMovedTitle: "Data advocacy and public needs organizing",
     resilienceMovedText:
-      "The road-report flow has moved to the Road Report page. Please continue to the Road Report page to view the current process.",
-    resilienceMovedCta: "Continue to Road Reports",
-    resilienceMovedSecondaryCta: "Learn about NVD's ideas",
+      "NVD organizes everyday mobility difficulties, access barriers, and service gaps into public information that can be understood, tracked, and discussed.",
+    resilienceMovedCta: "View action projects",
+    resilienceMovedSecondaryCta: "Go to road reporting",
     privacySectionCollection: "Data Collection Scope",
     privacyCollectionText:
       "This is a static website. It does not require registration and does not actively collect names, email addresses, payment information, or other directly identifying personal data.",
@@ -1380,7 +1380,7 @@ const brandVoiceContent = {
       footerCompanyUpdates: "更新日誌",
       footerCompanyPrivacy: "隱私權政策",
       footerCompanyTerms: "服務條款",
-      footerCopy: "© 2026 NVD 協會. Road Feedback & Repair Action.",
+      footerCopy: "© 2026 NVD 協會",
     },
   },
   official: {
@@ -1437,7 +1437,7 @@ const brandVoiceContent = {
       footerCompanyUpdates: "更新紀錄",
       footerCompanyPrivacy: "隱私權政策",
       footerCompanyTerms: "服務條款",
-      footerCopy: "© 2026 NVD 協會. Road Feedback & Repair Action.",
+      footerCopy: "© 2026 NVD 協會",
     },
   },
 };
