@@ -6,18 +6,18 @@
 const translations = {
   zh: {
     brandName: "NVD 協會",
-    pageTitle: "NVD 協會｜移動主權、生活韌性與公共資料倡議",
+    pageTitle: "NVD 協會｜AI 工具、輔具支持與公共倡議平台",
     indexPageTitle: "NVD 協會｜AI 工具、輔具支持與公共倡議平台",
     indexPageDescription: "NVD 協會結合線上 AI 工具與線下輔具支持，協助身障同儕表達自我、延伸生活並參與社會，讓真實使用經驗成為工具優化與公共倡議的基礎。",
     aboutPageTitle: "關於 NVD｜理念與團隊",
     aboutPageDescription:
-      "了解 NVD 的理念、發起背景、團隊角色與移動主權倡議，認識我們如何從日常通行經驗出發，推動友善道路討論。",
+      "了解 NVD 如何結合 AI 工具、輔具支持、同儕經驗與跨域合作，協助身障同儕與行動不便者延伸生活、表達自我、參與社會並創造價值。",
     reportPageTitle: "道路回報｜NVD ROAD HUB",
     reportPageDescription:
       "查看 NVD ROAD HUB 的道路回報流程體驗，了解如何以拍照、定位與補充說明整理道路障礙資訊。本頁目前不會傳送、保存或正式受理資料。",
     joinPageTitle: "加入 NVD 共創行動｜參與方式",
     joinPageDescription:
-      "了解加入 NVD 共創行動的參與方向，包括行動夥伴、道路觀察、設計技術支援與合作詢問。本頁目前不提供正式報名表。",
+      "了解加入 NVD 共創行動的參與方向，包括 AI 工具學習、輔具使用回饋、同儕支持、公共倡議與合作詢問。本頁目前不提供正式報名表。",
     privacyPageTitle: "隱私權政策｜NVD 協會",
     privacyPageDescription:
       "閱讀 NVD 協會網站的隱私權政策，了解目前網站功能、資料使用原則與未來正式表單開放前的個資處理說明。",
@@ -102,21 +102,21 @@ const translations = {
     aboutEyebrow: "About NVD",
     aboutTitle: "關於 NVD",
     aboutParagraphOne:
-      "NVD 是一個以「移動主權」與「社會韌性」為核心的行動倡議，關注輪椅使用者、嬰兒車推行者、高齡者、照顧者與所有行人在城市中的真實移動經驗。",
+      "NVD 是一個結合 AI 工具、輔具支持與同儕協作的行動倡議，關注身障同儕、行動不便者、高齡者、照顧者與所有在生活中需要支持的人，如何更清楚地表達自己、更穩定地移動與參與社會。",
     aboutParagraphTwo:
-      "我們相信，無障礙不只是硬體改善，也不只是少數族群的需求，而是每個人都會在生命不同階段遇到的公共議題。從嬰兒車、行李箱、助行器到電動輪椅，城市道路是否平整、動線是否友善、空間是否能被安全使用，最終都會影響全民的生活品質。",
+      "我們相信，友善生活不只來自硬體改善，也來自表達、溝通、工具使用、輔具支持與社會理解。AI 工具能協助整理想法、表達需求、創作內容與發展能力；輪椅、手推輪椅、電動輪椅與各式輔具，則能延伸生活範圍與公共參與。",
     aboutParagraphThree:
-      "NVD 透過使用者經驗、現場觀察、路徑紀錄與資料整理，將日常移動中看似微小的障礙，轉化為可被理解、討論與改善的公共資訊。我們希望連結使用者、社區、政府、企業與專業團隊，共同建立更具韌性的城市環境。",
+      "NVD 透過同儕經驗、現場觀察、工具使用回饋與資料整理，將日常生活中看似零散的需求，轉化為可被理解、討論與改善的公共資訊。",
     aboutParagraphFour:
-      "我們的目標不是把障礙者放在被照顧的位置，而是重新定義他們的專業價值：身體經驗本身，就是理解城市缺口的重要感測器。NVD 希望讓這些經驗被看見、被尊重，並成為推動未來公共空間改善的重要依據。",
+      "我們的目標不是把身障者放在被照顧的位置，而是讓身障同儕成為能表達、能參與、能創造價值的主體。NVD 希望連結同儕、政府、企業、教育單位與社會組織，讓真實使用經驗成為工具改善、輔具應用、服務設計與公共倡議的基礎。",
     aboutFocusEyebrow: "Our Focus",
     aboutFocusTitle: "我們關心什麼",
-    focusMobilityTitle: "移動主權",
+    focusMobilityTitle: "表達自主",
     focusMobilityText:
-      "關注每個人能不能安全、自由、有尊嚴地移動。",
-    focusResilienceTitle: "生活韌性",
+      "協助身障同儕透過 AI 工具整理想法、說明需求、表達感受，改善家庭、同儕、職場與社會互動。",
+    focusResilienceTitle: "輔具支持",
     focusResilienceText:
-      "從照顧、家庭、社區與日常需求出發，整理被忽略的生活困難。",
+      "關注輪椅、手推輪椅、電動輪椅與各式輔具如何延伸移動能力、生活範圍與公共參與。",
     focusDataTitle: "公共資料倡議",
     focusDataText:
       "將民眾經驗轉化為可被討論、追蹤與改善的公共資料。",
@@ -125,10 +125,10 @@ const translations = {
       "透過內容、講座與合作，讓更多人理解無障礙與社會參與。",
     focusExperienceTitle: "真實經驗",
     focusExperienceText:
-      "輪椅、嬰兒車、助行器與行人日常遇到的阻礙，是改善公共空間的重要線索。",
+      "重視身障同儕與高齡化社會在日常生活中的使用回饋，讓需求不只被聽見，也能被整理成可改善的依據。",
     focusCollaborationTitle: "公共協作",
     focusCollaborationText:
-      "NVD 希望連結使用者、社區、政府、企業與專業者，讓改善不只停留在抱怨，而能形成具體行動。",
+      "連結同儕、政府、企業、教育單位與社會組織，讓 AI 工具與輔具支持能在真實生活中持續改善。",
     homeFlowTitle: "讓真實使用經驗成為下一次改善的起點",
     homeFlowLead: "NVD 透過身障同儕、政府、企業、教育單位與社會組織共同合作，讓現有 AI 工具與輔具在真實生活中被使用、被回饋、被理解、被改善。我們協助整理真實使用情境、需求回饋、操作困難、環境限制與必要參數，讓這些資料成為工具優化、輔具改良、服務設計、公共倡議與政策溝通的基礎。",
     homeFlowUse: "真實使用",
@@ -190,7 +190,7 @@ const translations = {
     officialProfileTitle: "官方簡介",
     officialProfileLead: "可供履歷、提案、媒體與社群引用。",
     officialProfileText:
-      "NVD 是一個以移動主權與社會韌性為核心的行動倡議，關注輪椅使用者、嬰兒車推行者、高齡者、照顧者與一般行人在城市中的真實移動經驗。NVD 透過現場觀察、路徑紀錄與資料整理，將日常移動中遇到的障礙轉化為可被理解、討論與改善的公共資訊，並希望連結使用者、社區、政府、企業與專業團隊，共同推動更友善、更具韌性的城市環境。",
+      "NVD 是一個結合 AI 工具、輔具支持與同儕協作的行動倡議，關注身障同儕、行動不便者、高齡者與照顧者在表達、移動、互動、學習、工作與社會參與中的真實需求。NVD 透過同儕經驗、工具使用回饋、現場觀察與資料整理，將生活中的需求轉化為可被理解、討論與改善的公共資訊，並希望連結政府、企業、教育單位、社會組織與專業團隊，共同推動更友善的工具、服務與公共支持。",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "三個入口，對應同一個使命",
     gatewayLead:
@@ -205,27 +205,27 @@ const translations = {
     gatewayJoinText:
       "讓同學、師資與種子使用者從測試、回饋、分享開始，進入 NVD 友善科技循環。",
     valuesEyebrow: "Core Values",
-    valuesTitle: "從道路回饋開始，走向友善社會系統",
+    valuesTitle: "從工具支持開始，走向友善生活系統",
     valuesLead:
-      "我們先幫人少卡一次，再讓每一次理解、測試與回饋，成為社會韌性的一個節點。",
-    valueFrictionTitle: "降低摩擦",
-    valueFrictionText: "把複雜指令、黑色視窗與繁瑣流程，折成更直覺的一鍵操作。",
+      "我們把真實生活中的工具使用、輔具經驗與互動需求，整理成可被看見、可被理解、可被改善的公共資訊。",
+    valueFrictionTitle: "降低門檻",
+    valueFrictionText: "把複雜的工具、流程與資訊整理成更容易理解、使用與參與的方式。",
     valueAccessTitle: "友善可及",
     valueAccessText:
-      "讓專業前輩、企業經營者、無礙需求者與照護同行者，都能以更低摩擦參與 AI 時代的公共協作。",
-    valueActionTitle: "從回饋到行動",
+      "讓身障同儕、高齡者、照顧者、企業與公共服務單位，都能以更低門檻參與 AI 工具與輔具支持的協作。",
+    valueActionTitle: "從回饋到改善",
     valueActionText:
-      "每一次觀察、分享與回饋，都能推動下一個更友善的道路專案。",
+      "每一次工具使用、輔具經驗與生活回饋，都能成為下一次服務設計、產品改善與公共倡議的基礎。",
     dualFrictionEyebrow: "Dual Friction",
-    dualFrictionTitle: "我們想解決的，不只是道路問題",
+    dualFrictionTitle: "我們想解決的，不只是移動問題",
     dualFrictionLead:
-      "數位流程會卡住人，城市空間也會卡住人。NVD 把這些摩擦視為可以被看見、被降低、被改善的系統問題。",
+      "數位工具會卡住人，生活環境也會卡住人。NVD 把這些摩擦視為可以被看見、被整理、被改善的系統問題。",
     digitalFrictionTitle: "數位摩擦",
     digitalFrictionText:
-      "資訊落差、通報門檻、責任分散與介面焦慮，讓很多真實需求難以被看見。",
+      "資訊落差、工具門檻、表達困難、通報流程與介面焦慮，讓很多真實需求難以被清楚說出與整理。",
     physicalFrictionTitle: "生活摩擦",
     physicalFrictionText:
-      "高低差、斷裂人行道、資訊不透明與不友善動線，讓日常移動變成被迫繞路、等待或放棄。",
+      "移動限制、輔具使用困難、不友善動線、家庭與社會互動斷點，讓日常生活變成被迫等待、繞路或放棄。",
     softwareEyebrow: "Green Friendly Software",
     softwareLead:
       "不用註冊、不逼學指令、不製造更多焦慮，只為了讓人更快完成事情。",
@@ -289,7 +289,7 @@ const translations = {
     productSecurityDetailOne:
       "僅從本站提供的官方入口前往外部服務，避免使用來路不明的轉傳連結。",
     productSecurityDetailTwo:
-      "???????????????????????????",
+      "???????? AI ???????? AI ????? AI ?????? AI ? AI ???????????????????????????????? AI ? AI ???????????????????????????????? AI ? AI ?????????????????????????? AI ??????????????????????????????",
     productSecurityDetailThree:
       "若外部頁面內容與本站說明不一致，請先停止操作並回報。",
     downloadCheckVersionLabel: "目前階段",
@@ -516,26 +516,26 @@ const translations = {
     joinEyebrow: "JOIN NVD",
     joinTitle: "加入 NVD 共創行動",
     joinLead:
-      "NVD 正在整理道路觀察、公共倡議、設計技術與社區合作的參與方式。正式加入流程開放前，本頁先說明你可以如何理解與參與這項行動。",
+      "NVD 歡迎身障同儕、照顧者、政府單位、企業、輔具廠商、教育單位與社會組織一起參與，透過 AI 工具、輔具支持、同儕經驗與公共倡議，推動更友善的生活支持系統。",
     joinPathsEyebrow: "Participation Paths",
     joinPathsTitle: "你可以從這些方向參與",
     joinPathsLead:
       "目前 NVD 正在整理合作與參與流程，本頁提供方向說明，尚未開放正式報名表，也不透過本頁收集表單資料。",
     joinActionTitle: "行動夥伴",
-    joinActionText: "適合願意分享日常通行經驗、協助觀察道路障礙與友善空間的人。",
-    joinObservationTitle: "道路觀察",
-    joinObservationText: "適合願意協助紀錄人行道、騎樓、坡道、路口與公共空間通行情況的人。",
-    joinSupportTitle: "設計與技術支援",
-    joinSupportText: "適合能協助網站維護、資料整理、視覺設計、社群內容或數位工具規劃的人。",
+    joinActionText: "適合願意分享 AI 工具、輔具使用與日常生活經驗，協助整理真實需求的人。",
+    joinObservationTitle: "生活觀察",
+    joinObservationText: "適合願意協助整理公共空間、工具使用、輔具支持與生活需求的人。",
+    joinSupportTitle: "工具與內容支援",
+    joinSupportText: "適合能協助 AI 工具學習、資料整理、網站維護、視覺設計、社群內容或數位工具規劃的人。",
     joinPartnerTitle: "學校／社區／企業合作",
-    joinPartnerText: "適合想從公共倡議、友善空間、社會實踐或 ESG 角度認識 NVD 的單位。",
+    joinPartnerText: "適合想從 AI 工具學習、輔具使用回饋、身障同儕支持、高齡化社會生活品質或 ESG 角度認識 NVD 的單位。",
     joinLearnTitle: "先了解 NVD",
-    joinLearnText: "如果你還不確定怎麼參與，可以先閱讀 NVD 理念與道路回報流程。",
+    joinLearnText: "如果你還不確定怎麼參與，可以先閱讀 NVD 理念、行動專案與資料倡議方向。",
     joinPrepareEyebrow: "Before You Join",
     joinPrepareTitle: "參與前可以先準備",
-    joinPrepareOne: "觀察自己日常通行中遇到的道路障礙",
+    joinPrepareOne: "觀察自己或身邊的人在表達、移動、工具使用與社會參與中遇到的困難",
     joinPrepareTwo: "思考你能提供的是經驗、時間、專業能力或合作場域",
-    joinPrepareThree: "先閱讀 NVD 的理念與道路回報流程",
+    joinPrepareThree: "先閱讀 NVD 的理念、行動專案與資料倡議方向",
     joinPrepareFour: "等待正式合作流程逐步開放",
     joinContactEyebrow: "Contact NVD",
     joinContactTitle: "初步聯絡窗口",
@@ -543,10 +543,10 @@ const translations = {
     joinEmailLabel: "聯絡信箱：",
     joinEmailCta: "寄信聯繫 NVD",
     joinContactNotice:
-      "此信箱目前僅作為 NVD 合作詢問、參與方式了解與一般聯繫使用，不作為道路障礙正式陳情、緊急通報或政府案件受理管道。若未來開放正式表單或合作申請流程，NVD 將同步提供資料用途、保存方式與回覆範圍說明。",
+      "此信箱目前僅作為 NVD 合作詢問、參與方式了解與一般聯繫使用，不作為正式陳情、緊急通報、政府案件受理或個案服務管道。若未來開放正式表單或合作申請流程，NVD 將同步提供資料用途、保存方式與回覆範圍說明。",
     joinNextTitle: "繼續了解 NVD",
     joinAboutCta: "了解 NVD 理念",
-    joinReportCta: "查看道路回報流程",
+    joinReportCta: "查看行動專案",
     joinHomeCta: "回到首頁",
     frictionEyebrow: "Technology Friction",
     frictionTitle: "科技讓我們進化，還是退化？",
@@ -676,7 +676,7 @@ const translations = {
   },
   en: {
     brandName: "NVD Association",
-    pageTitle: "NVD Association｜Mobility Autonomy, Living Resilience, and Public Data Advocacy",
+    pageTitle: "NVD Association｜Expression Autonomy, Assistive Support, and Public Data Advocacy",
     indexPageTitle: "NVD Association - AI tools, assistive technology support, and public advocacy",
     indexPageDescription: "NVD connects online AI tools and offline assistive technology support to help disabled peers express themselves, extend daily life, and participate in society, while turning lived experience into a basis for tool improvement and public advocacy.",
     aboutPageTitle: "About NVD｜Mission and Team",
@@ -772,21 +772,21 @@ const translations = {
     aboutEyebrow: "About NVD",
     aboutTitle: "About NVD",
     aboutParagraphOne:
-      "NVD is a civic initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and all pedestrians.",
+      "NVD is a civic initiative that connects AI tools, assistive support, and peer collaboration. We focus on how disabled peers, people with limited mobility, older adults, caregivers, and others who need support in daily life can express themselves more clearly, move more steadily, and participate in society.",
     aboutParagraphTwo:
-      "We believe accessibility is not only about physical infrastructure or the needs of a small group. It is a public issue that everyone may encounter at different stages of life. From strollers and luggage to walkers and powered wheelchairs, road conditions, accessible routes, and safe public spaces affect everyone's quality of life.",
+      "We believe a friendlier life comes not only from physical improvements, but also from expression, communication, tool use, assistive support, and social understanding. AI tools can help organize ideas, express needs, create content, and develop abilities; wheelchairs, manual wheelchairs, powered wheelchairs, and other assistive tools can extend daily life and public participation.",
     aboutParagraphThree:
-      "Through lived experience, field observation, route records, and organized information, NVD turns small everyday mobility barriers into public information that can be understood, discussed, and improved. We seek to connect community members, local communities, government, businesses, and professional teams to support more resilient cities.",
+      "Through peer experience, field observation, tool-use feedback, and organized information, NVD turns everyday needs that may seem scattered into public information that can be understood, discussed, and improved.",
     aboutParagraphFour:
-      "Our goal is not to place disabled people only in the position of receiving care. We recognize the professional value of embodied experience: it is an important sensor for understanding gaps in the city. NVD works to make these experiences visible and respected, and to establish them as meaningful evidence for improving future public spaces.",
+      "Our goal is not to place disabled people only in the position of receiving care. We want disabled peers to be subjects who can express themselves, participate, and create value. NVD seeks to connect peers, government, businesses, educational institutions, and social organizations so real use experience can become the basis for tool improvement, assistive support, service design, and public advocacy.",
     aboutFocusEyebrow: "Our Focus",
     aboutFocusTitle: "What We Care About",
-    focusMobilityTitle: "Mobility Autonomy",
+    focusMobilityTitle: "Expression Autonomy",
     focusMobilityText:
-      "We ask whether people can move safely, freely, and with dignity.",
-    focusResilienceTitle: "Living Resilience",
+      "We help disabled peers use AI tools to organize ideas, explain needs, express feelings, and improve interaction with family, peers, workplaces, and society.",
+    focusResilienceTitle: "Assistive Support",
     focusResilienceText:
-      "We start from care, family, community, and everyday needs to organize overlooked difficulties in daily life.",
+      "We focus on how wheelchairs, manual wheelchairs, powered wheelchairs, and other assistive tools can extend mobility, daily life, and public participation.",
     focusDataTitle: "Public Data Advocacy",
     focusDataText:
       "We turn public experience into public data that can be discussed, tracked, and improved.",
@@ -795,10 +795,10 @@ const translations = {
       "Through content, talks, and partnerships, we help more people understand accessibility and social participation.",
     focusExperienceTitle: "Lived Experience",
     focusExperienceText:
-      "The barriers encountered by wheelchair users, people pushing strollers, walker users, and pedestrians are important clues for improving public space.",
+      "We value feedback from disabled peers and an ageing society in everyday life, so needs are not only heard but organized into grounds for improvement.",
     focusCollaborationTitle: "Public Collaboration",
     focusCollaborationText:
-      "NVD connects community members, local communities, government, businesses, and professionals so that concerns can lead to concrete action.",
+      "NVD connects peers, government, businesses, educational institutions, and social organizations so AI tools and assistive support can keep improving in real life.",
     homeFlowTitle: "Let real use experience become the start of the next improvement",
     homeFlowLead: "NVD works with disabled peers, government, businesses, educational institutions, and social organizations so existing AI tools and assistive tools can be used, reviewed, understood, and improved in real life. We organize real use contexts, needs feedback, operational difficulties, environmental limits, and necessary parameters so the information can support tool improvement, assistive technology refinement, service design, public advocacy, and policy communication.",
     homeFlowUse: "Real Use",
@@ -860,7 +860,7 @@ const translations = {
     officialProfileTitle: "Official Profile",
     officialProfileLead: "For use in resumes, proposals, media, and social profiles.",
     officialProfileText:
-      "NVD is a civic initiative centered on mobility autonomy and social resilience. We focus on the lived urban mobility experiences of wheelchair users, people pushing strollers, older adults, caregivers, and pedestrians. Through field observation, route records, and organized information, NVD turns everyday mobility barriers into public information that can be understood, discussed, and improved. We seek to connect community members, local communities, government, businesses, and professional teams to advance more accessible and resilient cities.",
+      "NVD is a civic initiative that connects AI tools, assistive support, and peer collaboration. We focus on the real needs of disabled peers, people with limited mobility, older adults, and caregivers in expression, mobility, interaction, learning, work, and social participation. Through peer experience, tool-use feedback, field observation, and organized information, NVD turns everyday needs into public information that can be understood, discussed, and improved, and seeks to connect government, businesses, educational institutions, social organizations, and professional teams to advance friendlier tools, services, and public support.",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "Three gateways, one mission",
     gatewayLead:
@@ -875,28 +875,28 @@ const translations = {
     gatewayJoinText:
       "Invite classmates, mentors, and seed users to test, give feedback, share, and enter the NVD friendly tech loop.",
     valuesEyebrow: "Core Values",
-    valuesTitle: "Start with tools, move toward a friendlier social system",
+    valuesTitle: "Start with tool support, move toward a friendlier life system",
     valuesLead:
-      "We help people get unstuck first, then turn every download, test, and feedback loop into a node of social resilience.",
-    valueFrictionTitle: "Reduce Friction",
+      "We organize real-life tool use, assistive experiences, and interaction needs into public information that can be seen, understood, and improved.",
+    valueFrictionTitle: "Lower Barriers",
     valueFrictionText:
-      "Fold complex commands, terminals, and tedious workflows into more intuitive one-click actions.",
-    valueAccessTitle: "Accessible by Design",
+      "We organize complex tools, processes, and information into ways that are easier to understand, use, and participate in.",
+    valueAccessTitle: "Friendly Access",
     valueAccessText:
-      "Help established professionals, business leaders, accessibility communities, and care partners connect with AI-era tools with less friction.",
-    valueActionTitle: "From Tools to Action",
+      "We help disabled peers, older adults, caregivers, businesses, and public-service partners participate in AI tool and assistive-support collaboration with lower barriers.",
+    valueActionTitle: "From Feedback to Improvement",
     valueActionText:
-      "Every use, share, and feedback loop can push the next friendlier tool or project forward.",
+      "Every tool-use experience, assistive experience, and everyday feedback can become the basis for the next service design, product improvement, and public advocacy effort.",
     dualFrictionEyebrow: "Dual Friction",
-    dualFrictionTitle: "We are solving more than a tooling problem",
+    dualFrictionTitle: "We are solving more than a mobility problem",
     dualFrictionLead:
-      "Digital workflows can block people. City spaces can block people too. NVD treats these frictions as system issues that can be seen, reduced, and improved.",
+      "Digital tools can block people. Daily environments can block people too. NVD treats these frictions as system issues that can be seen, organized, and improved.",
     digitalFrictionTitle: "Digital Friction",
     digitalFrictionText:
-      "Complex commands, software barriers, conversion workflows, and interface anxiety keep people outside the tools they need.",
+      "Information gaps, tool barriers, expression difficulties, reporting processes, and interface anxiety make many real needs hard to explain and organize clearly.",
     physicalFrictionTitle: "Life Friction",
     physicalFrictionText:
-      "Level differences, broken sidewalks, opaque information, and unfriendly routes turn everyday movement into detours, waiting, or giving up.",
+      "Mobility limits, assistive-tool difficulties, unfriendly routes, and breaks in family or social interaction can turn everyday life into waiting, detours, or giving up.",
     softwareEyebrow: "Green Friendly Software",
     softwareLead:
       "No registration pressure, no forced command learning, no extra anxiety. Just small tools that help people finish work faster.",
@@ -1204,26 +1204,26 @@ const translations = {
     joinEyebrow: "JOIN NVD",
     joinTitle: "Join NVD's collaborative initiative",
     joinLead:
-      "NVD is organizing participation paths for road observation, public advocacy, design and technology, and community collaboration. Until the formal participation process opens, this page explains how you can understand and take part in the initiative.",
+      "NVD welcomes disabled peers, caregivers, government agencies, businesses, assistive-tool makers, educational institutions, and social organizations to participate through AI tools, assistive support, peer experience, and public advocacy, and to advance a friendlier life-support system together.",
     joinPathsEyebrow: "Participation Paths",
     joinPathsTitle: "Ways you can participate",
     joinPathsLead:
       "NVD is still organizing its collaboration process. This page offers direction only; there is no formal registration form, and no form data is collected here.",
     joinActionTitle: "Action partner",
-    joinActionText: "For people willing to share everyday mobility experiences and help observe road barriers and accessible spaces.",
-    joinObservationTitle: "Road observation",
-    joinObservationText: "For people willing to document sidewalks, arcades, ramps, intersections, and access conditions in public spaces.",
-    joinSupportTitle: "Design and technical support",
-    joinSupportText: "For people who can support website maintenance, information organization, visual design, community content, or digital tool planning.",
+    joinActionText: "For people willing to share AI tool use, assistive-tool use, and everyday life experiences to help organize real needs.",
+    joinObservationTitle: "Life observation",
+    joinObservationText: "For people willing to help organize public-space conditions, tool use, assistive support, and everyday life needs.",
+    joinSupportTitle: "Tool and content support",
+    joinSupportText: "For people who can support AI tool learning, information organization, website maintenance, visual design, community content, or digital tool planning.",
     joinPartnerTitle: "School, community, or business collaboration",
-    joinPartnerText: "For organizations interested in NVD through public advocacy, accessible spaces, social practice, or ESG.",
+    joinPartnerText: "For organizations interested in NVD through AI tool learning, assistive-tool feedback, disabled peer support, quality of life in an ageing society, or ESG.",
     joinLearnTitle: "Learn about NVD first",
-    joinLearnText: "If you are not sure how to participate yet, start with NVD's ideas and road-reporting process.",
+    joinLearnText: "If you are not sure how to participate yet, start with NVD's ideas, action projects, and data advocacy direction.",
     joinPrepareEyebrow: "Before You Join",
     joinPrepareTitle: "What you can prepare",
-    joinPrepareOne: "Observe road barriers in your everyday travel",
+    joinPrepareOne: "Observe difficulties in expression, mobility, tool use, and social participation around you",
     joinPrepareTwo: "Consider whether you can offer experience, time, professional skills, or a place for collaboration",
-    joinPrepareThree: "Read about NVD's ideas and road-reporting process",
+    joinPrepareThree: "Read about NVD's ideas, action projects, and data advocacy direction",
     joinPrepareFour: "Wait for the formal collaboration process to open gradually",
     joinContactEyebrow: "Contact NVD",
     joinContactTitle: "Initial contact",
@@ -1231,10 +1231,10 @@ const translations = {
     joinEmailLabel: "Email:",
     joinEmailCta: "Email NVD",
     joinContactNotice:
-      "This email is currently for NVD collaboration questions, participation information, and general contact only. It is not a road-complaint or emergency-reporting channel, and messages sent here are not treated as formal submissions. If NVD later opens a formal form or collaboration application, we will explain the purpose, storage method, and scope of responses.",
+      "This email is currently for NVD collaboration questions, participation information, and general contact only. It is not a formal complaint channel, emergency-reporting channel, government case channel, or individual service channel, and messages sent here are not treated as formal submissions. If NVD later opens a formal form or collaboration application, we will explain the purpose, storage method, and scope of responses.",
     joinNextTitle: "Continue exploring NVD",
     joinAboutCta: "Learn about NVD's ideas",
-    joinReportCta: "View the road-reporting process",
+    joinReportCta: "View action projects",
     joinHomeCta: "Back to home",
     frictionEyebrow: "Technology Friction",
     frictionTitle: "Does technology evolve us, or regress us?",
@@ -1394,9 +1394,9 @@ const brandVoiceContent = {
       gatewayJoinTitle: "加入共創",
       gatewayJoinText:
         "學生、居民、志工、設計者、工程與資料夥伴，都可以從測試、回饋與分享開始參與。",
-      valuesTitle: "NVD 的核心：讓通行更安全，讓回饋真的有用",
+      valuesTitle: "NVD 的核心：讓工具支持回到真實生活",
       valuesLead:
-        "我們相信友善道路不是口號，而是一套可以被回報、被整理、被協作、被改善的行動循環。",
+        "我們相信工具與輔具不是冰冷設備，而是能協助人表達、移動、互動與參與生活的支持系統。",
       footerProductsTitle: "協會行動",
       footerProductTools: "道路回饋與修復行動",
       footerProductConverter: "加入共創",
@@ -1450,9 +1450,9 @@ const brandVoiceContent = {
       gatewayJoinTitle: "參與機制",
       gatewayJoinText:
         "邀請公民、學生、專業者、社群與跨域夥伴，透過測試、回饋、資料協作與倡議參與，共同推動友善通行環境。",
-      valuesTitle: "以友善通行、資料治理與社會韌性為核心之公共倡議",
+      valuesTitle: "以 AI 工具、輔具支持、同儕經驗與公共倡議為核心的行動平台",
       valuesLead:
-        "NVD 將道路回饋視為城市治理的重要訊號，透過資料化、流程化與協作化，促進更安全、更可及且更具韌性的公共環境。",
+        "NVD 將真實使用經驗整理為公共資訊，作為工具改善、輔具應用、服務設計與政策溝通的基礎。",
       footerProductsTitle: "協會行動",
       footerProductTools: "道路治理行動",
       footerProductConverter: "參與協作",
