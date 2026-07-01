@@ -1027,7 +1027,8 @@ body[data-theme="dark"] .hero-stats strong {
   border-block: 1px solid var(--border-main);
 }
 
-.team-member-card {
+.team-member-card,
+.team-section .team-card {
   max-width: 920px;
   margin: 34px auto 0;
   padding: clamp(26px, 4vw, 42px);
@@ -1036,6 +1037,35 @@ body[data-theme="dark"] .hero-stats strong {
   border: 1px solid var(--border-main);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-main);
+}
+
+.team-section .team-card + .team-card {
+  margin-top: 24px;
+}
+
+.team-section .team-photo {
+  display: block;
+  width: min(180px, 100%);
+  aspect-ratio: 1;
+  margin: 0 0 18px;
+  object-fit: cover;
+  border: 1px solid var(--border-main);
+  border-radius: 8px;
+}
+
+.team-section .team-content {
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+.team-section .team-content h2 {
+  margin: 0 0 16px;
+  color: var(--text-main);
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+}
+
+.team-section .team-content p {
+  margin: 0 0 16px;
 }
 
 .team-member-heading {

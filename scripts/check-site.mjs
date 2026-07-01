@@ -380,7 +380,8 @@ for (const file of htmlFiles) {
     }
   }
 
-  for (const match of html.matchAll(/\s(?:href|src)="([^"]+)"/g)) {
+  const htmlWithoutComments = html.replace(/<!--[\s\S]*?-->/g, " ");
+  for (const match of htmlWithoutComments.matchAll(/\s(?:href|src)="([^"]+)"/g)) {
     const rawUrl = match[1];
     if (/^(https?:|mailto:|tel:|data:)/i.test(rawUrl)) continue;
 
