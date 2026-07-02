@@ -6117,8 +6117,8 @@ body[data-theme="dark"] .receipt-modal {
 
 .report-page .nvd-demo-stage {
   display: grid;
-  grid-template-columns: minmax(390px, 0.32fr) minmax(230px, 0.16fr) minmax(670px, 0.52fr);
-  gap: clamp(18px, 2.2vw, 34px);
+  grid-template-columns: minmax(340px, 0.32fr) minmax(180px, 0.16fr) minmax(600px, 0.52fr);
+  gap: clamp(16px, 1.8vw, 24px);
   align-items: start;
   width: min(1360px, calc(100% - 32px));
   margin-inline: auto;
@@ -7293,8 +7293,10 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
   .report-page .nvd-demo-stage {
     grid-template-columns: minmax(360px, 0.9fr) minmax(290px, 0.65fr) minmax(720px, 1.65fr);
     gap: clamp(14px, 1.4vw, 22px);
-    width: min(1640px, calc(100% - 20px));
+    width: min(1640px, calc(100dvw - 40px));
+    left: 50%;
     margin-inline: auto;
+    transform: translateX(-50%);
   }
 }
 
