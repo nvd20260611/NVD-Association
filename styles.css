@@ -4135,7 +4135,7 @@ body[data-theme="dark"] .site-footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(28px, 4vw, 46px);
   justify-items: center;
   text-align: center;
@@ -4463,7 +4463,7 @@ body[data-theme="dark"] .footer-logo {
   }
 
   .footer-bottom {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -4999,16 +4999,18 @@ body[data-theme="dark"] .footer-logo {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 24px;
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
+    text-align: left;
   }
 
   .footer-column {
+    width: 100%;
     padding-bottom: 2px;
   }
 
   .footer-social {
     gap: 10px;
+    justify-content: flex-start;
     margin-top: 16px;
   }
 
@@ -5019,7 +5021,7 @@ body[data-theme="dark"] .footer-logo {
 
   .footer-bottom,
   .footer-brand {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
   }
 }

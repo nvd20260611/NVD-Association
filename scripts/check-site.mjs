@@ -152,6 +152,19 @@ function fail(file, message) {
 const htmlByFile = Object.fromEntries(htmlFiles.map((file) => [file, read(file)]));
 const script = read("script.js");
 const styles = read("styles.css");
+const requiredCspDirectives = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "script-src 'self'",
+  "connect-src 'self'",
+  "media-src 'self'",
+  "frame-src 'none'",
+  "manifest-src 'self'",
+  "worker-src 'none'",
+  "form-action 'none'",
+  "upgrade-insecure-requests",
+];
 const zhDictionaryStart = script.indexOf("  zh: {");
 const enDictionaryStart = script.indexOf("  en: {");
 const brandVoiceStart = script.indexOf("const brandVoiceContent");
@@ -162,6 +175,23 @@ const enDictionaryKeys = collectDictionaryKeys(enDictionarySource);
 const anchorsByFile = Object.fromEntries(
   htmlFiles.map((file) => [file, collectAnchors(htmlByFile[file])]),
 );
+
+if (
+  !script.includes("function enforceTopLevelBrowsingContext") ||
+  !script.includes("window.top") ||
+  !script.includes("window.self")
+) {
+  fail("script.js", "missing top-level browsing context guard");
+}
+
+const forbiddenDomSinks = [
+  ["document.write", /document\.write\s*\(/],
+  ["document.writeln", /document\.writeln\s*\(/],
+  ["insertAdjacentHTML", /insertAdjacentHTML\s*\(/],
+];
+for (const [label, pattern] of forbiddenDomSinks) {
+  if (pattern.test(script)) fail("script.js", `unsafe DOM sink is forbidden: ${label}`);
+}
 
 for (const [file, html] of Object.entries(htmlByFile)) {
   const i18nKeys = new Set(
@@ -353,7 +383,15 @@ for (const file of htmlFiles) {
     fail(file, "missing responsive viewport");
   }
   if (!/<title>[^<]+<\/title>/i.test(html)) fail(file, "missing title");
-  if (!/Content-Security-Policy/i.test(html)) fail(file, "missing Content-Security-Policy");
+  if (!/Content-Security-Policy/i.test(html)) {
+    fail(file, "missing Content-Security-Policy");
+  } else {
+    for (const directive of requiredCspDirectives) {
+      if (!html.includes(directive)) {
+        fail(file, `Content-Security-Policy missing directive: ${directive}`);
+      }
+    }
+  }
 
   for (const meta of requiredMeta) {
     if (!meta.pattern.test(html)) fail(file, `missing ${meta.label}`);

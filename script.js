@@ -1,14 +1,26 @@
 /**
- * NVD 協會
+ * NVD 永賦行動協會
  * 功能：協會官網互動、深淺色主題、多語言切換、使用說明 Modal。
  */
 
+function enforceTopLevelBrowsingContext() {
+  if (window.top === window.self) return;
+
+  try {
+    window.top.location = window.self.location.href;
+  } catch {
+    window.location.href = window.self.location.href;
+  }
+}
+
+enforceTopLevelBrowsingContext();
+
 const translations = {
   zh: {
-    brandName: "NVD 協會",
-    pageTitle: "NVD 協會｜AI 工具、輔具支持與公共倡議平台",
-    indexPageTitle: "NVD 協會｜AI 工具、輔具支持與公共倡議平台",
-    indexPageDescription: "NVD 協會結合線上 AI 工具與線下輔具支持，協助身障同儕表達自我、延伸生活並參與社會，讓真實使用經驗成為工具優化與公共倡議的基礎。",
+    brandName: "NVD 永賦行動協會",
+    pageTitle: "NVD 永賦行動協會｜AI 工具、輔具支持與公共倡議平台",
+    indexPageTitle: "NVD 永賦行動協會｜AI 工具、輔具支持與公共倡議平台",
+    indexPageDescription: "NVD 永賦行動協會結合線上 AI 工具與線下輔具支持，協助身障同儕表達自我、延伸生活並參與社會，讓真實使用經驗成為工具優化與公共倡議的基礎。",
     aboutPageTitle: "關於 NVD｜理念與團隊",
     aboutPageDescription:
       "了解 NVD 如何結合 AI 工具、輔具支持、同儕經驗與跨域合作，協助身障同儕與行動不便者延伸生活、表達自我、參與社會並創造價值。",
@@ -18,21 +30,21 @@ const translations = {
     joinPageTitle: "加入 NVD 共創行動｜參與方式",
     joinPageDescription:
       "了解加入 NVD 共創行動的參與方向，包括 AI 工具學習、輔具使用回饋、同儕支持、公共倡議與合作詢問。本頁目前不提供正式報名表。",
-    privacyPageTitle: "隱私權政策｜NVD 協會",
+    privacyPageTitle: "隱私權政策｜NVD 永賦行動協會",
     privacyPageDescription:
-      "閱讀 NVD 協會網站的隱私權政策，了解目前網站功能、資料使用原則與未來正式表單開放前的個資處理說明。",
-    termsPageTitle: "服務條款｜NVD 協會",
+      "閱讀 NVD 永賦行動協會網站的隱私權政策，了解目前網站功能、資料使用原則與未來正式表單開放前的個資處理說明。",
+    termsPageTitle: "服務條款｜NVD 永賦行動協會",
     termsPageDescription:
-      "閱讀 NVD 協會網站服務條款，了解網站使用、內容限制、流程體驗與責任範圍。",
+      "閱讀 NVD 永賦行動協會網站服務條款，了解網站使用、內容限制、流程體驗與責任範圍。",
     manifestoPageTitle: "品牌理念已移至關於 NVD",
     manifestoPageDescription:
       "NVD 品牌理念內容已移至關於 NVD 頁面，請前往新的介紹頁閱讀目前版本。",
-    resiliencePageTitle: "資料倡議與公共需求整理｜NVD 協會",
+    resiliencePageTitle: "資料倡議與公共需求整理｜NVD 永賦行動協會",
     resiliencePageDescription:
       "NVD 將民眾在日常生活中遇到的移動困難、空間阻礙與服務缺口，整理成可以被理解、追蹤與討論的公共資料。",
     primaryNavigationAria: "主要導覽",
-    brandHomeAria: "NVD 協會首頁",
-    headerLogoAlt: "NVD 協會",
+    brandHomeAria: "NVD 永賦行動協會首頁",
+    headerLogoAlt: "NVD 永賦行動協會",
     mobileMenuOpenAria: "開啟網站選單",
     mobileMenuCloseAria: "關閉網站選單",
     siteMenuAria: "網站選單",
@@ -62,8 +74,11 @@ const translations = {
     mobileLanguageLabel: "語言：",
     themeLightLabel: "切換為淺色主題",
     themeDarkLabel: "切換為深色主題",
-    heroKicker: "NVD 協會｜AI 工具與輔具支持",
+    heroKicker: "NVD｜Nature・Value・Days",
     heroTitle: "讓身障同儕透過 AI 與輔具支持，延伸生活，表達自我，創造價值。",
+    heroIdentityLineOne: "從真實生活出發，",
+    heroIdentityLineTwo: "讓每個人都能創造價值，",
+    heroIdentityLineThree: "並把改變帶進每一天。",
     heroSubtitle: "<strong>NVD 結合線上 AI 工具與線下輔具支持</strong>，協助身障同儕與行動不便者降低表達、互動、移動、學習與社會參與的門檻，並讓真實使用經驗成為工具優化與公共倡議的基礎。",
     heroPositioningText: "NVD 讓身障同儕不只是被協助的人，也能成為工具改善、輔具應用與高齡化社會支持的重要推動者。",
     homeIdeaTitle: "為什麼成立 NVD",
@@ -192,11 +207,15 @@ const translations = {
     officialProfileLead: "可供履歷、提案、媒體與社群引用。",
     officialProfileText:
       "NVD 是一個結合 AI 工具、輔具支持與同儕協作的行動倡議，關注身障同儕、行動不便者、高齡者與照顧者在表達、移動、互動、學習、工作與社會參與中的真實需求。NVD 透過同儕經驗、工具使用回饋、現場觀察與資料整理，將生活中的需求轉化為可被理解、討論與改善的公共資訊，並希望連結政府、企業、教育單位、社會組織與專業團隊，共同推動更友善的工具、服務與公共支持。",
+    aboutNvdMeaningIntro: "NVD 代表 Nature、Value、Days。",
+    aboutNvdMeaningNature: "Nature，是人的真實生活與需求。",
+    aboutNvdMeaningValue: "Value，是每個人都能參與並創造價值，而不只是接受協助。",
+    aboutNvdMeaningDays: "Days，是讓改變落在每一天，而不只停留在理念。",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "三個入口，對應同一個使命",
     gatewayLead:
       "NVD 不是先要求認同，而是先提供可感受到的幫助，再把幫助轉成理解與參與。",
-    gatewaySoftwareTitle: "認識 NVD 協會",
+    gatewaySoftwareTitle: "認識 NVD 永賦行動協會",
     gatewaySoftwareText:
       "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
     gatewayResilienceTitle: "社會韌性友善專案",
@@ -233,7 +252,7 @@ const translations = {
     productEyebrow: "安全合規版 v2.1",
     productHeroTitle: "道路回饋與修復行動",
     productHeroLead:
-      "整理 NVD 協會理念、道路行動、參與共創與安全提醒，讓理解與參與更直覺。",
+      "整理 NVD 永賦行動協會理念、道路行動、參與共創與安全提醒，讓理解與參與更直覺。",
     productHeroPrimaryCta: "了解道路行動 →",
     productHeroSecondaryCta: "加入共創",
     productCardKicker: "NVD ROAD HUB",
@@ -550,7 +569,7 @@ const translations = {
     frictionEyebrow: "Technology Friction",
     frictionTitle: "科技讓我們進化，還是退化？",
     frictionLead:
-      "人類花了數百萬年學會挺直脊椎，卻在科技與城市流程快速變複雜的今天，再度被介面、道路與制度摩擦壓低。NVD 協會推動道路回饋與修復行動，就是為了讓每一次友善回報都能被看見、被追蹤，重新接回更直覺、更省力的公共生活。",
+      "人類花了數百萬年學會挺直脊椎，卻在科技與城市流程快速變複雜的今天，再度被介面、道路與制度摩擦壓低。NVD 永賦行動協會推動道路回饋與修復行動，就是為了讓每一次友善回報都能被看見、被追蹤，重新接回更直覺、更省力的公共生活。",
     frictionCardOneTitle: "我們曾經學會直立",
     frictionCardOneText:
       "文明的演化，應該讓通行更自由、更安全，而不是讓障礙反覆消耗人的尊嚴。",
@@ -562,7 +581,7 @@ const translations = {
       "當我們走到生命後半段，難道就注定被現代科技拋棄，只能對著電腦發愁嗎？",
     visitSite: "直達網站",
     favoriteTool: "收藏 {name}",
-    footerCopy: "© 2026 NVD 協會",
+    footerCopy: "© 2026 NVD 永賦行動協會",
     footerProductsTitle: "協會行動",
     footerProductTools: "道路回饋與修復行動",
     footerProductConverter: "加入共創",
@@ -622,7 +641,7 @@ const translations = {
       "隱私權政策如有調整，將更新本頁內容與日期。重大變更會以清楚方式說明。",
     privacySectionScope: "我們如何保護你的資料",
     privacyScopeText:
-      "NVD 協會網站是純前端靜態網站。本網站不要求註冊帳號，也不會主動收集你的姓名、電子郵件、檔案內容或付款資料。",
+      "NVD 永賦行動協會網站是純前端靜態網站。本網站不要求註冊帳號，也不會主動收集你的姓名、電子郵件、檔案內容或付款資料。",
     privacySectionStorage: "本機儲存資料",
     privacyStorageText:
       "網站會在你的瀏覽器 localStorage 中保存語言、深淺色主題與收藏清單，僅用於維持你的使用偏好。你可以隨時透過瀏覽器清除網站資料。",
@@ -633,7 +652,7 @@ const translations = {
     privacyDownloadsText: "本網站可能連結至社群平台、協作表單或第三方資訊頁。離開本站後的資料處理方式，請以該服務提供者的政策為準。",
     termsSectionService: "服務內容",
     termsServiceText:
-      "本網站提供 NVD 協會理念、道路回饋與修復行動、參與共創與相關資源整理。部分連結可能導向第三方網站或社群平台。",
+      "本網站提供 NVD 永賦行動協會理念、道路回饋與修復行動、參與共創與相關資源整理。部分連結可能導向第三方網站或社群平台。",
     termsSectionUse: "使用責任",
     termsUseText:
       "使用者應自行確認外部服務是否符合需求，並遵守所在地法律與第三方服務規範。請勿使用本網站或相關資源處理、散布或侵害他人權利的內容。",
@@ -666,7 +685,7 @@ const translations = {
     faqTitle: "常見問題 FAQ",
     faqOneQuestion: "Q: 參與 NVD 行動需要付費或註冊嗎？",
     faqOneAnswer:
-      "參與 NVD 協會行動不以購買服務為前提；實際活動、合作與社群參與方式，將依各專案公告為準。",
+      "參與 NVD 永賦行動協會行動不以購買服務為前提；實際活動、合作與社群參與方式，將依各專案公告為準。",
     faqTwoQuestion: "Q: 外部平台要求登入或授權時該怎麼辦？",
     faqTwoAnswer:
       "若外部平台要求登入、授權或填寫資料，請先確認網域、用途與隱私政策；不確定時可以先暫停。",
@@ -731,8 +750,11 @@ const translations = {
     mobileLanguageLabel: "Language:",
     themeLightLabel: "Switch to light mode",
     themeDarkLabel: "Switch to dark mode",
-    heroKicker: "NVD Association - AI tools and assistive support",
+    heroKicker: "NVD | Nature・Value・Days",
     heroTitle: "Helping disabled peers extend daily life, express themselves, and create value through AI and assistive support.",
+    heroIdentityLineOne: "Starting from real life,",
+    heroIdentityLineTwo: "so every person can create value,",
+    heroIdentityLineThree: "and bring change into everyday life.",
     heroSubtitle: "<strong>NVD connects online AI tools with offline assistive support</strong> to help disabled peers and people with limited mobility lower barriers to expression, interaction, mobility, learning, and social participation. Real use experiences become the basis for tool improvement and public advocacy.",
     heroPositioningText: "NVD helps disabled peers move beyond being supported, becoming active contributors to tool improvement, assistive technology use, and more age-friendly support systems.",
     homeIdeaTitle: "Why NVD exists",
@@ -861,11 +883,15 @@ const translations = {
     officialProfileLead: "For use in resumes, proposals, media, and social profiles.",
     officialProfileText:
       "NVD is a civic initiative that connects AI tools, assistive support, and peer collaboration. We focus on the real needs of disabled peers, people with limited mobility, older adults, and caregivers in expression, mobility, interaction, learning, work, and social participation. Through peer experience, tool-use feedback, field observation, and organized information, NVD turns everyday needs into public information that can be understood, discussed, and improved, and seeks to connect government, businesses, educational institutions, social organizations, and professional teams to advance friendlier tools, services, and public support.",
+    aboutNvdMeaningIntro: "NVD stands for Nature, Value, and Days.",
+    aboutNvdMeaningNature: "Nature means real human lives and needs.",
+    aboutNvdMeaningValue: "Value means everyone can participate and create value, not only receive support.",
+    aboutNvdMeaningDays: "Days means bringing change into everyday life, not leaving it as an abstract idea.",
     gatewayEyebrow: "Ecosystem Gateway",
     gatewayTitle: "Three gateways, one mission",
     gatewayLead:
       "NVD does not demand belief first. It offers tangible help, then turns help into understanding and participation.",
-    gatewaySoftwareTitle: "認識 NVD 協會",
+    gatewaySoftwareTitle: "認識 NVD 永賦行動協會",
     gatewaySoftwareText:
       "Start with one community report, see how road barriers affect wheelchair users, people pushing strollers, and pedestrians, and turn lived experience into a starting point for city improvement.",
     gatewayResilienceTitle: "Social Resilience Friendly Project",
@@ -1374,8 +1400,11 @@ const brandVoiceContent = {
       navLoop: "加入我們",
       navGuide: "使用說明",
       navCommunity: "關於 NVD",
-      heroKicker: "NVD 協會｜AI 工具與輔具支持",
+      heroKicker: "NVD｜Nature・Value・Days",
       heroTitle: "讓身障同儕透過 AI 與輔具支持，延伸生活，表達自我，創造價值。",
+      heroIdentityLineOne: "從真實生活出發，",
+      heroIdentityLineTwo: "讓每個人都能創造價值，",
+      heroIdentityLineThree: "並把改變帶進每一天。",
       heroSubtitle: "<strong>NVD 結合線上 AI 工具與線下輔具支持</strong>，協助身障同儕與行動不便者降低表達、互動、移動、學習與社會參與的門檻，並讓真實使用經驗成為工具優化與公共倡議的基礎。",
       heroPositioningText: "NVD 讓身障同儕不只是被協助的人，也能成為工具改善、輔具應用與高齡化社會支持的重要推動者。",
       homePrimaryCta: "我想加入 NVD",
@@ -1384,7 +1413,7 @@ const brandVoiceContent = {
       gatewayTitle: "先讓生活困難被看見，再讓更多人一起改善",
       gatewayLead:
         "NVD 把現場經驗、資料整理與資源串聯接在一起，讓一般人也能用簡單方式參與公共改善。",
-      gatewaySoftwareTitle: "認識 NVD 協會",
+      gatewaySoftwareTitle: "認識 NVD 永賦行動協會",
       gatewaySoftwareText:
         "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
       gatewayResilienceTitle: "路平與無障礙回報行動",
@@ -1419,7 +1448,7 @@ const brandVoiceContent = {
       footerCompanyUpdates: "更新日誌",
       footerCompanyPrivacy: "隱私權政策",
       footerCompanyTerms: "服務條款",
-      footerCopy: "© 2026 NVD 協會",
+      footerCopy: "© 2026 NVD 永賦行動協會",
     },
   },
   official: {
@@ -1431,8 +1460,11 @@ const brandVoiceContent = {
       navLoop: "加入我們",
       navGuide: "操作指引",
       navCommunity: "關於 NVD",
-      heroKicker: "NVD 協會｜AI 工具與輔具支持",
+      heroKicker: "NVD｜Nature・Value・Days",
       heroTitle: "讓身障同儕透過 AI 與輔具支持，延伸生活，表達自我，創造價值。",
+      heroIdentityLineOne: "從真實生活出發，",
+      heroIdentityLineTwo: "讓每個人都能創造價值，",
+      heroIdentityLineThree: "並把改變帶進每一天。",
       heroSubtitle: "<strong>NVD 結合線上 AI 工具與線下輔具支持</strong>，協助身障同儕與行動不便者降低表達、互動、移動、學習與社會參與的門檻，並讓真實使用經驗成為工具優化與公共倡議的基礎。",
       heroPositioningText: "NVD 讓身障同儕不只是被協助的人，也能成為工具改善、輔具應用與高齡化社會支持的重要推動者。",
       homePrimaryCta: "我想加入 NVD",
@@ -1476,7 +1508,7 @@ const brandVoiceContent = {
       footerCompanyUpdates: "更新紀錄",
       footerCompanyPrivacy: "隱私權政策",
       footerCompanyTerms: "服務條款",
-      footerCopy: "© 2026 NVD 協會",
+      footerCopy: "© 2026 NVD 永賦行動協會",
     },
   },
 };

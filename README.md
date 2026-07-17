@@ -1,10 +1,10 @@
-﻿# NVD 協會官方網站
+# NVD 永賦行動協會官方網站
 
-NVD Road Feedback & Repair 官方靜態網站，部署於 GitHub Pages。專案維持純 HTML、CSS 與 JavaScript，不使用框架、SPA 或建置系統。
+NVD 永賦行動協會官方靜態網站，部署於 GitHub Pages。網站以 AI 工具、輔具支持、同儕協作與公共倡議為母品牌定位；道路回報與 ROAD HUB 是目前的行動專案之一。專案維持純 HTML、CSS 與 JavaScript，不使用框架、SPA 或建置系統。
 
 ## 網站頁面分工
 
-- `index.html`：首頁入口，只放 Hero、理念摘要、道路回報入口與 Footer，不放完整長文。
+- `index.html`：首頁入口，說明 NVD 母品牌定位、AI 工具與輔具支持、合作對象與行動入口，不放完整長文。
 - `about.html`：關於 NVD、理念、價值、團隊介紹、官方簡介。
 - `report.html`：道路障礙回報入口、NVD ROAD HUB、回饋流程與頁面內操作說明。
 - `privacy.html`：隱私權政策全文。

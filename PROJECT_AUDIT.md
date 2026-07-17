@@ -1,4 +1,4 @@
-﻿# NVD 官網專案稽核紀錄
+# NVD 官網專案稽核紀錄
 
 ## 第二階段整理目的
 
@@ -6,14 +6,14 @@
 
 ## 頁面狀態
 
-- `index.html`：首頁入口，保留 Hero、理念摘要與道路回報入口。
+- `index.html`：首頁入口，說明 NVD 母品牌定位、AI 工具與輔具支持、合作對象與行動入口。
 - `about.html`：關於 NVD、理念、價值、團隊與官方簡介。
 - `report.html`：道路回報、NVD ROAD HUB 與回饋流程。
 - `privacy.html`：隱私權政策全文。
 - `terms.html`：服務條款全文。
 - `join.html`：加入共創的參與方式說明頁，提供初步聯絡 Email，不含正式報名表。
 - `manifesto.html`：保留為品牌理念轉址說明頁，canonical 指向 `about.html`。
-- `resilience.html`：保留為道路回報轉址說明頁，canonical 指向 `report.html`。
+- `resilience.html`：保留為資料倡議頁，canonical 指向 `resilience.html`。
 
 ## 冗餘清理紀錄
 
@@ -28,7 +28,7 @@
 ## SEO 與 Sitemap
 
 - `manifesto.html` canonical 指向 `about.html`。
-- `resilience.html` canonical 指向 `report.html`。
+- `resilience.html` canonical 指向 `resilience.html`。
 - 兩個轉址說明頁保留供舊連結使用，但從 `sitemap.xml` 移除，避免與正式內容重複。
 - `join.html` 保留於 sitemap。
 
@@ -90,3 +90,11 @@
 - 觀察筆數只使用瀏覽器本機 `nvdRoadHubDemoCount` 產生累積感；未保存姓名、Email、電話、GPS、照片、正式案件資料或其他個人資料。
 - 本次仍未新增表單、Google Form、後端、`fetch`、XHR、`FormData` 或正式送件功能。
 - `scripts/check-site.mjs` 已補強 ROAD HUB 儀表板、防誤導文案、本機儲存 key 與英文 Demo 文案檢查。
+
+## ZAP 可修項目與 Footer 對齊修正（2026-07-17）
+
+- 針對 ZAP 報告中可由靜態 repo 處理的項目，8 個公開 HTML 已補強 CSP meta directive：`connect-src`、`media-src`、`frame-src`、`manifest-src`、`worker-src`。
+- `script.js` 已加入 top-level browsing context guard，降低頁面被嵌入 frame 的風險；GitHub Pages 無法由 repo 直接設定 `X-Frame-Options` 或 `frame-ancestors` response header。
+- `scripts/check-site.mjs` 已加入 CSP directive、top-level browsing context guard，以及 `document.write`、`document.writeln`、`insertAdjacentHTML` 防回歸檢查。
+- Footer CSS 已修正為符合現有三欄導覽的 grid 欄數，避免桌機版因空白欄位造成視覺偏移；手機版 copyright 維持置中。
+- ZAP 報告中的 HSTS、`X-Content-Type-Options`、`X-Frame-Options`、CORS 與 Cache-Control 屬於 GitHub Pages response header 限制，需在報告中標記為平台限制，不應宣稱已由 repo 完全修復。

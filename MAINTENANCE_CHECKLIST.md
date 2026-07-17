@@ -1,4 +1,4 @@
-﻿# NVD 官網維護檢查清單
+# NVD 官網維護檢查清單
 
 ## 改版前
 
@@ -53,12 +53,15 @@
 - [ ] 桌機版 Navbar 正常。
 - [ ] 無水平溢出。
 - [ ] 無 Console error。
+- [ ] 無 CSP violation；所有公開 HTML 保留 `connect-src`、`media-src`、`frame-src`、`manifest-src`、`worker-src` 與 `form-action` 等必要 CSP directive。
+- [ ] `script.js` 保留 top-level browsing context guard，並避免新增 `document.write`、`document.writeln` 或 `insertAdjacentHTML`。
+- [ ] ZAP 報告中的 GitHub Pages response header 類項目（HSTS、X-Frame-Options、X-Content-Type-Options、CORS、Cache-Control）已標記為平台限制，不假裝由 repo 直接修復。
 - [ ] 無禁用詞。
 - [ ] 無「數據」。
 - [ ] `sitemap.xml` 已同步。
 - [ ] canonical 正確。
 - [ ] 外部連結有 `target="_blank"` 與 `rel="noopener noreferrer"`。
-- [ ] header logo `alt="NVD 協會"`。
+- [ ] header logo `alt="NVD 永賦行動協會"`。
 - [ ] footer 裝飾 logo `alt=""` 且外層 `aria-hidden="true"`。
 
 ## 刪除檔案或 class 前
