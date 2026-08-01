@@ -58,7 +58,7 @@ const translations = {
     footerNavigationAria: "頁尾導覽",
     heroStatsAria: "友善行動計數",
     homeReportCtaAria: "查看目前主力行動",
-    founderWebsiteAria: "查看陳怡安的個人網站",
+    founderWebsiteAria: "了解陳怡安的更多經歷",
     founderPhotoAlt: "陳怡安，NVD 發起人",
     joinEmailAria: "寄信至 NVD 初步聯絡信箱",
     navHome: "首頁",
@@ -211,19 +211,6 @@ const translations = {
     aboutNvdMeaningNature: "Nature，是人的真實生活與需求。",
     aboutNvdMeaningValue: "Value，是每個人都能參與並創造價值，而不只是接受協助。",
     aboutNvdMeaningDays: "Days，是讓改變落在每一天，而不只停留在理念。",
-    gatewayEyebrow: "Ecosystem Gateway",
-    gatewayTitle: "三個入口，對應同一個使命",
-    gatewayLead:
-      "NVD 不是先要求認同，而是先提供可感受到的幫助，再把幫助轉成理解與參與。",
-    gatewaySoftwareTitle: "認識 NVD 永賦行動協會",
-    gatewaySoftwareText:
-      "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
-    gatewayResilienceTitle: "社會韌性友善專案",
-    gatewayResilienceText:
-      "用模擬資料盤呈現城市障礙如何被標記、被理解，並走向可協作的改善。",
-    gatewayJoinTitle: "參與共創",
-    gatewayJoinText:
-      "讓同學、師資與種子使用者從測試、回饋、分享開始，進入 NVD 友善科技循環。",
     valuesEyebrow: "Core Values",
     valuesTitle: "從工具支持開始，走向友善生活系統",
     valuesLead:
@@ -246,93 +233,6 @@ const translations = {
     physicalFrictionTitle: "生活摩擦",
     physicalFrictionText:
       "移動限制、輔具使用困難、不友善動線、家庭與社會互動斷點，讓日常生活變成被迫等待、繞路或放棄。",
-    softwareEyebrow: "Green Friendly Software",
-    softwareLead:
-      "不用註冊、不逼學指令、不製造更多焦慮，只為了讓人更快完成事情。",
-    productEyebrow: "安全合規版 v2.1",
-    productHeroTitle: "道路回饋與修復行動",
-    productHeroLead:
-      "整理 NVD 永賦行動協會理念、道路行動、參與共創與安全提醒，讓理解與參與更直覺。",
-    productHeroPrimaryCta: "了解道路行動 →",
-    productHeroSecondaryCta: "加入共創",
-    productCardKicker: "NVD ROAD HUB",
-    productCardTitle: "道路回饋與修復行動",
-    productCardDescription:
-      "一份獻給台灣師字輩專業者、企業經營者與跨域決策者的公共協作入口，以公益行動補上 AI 時代的參與落差。",
-    productBadgeBusiness: "本地端",
-    productBadgeBinding: "安全合規",
-    productBadgeElite: "知識圖書館",
-    productBadgeNoSerial: "免註冊",
-    productPainEyebrow: "Executive Friction",
-    productPainTitle: "你不該為了簡報，暫時變成 IT 管理員。",
-    productPainLead:
-      "醫師、律師、顧問、企業主與頂尖業務的時間，應該花在判斷、說服、成交與策略，而不是卡在序號、設定、格式還原與技術盲區。",
-    productPainStrategyTitle: "高階思考，不該被低階設定中斷",
-    productPainStrategyText:
-      "當社會正在面對通行風險，真正稀缺的是可被信任的現場資料。NVD 把回饋流程收斂成更清楚的公共訊號。",
-    productPainBandwidthTitle: "非資訊本業，也能乾淨完成",
-    productPainBandwidthText:
-      "不需要理解技術細節、不需要找人救火，也不需要在黑色視窗和授權流程之間消耗專業能量。",
-    productFeatureEyebrow: "Zero-Friction Features",
-    productFeatureTitle: "把技術摩擦壓到最低，把專業價值放到最大。",
-    productFeatureAutoTitle: "免序號自動綁定",
-    productFeatureAutoText:
-      "降低回饋與協作摩擦，讓現場觀察更容易進入後續整理。",
-    productFeatureClickTitle: "點擊即用",
-    productFeatureClickText:
-      "以非技術使用者為核心設計，減少流程判斷與操作成本。",
-    productFeatureDeckTitle: "聚焦關鍵簡報",
-    productFeatureDeckText:
-      "協助參與者把注意力留給現場、需求、證據與改善，而不是流程本身。",
-    productAudienceEyebrow: "Fit Check",
-    productAudienceTitle: "先確認這是不是你想參與的行動。",
-    productAudienceDoctor: "適合：師字輩專業者、企業決策者，或希望參與道路友善公共協作的人。",
-    productAudienceLawyer: "適合：需要本地端使用、清楚來源與安全驗證資訊的人。",
-    productAudienceOwner: "不適合：需要雲端多人協作或企業 IT 大規模部署的人。",
-    productAudienceSales: "不適合：不願意確認外部連結來源或閱讀安全提醒的人。",
-    productWorkflowEyebrow: "Workflow",
-    productWorkflowTitle: "五步驟，把回饋變成行動。",
-    productStepOneTitle: "理解",
-    productStepOneText: "從官方頁面理解行動範圍，保留清楚資訊來源。",
-    productStepTwoTitle: "開啟",
-    productStepTwoText: "不需要先研究技術文件，直接進入操作。",
-    productStepThreeTitle: "自動綁定",
-    productStepThreeText: "免輸入序號，降低授權流程的干擾。",
-    productStepFourTitle: "還原簡報",
-    productStepFourText: "讓協作流程協助整理現場回饋。",
-    productStepFiveTitle: "使用成果",
-    productStepFiveText: "把時間交還給內容修整、演示與決策。",
-    productSecurityEyebrow: "Trust & Safety",
-    productSecurityTitle: "公開資訊可以簡單，外部連結必須清楚。",
-    productSecurityText: "本站不要求註冊，並保留清楚的協會資訊、外部連結說明與安全提醒。使用外部服務前，請確認來源與資料用途。",
-    productSecurityDetailSummary: "查看安全理解提醒",
-    productSecurityDetailOne:
-      "僅從本站提供的官方入口前往外部服務，避免使用來路不明的轉傳連結。",
-    productSecurityDetailThree:
-      "若外部頁面內容與本站說明不一致，請先停止操作並回報。",
-    downloadCheckVersionLabel: "目前階段",
-    downloadCheckVersionValue: "協會官網",
-    downloadCheckTypeLabel: "行動類型",
-    downloadCheckTypeValue: "道路回饋與修復",
-    downloadCheckAudienceLabel: "適合對象",
-    downloadCheckAudienceValue: "居民、專業者、企業與公共協作夥伴",
-    productVerificationSummary: "查看資訊來源說明",
-    productVerificationFileLabel: "資料來源",
-    productVerificationUpdatedLabel: "更新日期",
-    productVerificationUpdatedValue: "2026-06-05",
-    productVerificationShaLabel: "SHA-256",
-    filterTitle: "先從一個真實可行的道路回饋開始",
-    resultCount: "{count} 個行動入口",
-    categoryAll: "全部",
-    categoryOffice: "辦公效率",
-    categoryFavorites: "我的收藏",
-    categoryUnknown: "未分類",
-    shareTool: "分享 {name} 連結",
-    linkCopied: "已成功複製 {name} 的連結！",
-    favoriteAdded: "已將 {name} 加入我的收藏！",
-    favoriteRemoved: "已將 {name} 從我的收藏移除！",
-    emptyTitle: "沒有找到符合條件的行動入口",
-    emptyText: "換個關鍵字或切回全部分類試試看。",
     resilienceEyebrow: "NVD ACTION HUB",
     resilienceTitle: "讓道路問題被看見 讓修復行動被串起",
     resilienceLead:
@@ -502,22 +402,7 @@ const translations = {
     demoContactLink: "聯絡 NVD：nvd20260611@gmail.com",
     demoObservationAdded: "現場觀察已轉入後台統計",
     demoObservationReset: "已重置本機觀察資料",
-    demoReceiptTitle: "流程體驗紀錄",
-    demoReceiptId: "觀察編號：不產生正式紀錄",
-    demoReceiptStatus: "狀態：僅供體驗",
     demoStatusLabelShort: "體驗狀態",
-    demoLogAria: "流程體驗整理紀錄",
-    demoLogIdle: "[體驗] 流程待命中...",
-    demoLogImpact: "[體驗] 通行影響整理中...",
-    demoLogLocation: "[體驗] 位置描述整理中...",
-    demoLogRoadCondition: "[體驗] 路面狀況標記中...",
-    demoLogReport: "[體驗] 回報內容整理中，未傳送資料...",
-    demoLogComplete: "[體驗] 流程體驗完成，未建立正式紀錄",
-    demoLogItemPosition: "位置描述",
-    demoLogItemImpact: "通行影響",
-    demoLogItemObstacle: "障礙類型",
-    demoLogItemPhoto: "照片資訊",
-    demoLogOrganizing: "[體驗] {item}整理中...",
     demoDetectionScanning: "正在辨識現場道路狀況...",
     demoDetectionFound: "偵測到路面狀況：",
     demoObstacleHeight: "高低落差",
@@ -579,8 +464,6 @@ const translations = {
     frictionCardThreeTitle: "每個人都會走向不同階段",
     frictionCardThreeText:
       "當我們走到生命後半段，難道就注定被現代科技拋棄，只能對著電腦發愁嗎？",
-    visitSite: "直達網站",
-    favoriteTool: "收藏 {name}",
     footerCopy: "© 2026 NVD 永賦行動協會",
     footerProductsTitle: "協會行動",
     footerProductTools: "道路回饋與修復行動",
@@ -734,7 +617,7 @@ const translations = {
     footerNavigationAria: "Footer navigation",
     heroStatsAria: "Accessible-action status",
     homeReportCtaAria: "View the current main action project",
-    founderWebsiteAria: "Visit Yi-An Chen’s personal website",
+    founderWebsiteAria: "Learn more about Yi-An Chen’s experience",
     founderPhotoAlt: "Yi-An Chen, founder of NVD",
     joinEmailAria: "Email NVD’s initial contact address",
     navHome: "Home",
@@ -887,19 +770,6 @@ const translations = {
     aboutNvdMeaningNature: "Nature means real human lives and needs.",
     aboutNvdMeaningValue: "Value means everyone can participate and create value, not only receive support.",
     aboutNvdMeaningDays: "Days means bringing change into everyday life, not leaving it as an abstract idea.",
-    gatewayEyebrow: "Ecosystem Gateway",
-    gatewayTitle: "Three gateways, one mission",
-    gatewayLead:
-      "NVD does not demand belief first. It offers tangible help, then turns help into understanding and participation.",
-    gatewaySoftwareTitle: "認識 NVD 永賦行動協會",
-    gatewaySoftwareText:
-      "Start with one community report, see how road barriers affect wheelchair users, people pushing strollers, and pedestrians, and turn lived experience into a starting point for city improvement.",
-    gatewayResilienceTitle: "Social Resilience Friendly Project",
-    gatewayResilienceText:
-      "Use a simulated data board to show how city barriers can be marked, understood, and improved collaboratively.",
-    gatewayJoinTitle: "Co-create",
-    gatewayJoinText:
-      "Invite classmates, mentors, and seed users to test, give feedback, share, and enter the NVD friendly tech loop.",
     valuesEyebrow: "Core Values",
     valuesTitle: "Start with tool support, move toward a friendlier life system",
     valuesLead:
@@ -923,99 +793,6 @@ const translations = {
     physicalFrictionTitle: "Life Friction",
     physicalFrictionText:
       "Mobility limits, assistive-tool difficulties, unfriendly routes, and breaks in family or social interaction can turn everyday life into waiting, detours, or giving up.",
-    softwareEyebrow: "Green Friendly Software",
-    softwareLead:
-      "No registration pressure, no forced command learning, no extra anxiety. Just small tools that help people finish work faster.",
-    productEyebrow: "Safe Compliance v2.1",
-    productHeroTitle: "道路回饋與修復行動",
-    productHeroLead:
-      "A public-facing association hub for road feedback, civic resilience, and friendlier participation pathways.",
-    productHeroPrimaryCta: "了解道路行動 →",
-    productHeroSecondaryCta: "加入共創",
-    productCardKicker: "NVD ROAD HUB",
-    productCardTitle: "道路回饋與修復行動",
-    productCardDescription:
-      "A civic collaboration gateway that helps residents, professionals, and partners turn road feedback into clearer public signals and repair action.",
-    productBadgeBusiness: "Local-first",
-    productBadgeBinding: "Safety checks",
-    productBadgeElite: "Knowledge library",
-    productBadgeNoSerial: "No account",
-    productPainEyebrow: "Executive Friction",
-    productPainTitle:
-      "You should not have to become an IT admin just to get a deck right.",
-    productPainLead:
-      "Doctors, lawyers, consultants, SME owners, and top sales professionals should spend time on judgment, persuasion, deals, and strategy, not serial codes, settings, deck recovery, and technical blind spots.",
-    productPainStrategyTitle:
-      "High-level thinking should not be interrupted by low-level setup",
-    productPainStrategyText:
-      "When a key presentation is on the line, attention is scarce. This toolkit moves tedious setup into the background so you can stay in decision rhythm.",
-    productPainBandwidthTitle: "Clean execution for non-technical leaders",
-    productPainBandwidthText:
-      "No need to understand technical details, find emergency help, or burn expert energy inside terminals and license flows.",
-    productFeatureEyebrow: "Zero-Friction Features",
-    productFeatureTitle:
-      "Minimize technical overhead. Maximize professional value.",
-    productFeatureAutoTitle: "No-serial automatic binding",
-    productFeatureAutoText:
-      "Reduce license and setup friction so the tool opens into a usable state.",
-    productFeatureClickTitle: "Click-to-use workflow",
-    productFeatureClickText:
-      "Designed around non-technical users to reduce process decisions and operating cost.",
-    productFeatureDeckTitle: "Built for key presentations",
-    productFeatureDeckText:
-      "Keep your attention on content, logic, clients, and decisions instead of the tool itself.",
-    productAudienceEyebrow: "Fit Check",
-    productAudienceTitle: "Check whether this is the right tool for you.",
-    productAudienceDoctor: "Good fit: senior professionals, business decision-makers, or anyone seeking lower-friction AI tool adoption.",
-    productAudienceLawyer: "Good fit: people who need local-first use, clear sources, and verification details.",
-    productAudienceOwner: "Not a fit: teams needing cloud collaboration or large-scale enterprise IT deployment.",
-    productAudienceSales: "Not a fit: users unwilling to verify the source, scan files, or read safety notes.",
-    productWorkflowEyebrow: "Workflow",
-    productWorkflowTitle: "Five steps from tool to outcome.",
-    productStepOneTitle: "Download",
-    productStepOneText:
-      "Get the tool from the official link with a clear source.",
-    productStepTwoTitle: "Open",
-    productStepTwoText:
-      "Start directly without studying technical documentation first.",
-    productStepThreeTitle: "Auto bind",
-    productStepThreeText: "No serial input, less licensing interruption.",
-    productStepFourTitle: "Recover deck",
-    productStepFourText: "Let the tool handle tedious recovery work.",
-    productStepFiveTitle: "Use result",
-    productStepFiveText:
-      "Spend time on content refinement, delivery, and decisions.",
-    productSecurityEyebrow: "Trust & Safety",
-    productSecurityTitle: "公開資訊可以簡單，外部連結必須清楚。",
-    productSecurityText: "本站不要求註冊，並保留清楚的協會資訊、外部連結說明與安全提醒。使用外部服務前，請確認來源與資料用途。",
-    productSecurityDetailSummary: "View safe download reminders",
-    productSecurityDetailOne:
-      "Download only from the official link on this page and avoid forwarded files from unknown sources.",
-    productSecurityDetailThree:
-      "If the source, file size, or release note does not match this page, stop and report it first.",
-    downloadCheckVersionLabel: "目前階段",
-    downloadCheckVersionValue: "協會官網",
-    downloadCheckTypeLabel: "行動類型",
-    downloadCheckTypeValue: "道路回饋與修復",
-    downloadCheckAudienceLabel: "適合對象",
-    downloadCheckAudienceValue: "居民、專業者、企業與公共協作夥伴",
-    productVerificationSummary: "View file verification details",
-    productVerificationFileLabel: "File name",
-    productVerificationUpdatedLabel: "Updated",
-    productVerificationUpdatedValue: "2026-06-05",
-    productVerificationShaLabel: "SHA-256",
-    filterTitle: "Start with one tool that genuinely helps",
-    resultCount: "{count} tools",
-    categoryAll: "All",
-    categoryOffice: "Office",
-    categoryFavorites: "My Favorites",
-    categoryUnknown: "Uncategorized",
-    shareTool: "Share {name} link",
-    linkCopied: "Successfully copied link for {name}!",
-    favoriteAdded: "Added {name} to your favorites!",
-    favoriteRemoved: "Removed {name} from your favorites!",
-    emptyTitle: "No matching tools found",
-    emptyText: "Try another keyword or switch back to all categories.",
     resilienceEyebrow: "NVD ACTION HUB",
     resilienceTitle: "Make road issues visible, then connect repair action",
     resilienceLead:
@@ -1192,22 +969,7 @@ const translations = {
     demoContactLink: "Contact NVD: nvd20260611@gmail.com",
     demoObservationAdded: "Field observation added to dashboard",
     demoObservationReset: "Local demo data has been reset",
-    demoReceiptTitle: "Demo record",
-    demoReceiptId: "Demo ID: no formal record is generated",
-    demoReceiptStatus: "Status: demonstration only",
     demoStatusLabelShort: "Demo status",
-    demoLogAria: "Process-demo activity log",
-    demoLogIdle: "[Demo] Waiting to begin...",
-    demoLogImpact: "[Demo] Organizing access impact...",
-    demoLogLocation: "[Demo] Organizing location description...",
-    demoLogRoadCondition: "[Demo] Marking the road condition...",
-    demoLogReport: "[Demo] Organizing content; no data transmitted...",
-    demoLogComplete: "[Demo] Process complete; no formal record created",
-    demoLogItemPosition: "location description",
-    demoLogItemImpact: "access impact",
-    demoLogItemObstacle: "barrier type",
-    demoLogItemPhoto: "photo information",
-    demoLogOrganizing: "[Demo] Organizing {item}...",
     demoDetectionScanning: "Reviewing the illustrative road scene...",
     demoDetectionFound: "Illustrative road condition: ",
     demoObstacleHeight: "level difference",
@@ -1273,8 +1035,6 @@ const translations = {
     frictionCardThreeTitle: "Everyone Journeys Through Different Stages",
     frictionCardThreeText:
       "As we reach the later stages of life, are we destined to be abandoned by modern tech, left to struggle in front of a computer screen?",
-    visitSite: "Visit site",
-    favoriteTool: "Save {name}",
     footerCopy:
       "© 2026 NVD Association",
     footerProductsTitle: "協會行動",
@@ -1410,18 +1170,6 @@ const brandVoiceContent = {
       homePrimaryCta: "我想加入 NVD",
       homeSecondaryCta: "查看行動專案",
       homeTertiaryCta: "了解協會願景",
-      gatewayTitle: "先讓生活困難被看見，再讓更多人一起改善",
-      gatewayLead:
-        "NVD 把現場經驗、資料整理與資源串聯接在一起，讓一般人也能用簡單方式參與公共改善。",
-      gatewaySoftwareTitle: "認識 NVD 永賦行動協會",
-      gatewaySoftwareText:
-        "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
-      gatewayResilienceTitle: "路平與無障礙回報行動",
-      gatewayResilienceText:
-        "從一個現場回報開始，把道路問題整理成可追蹤的資訊，讓改善不再只靠抱怨或等待。",
-      gatewayJoinTitle: "加入共創",
-      gatewayJoinText:
-        "學生、居民、志工、設計者、工程與資料夥伴，都可以從測試、回饋與分享開始參與。",
       valuesTitle: "NVD 的核心：讓工具支持回到真實生活",
       valuesLead:
         "我們相信工具與輔具不是冰冷設備，而是能協助人表達、移動、互動與參與生活的支持系統。",
@@ -1470,18 +1218,6 @@ const brandVoiceContent = {
       homePrimaryCta: "我想加入 NVD",
       homeSecondaryCta: "查看行動專案",
       homeTertiaryCta: "了解協會願景",
-      gatewayTitle: "建立由生活觀察到公共改善的行動流程",
-      gatewayLead:
-        "NVD 整合現場觀察、資料彙整與多方協作，協助形成可讀、可追蹤、可討論的公共資料基礎。",
-      gatewaySoftwareTitle: "協會定位",
-      gatewaySoftwareText:
-        "邀請市民從一次回報開始，看見道路障礙如何影響輪椅、嬰兒車與行人，並把經驗轉化為城市改善的起點。",
-      gatewayResilienceTitle: "路平與無障礙回報行動",
-      gatewayResilienceText:
-        "透過標準化回饋流程，將道路現場問題轉化為可追蹤資料，作為後續協調、溝通與改善倡議之基礎。",
-      gatewayJoinTitle: "參與機制",
-      gatewayJoinText:
-        "邀請公民、學生、專業者、社群與跨域夥伴，透過測試、回饋、資料協作與倡議參與，共同推動友善通行環境。",
       valuesTitle: "以 AI 工具、輔具支持、同儕經驗與公共倡議為核心的行動平台",
       valuesLead:
         "NVD 將真實使用經驗整理為公共資訊，作為工具改善、輔具應用、服務設計與政策溝通的基礎。",
@@ -1513,25 +1249,17 @@ const brandVoiceContent = {
   },
 };
 
-const tools = [];
-
-const iconThemeCount = 4;
-
-const savedFavorites = localStorage.getItem("nvd-favorites");
 const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 const savedTheme = localStorage.getItem("nvd-theme");
 const savedBrandVoice = localStorage.getItem("nvd-brand-voice");
 const htmlTranslationKeys = new Set(["heroSubtitle"]);
 
 const state = {
-  keyword: "",
-  categoryKey: "all",
   language: localStorage.getItem("nvd-language") || "zh",
   theme: savedTheme || (systemThemeQuery.matches ? "dark" : "light"),
   brandVoice: ["plain", "official"].includes(savedBrandVoice)
     ? savedBrandVoice
     : "plain",
-  favorites: new Set(parseStoredFavorites(savedFavorites)),
 };
 
 const pageMetadataKeys = {
@@ -1545,11 +1273,6 @@ const pageMetadataKeys = {
   "resilience.html": ["resiliencePageTitle", "resiliencePageDescription"],
 };
 
-const toolGrid = document.querySelector("#toolGrid");
-const emptyState = document.querySelector("#emptyState");
-const searchInput = document.querySelector("#searchInput");
-const resultCount = document.querySelector("#resultCount");
-const categoryTabs = document.querySelectorAll(".category-tab");
 const languageMenu = document.querySelector("#languageMenu");
 const languageToggle = document.querySelector("#languageToggle");
 const languageOptions = document.querySelectorAll(".language-option");
@@ -1566,15 +1289,8 @@ const demoCoordinates = document.querySelector("#demoCoordinates");
 const demoStatusPrimary = document.querySelector("#demoStatusPrimary");
 const demoStatusSecondary = document.querySelector("#demoStatusSecondary");
 const demoSubmitHint = document.querySelector("#demoSubmitHint");
-const phoneSubmitButton = document.querySelector(".phone-submit");
-const resilienceScore = document.querySelector("#resilienceScore");
-const taiwanMap = document.querySelector(".taiwan-map");
-const logStream = document.querySelector(".log-stream");
-const receiptModal = document.querySelector(".receipt-modal");
-const receiptHash = document.querySelector("#receiptHash");
 const demoObservationCount = document.querySelector("#resilienceScore");
 const demoGrowthCount = document.querySelector("#demoGrowthValue");
-const demoAddObservationButton = document.querySelector(".hub-demo-add");
 const demoResetLocalDataButton = document.querySelector(".hub-demo-reset");
 const roadHubCaptureButton = document.querySelector('[data-roadhub-action="capture-photo"]');
 const roadHubPhonePhoto = document.querySelector(".roadhub-phone-photo");
@@ -1585,10 +1301,7 @@ const roadHubPhoneImpact = document.querySelector('[data-i18n="demoPhoneImpactVa
 const roadHubLatestObservation = document.querySelector('[data-i18n="demoLatestObservation"]');
 const roadHubLatestCard = document.querySelector(".dashboard-map-card");
 const roadHubListItems = document.querySelectorAll(".hub-demo-list-grid li");
-let resilienceScoreFrameId;
 let resilienceResetTimerId;
-let crowdSyncTimerId;
-let receiptTypingTimerId;
 let resilienceTimelineTimers = [];
 let roadHubObservationIndex = 0;
 const roadHubDemoCountKey = "nvdRoadHubDemoCount";
@@ -1684,33 +1397,6 @@ function t(key, replacements = {}) {
   return Object.entries(replacements).reduce((text, [name, value]) => {
     return text.replace(`{${name}}`, value);
   }, template);
-}
-
-function parseStoredFavorites(value) {
-  if (!value) return [];
-
-  try {
-    const parsed = JSON.parse(value);
-    return Array.isArray(parsed)
-      ? parsed.filter((id) => Number.isFinite(Number(id))).map(Number)
-      : [];
-  } catch {
-    localStorage.removeItem("nvd-favorites");
-    return [];
-  }
-}
-
-function escapeHTML(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function normalizeText(text) {
-  return String(text).trim().toLowerCase();
 }
 
 function clearResilienceTimeline() {
@@ -1815,7 +1501,6 @@ function addRoadHubDemoObservation() {
   updateRoadHubDemoCount();
   resilienceDemo?.classList.add("is-flowing");
   window.setTimeout(() => resilienceDemo?.classList.remove("is-flowing"), 900);
-  addLogLine(t("demoLogRoadCondition"));
   if (typeof showToast === "function") {
     showToast(t("demoObservationAdded"));
   }
@@ -1841,7 +1526,7 @@ function setResilienceDemoStep(step) {
     Math.min(4, Number.isFinite(Number(step)) ? Number(step) : 0),
   );
   window.clearTimeout(resilienceResetTimerId);
-  resilienceDemo.classList.remove("is-submitting", "scanning", "show-receipt");
+  resilienceDemo.classList.remove("is-submitting", "scanning");
   resilienceDemo.dataset.step = String(activeStep);
 
   demoStepButtons.forEach((button) => {
@@ -1864,60 +1549,6 @@ function runResilienceTimelineStep(step, overrideText) {
     resilienceDemo.classList.add("scanning");
   }
   updateResilienceDemoReadout(step, overrideText);
-}
-
-function addLogLine(text) {
-  if (!logStream) return;
-
-  const line = document.createElement("span");
-  line.textContent = text;
-  logStream.prepend(line);
-
-  while (logStream.children.length > 4) {
-    logStream.lastElementChild.remove();
-  }
-}
-
-function addCrowdPulse() {
-  if (!taiwanMap || resilienceDemo?.classList.contains("is-submitting")) return;
-
-  const demoItems = [
-    t("demoLogItemPosition"),
-    t("demoLogItemImpact"),
-    t("demoLogItemObstacle"),
-    t("demoLogItemPhoto"),
-  ];
-  const demoItem = demoItems[Math.floor(Math.random() * demoItems.length)];
-  const pulse = document.createElement("span");
-  pulse.className = "crowd-pulse";
-  pulse.style.left = `${28 + Math.random() * 48}%`;
-  pulse.style.top = `${18 + Math.random() * 62}%`;
-  taiwanMap.appendChild(pulse);
-  addLogLine(t("demoLogOrganizing", { item: demoItem }));
-  pulse.addEventListener("animationend", () => pulse.remove(), { once: true });
-}
-
-function startCrowdSync() {
-  if (crowdSyncTimerId || !taiwanMap) return;
-
-  addCrowdPulse();
-  crowdSyncTimerId = window.setInterval(addCrowdPulse, 3000);
-}
-
-function typeReceiptHash() {
-  if (!receiptHash) return;
-
-  window.clearInterval(receiptTypingTimerId);
-  const hash = t("demoReceiptId");
-  let index = 0;
-  receiptHash.textContent = "";
-  receiptTypingTimerId = window.setInterval(() => {
-    receiptHash.textContent = hash.slice(0, index + 1);
-    index += 1;
-    if (index >= hash.length) {
-      window.clearInterval(receiptTypingTimerId);
-    }
-  }, 28);
 }
 
 function updateResilienceDemoReadout(step, overrideText) {
@@ -1945,28 +1576,6 @@ function updateResilienceDemoReadout(step, overrideText) {
   if (demoSubmitHint) {
     demoSubmitHint.textContent = t("demoStatusReady");
   }
-}
-
-function animateResilienceScore(startValue, endValue) {
-  if (!resilienceScore) return;
-
-  cancelAnimationFrame(resilienceScoreFrameId);
-
-  const duration = 920;
-  const startTime = performance.now();
-
-  function tick(currentTime) {
-    const progress = Math.min((currentTime - startTime) / duration, 1);
-    const easedProgress = 1 - Math.pow(1 - progress, 3);
-    const currentValue = startValue + (endValue - startValue) * easedProgress;
-    resilienceScore.textContent = currentValue.toFixed(2);
-
-    if (progress < 1) {
-      resilienceScoreFrameId = requestAnimationFrame(tick);
-    }
-  }
-
-  resilienceScoreFrameId = requestAnimationFrame(tick);
 }
 
 function triggerAutoDetection() {
@@ -2023,9 +1632,6 @@ function resetAutoDetectionUi() {
   document
     .querySelector(".detection-result-card")
     ?.classList.remove("is-visible");
-  if (receiptHash) {
-    receiptHash.textContent = t("demoReceiptId");
-  }
 }
 
 function triggerResilienceSubmit() {
@@ -2035,8 +1641,6 @@ function triggerResilienceSubmit() {
 
   clearResilienceTimeline();
   window.clearTimeout(resilienceResetTimerId);
-  window.clearInterval(crowdSyncTimerId);
-  crowdSyncTimerId = null;
   resetAutoDetectionUi();
   triggerAutoDetection();
 
@@ -2044,42 +1648,27 @@ function triggerResilienceSubmit() {
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(1);
-    addLogLine(t("demoLogLocation"));
   }, 1500);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(2);
-    addLogLine(t("demoLogRoadCondition"));
   }, 3000);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(3, t("demoStatusEncrypting"));
-    addLogLine(t("demoLogReport"));
   }, 4500);
 
   queueResilienceTimeline(() => {
     runResilienceTimelineStep(4);
     resilienceDemo.classList.remove("scanning");
-    resilienceDemo.classList.add("show-receipt");
-    typeReceiptHash();
-    addLogLine(t("demoLogComplete"));
-
-    queueResilienceTimeline(() => {
-      resilienceDemo.classList.remove("show-receipt");
-    }, 2000);
 
     resilienceResetTimerId = window.setTimeout(() => {
       clearResilienceTimeline();
       resilienceDemo.classList.remove("is-submitting", "scanning");
       resetAutoDetectionUi();
       setResilienceDemoStep(0);
-      startCrowdSync();
     }, 3200);
   }, 6000);
-}
-
-function getToolText(tool) {
-  return tool.i18n[state.language] || tool.i18n.zh;
 }
 
 function initializeTeamPhotoFallbacks() {
@@ -2197,105 +1786,11 @@ function applyTranslations() {
 
   applySharedAccessibilityText();
 
-  if (resultCount) {
-    const count = getFilteredTools().length;
-    resultCount.textContent = t("resultCount", { count });
-  }
-
   if (resilienceDemo) {
     updateResilienceDemoReadout(Number(resilienceDemo.dataset.step) || 0);
     updateRoadHubObservationView();
     updateRoadHubDemoCount();
   }
-}
-
-function getFilteredTools() {
-  const keyword = normalizeText(state.keyword);
-
-  return tools.filter((tool) => {
-    const content = getToolText(tool);
-    const categoryLabel = t(tool.categoryLabelKey || "categoryUnknown");
-    const searchableText = normalizeText(
-      `${content.name} ${content.description} ${categoryLabel} ${content.tags.join(" ")}`,
-    );
-
-    let matchesCategory = false;
-    if (state.categoryKey === "all") {
-      matchesCategory = true;
-    } else if (state.categoryKey === "favorites") {
-      matchesCategory = state.favorites.has(tool.id);
-    } else {
-      matchesCategory = tool.categoryKey === state.categoryKey;
-    }
-
-    const matchesKeyword = !keyword || searchableText.includes(keyword);
-
-    return matchesCategory && matchesKeyword;
-  });
-}
-
-function createToolCard(tool, index) {
-  const content = getToolText(tool);
-  const themeClass = `theme-${index % iconThemeCount}`;
-  const tagsHtml = content.tags
-    .map((tag) => `<span class="tag">${escapeHTML(tag)}</span>`)
-    .join("");
-  const isFavorite = state.favorites.has(tool.id);
-  const escapedName = escapeHTML(content.name);
-  const escapedDescription = escapeHTML(content.description);
-  const ctaText = content.ctaText || t("visitSite");
-  const ctaIcon = content.ctaText
-    ? ""
-    : '<i class="fa-solid fa-arrow-right"></i>';
-
-  return `
-    <article class="tool-card">
-      <div class="card-header-visual">
-        <div class="card-visual-gradient"></div>
-        <div class="tool-icon-badge ${themeClass}">
-          <i class="${tool.imageIcon}"></i>
-        </div>
-      </div>
-
-      <div class="card-body">
-        <div class="tag-list">${tagsHtml}</div>
-        <h3 class="tool-title">${escapedName}</h3>
-        <p class="tool-desc">${escapedDescription}</p>
-      </div>
-
-      <div class="card-footer">
-        <div class="footer-actions-left">
-          <button class="favorite-btn ${isFavorite ? "active" : ""}" type="button" data-id="${tool.id}" aria-label="${escapeHTML(t("favoriteTool", { name: content.name }))}">
-            <i class="${isFavorite ? "fa-solid" : "fa-regular"} fa-heart"></i>
-          </button>
-          <button class="share-btn" type="button" data-id="${tool.id}" aria-label="${escapeHTML(t("shareTool", { name: content.name }))}">
-            <i class="fa-regular fa-share-from-square"></i>
-          </button>
-        </div>
-        <a class="visit-btn" href="${escapeHTML(tool.url)}" target="_blank" rel="noopener noreferrer">
-          <span>${escapeHTML(ctaText)}</span>
-          ${ctaIcon}
-        </a>
-      </div>
-    </article>
-  `;
-}
-
-function renderTools() {
-  if (!toolGrid || !resultCount || !emptyState) return;
-
-  const filteredTools = getFilteredTools();
-
-  toolGrid.innerHTML = filteredTools.map(createToolCard).join("");
-  resultCount.textContent = t("resultCount", { count: filteredTools.length });
-  emptyState.hidden = filteredTools.length > 0;
-}
-
-function setActiveCategory(selectedButton) {
-  if (!categoryTabs.length) return;
-
-  categoryTabs.forEach((button) => button.classList.remove("active"));
-  selectedButton.classList.add("active");
 }
 
 function setTheme(theme, shouldPersist = true) {
@@ -2342,7 +1837,6 @@ function setLanguage(language) {
 
   applyTranslations();
   setTheme(state.theme, Boolean(localStorage.getItem("nvd-theme")));
-  renderTools();
 }
 
 function setBrandVoice(voice, shouldPersist = true) {
@@ -2370,7 +1864,6 @@ function setBrandVoice(voice, shouldPersist = true) {
   });
 
   applyTranslations();
-  renderTools();
 }
 
 function closeLanguageMenu() {
@@ -2408,21 +1901,6 @@ function toggleMobileNav() {
   );
 }
 
-if (searchInput) {
-  searchInput.addEventListener("input", (event) => {
-    state.keyword = event.target.value;
-    renderTools();
-  });
-}
-
-categoryTabs.forEach((button) => {
-  button.addEventListener("click", () => {
-    state.categoryKey = button.dataset.categoryKey;
-    setActiveCategory(button);
-    renderTools();
-  });
-});
-
 demoStepButtons.forEach((button) => {
   button.addEventListener("click", () => {
     clearResilienceTimeline();
@@ -2430,26 +1908,11 @@ demoStepButtons.forEach((button) => {
     if (resilienceDemo) {
       resilienceDemo.classList.remove("is-submitting");
       resilienceDemo.classList.remove("scanning");
-      resilienceDemo.classList.remove("show-receipt");
     }
     resetAutoDetectionUi();
     setResilienceDemoStep(button.dataset.demoStep);
   });
 });
-
-if (phoneSubmitButton) {
-  phoneSubmitButton.addEventListener("click", () => {
-    addRoadHubDemoObservation();
-    triggerResilienceSubmit();
-  });
-}
-
-if (demoAddObservationButton) {
-  demoAddObservationButton.addEventListener("click", () => {
-    addRoadHubDemoObservation();
-    triggerResilienceSubmit();
-  });
-}
 
 if (demoResetLocalDataButton) {
   demoResetLocalDataButton.addEventListener("click", resetRoadHubDemoData);
@@ -2506,72 +1969,6 @@ function showToast(message, type = "success") {
       }
     });
   }, 3000);
-}
-
-if (toolGrid) {
-  toolGrid.addEventListener("click", (event) => {
-    const favoriteButton = event.target.closest(".favorite-btn");
-
-    if (favoriteButton) {
-      const toolId = Number(favoriteButton.dataset.id);
-      const tool = tools.find((t) => t.id === toolId);
-      const content = getToolText(tool);
-
-      if (state.favorites.has(toolId)) {
-        state.favorites.delete(toolId);
-        localStorage.setItem(
-          "nvd-favorites",
-          JSON.stringify(Array.from(state.favorites)),
-        );
-        showToast(t("favoriteRemoved", { name: content.name }), "info");
-      } else {
-        state.favorites.add(toolId);
-        localStorage.setItem(
-          "nvd-favorites",
-          JSON.stringify(Array.from(state.favorites)),
-        );
-        showToast(t("favoriteAdded", { name: content.name }), "success");
-      }
-      renderTools();
-      return;
-    }
-
-    const shareButton = event.target.closest(".share-btn");
-    if (shareButton) {
-      const toolId = Number(shareButton.dataset.id);
-      const tool = tools.find((item) => item.id === toolId);
-      if (!tool) return;
-
-      const name = getToolText(tool).name;
-      copyText(tool.url)
-        .then(() => showToast(t("linkCopied", { name }), "success"))
-        .catch(() => showToast(tool.url, "info"));
-    }
-  });
-}
-
-function copyText(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    return navigator.clipboard.writeText(text);
-  }
-
-  return new Promise((resolve, reject) => {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    textarea.setAttribute("readonly", "");
-    textarea.className = "copy-buffer";
-    document.body.appendChild(textarea);
-    textarea.select();
-
-    try {
-      const copied = document.execCommand("copy");
-      document.body.removeChild(textarea);
-      copied ? resolve() : reject(new Error("Copy command failed"));
-    } catch (error) {
-      document.body.removeChild(textarea);
-      reject(error);
-    }
-  });
 }
 
 if (languageToggle) {
@@ -2656,4 +2053,3 @@ setLanguage(state.language);
 setBrandVoice(state.brandVoice, false);
 setTheme(state.theme, Boolean(savedTheme));
 setResilienceDemoStep(0);
-startCrowdSync();
