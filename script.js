@@ -1304,6 +1304,7 @@ const roadHubListItems = document.querySelectorAll(".hub-demo-list-grid li");
 let resilienceResetTimerId;
 let resilienceTimelineTimers = [];
 let roadHubObservationIndex = 0;
+let roadHubInteractionFallbackTimerId;
 const roadHubDemoCountKey = "nvdRoadHubDemoCount";
 const roadHubDemoBaseCount = 12846;
 
@@ -1323,25 +1324,25 @@ const roadHubObservationSamples = [
   },
   {
     photo: "assets/road-hub/road-photo-02.jpg",
-    area: { zh: "前鎮區", en: "Cianjhen" },
+    area: { zh: "前鎮區", en: "Qianzhen" },
     location: "22.590N｜120.309E",
     barrier: { zh: "鋪面高低差/絆倒隱患", en: "Uneven pavement / trip risk" },
     impact: { zh: "輪椅｜高齡行人", en: "Wheelchair｜Older pedestrian" },
     latest: {
       zh: "前鎮區｜鋪面高低差/絆倒隱患｜輪椅、高齡行人",
-      en: "Cianjhen｜Uneven pavement / trip risk｜Wheelchair, older pedestrian",
+      en: "Qianzhen｜Uneven pavement / trip risk｜Wheelchair, older pedestrian",
     },
     barrierKey: "demoBarrierTwo",
-    districtKey: "demoBarrierOther",
+    districtKey: "demoDistrictFive",
   },
   {
     photo: "assets/road-hub/road-photo-03.jpg",
     area: { zh: "苓雅區", en: "Lingya" },
     location: "22.623N｜120.318E",
     barrier: { zh: "無障礙坡道陡峭/違規", en: "Steep or noncompliant accessible ramp" },
-    impact: { zh: "視障者｜行人", en: "Visually impaired pedestrian｜Pedestrian" },
+    impact: { zh: "視障行人｜行人", en: "Visually impaired pedestrian｜Pedestrian" },
     latest: {
-      zh: "苓雅區｜無障礙坡道陡峭/違規｜視障者、行人",
+      zh: "苓雅區｜無障礙坡道陡峭/違規｜視障行人、行人",
       en: "Lingya｜Steep or noncompliant accessible ramp｜Visually impaired pedestrian, pedestrian",
     },
     barrierKey: "demoBarrierThree",
@@ -1402,6 +1403,37 @@ function t(key, replacements = {}) {
 function clearResilienceTimeline() {
   resilienceTimelineTimers.forEach((timerId) => window.clearTimeout(timerId));
   resilienceTimelineTimers = [];
+}
+
+function setRoadHubFlowLock(shouldLock) {
+  document.body.classList.toggle("road-hub-flow-lock", Boolean(shouldLock));
+}
+
+function clearRoadHubInteractionState() {
+  window.clearTimeout(roadHubInteractionFallbackTimerId);
+  setRoadHubFlowLock(false);
+  roadHubCaptureButton?.classList.remove("is-loading");
+  if (roadHubCaptureButton) {
+    roadHubCaptureButton.disabled = false;
+    roadHubCaptureButton.removeAttribute("aria-busy");
+  }
+}
+
+function startRoadHubInteractionState() {
+  setRoadHubFlowLock(true);
+  roadHubCaptureButton?.classList.add("is-loading");
+  if (roadHubCaptureButton) {
+    roadHubCaptureButton.disabled = true;
+    roadHubCaptureButton.setAttribute("aria-busy", "true");
+  }
+  window.clearTimeout(roadHubInteractionFallbackTimerId);
+  roadHubInteractionFallbackTimerId = window.setTimeout(() => {
+    clearResilienceTimeline();
+    resilienceDemo?.classList.remove("is-submitting", "scanning", "is-flowing");
+    resetAutoDetectionUi();
+    setResilienceDemoStep(0);
+    clearRoadHubInteractionState();
+  }, 10000);
 }
 
 function queueResilienceTimeline(callback, delay) {
@@ -1507,6 +1539,7 @@ function addRoadHubDemoObservation() {
 }
 
 function resetRoadHubDemoData() {
+  clearRoadHubInteractionState();
   localStorage.removeItem(roadHubDemoCountKey);
   roadHubObservationIndex = 0;
   updateRoadHubObservationView();
@@ -1596,25 +1629,25 @@ function triggerAutoDetection() {
   targetBox.classList.add("scanning-active");
   demoStage?.classList.add("scanning");
   miniDataOverlay?.classList.add("is-active");
-  statusText.innerHTML = `<span class="animate-pulse">${t("demoDetectionScanning")}</span>`;
+  statusText.textContent = t("demoDetectionScanning");
 
   const updateMiniData = () => {
     if (!miniDataOverlay) return;
 
-    miniDataOverlay.innerHTML = `${t("demoOverlayPositionInitial")}<br>${t("demoOverlayRoadInitial")}<br>${t("demoExperienceOnly")}`;
+    miniDataOverlay.textContent = `${t("demoOverlayPositionInitial")} / ${t("demoOverlayRoadInitial")} / ${t("demoExperienceOnly")}`;
   };
 
   updateMiniData();
-  triggerAutoDetection.dataTimer = window.setInterval(updateMiniData, 80);
 
   triggerAutoDetection.lockTimer = window.setTimeout(() => {
     window.clearInterval(triggerAutoDetection.dataTimer);
+    triggerAutoDetection.dataTimer = null;
     targetBox.classList.remove("scanning-active");
     targetBox.classList.add("target-locked");
     if (miniDataOverlay) {
-      miniDataOverlay.innerHTML = `${t("demoOverlayPositionComplete")}<br>${t("demoOverlayRoadComplete")}<br>${t("demoNoStorage")}`;
+      miniDataOverlay.textContent = `${t("demoOverlayPositionComplete")} / ${t("demoOverlayRoadComplete")} / ${t("demoNoStorage")}`;
     }
-    statusText.innerHTML = `${t("demoDetectionFound")}<span class="font-bold text-[#10b981]">${t("demoObstacleHeight")}</span>`;
+    statusText.textContent = `${t("demoDetectionFound")} ${t("demoObstacleHeight")}`;
     resultCard?.classList.add("is-visible");
     if (typeof showToast === "function") {
       showToast(t("demoToastMarked"));
@@ -1624,7 +1657,9 @@ function triggerAutoDetection() {
 
 function resetAutoDetectionUi() {
   window.clearInterval(triggerAutoDetection.dataTimer);
+  triggerAutoDetection.dataTimer = null;
   window.clearTimeout(triggerAutoDetection.lockTimer);
+  triggerAutoDetection.lockTimer = null;
   document
     .querySelector(".target-box")
     ?.classList.remove("scanning-active", "target-locked");
@@ -1636,9 +1671,10 @@ function resetAutoDetectionUi() {
 
 function triggerResilienceSubmit() {
   if (!resilienceDemo || resilienceDemo.classList.contains("is-submitting")) {
-    return;
+    return false;
   }
 
+  startRoadHubInteractionState();
   clearResilienceTimeline();
   window.clearTimeout(resilienceResetTimerId);
   resetAutoDetectionUi();
@@ -1667,8 +1703,21 @@ function triggerResilienceSubmit() {
       resilienceDemo.classList.remove("is-submitting", "scanning");
       resetAutoDetectionUi();
       setResilienceDemoStep(0);
+      clearRoadHubInteractionState();
     }, 3200);
   }, 6000);
+
+  return true;
+}
+
+function handleRoadHubCapture() {
+  if (roadHubCaptureButton?.disabled || resilienceDemo?.classList.contains("is-submitting")) {
+    return;
+  }
+
+  if (triggerResilienceSubmit()) {
+    addRoadHubDemoObservation();
+  }
 }
 
 function initializeTeamPhotoFallbacks() {
@@ -1909,6 +1958,7 @@ demoStepButtons.forEach((button) => {
       resilienceDemo.classList.remove("is-submitting");
       resilienceDemo.classList.remove("scanning");
     }
+    clearRoadHubInteractionState();
     resetAutoDetectionUi();
     setResilienceDemoStep(button.dataset.demoStep);
   });
@@ -1919,10 +1969,7 @@ if (demoResetLocalDataButton) {
 }
 
 if (roadHubCaptureButton) {
-  roadHubCaptureButton.addEventListener("click", () => {
-    addRoadHubDemoObservation();
-    triggerResilienceSubmit();
-  });
+  roadHubCaptureButton.addEventListener("click", handleRoadHubCapture);
 }
 
 function showToast(message, type = "success") {
@@ -1933,8 +1980,13 @@ function showToast(message, type = "success") {
     document.body.appendChild(container);
   }
 
+  while (container.children.length >= 2) {
+    container.firstElementChild?.remove();
+  }
+
   const toast = document.createElement("div");
   toast.className = `toast ${type}`;
+  toast.setAttribute("role", "status");
 
   let iconClass = "fa-solid fa-circle-check";
   if (type === "info") {
@@ -1945,30 +1997,45 @@ function showToast(message, type = "success") {
 
   const icon = document.createElement("i");
   icon.className = iconClass;
+  icon.setAttribute("aria-hidden", "true");
 
   const text = document.createElement("span");
   text.className = "toast-message";
   text.textContent = message;
 
-  toast.append(icon, text);
+  const closeButton = document.createElement("button");
+  closeButton.type = "button";
+  closeButton.className = "toast-close";
+  closeButton.setAttribute(
+    "aria-label",
+    state.language === "en" ? "Close notification" : "關閉通知",
+  );
+  closeButton.textContent = "x";
 
+  toast.append(icon, text, closeButton);
   container.appendChild(toast);
 
-  // Trigger animation next frame
-  requestAnimationFrame(() => {
-    toast.classList.add("show");
-  });
-
-  // Remove toast after 3 seconds
-  setTimeout(() => {
+  const removeToast = () => {
     toast.classList.remove("show");
-    toast.addEventListener("transitionend", () => {
+    const cleanup = () => {
       toast.remove();
       if (container.children.length === 0) {
         container.remove();
       }
-    });
-  }, 3000);
+    };
+    toast.addEventListener("transitionend", cleanup, { once: true });
+    window.setTimeout(cleanup, 300);
+  };
+
+  requestAnimationFrame(() => {
+    toast.classList.add("show");
+  });
+
+  const dismissTimer = window.setTimeout(removeToast, 3800);
+  closeButton.addEventListener("click", () => {
+    window.clearTimeout(dismissTimer);
+    removeToast();
+  });
 }
 
 if (languageToggle) {
