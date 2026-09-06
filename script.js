@@ -29,10 +29,10 @@ const translations = {
       "查看 NVD ROAD HUB 的道路回報流程體驗，了解如何以拍照、定位與補充說明整理道路障礙資訊。本頁目前不會傳送、保存或正式受理資料。",
     joinPageTitle: "加入 NVD 共創行動｜參與方式",
     joinPageDescription:
-      "了解加入 NVD 共創行動的參與方向，包括 AI 工具學習、輔具使用回饋、同儕支持、公共倡議與合作詢問。本頁目前不提供正式報名表。",
+      "了解加入 NVD 共創行動的參與方向，包括 AI 工具學習、輔具使用回饋、同儕支持、公共倡議、發起人意願確認與合作詢問。",
     privacyPageTitle: "隱私權政策｜NVD 永賦行動協會",
     privacyPageDescription:
-      "閱讀 NVD 永賦行動協會網站的隱私權政策，了解目前網站功能、資料使用原則與未來正式表單開放前的個資處理說明。",
+      "閱讀 NVD 永賦行動協會網站的隱私權政策，了解網站功能、外部表單、資料使用原則與個資處理說明。",
     termsPageTitle: "服務條款｜NVD 永賦行動協會",
     termsPageDescription:
       "閱讀 NVD 永賦行動協會網站服務條款，了解網站使用、內容限制、流程體驗與責任範圍。",
@@ -423,7 +423,7 @@ const translations = {
     joinPathsEyebrow: "Participation Paths",
     joinPathsTitle: "你可以從這些方向參與",
     joinPathsLead:
-      "目前 NVD 正在整理合作與參與流程，本頁提供方向說明，尚未開放正式報名表，也不透過本頁收集表單資料。",
+      "目前 NVD 正在整理合作與參與流程，本頁提供方向說明；若你有意願參與人民團體籌組，可先填寫第一階段發起人意願暨資格確認表。",
     joinActionTitle: "行動夥伴",
     joinActionText: "適合願意分享 AI 工具、輔具使用與日常生活經驗，協助整理真實需求的人。",
     joinObservationTitle: "生活觀察",
@@ -434,6 +434,27 @@ const translations = {
     joinPartnerText: "適合想從 AI 工具學習、輔具使用回饋、身障同儕支持、高齡化社會生活品質或 ESG 角度認識 NVD 的單位。",
     joinLearnTitle: "先了解 NVD",
     joinLearnText: "如果你還不確定怎麼參與，可以先閱讀 NVD 理念、行動專案與資料倡議方向。",
+    joinFounderEyebrow: "Founder Confirmation",
+    joinFounderTitle: "發起人第一階段意願確認",
+    joinFounderLead:
+      "NVD 永賦行動協會正在進行人民團體籌組作業，現階段先確認發起意願與基本資格，協助籌備團隊整理後續聯絡與正式文件補件流程。",
+    joinFounderGridAria: "發起人意願確認重點",
+    joinFounderWhyTitle: "為什麼需要發起人",
+    joinFounderWhyText:
+      "人民團體籌組需要具備發起意願與初步資格的參與者，一起完成設立前的必要準備。",
+    joinFounderWhoTitle: "基本資格",
+    joinFounderWhoText:
+      "本次先確認是否成年，以及目前是否設籍或工作於高雄市，後續仍以主管機關與正式文件確認為準。",
+    joinFounderNowTitle: "目前需要做什麼",
+    joinFounderNowText:
+      "請填寫第一階段意願與資格確認表；初步符合後，籌備團隊才會另行聯繫正式補件。",
+    joinFounderPrivacyTitle: "本階段不收高敏感文件",
+    joinFounderPrivacyText:
+      "第一階段不要求身分證字號、身分證影本或完整戶籍資料影本。",
+    joinFounderFormCta: "填寫發起人意願暨資格確認表",
+    joinFounderPrivacyCta: "查看資料使用說明",
+    joinFounderNotice:
+      "這是第一階段意願與基本資格確認，不是正式補件表；填寫本表不等同於當選理事、監事或其他協會職務。",
     joinPrepareEyebrow: "Before You Join",
     joinPrepareTitle: "參與前可以先準備",
     joinPrepareOne: "觀察自己或身邊的人在表達、移動、工具使用與社會參與中遇到的困難",
@@ -512,13 +533,13 @@ const translations = {
     resilienceMovedSecondaryCta: "前往道路回報",
     privacySectionCollection: "資料蒐集範圍",
     privacyCollectionText:
-      "本網站為靜態網站，不要求註冊帳號，也不會主動蒐集姓名、電子郵件、付款資料或其他可直接識別個人的資料。",
+      "本網站為靜態網站，不要求註冊帳號。若你透過外部表單主動填寫資料，NVD 會依表單說明使用你提供的內容。",
     privacySectionPurpose: "資料使用目的",
     privacyPurposeText:
       "瀏覽器可能保存語言、主題與閱讀模式偏好，僅用於維持網站顯示設定，不會用於廣告投放或身分分析。",
     privacySectionProtection: "個人資料保護",
     privacyProtectionText:
-      "NVD 不會出售或交換個人資料。若未來新增表單或合作聯絡功能，將於蒐集前說明用途、保存方式與聯絡窗口。",
+      "NVD 不會出售或交換個人資料。外部表單蒐集前會說明用途、使用方式與聯絡窗口。",
     privacySectionChanges: "政策調整",
     privacyChangesText:
       "隱私權政策如有調整，將更新本頁內容與日期。重大變更會以清楚方式說明。",
@@ -531,6 +552,9 @@ const translations = {
     privacySectionThirdParty: "第三方服務",
     privacyThirdPartyText:
       "本網站透過 GitHub Pages 提供頁面，並載入 Google Fonts 與 Font Awesome。第三方服務可能依其政策處理必要的連線紀錄。",
+    privacySectionFounderForm: "發起人意願確認表",
+    privacyFounderFormText:
+      "第一階段發起人意願暨資格確認表由 Google Forms 提供，可能蒐集姓名、出生年月日、手機、Email、高雄市資格關係、行政區、發起意願、後續補件意願、參與意願與個資告知確認。資料僅供 NVD 籌備、發起人資格確認、聯絡及依法辦理人民團體設立程序使用；本階段不要求身分證字號、身分證影本或完整戶籍資料影本。離開本站後，Google 服務的資料處理方式請以 Google 相關政策為準。",
     privacySectionDownloads: "外部連結與協作服務",
     privacyDownloadsText: "本網站可能連結至社群平台、協作表單或第三方資訊頁。離開本站後的資料處理方式，請以該服務提供者的政策為準。",
     termsSectionService: "服務內容",
@@ -588,10 +612,10 @@ const translations = {
       "View the NVD ROAD HUB process demo for organizing road-barrier observations with photos, location context, and notes. This page does not transmit, store, or formally accept data.",
     joinPageTitle: "Join NVD｜Ways to Participate",
     joinPageDescription:
-      "Explore ways to participate in NVD, including action partners, road observation, design and technical support, and collaboration inquiries. This page does not provide a formal application form.",
+      "Explore ways to participate in NVD, including AI tool learning, assistive-support feedback, peer support, public advocacy, founder interest confirmation, and collaboration inquiries.",
     privacyPageTitle: "Privacy Policy｜NVD Association",
     privacyPageDescription:
-      "Read the NVD Association website privacy policy, including current site functions, data-use principles, and privacy notes before any future formal form is opened.",
+      "Read the NVD Association website privacy policy, including site functions, external forms, data-use principles, and personal-data handling notes.",
     termsPageTitle: "Terms of Use｜NVD Association",
     termsPageDescription:
       "Read the NVD Association website terms of use, including site usage, content limitations, process demos, and scope of responsibility.",
@@ -994,7 +1018,7 @@ const translations = {
     joinPathsEyebrow: "Participation Paths",
     joinPathsTitle: "Ways you can participate",
     joinPathsLead:
-      "NVD is still organizing its collaboration process. This page offers direction only; there is no formal registration form, and no form data is collected here.",
+      "NVD is still organizing its collaboration and participation process. If you are interested in joining the people’s organization preparation as a founder, you can complete the first-stage founder interest and eligibility form.",
     joinActionTitle: "Action partner",
     joinActionText: "For people willing to share AI tool use, assistive-tool use, and everyday life experiences to help organize real needs.",
     joinObservationTitle: "Life observation",
@@ -1005,6 +1029,27 @@ const translations = {
     joinPartnerText: "For organizations interested in NVD through AI tool learning, assistive-tool feedback, disabled peer support, quality of life in an ageing society, or ESG.",
     joinLearnTitle: "Learn about NVD first",
     joinLearnText: "If you are not sure how to participate yet, start with NVD's ideas, action projects, and data advocacy direction.",
+    joinFounderEyebrow: "Founder Confirmation",
+    joinFounderTitle: "First-stage founder interest confirmation",
+    joinFounderLead:
+      "NVD Association is preparing for a people’s organization formation process. At this stage, we are first confirming founder interest and basic eligibility so the preparation team can organize follow-up contact and formal document steps.",
+    joinFounderGridAria: "Founder interest confirmation highlights",
+    joinFounderWhyTitle: "Why founders are needed",
+    joinFounderWhyText:
+      "A people’s organization formation process needs participants with founder interest and initial eligibility to complete the necessary preparation before establishment.",
+    joinFounderWhoTitle: "Basic eligibility",
+    joinFounderWhoText:
+      "This stage first confirms adulthood and whether the person is registered or works in Kaohsiung. Final confirmation still depends on the competent authority and formal documents.",
+    joinFounderNowTitle: "What to do now",
+    joinFounderNowText:
+      "Please complete the first-stage interest and eligibility form. If the initial conditions appear to be met, the preparation team will contact you about formal documents.",
+    joinFounderPrivacyTitle: "No high-sensitivity documents at this stage",
+    joinFounderPrivacyText:
+      "The first stage does not ask for a national ID number, ID-card image, or full household-registration document.",
+    joinFounderFormCta: "Complete the founder interest and eligibility form",
+    joinFounderPrivacyCta: "Review data-use notes",
+    joinFounderNotice:
+      "This is a first-stage interest and basic eligibility confirmation, not a formal supplementary-document form. Completing it does not mean being elected as a director, supervisor, or other association role.",
     joinPrepareEyebrow: "Before You Join",
     joinPrepareTitle: "What you can prepare",
     joinPrepareOne: "Observe difficulties in expression, mobility, tool use, and social participation around you",
@@ -1084,13 +1129,13 @@ const translations = {
     resilienceMovedSecondaryCta: "Go to road reporting",
     privacySectionCollection: "Data Collection Scope",
     privacyCollectionText:
-      "This is a static website. It does not require registration and does not actively collect names, email addresses, payment information, or other directly identifying personal data.",
+      "This is a static website and does not require registration. If you voluntarily submit information through an external form, NVD will use the information according to the form description.",
     privacySectionPurpose: "Purpose of Data Use",
     privacyPurposeText:
       "Your browser may save language, theme, and reading-mode preferences only to preserve display settings. They are not used for advertising or identity profiling.",
     privacySectionProtection: "Personal Data Protection",
     privacyProtectionText:
-      "NVD does not sell or exchange personal data. If forms or collaboration contact features are added later, their purpose, storage method, and contact point will be explained before collection.",
+      "NVD does not sell or exchange personal data. External forms explain their purpose, use method, and contact point before collection.",
     privacySectionChanges: "Policy Changes",
     privacyChangesText:
       "If this policy changes, the content and date on this page will be updated. Material changes will be explained clearly.",
@@ -1103,6 +1148,9 @@ const translations = {
     privacySectionThirdParty: "Third-party services",
     privacyThirdPartyText:
       "This site is hosted on GitHub Pages and may load Google Fonts and Font Awesome. These services may process basic connection logs under their own policies.",
+    privacySectionFounderForm: "Founder interest confirmation form",
+    privacyFounderFormText:
+      "The first-stage founder interest and eligibility form is provided through Google Forms. It may collect name, date of birth, mobile number, email, Kaohsiung eligibility relation, district, founder interest, willingness to provide later documents, participation preferences, and personal-data notice confirmation. The information is used only for NVD preparation, founder eligibility confirmation, contact, and legally required people’s organization establishment procedures. This stage does not ask for a national ID number, ID-card image, or full household-registration document. After leaving this site, Google services handle data under Google’s own policies.",
     privacySectionDownloads: "外部連結與協作服務",
     privacyDownloadsText: "本網站可能連結至社群平台、協作表單或第三方資訊頁。離開本站後的資料處理方式，請以該服務提供者的政策為準。",
     termsSectionService: "Service scope",
