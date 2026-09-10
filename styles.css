@@ -837,6 +837,16 @@ body[data-theme="dark"].home-page .hero-positioning {
   max-width: 780px;
 }
 
+.report-page .loop-section .centered-heading > div {
+  max-width: min(100%, 980px);
+}
+
+.report-page .loop-section .section-heading h2 {
+  font-size: clamp(2.1rem, 3vw, 2.75rem);
+  line-height: 1.18;
+  white-space: nowrap;
+}
+
 .section-lead {
   max-width: 780px;
   margin: 12px 0 0;
@@ -5937,6 +5947,10 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
 }
 
 @media (max-width: 760px) {
+  .report-page .loop-section .section-heading h2 {
+    white-space: normal;
+  }
+
   .report-page .nvd-demo-section {
     overflow-x: clip;
   }
