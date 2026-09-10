@@ -398,8 +398,9 @@ const translations = {
     demoRecordBody:
       "區域：三民區｜類型：人行道鋪面破損/碎裂｜影響：輪椅使用者、嬰兒車使用者、行人｜狀態：加入儀表板｜備註：此紀錄僅供流程預覽，未傳送、保存或正式受理。",
     demoDashboardDisclaimer:
-      "本頁為 ROAD HUB 體驗版；觀察筆數儲存在目前瀏覽器，用於呈現資料累積效果，不代表 NVD 正式受理數或政府案件紀錄。資料不會傳送到伺服器，也不保存個人資料。",
-    demoContactPrompt: "想把這套流程帶進社區、校園或企業合作？",
+      "本頁為 ROAD HUB 體驗版；觀察筆數僅儲存在目前瀏覽器，用於呈現資料累積效果，不代表正式受理數或政府案件紀錄。",
+    demoContactPrompt:
+      "資料不會傳送到伺服器，也不保存個人資料。想把這套流程帶進社區、校園或企業合作？",
     demoContactLink: "聯絡 NVD：nvd20260611@gmail.com",
     demoObservationAdded: "現場觀察已轉入後台統計",
     demoObservationReset: "已重置本機觀察資料",
@@ -533,7 +534,7 @@ const translations = {
     resilienceIntroText:
       "資料倡議不是把經驗變成冰冷表格，而是讓分散在生活現場的需求有脈絡、有依據，也能成為合作溝通與公共改善的起點。",
     resilienceMovedCta: "查看行動專案",
-    resilienceMovedSecondaryCta: "前往 ROAD HUB",
+    resilienceMovedSecondaryCta: "提出合作提案",
     resilienceSourcesTitle: "我們整理什麼資料",
     resilienceSourcesLead:
       "NVD 關注的不只是一條道路，而是人、工具、輔具、空間與服務之間的真實互動。",
@@ -1015,9 +1016,9 @@ const translations = {
     demoRecordBody:
       "Area: Sanmin | Type: Damaged sidewalk surface | Impact: wheelchair users, stroller users, pedestrians | Status: Added to dashboard | Note: This record is for process preview only. No data is transmitted, stored, or formally accepted.",
     demoDashboardDisclaimer:
-      "This ROAD HUB page is an experience version. The observation count is stored only in this browser to present a data-accumulation effect. It does not represent formal NVD case acceptance or government records. No data is transmitted to a server, and no personal data is stored.",
+      "This ROAD HUB page is an experience version. The observation count is stored only in this browser to present a data-accumulation effect. It does not represent official NVD intake counts or government records.",
     demoContactPrompt:
-      "Interested in bringing this workflow into a community, campus, or corporate collaboration?",
+      "No data is transmitted to a server, and no personal data is stored. Interested in bringing this workflow into a community, campus, or corporate collaboration?",
     demoContactLink: "Contact NVD: nvd20260611@gmail.com",
     demoObservationAdded: "Field observation added to dashboard",
     demoObservationReset: "Local demo data has been reset",
@@ -1156,7 +1157,7 @@ const translations = {
     resilienceIntroText:
       "Data advocacy is not about turning lived experience into cold tables. It gives scattered daily needs context and evidence, so they can support collaboration and public improvement.",
     resilienceMovedCta: "View action projects",
-    resilienceMovedSecondaryCta: "Go to ROAD HUB",
+    resilienceMovedSecondaryCta: "Propose a collaboration",
     resilienceSourcesTitle: "What NVD organizes",
     resilienceSourcesLead:
       "NVD looks beyond one road or one issue, focusing on real interaction between people, tools, assistive support, spaces, and services.",
