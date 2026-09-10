@@ -56,6 +56,7 @@ const translations = {
     brandVoiceGovernanceLabel: "治理",
     brandVoicePlainLabel: "白話",
     footerNavigationAria: "頁尾導覽",
+    backToTopLabel: "回到頁首",
     heroStatsAria: "友善行動計數",
     homeReportCtaAria: "查看目前主力行動",
     founderWebsiteAria: "了解陳怡安的更多經歷",
@@ -528,9 +529,35 @@ const translations = {
     manifestoMovedCta: "前往關於 NVD",
     resilienceMovedTitle: "資料倡議與公共需求整理",
     resilienceMovedText:
-      "將民眾在日常生活中遇到的移動困難、空間阻礙與服務缺口，整理成可以被理解、追蹤與討論的公共資料。",
+      "NVD 將身障同儕、行動不便者與照顧者在日常生活中遇到的移動困難、工具使用回饋、輔具經驗、空間阻礙與服務缺口，整理成可以被理解、追蹤與討論的公共資料。",
+    resilienceIntroText:
+      "資料倡議不是把經驗變成冰冷表格，而是讓分散在生活現場的需求有脈絡、有依據，也能成為合作溝通與公共改善的起點。",
     resilienceMovedCta: "查看行動專案",
-    resilienceMovedSecondaryCta: "前往道路回報",
+    resilienceMovedSecondaryCta: "前往 ROAD HUB",
+    resilienceSourcesTitle: "我們整理什麼資料",
+    resilienceSourcesLead:
+      "NVD 關注的不只是一條道路，而是人、工具、輔具、空間與服務之間的真實互動。",
+    resilienceSourcePeerTitle: "同儕經驗",
+    resilienceSourcePeerText:
+      "整理身障同儕、行動不便者、高齡者與照顧者在表達、移動、學習、工作與參與社會中的真實需求。",
+    resilienceSourceToolTitle: "AI 工具使用回饋",
+    resilienceSourceToolText:
+      "記錄文字整理、語音轉文字、企劃撰寫、溝通表達與內容製作等工具在真實使用時遇到的限制與可改善之處。",
+    resilienceSourceAssistiveTitle: "輔具與生活支持",
+    resilienceSourceAssistiveText:
+      "關注輪椅、手推輪椅、電動輪椅、行動輔具與生活輔具如何影響日常移動、照顧、工作與公共參與。",
+    resilienceSourcePublicTitle: "公共空間觀察",
+    resilienceSourcePublicText:
+      "從道路障礙、動線阻礙、標示不清與服務缺口中，整理可供社區、學校、企業與公共單位討論的資訊。",
+    resilienceUseTitle: "資料如何支持改善",
+    resilienceUseLead: "資料倡議的目的，是讓真實經驗能被整理、被理解，並進入後續協作。",
+    resilienceFlowObserve: "真實經驗",
+    resilienceFlowOrganize: "資料整理",
+    resilienceFlowDiscuss: "共同討論",
+    resilienceFlowImprove: "推動改善",
+    resilienceFlowReview: "再次確認",
+    resilienceRoadHubText:
+      "ROAD HUB 是 NVD 第一個資料倡議示範專案，先從道路與無障礙回報開始，測試如何把照片、定位與補充說明整理成公共討論的依據。未來資料倡議也可延伸到 AI 工具、輔具應用、照顧支持、教育推廣與跨域合作。",
     privacySectionCollection: "資料蒐集範圍",
     privacyCollectionText:
       "本網站為靜態網站，不要求註冊帳號。若你透過外部表單主動填寫資料，NVD 會依表單說明使用你提供的內容。",
@@ -639,6 +666,7 @@ const translations = {
     brandVoiceGovernanceLabel: "Governance",
     brandVoicePlainLabel: "Plain",
     footerNavigationAria: "Footer navigation",
+    backToTopLabel: "Back to top",
     heroStatsAria: "Accessible-action status",
     homeReportCtaAria: "View the current main action project",
     founderWebsiteAria: "Learn more about Yi-An Chen’s experience",
@@ -1124,9 +1152,36 @@ const translations = {
     manifestoMovedCta: "Continue to About NVD",
     resilienceMovedTitle: "Data advocacy and public needs organizing",
     resilienceMovedText:
-      "NVD organizes everyday mobility difficulties, access barriers, and service gaps into public information that can be understood, tracked, and discussed.",
+      "NVD organizes the mobility difficulties, tool-use feedback, assistive-support experiences, access barriers, and service gaps that disabled peers, people with limited mobility, and caregivers encounter in daily life into public information that can be understood, tracked, and discussed.",
+    resilienceIntroText:
+      "Data advocacy is not about turning lived experience into cold tables. It gives scattered daily needs context and evidence, so they can support collaboration and public improvement.",
     resilienceMovedCta: "View action projects",
-    resilienceMovedSecondaryCta: "Go to road reporting",
+    resilienceMovedSecondaryCta: "Go to ROAD HUB",
+    resilienceSourcesTitle: "What NVD organizes",
+    resilienceSourcesLead:
+      "NVD looks beyond one road or one issue, focusing on real interaction between people, tools, assistive support, spaces, and services.",
+    resilienceSourcePeerTitle: "Peer experience",
+    resilienceSourcePeerText:
+      "We organize the real needs of disabled peers, people with limited mobility, older adults, and caregivers in expression, mobility, learning, work, and social participation.",
+    resilienceSourceToolTitle: "AI tool feedback",
+    resilienceSourceToolText:
+      "We record where tools for writing support, speech-to-text, proposal writing, communication, and content creation meet real-world limits and where they can improve.",
+    resilienceSourceAssistiveTitle: "Assistive support",
+    resilienceSourceAssistiveText:
+      "We focus on how wheelchairs, manual wheelchairs, power wheelchairs, mobility aids, and daily-living aids affect movement, care, work, and public participation.",
+    resilienceSourcePublicTitle: "Public space observation",
+    resilienceSourcePublicText:
+      "We organize road barriers, route obstacles, unclear signs, and service gaps into information that communities, schools, businesses, and public agencies can discuss.",
+    resilienceUseTitle: "How data supports improvement",
+    resilienceUseLead:
+      "The purpose of data advocacy is to organize and clarify lived experience so it can enter later collaboration.",
+    resilienceFlowObserve: "Real experience",
+    resilienceFlowOrganize: "Information organizing",
+    resilienceFlowDiscuss: "Shared discussion",
+    resilienceFlowImprove: "Improvement action",
+    resilienceFlowReview: "Review again",
+    resilienceRoadHubText:
+      "ROAD HUB is NVD's first data-advocacy demo project. It starts with road and accessibility reporting to test how photos, location context, and notes can become evidence for public discussion. In the future, data advocacy can also extend to AI tools, assistive technology use, care support, educational outreach, and cross-sector collaboration.",
     privacySectionCollection: "Data Collection Scope",
     privacyCollectionText:
       "This is a static website and does not require registration. If you voluntarily submit information through an external form, NVD will use the information according to the form description.",
@@ -1853,6 +1908,9 @@ function applySharedAccessibilityText() {
   document
     .querySelector('a[href="mailto:nvd20260611@gmail.com"]')
     ?.setAttribute("aria-label", t("joinEmailAria"));
+  document
+    .querySelector(".back-to-top")
+    ?.setAttribute("aria-label", t("backToTopLabel"));
 }
 
 function applyTranslations() {
@@ -2151,6 +2209,30 @@ function handleSystemThemeChange(event) {
   }
 }
 
+function initializeBackToTop() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "back-to-top";
+  button.setAttribute("aria-label", t("backToTopLabel"));
+
+  const icon = document.createElement("i");
+  icon.className = "fa-solid fa-arrow-up";
+  icon.setAttribute("aria-hidden", "true");
+  button.appendChild(icon);
+
+  const updateVisibility = () => {
+    button.classList.toggle("is-visible", window.scrollY > 640);
+  };
+
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", updateVisibility, { passive: true });
+  document.body.appendChild(button);
+  updateVisibility();
+}
+
 if (typeof systemThemeQuery.addEventListener === "function") {
   systemThemeQuery.addEventListener("change", handleSystemThemeChange);
 } else if (typeof systemThemeQuery.addListener === "function") {
@@ -2168,3 +2250,4 @@ setLanguage(state.language);
 setBrandVoice(state.brandVoice, false);
 setTheme(state.theme, Boolean(savedTheme));
 setResilienceDemoStep(0);
+initializeBackToTop();
