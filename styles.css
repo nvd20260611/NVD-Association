@@ -720,15 +720,56 @@ body[data-theme="dark"] .hero-stats strong {
 }
 
 .home-page .hero-inner {
-  max-width: 760px;
+  max-width: 880px;
+}
+
+.home-page .hero {
+  padding: clamp(64px, 7vw, 92px) 0 clamp(48px, 6vw, 72px);
+}
+
+.home-page .hero::before {
+  inset: 24% auto auto 50%;
+  width: min(62vw, 720px);
+  border-width: clamp(14px, 2.8vw, 32px);
+  opacity: 0.62;
 }
 
 .home-page .hero h1 {
-  max-width: 700px;
+  max-width: 840px;
+  font-size: clamp(2.25rem, 4.1vw, 3.25rem);
+  line-height: 1.18;
+  text-wrap: balance;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .home-page .hero-subtitle {
-  max-width: 620px;
+  max-width: 640px;
+}
+
+.home-page .hero-identity {
+  margin-bottom: 22px;
+}
+
+.home-page .hero-subtitle strong {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.home-page .hero-positioning {
+  max-width: 660px;
+  margin-top: -12px;
+  margin-bottom: 28px;
+  color: var(--text-main);
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
+  line-height: 1.72;
+}
+
+body[data-theme="dark"].home-page .hero-positioning {
+  color: rgba(248, 250, 252, 0.88);
 }
 
 .home-page .section-heading > div,
