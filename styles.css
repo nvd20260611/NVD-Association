@@ -1383,6 +1383,40 @@ body[data-theme="dark"] .join-link-group a {
   white-space: nowrap;
 }
 
+.report-action-card__actions,
+.report-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.report-guide-block,
+.report-data-card,
+.report-final-cta {
+  margin-top: clamp(32px, 5vw, 56px);
+}
+
+.report-guide-block .compact-heading {
+  margin-bottom: 22px;
+}
+
+.report-guide-grid {
+  margin-top: 0;
+}
+
+.report-data-flow {
+  margin-top: 22px;
+}
+
+.report-final-cta .report-action-card__desc {
+  max-width: 760px;
+}
+
+.report-final-actions {
+  margin-top: 22px;
+}
+
 .hub-demo-count-card,
 .dashboard-growth-card {
   min-height: 118px;
@@ -4628,6 +4662,8 @@ body[data-theme="dark"] .backend-toast {
 
 .report-page .resilience-demo-header,
 .report-page .report-action-card,
+.report-page .report-data-card,
+.report-page .report-final-cta,
 .report-page .hub-demo-disclaimer {
   color: #f8faf7;
   background: rgba(7, 17, 31, 0.78);
@@ -4701,12 +4737,19 @@ body[data-theme="dark"] .backend-toast {
 .report-page .nvd-demo-section .resilience-copy p,
 .report-page .report-action-card__title,
 .report-page .report-action-card__desc,
+.report-page .report-guide-block .section-heading h2,
+.report-page .report-guide-block .section-lead,
+.report-page .report-data-card .report-action-card__title,
+.report-page .report-data-card .report-action-card__desc,
+.report-page .report-final-cta .report-action-card__title,
+.report-page .report-final-cta .report-action-card__desc,
 .report-page .report-steps li {
   color: #f8faf7;
 }
 
 .report-page .nvd-demo-section .resilience-copy .eyebrow,
 .report-page .report-action-card .eyebrow,
+.report-page .report-guide-block .eyebrow,
 .report-page .report-demo-notice strong,
 .report-page .report-action-card__desc strong {
   color: #f28c38;
@@ -4714,6 +4757,7 @@ body[data-theme="dark"] .backend-toast {
 
 .report-page .nvd-demo-section .resilience-copy p:not(.eyebrow),
 .report-page .report-action-card__desc,
+.report-page .report-guide-block .section-lead,
 .report-page .report-steps li {
   color: rgba(248, 250, 247, 0.74);
 }
@@ -4722,6 +4766,20 @@ body[data-theme="dark"] .backend-toast {
   color: #f8faf7;
   background: rgba(7, 17, 31, 0.76);
   border-color: rgba(110, 231, 216, 0.22);
+}
+
+.report-page .nvd-demo-section .loop-card {
+  color: #f8faf7;
+  background: rgba(7, 17, 31, 0.72);
+  border-color: rgba(110, 231, 216, 0.18);
+}
+
+.report-page .nvd-demo-section .loop-card h3 {
+  color: #f8faf7;
+}
+
+.report-page .nvd-demo-section .loop-card p {
+  color: rgba(248, 250, 247, 0.74);
 }
 
 .report-page .pixel-shell {
@@ -5618,6 +5676,8 @@ body.report-page:not([data-theme="dark"]) .nvd-demo-section::after {
 
 body.report-page:not([data-theme="dark"]) .resilience-demo-header,
 body.report-page:not([data-theme="dark"]) .report-action-card,
+body.report-page:not([data-theme="dark"]) .report-data-card,
+body.report-page:not([data-theme="dark"]) .report-final-cta,
 body.report-page:not([data-theme="dark"]) .resilience-dashboard,
 body.report-page:not([data-theme="dark"]) .score-card,
 body.report-page:not([data-theme="dark"]) .resilience-radar-card,
@@ -5633,6 +5693,7 @@ body.report-page:not([data-theme="dark"]) .hub-demo-disclaimer {
 
 body.report-page:not([data-theme="dark"]) .nvd-demo-section .resilience-copy h1,
 body.report-page:not([data-theme="dark"]) .report-action-card__title,
+body.report-page:not([data-theme="dark"]) .report-guide-block .section-heading h2,
 body.report-page:not([data-theme="dark"]) .dashboard-header strong,
 body.report-page:not([data-theme="dark"]) .hub-demo-list-grid li b,
 body.report-page:not([data-theme="dark"]) .dashboard-map-card h3,
@@ -5644,6 +5705,7 @@ body.report-page:not([data-theme="dark"]) .hub-demo-record strong {
 
 body.report-page:not([data-theme="dark"]) .nvd-demo-section .resilience-copy p:not(.eyebrow),
 body.report-page:not([data-theme="dark"]) .report-action-card__desc,
+body.report-page:not([data-theme="dark"]) .report-guide-block .section-lead,
 body.report-page:not([data-theme="dark"]) .report-steps li,
 body.report-page:not([data-theme="dark"]) .score-card span,
 body.report-page:not([data-theme="dark"]) .dashboard-map-card p,
@@ -5655,9 +5717,25 @@ body.report-page:not([data-theme="dark"]) .hub-impact-list li > span {
 
 body.report-page:not([data-theme="dark"]) .nvd-demo-section .resilience-copy .eyebrow,
 body.report-page:not([data-theme="dark"]) .report-action-card .eyebrow,
+body.report-page:not([data-theme="dark"]) .report-guide-block .eyebrow,
 body.report-page:not([data-theme="dark"]) .report-action-card__desc strong,
 body.report-page:not([data-theme="dark"]) .hub-demo-analysis-title span {
   color: #f28c38;
+}
+
+body.report-page:not([data-theme="dark"]) .nvd-demo-section .loop-card {
+  color: #202434;
+  background: rgba(255, 255, 255, 0.84);
+  border-color: rgba(13, 35, 64, 0.12);
+  box-shadow: 0 20px 54px rgba(13, 35, 64, 0.1);
+}
+
+body.report-page:not([data-theme="dark"]) .nvd-demo-section .loop-card h3 {
+  color: #202434;
+}
+
+body.report-page:not([data-theme="dark"]) .nvd-demo-section .loop-card p {
+  color: #5b6678;
 }
 
 body.report-page:not([data-theme="dark"]) .step-bar-container {
@@ -5798,6 +5876,8 @@ body.report-page:not([data-theme="dark"]) .roadhub-phone-photo-wrap::after {
 
 body[data-theme="dark"].report-page .resilience-demo-header,
 body[data-theme="dark"].report-page .report-action-card,
+body[data-theme="dark"].report-page .report-data-card,
+body[data-theme="dark"].report-page .report-final-cta,
 body[data-theme="dark"].report-page .resilience-dashboard,
 body[data-theme="dark"].report-page .score-card,
 body[data-theme="dark"].report-page .dashboard-map-card,
@@ -5810,6 +5890,7 @@ body[data-theme="dark"].report-page .hub-demo-disclaimer {
 
 body[data-theme="dark"].report-page .nvd-demo-section .resilience-copy h1,
 body[data-theme="dark"].report-page .report-action-card__title,
+body[data-theme="dark"].report-page .report-guide-block .section-heading h2,
 body[data-theme="dark"].report-page .dashboard-header strong,
 body[data-theme="dark"].report-page .hub-demo-analysis-title span,
 body[data-theme="dark"].report-page .hub-demo-list-grid h3,
@@ -5821,6 +5902,7 @@ body[data-theme="dark"].report-page .hub-demo-list-grid li b {
 
 body[data-theme="dark"].report-page .nvd-demo-section .resilience-copy p:not(.eyebrow),
 body[data-theme="dark"].report-page .report-action-card__desc,
+body[data-theme="dark"].report-page .report-guide-block .section-lead,
 body[data-theme="dark"].report-page .report-steps li,
 body[data-theme="dark"].report-page .score-card span,
 body[data-theme="dark"].report-page .dashboard-map-card p,
@@ -5958,6 +6040,8 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
   .report-page .nvd-demo-section .container,
   .report-page .resilience-demo-header,
   .report-page .report-action-card,
+  .report-page .report-data-card,
+  .report-page .report-final-cta,
   .report-page .nvd-demo-stage,
   .report-page .nvd-demo-backend,
   .report-page .resilience-dashboard {
@@ -5973,7 +6057,9 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
   }
 
   .report-page .resilience-demo-header,
-  .report-page .report-action-card {
+  .report-page .report-action-card,
+  .report-page .report-data-card,
+  .report-page .report-final-cta {
     margin-inline: 0;
     padding-inline: 22px;
   }
@@ -6021,6 +6107,19 @@ body[data-theme="dark"].report-page .dashboard-growth-card strong {
     padding-inline: 16px;
     white-space: normal;
     text-align: center;
+  }
+
+  .report-action-card__actions,
+  .report-final-actions {
+    align-items: stretch;
+  }
+
+  .report-action-card__actions .report-action-card__cta,
+  .report-final-actions .primary-link-btn,
+  .report-final-actions .secondary-link-btn,
+  .report-final-actions .tertiary-link-btn {
+    width: 100%;
+    max-width: 100%;
   }
 
   .report-page .nvd-demo-stage,
