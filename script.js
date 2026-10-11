@@ -24,9 +24,9 @@ const translations = {
     aboutPageTitle: "關於 NVD｜理念與團隊",
     aboutPageDescription:
       "了解 NVD 如何結合 AI 工具、輔具支持、同儕經驗與跨域合作，協助身障同儕與行動不便者延伸生活、表達自我、參與社會並創造價值。",
-    reportPageTitle: "行動專案｜恢恢尋路與 ROAD HUB",
+    reportPageTitle: "行動專案｜台灣騎樓與人行道通行回報地圖與 ROAD HUB",
     reportPageDescription:
-      "了解 NVD 行動專案如何以恢恢尋路記錄通行阻礙，並透過 ROAD HUB 示範資料整理流程。本頁 ROAD HUB 目前不會傳送、保存或正式受理資料。",
+      "了解 NVD 行動專案如何以台灣騎樓與人行道通行回報地圖記錄通行阻礙，並透過 ROAD HUB 示範資料整理流程。本頁 ROAD HUB 目前不會傳送、保存或正式受理資料。",
     joinPageTitle: "加入 NVD 共創行動｜參與方式",
     joinPageDescription:
       "了解加入 NVD 共創行動的參與方向，包括 AI 工具學習、輔具使用回饋、同儕支持、公共倡議、發起人意願確認與合作詢問。",
@@ -237,9 +237,9 @@ const translations = {
     resilienceEyebrow: "NVD ACTION PROJECT",
     resilienceTitle: "讓道路問題被看見 讓修復行動被串起",
     resilienceLead:
-      "NVD 以恢恢尋路作為目前的行動工具，協助使用者記錄道路與空間阻礙；ROAD HUB 則示範這些觀察如何被整理成可理解、可追蹤、可討論的公共資料。",
-    reportHeroTitleOne: "恢恢尋路：讓通行阻礙被記錄",
-    reportHeroTitleTwo: "也被整理成公共資料",
+      "NVD 以台灣騎樓與人行道通行回報地圖作為目前的行動工具，協助使用者記錄道路與空間阻礙；ROAD HUB 則示範這些觀察如何被整理成可理解、可追蹤、可討論的公共資料。",
+    reportHeroTitleOne: "台灣騎樓與人行道通行回報地圖",
+    reportHeroTitleTwo: "記錄通行阻礙，整理公共資料",
     reportTimelineLabel: "ROAD HUB 示範流程",
     reportStepOne: "01 發現問題",
     reportStepTwo: "02 位置描述",
@@ -247,15 +247,15 @@ const translations = {
     reportStepFour: "04 資料整理",
     reportStepFive: "05 查看結果",
     smartRoadEyebrow: "回報前準備",
-    smartRoadTitle: "恢恢尋路",
+    smartRoadTitle: "台灣騎樓與人行道通行回報地圖",
     smartRoadDescription:
-      "恢恢尋路是 NVD 目前用來記錄通行阻礙的行動工具，重點是拍照、定位、補充說明，把日常遇到的障礙整理成後續可討論的資料。",
-    smartRoadStepsLabel: "恢恢尋路功能重點",
+      "台灣騎樓與人行道通行回報地圖是 NVD 目前用來記錄通行阻礙的行動工具，重點是拍照、定位、補充說明，把日常遇到的障礙整理成後續可討論的資料。",
+    smartRoadStepsLabel: "台灣騎樓與人行道通行回報地圖功能重點",
     smartRoadStepOne: "拍下障礙照片",
     smartRoadStepTwo: "標記地點或描述位置",
     smartRoadStepThree: "補充通行影響",
-    smartRoadCta: "開啟恢恢尋路",
-    smartRoadCtaAria: "開啟恢恢尋路",
+    smartRoadCta: "開啟通行回報地圖",
+    smartRoadCtaAria: "開啟通行回報地圖",
     smartRoadGuideCta: "了解巡護流程",
     smartRoadGuideCtaAria: "了解新手巡護流程",
     reportActionEyebrow: "ROAD HUB 示範",
@@ -263,7 +263,7 @@ const translations = {
     reportDemoNotice:
       "流程體驗：目前此區不會傳送或保存資料，不會形成正式受理或正式回報，也不是政府通報管道。",
     reportActionDescription:
-      "ROAD HUB 是 NVD 官網中的資料整理示範，用來說明現場觀察如何被分類、統計與呈現；實際巡護與回報以前往恢恢尋路為主。",
+      "ROAD HUB 是 NVD 官網中的資料整理示範，用來說明現場觀察如何被分類、統計與呈現；實際巡護與回報以前往台灣騎樓與人行道通行回報地圖為主。",
     reportStepsLabel: "ROAD HUB 示範步驟",
     reportActionStepPhoto: "查看現場觀察如何被記錄",
     reportActionStepLocation: "理解障礙類型與通行影響",
@@ -433,7 +433,7 @@ const translations = {
     reportDataEyebrow: "從回報工具到公共資料",
     reportDataTitle: "NVD 的差異在於把經驗整理成可討論的依據",
     reportDataDescription:
-      "恢恢尋路協助記錄現場，ROAD HUB 示範資料如何被整理。NVD 更在意的是後續如何把同儕經驗、空間阻礙與工具使用回饋，轉化成社區、校園、企業與公共部門能一起討論的資料。",
+      "台灣騎樓與人行道通行回報地圖協助記錄現場，ROAD HUB 示範資料如何被整理。NVD 更在意的是後續如何把同儕經驗、空間阻礙與工具使用回饋，轉化成社區、校園、企業與公共部門能一起討論的資料。",
     reportDataFlowAria: "資料整理流程",
     reportDataFlowOne: "現場記錄",
     reportDataFlowTwo: "分類整理",
@@ -443,8 +443,8 @@ const translations = {
     reportFinalCtaEyebrow: "一起把觀察變成行動",
     reportFinalCtaTitle: "你可以先試用工具，也可以和 NVD 一起整理需求",
     reportFinalCtaText:
-      "如果你想回報通行阻礙，請先前往恢恢尋路；如果你想把這套方法帶進社區、校園或組織，歡迎聯絡 NVD。",
-    reportFinalUseTool: "開啟恢恢尋路",
+      "如果你想回報通行阻礙，請先前往台灣騎樓與人行道通行回報地圖；如果你想把這套方法帶進社區、校園或組織，歡迎聯絡 NVD。",
+    reportFinalUseTool: "開啟通行回報地圖",
     reportFinalJoin: "加入 NVD 行動",
     reportFinalContact: "提出合作提案",
     loopEyebrow: "Friendly Tech Loop",
@@ -673,9 +673,9 @@ const translations = {
     aboutPageTitle: "About NVD｜Mission and Team",
     aboutPageDescription:
       "Learn about NVD’s mission, founding background, team roles, and mobility-sovereignty advocacy rooted in everyday accessibility experiences.",
-    reportPageTitle: "Action Project｜SmartRoad and ROAD HUB",
+    reportPageTitle: "Action Project｜Taiwan Arcade and Sidewalk Access Map and ROAD HUB",
     reportPageDescription:
-      "Learn how NVD uses SmartRoad to record access barriers and ROAD HUB to demonstrate how observations can be organized. The ROAD HUB demo does not transmit, store, or formally accept data.",
+      "Learn how NVD uses Taiwan Arcade and Sidewalk Access Map to record access barriers and ROAD HUB to demonstrate how observations can be organized. The ROAD HUB demo does not transmit, store, or formally accept data.",
     joinPageTitle: "Join NVD｜Ways to Participate",
     joinPageDescription:
       "Explore ways to participate in NVD, including AI tool learning, assistive-support feedback, peer support, public advocacy, founder interest confirmation, and collaboration inquiries.",
@@ -887,9 +887,9 @@ const translations = {
     resilienceEyebrow: "NVD ACTION PROJECT",
     resilienceTitle: "Make road issues visible, then connect repair action",
     resilienceLead:
-      "NVD currently uses SmartRoad as an action tool for recording road and space barriers, while ROAD HUB demonstrates how those observations can be organized into public information that people can understand, track, and discuss.",
-    reportHeroTitleOne: "SmartRoad records access barriers",
-    reportHeroTitleTwo: "ROAD HUB shows how they become public information",
+      "NVD currently uses Taiwan Arcade and Sidewalk Access Map as an action tool for recording road and space barriers, while ROAD HUB demonstrates how those observations can be organized into public information that people can understand, track, and discuss.",
+    reportHeroTitleOne: "Taiwan Arcade and Sidewalk Access Map",
+    reportHeroTitleTwo: "Record access barriers and organize public information",
     reportTimelineLabel: "ROAD HUB demo steps",
     reportStepOne: "01 Notice a barrier",
     reportStepTwo: "02 Describe the location",
@@ -897,15 +897,15 @@ const translations = {
     reportStepFour: "04 Organize the demo",
     reportStepFive: "05 Review the demo",
     smartRoadEyebrow: "Current action tool",
-    smartRoadTitle: "SmartRoad",
+    smartRoadTitle: "Taiwan Arcade and Sidewalk Access Map",
     smartRoadDescription:
-      "SmartRoad is NVD's current action tool for recording access barriers. It starts with location, photo, and written context, then helps turn everyday obstacles into information that can be discussed later.",
-    smartRoadStepsLabel: "SmartRoad feature highlights",
+      "Taiwan Arcade and Sidewalk Access Map is NVD's current action tool for recording access barriers. It starts with location, photo, and written context, then helps turn everyday obstacles into information that can be discussed later.",
+    smartRoadStepsLabel: "Taiwan Arcade and Sidewalk Access Map feature highlights",
     smartRoadStepOne: "Record location and photos",
     smartRoadStepTwo: "Add access impact",
     smartRoadStepThree: "Support public information organizing",
-    smartRoadCta: "Open SmartRoad",
-    smartRoadCtaAria: "Open SmartRoad",
+    smartRoadCta: "Open the access map",
+    smartRoadCtaAria: "Open the access map",
     smartRoadGuideCta: "View patrol guide",
     smartRoadGuideCtaAria: "View the beginner patrol guide",
     reportActionEyebrow: "ROAD HUB demo",
@@ -913,7 +913,7 @@ const translations = {
     reportDemoNotice:
       "Process demo: No data is transmitted or stored. Nothing entered here becomes a formal submission, no case-acceptance process takes place here, and this is not a government reporting channel.",
     reportActionDescription:
-      "ROAD HUB is the organizing demo on the NVD website. It shows how field observations can be classified, counted, and displayed; actual patrol and reporting should begin with SmartRoad.",
+      "ROAD HUB is the organizing demo on the NVD website. It shows how field observations can be classified, counted, and displayed; actual patrol and reporting should begin with Taiwan Arcade and Sidewalk Access Map.",
     reportStepsLabel: "ROAD HUB demo steps",
     reportActionStepPhoto: "See how a field observation is recorded",
     reportActionStepLocation: "Understand barrier types and access impact",
@@ -1093,7 +1093,7 @@ const translations = {
     reportDataEyebrow: "From reporting tool to public information",
     reportDataTitle: "NVD's difference is organizing lived experience into shared evidence",
     reportDataDescription:
-      "SmartRoad helps record the site, and ROAD HUB demonstrates how information can be organized. NVD's focus is the next step: turning peer experience, space barriers, and tool-use feedback into information that communities, campuses, businesses, and public-sector partners can discuss together.",
+      "Taiwan Arcade and Sidewalk Access Map helps record the site, and ROAD HUB demonstrates how information can be organized. NVD's focus is the next step: turning peer experience, space barriers, and tool-use feedback into information that communities, campuses, businesses, and public-sector partners can discuss together.",
     reportDataFlowAria: "Information organizing flow",
     reportDataFlowOne: "Field record",
     reportDataFlowTwo: "Classification",
@@ -1103,8 +1103,8 @@ const translations = {
     reportFinalCtaEyebrow: "Turn observation into action",
     reportFinalCtaTitle: "You can try the tool first, or organize needs with NVD",
     reportFinalCtaText:
-      "If you want to report an access barrier, start with SmartRoad. If you want to bring this method into a community, campus, or organization, contact NVD.",
-    reportFinalUseTool: "Open SmartRoad",
+      "If you want to report an access barrier, start with Taiwan Arcade and Sidewalk Access Map. If you want to bring this method into a community, campus, or organization, contact NVD.",
+    reportFinalUseTool: "Open the access map",
     reportFinalJoin: "Join NVD action",
     reportFinalContact: "Propose collaboration",
     loopEyebrow: "Friendly Tech Loop",
