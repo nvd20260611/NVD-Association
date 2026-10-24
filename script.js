@@ -203,6 +203,14 @@ const translations = {
     founderParagraphThree:
       "在 NVD 中，我主要負責理念建構、需求整理、資料倡議與對外溝通。我希望透過 NVD，讓更多人理解：真正友善的城市，不只是讓少數人勉強通過，而是讓每個人在不同人生階段，都能保有安心出門的尊嚴。",
     founderWebsiteCta: "了解更多經歷",
+    advisorRoleEyebrow: "Advisor",
+    advisorNameRole: "袁宜蓁｜NVD 顧問",
+    advisorParagraphOne:
+      "袁宜蓁（Karen Yuan／凱倫）具諮商心理與復健諮商碩士背景，以及勞動部職業輔導評量員資格。專長涵蓋專案企劃、系統導入與 AI 應用、職業重建，重視需求釐清、溝通協調與跨專業合作。",
+    advisorParagraphTwo:
+      "她目前投入醫療資訊、系統導入與跨部門專案，也參與自立生活倡議，關注自主選擇、無障礙環境與身障者的社會參與，將助人專業與工具應用連結到真實生活需求。",
+    advisorWebsiteCta: "認識凱倫與她的作品",
+    advisorWebsiteAria: "前往袁宜蓁的個人網站，了解經歷與作品",
     officialProfileEyebrow: "Official Profile",
     officialProfileTitle: "官方簡介",
     officialProfileLead: "可供履歷、提案、媒體與社群引用。",
@@ -852,6 +860,14 @@ const translations = {
     founderParagraphThree:
       "At NVD, I focus on shaping the core ideas, organizing needs, advancing public data advocacy, and communicating with external partners. Through NVD, I hope more people can understand that a truly friendly city is not one where a few people barely get through, but one where everyone can keep the dignity of going out with confidence at different stages of life.",
     founderWebsiteCta: "Learn more about my experience",
+    advisorRoleEyebrow: "Advisor",
+    advisorNameRole: "Karen Yuan | NVD Advisor",
+    advisorParagraphOne:
+      "Karen Yuan holds a master's degree in counseling psychology and rehabilitation counseling and a vocational evaluation qualification from Taiwan's Ministry of Labor. Her work spans project planning, system implementation, AI applications, and vocational rehabilitation, with an emphasis on understanding needs, communication, and collaboration across disciplines.",
+    advisorParagraphTwo:
+      "She currently works on healthcare information systems, system implementation, and cross-department projects, and also participates in independent living advocacy. She focuses on personal choice, accessibility, and the social participation of disabled people, connecting her helping-profession background and practical tools with everyday needs.",
+    advisorWebsiteCta: "Explore Karen's experience and projects",
+    advisorWebsiteAria: "Visit Karen Yuan's personal website to explore her experience and projects",
     officialProfileEyebrow: "Official Profile",
     officialProfileTitle: "Official Profile",
     officialProfileLead: "For use in resumes, proposals, media, and social profiles.",
