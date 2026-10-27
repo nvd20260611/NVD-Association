@@ -205,6 +205,7 @@ const translations = {
     founderWebsiteCta: "了解更多經歷",
     advisorRoleEyebrow: "Advisor",
     advisorNameRole: "袁宜蓁｜NVD 顧問",
+    advisorPhotoAlt: "袁宜蓁，NVD 顧問",
     advisorParagraphOne:
       "袁宜蓁（Karen Yuan／凱倫）具諮商心理與復健諮商碩士背景，以及勞動部職業輔導評量員資格。專長涵蓋專案企劃、系統導入與 AI 應用、職業重建，重視需求釐清、溝通協調與跨專業合作。",
     advisorParagraphTwo:
@@ -862,6 +863,7 @@ const translations = {
     founderWebsiteCta: "Learn more about my experience",
     advisorRoleEyebrow: "Advisor",
     advisorNameRole: "Karen Yuan | NVD Advisor",
+    advisorPhotoAlt: "Karen Yuan, NVD advisor",
     advisorParagraphOne:
       "Karen Yuan holds a master's degree in counseling psychology and rehabilitation counseling and a vocational evaluation qualification from Taiwan's Ministry of Labor. Her work spans project planning, system implementation, AI applications, and vocational rehabilitation, with an emphasis on understanding needs, communication, and collaboration across disciplines.",
     advisorParagraphTwo:
