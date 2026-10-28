@@ -218,6 +218,7 @@ if (englishValuesWithHan.length > 30) {
 const roadHubEnglishKeys = [
   "reportHeroTitleOne",
   "reportHeroTitleTwo",
+  "reportDemoLead",
   "reportDemoNotice",
   "reportActionCta",
   "demoStatusDetecting",

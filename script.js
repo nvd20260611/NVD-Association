@@ -51,8 +51,8 @@ const translations = {
     reportNowAria: "前往合作提案與聯絡方式",
     mobileLanguageAria: "手機版語言與閱讀模式切換",
     languageReadingAria: "語言與閱讀模式切換",
-    brandVoiceGovernanceAria: "切換為治理版",
-    brandVoicePlainAria: "切換為白話版",
+    brandVoiceGovernanceAria: "切換為治理版：適合市政府與公部門溝通的語氣",
+    brandVoicePlainAria: "切換為白話版：適合一般民眾理解的說明",
     brandVoiceGovernanceLabel: "治理",
     brandVoicePlainLabel: "白話",
     footerNavigationAria: "頁尾導覽",
@@ -246,9 +246,10 @@ const translations = {
     resilienceEyebrow: "NVD ACTION PROJECT",
     resilienceTitle: "讓道路問題被看見 讓修復行動被串起",
     resilienceLead:
-      "NVD 以台灣騎樓與人行道通行回報地圖作為目前的行動工具，協助使用者記錄道路與空間阻礙；ROAD HUB 則示範這些觀察如何被整理成可理解、可追蹤、可討論的公共資料。",
+      "NVD 透過通行回報地圖，協助使用者記錄道路與空間阻礙。",
+    reportDemoLead: "ROAD HUB 示範如何將觀察整理成可理解、可追蹤、可討論的公共資料。",
     reportHeroTitleOne: "台灣騎樓與人行道通行回報地圖",
-    reportHeroTitleTwo: "記錄通行阻礙，整理公共資料",
+    reportHeroTitleTwo: "記錄通行阻礙 × 整理公共資料",
     reportTimelineLabel: "ROAD HUB 示範流程",
     reportStepOne: "01 發現問題",
     reportStepTwo: "02 位置描述",
@@ -709,8 +710,8 @@ const translations = {
     reportNowAria: "Go to partnership proposals and contact information",
     mobileLanguageAria: "Mobile language and reading-mode switcher",
     languageReadingAria: "Language and reading-mode switcher",
-    brandVoiceGovernanceAria: "Switch to governance mode",
-    brandVoicePlainAria: "Switch to plain-language mode",
+    brandVoiceGovernanceAria: "Switch to governance mode for public-sector communication",
+    brandVoicePlainAria: "Switch to plain-language mode for everyday readers",
     brandVoiceGovernanceLabel: "Governance",
     brandVoicePlainLabel: "Plain",
     footerNavigationAria: "Footer navigation",
@@ -905,9 +906,10 @@ const translations = {
     resilienceEyebrow: "NVD ACTION PROJECT",
     resilienceTitle: "Make road issues visible, then connect repair action",
     resilienceLead:
-      "NVD currently uses Taiwan Arcade and Sidewalk Access Map as an action tool for recording road and space barriers, while ROAD HUB demonstrates how those observations can be organized into public information that people can understand, track, and discuss.",
+      "NVD uses the access reporting map to help people record barriers on roads and in public spaces.",
+    reportDemoLead: "ROAD HUB demonstrates how observations can become public information that people can understand, track, and discuss.",
     reportHeroTitleOne: "Taiwan Arcade and Sidewalk Access Map",
-    reportHeroTitleTwo: "Record access barriers and organize public information",
+    reportHeroTitleTwo: "Record access barriers × Organize public information",
     reportTimelineLabel: "ROAD HUB demo steps",
     reportStepOne: "01 Notice a barrier",
     reportStepTwo: "02 Describe the location",
@@ -1355,6 +1357,10 @@ const translations = {
 const brandVoiceContent = {
   plain: {
     zh: {
+      resilienceLead: "走路、使用輪椅或推嬰兒車時遇到阻礙，可以透過通行回報地圖記錄位置、照片與影響。",
+      reportDemoLead: "ROAD HUB 用示範畫面說明資料怎麼整理，不會送出正式通報。",
+      smartRoadDescription: "遇到騎樓高低差、人行道破損或通道被占用時，可以拍照、定位、補充說明，讓其他人理解這些阻礙如何影響通行。",
+      reportDataTitle: "把生活中的不方便，整理成大家能一起討論的資料",
       navHome: "首頁",
       navValues: "理念",
       navResilience: "資料倡議",
@@ -1400,9 +1406,19 @@ const brandVoiceContent = {
       footerCompanyTerms: "服務條款",
       footerCopy: "© 2026 NVD 永賦行動協會",
     },
+    en: {
+      resilienceLead: "When a barrier affects walking, wheelchair access, or pushing a stroller, use the map to record its location, photos, and impact.",
+      reportDemoLead: "ROAD HUB shows how records can be organized. This demo does not submit an official report.",
+      smartRoadDescription: "For uneven arcades, damaged sidewalks, or blocked paths, add photos, a location, and a short description so others can understand the access difficulty.",
+      reportDataTitle: "Turn everyday access difficulties into information people can discuss together",
+    },
   },
   official: {
     zh: {
+      resilienceLead: "本行動透過通行回報地圖協助記錄道路與公共空間的障礙位置、類型及通行影響。",
+      reportDemoLead: "ROAD HUB 示範觀察資料的分類與呈現，供公共需求研議參考，不形成正式通報或受理案件。",
+      smartRoadDescription: "以拍照、定位、補充說明建立觀察紀錄，整理通行障礙及受影響對象，作為後續需求釐清與跨單位溝通的參考。",
+      reportDataTitle: "以通行觀察與同儕經驗，支持公共需求整理與政策溝通",
       navHome: "首頁",
       navValues: "核心理念",
       navResilience: "資料倡議",
@@ -1447,6 +1463,12 @@ const brandVoiceContent = {
       footerCompanyPrivacy: "隱私權政策",
       footerCompanyTerms: "服務條款",
       footerCopy: "© 2026 NVD 永賦行動協會",
+    },
+    en: {
+      resilienceLead: "This initiative uses the access reporting map to document the location, type, and impact of barriers on roads and in public spaces.",
+      reportDemoLead: "ROAD HUB demonstrates classification and presentation for public-needs discussions. It does not constitute official reporting or case acceptance.",
+      smartRoadDescription: "Photos, locations, and written context form observation records of access barriers and affected groups, supporting needs assessment and communication across organizations.",
+      reportDataTitle: "Use access observations and peer experience to inform public-needs assessment and policy dialogue",
     },
   },
 };
@@ -2109,6 +2131,7 @@ function setBrandVoice(voice, shouldPersist = true) {
       "aria-label",
       t(isOfficial ? "brandVoicePlainAria" : "brandVoiceGovernanceAria"),
     );
+    toggle.setAttribute("title", t(isOfficial ? "brandVoicePlainAria" : "brandVoiceGovernanceAria"));
   });
 
   brandVoiceLabels.forEach((label) => {
