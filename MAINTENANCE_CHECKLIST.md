@@ -38,7 +38,7 @@
 - [ ] ROAD HUB 的 `12,846`、`+326` 與 `NVD-OBS` 均清楚維持 Demo / 體驗版語境。
 - [ ] ROAD HUB 的英文可見聲明與動態狀態沒有混入中文。
 - [ ] ROAD HUB 的繁中、英文與白話模式都保留「不傳送、不保存、非正式送件」的限制。
-- [ ] `manifesto.html` 與 `resilience.html` 的英文移轉說明可正常顯示。
+- [ ] `manifesto.html` 的英文移轉說明與 `resilience.html` 的英文資料倡議內容可正常顯示。
 - [ ] `privacy.html` 與 `terms.html` 顯示繁體中文版本為準的聲明。
 - [ ] 所有 HTML 使用的 `data-i18n`、placeholder 與 aria-label 翻譯鍵在繁中、英文辭典均存在。
 - [ ] 8 個公開頁面的 title、meta description、OG title/description 與 Twitter title/description 可隨語言切換。

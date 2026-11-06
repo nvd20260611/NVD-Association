@@ -11,7 +11,7 @@ NVD 永賦行動協會官方靜態網站，部署於 GitHub Pages。網站以 AI
 - `terms.html`：服務條款全文。
 - `join.html`：加入共創的參與方式說明頁，提供初步聯絡窗口，不是正式報名頁。
 - `manifesto.html`：品牌理念轉址說明頁，不再維護完整長文；正式內容在 `about.html#mission`。
-- `resilience.html`：道路回報轉址說明頁，不再維護完整長文；正式內容在 `report.html`。
+- `resilience.html`：資料倡議頁（Navbar「資料倡議」），說明 NVD 整理哪些資料、資料如何支持改善，以及 ROAD HUB 的角色；canonical 指向自己。2026-09-10 起是正式內容頁，不再是轉址頁，但目前仍未列入 `sitemap.xml`（`scripts/check-site.mjs` 仍把它當成舊轉址頁檢查）。
 
 不要再把完整理念、完整團隊介紹或完整法律條款放回 `index.html`。
 
@@ -21,9 +21,10 @@ Navbar 主選單固定為：
 
 - 首頁 → `index.html`
 - 關於 NVD → `about.html`
-- 道路回報 → `report.html`
-- 加入共創 → `join.html`
-- 立即回報 → `report.html#dashboard`
+- 行動專案 → `report.html`
+- 資料倡議 → `resilience.html`
+- 加入我們 → `join.html`
+- 合作提案 → `join.html#contact`
 
 Footer 固定為：
 
@@ -35,9 +36,9 @@ Footer 固定為：
 
 ### 行動
 
-- 道路回報 → `report.html`
+- 行動專案 → `report.html`
 - 回饋流程 → `report.html#loop`
-- 加入共創 → `join.html`
+- 加入我們 → `join.html`
 
 ### 網站資訊
 
@@ -88,7 +89,7 @@ Footer 固定為：
 1. 新增或調整 `data-i18n`、`data-i18n-placeholder`、`data-i18n-aria-label` 時，繁中與英文辭典必須同步補齊。
 2. ROAD HUB 的可見聲明、按鈕、時間軸與動態狀態必須使用同一套翻譯鍵；英文模式不得回退成中文，也不得產生正式送件或政府受理的誤解。
 3. 白話模式可以沿用繁中正式版聲明，但不得省略「不傳送、不保存、非正式送件」等限制。
-4. `manifesto.html` 與 `resilience.html` 的短移轉說明需維持繁中與英文版本。
+4. `manifesto.html` 的短移轉說明與 `resilience.html` 的資料倡議內容需維持繁中與英文版本（`resilience.html` 的翻譯鍵仍沿用舊名 `resilienceMoved*`，改名前需同步 `script.js` 與 `scripts/check-site.mjs`）。
 5. `privacy.html` 與 `terms.html` 必須保留繁體中文版本為準的可見聲明。
 6. 每個公開頁面的繁中與英文 title、meta description、Open Graph、Twitter 文案必須同步維護；語言切換後由 `script.js` 更新瀏覽器分頁與可更新的社群 metadata。
 7. Header logo、主要操作與頁面專屬圖片的 alt／ARIA 文字需同步提供繁中與英文，不可只翻譯畫面文字。

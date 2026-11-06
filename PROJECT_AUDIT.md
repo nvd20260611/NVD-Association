@@ -98,3 +98,10 @@
 - `scripts/check-site.mjs` 已加入 CSP directive、top-level browsing context guard，以及 `document.write`、`document.writeln`、`insertAdjacentHTML` 防回歸檢查。
 - Footer CSS 已修正為符合現有三欄導覽的 grid 欄數，避免桌機版因空白欄位造成視覺偏移；手機版 copyright 維持置中。
 - ZAP 報告中的 HSTS、`X-Content-Type-Options`、`X-Frame-Options`、CORS 與 Cache-Control 屬於 GitHub Pages response header 限制，需在報告中標記為平台限制，不應宣稱已由 repo 完全修復。
+
+## resilience.html 定位文件更正（2026-11-06）
+
+- `resilience.html` 自 2026-09-10 起已補強為資料倡議頁，並列在 Navbar「資料倡議」，不再是轉址說明頁。
+- 本文件前面「改為簡短轉址說明」與「保持短移轉頁定位」兩筆是當時的歷史紀錄，不代表目前狀態。
+- `README.md` 的頁面分工、Navbar / Footer 清單與 `MAINTENANCE_CHECKLIST.md` 已依目前實際頁面更新。
+- 未處理：`sitemap.xml` 仍未列入 `resilience.html`，`scripts/check-site.mjs` 的 `legacyRedirectFiles` 也仍包含它；是否列入 sitemap 待使用者決定。
