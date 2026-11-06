@@ -100,7 +100,7 @@ Footer 固定為：
 - `report.html` 是完整道路回報流程、道路回報行動卡與 ROAD HUB 的主要維護頁。
 - 不要把完整回報流程複製回 `index.html`。
 - 「拍照、定位、補充說明」等流程內容只在 `report.html` 修改。
-- 首頁 CTA 統一連到 `report.html#dashboard`。
+- 首頁 Hero 的「查看行動專案」連到 `report.html`；行動專案區塊的「查看 ROAD HUB」連到 `report.html#dashboard`。
 
 ## 加入共創頁維護規則
 
