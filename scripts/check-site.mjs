@@ -20,8 +20,9 @@ const sitemapFiles = [
   "privacy.html",
   "terms.html",
   "join.html",
+  "resilience.html",
 ];
-const legacyRedirectFiles = ["manifesto.html", "resilience.html"];
+const legacyRedirectFiles = ["manifesto.html"];
 const navbarLinks = [
   "index.html",
   "about.html",

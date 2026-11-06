@@ -11,7 +11,7 @@ NVD 永賦行動協會官方靜態網站，部署於 GitHub Pages。網站以 AI
 - `terms.html`：服務條款全文。
 - `join.html`：加入共創的參與方式說明頁，提供初步聯絡窗口，不是正式報名頁。
 - `manifesto.html`：品牌理念轉址說明頁，不再維護完整長文；正式內容在 `about.html#mission`。
-- `resilience.html`：資料倡議頁（Navbar「資料倡議」），說明 NVD 整理哪些資料、資料如何支持改善，以及 ROAD HUB 的角色；canonical 指向自己。2026-09-10 起是正式內容頁，不再是轉址頁，但目前仍未列入 `sitemap.xml`（`scripts/check-site.mjs` 仍把它當成舊轉址頁檢查）。
+- `resilience.html`：資料倡議頁（Navbar「資料倡議」），說明 NVD 整理哪些資料、資料如何支持改善，以及 ROAD HUB 的角色；canonical 指向自己。2026-09-10 起是正式內容頁，不再是轉址頁，已列入 `sitemap.xml`；`scripts/check-site.mjs` 會檢查 sitemap 包含它。
 
 不要再把完整理念、完整團隊介紹或完整法律條款放回 `index.html`。
 

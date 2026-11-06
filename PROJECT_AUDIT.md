@@ -104,4 +104,4 @@
 - `resilience.html` 自 2026-09-10 起已補強為資料倡議頁，並列在 Navbar「資料倡議」，不再是轉址說明頁。
 - 本文件前面「改為簡短轉址說明」與「保持短移轉頁定位」兩筆是當時的歷史紀錄，不代表目前狀態。
 - `README.md` 的頁面分工、Navbar / Footer 清單與 `MAINTENANCE_CHECKLIST.md` 已依目前實際頁面更新。
-- 未處理：`sitemap.xml` 仍未列入 `resilience.html`，`scripts/check-site.mjs` 的 `legacyRedirectFiles` 也仍包含它；是否列入 sitemap 待使用者決定。
+- 使用者決定列入 sitemap：`sitemap.xml` 已新增 `resilience.html`（lastmod 2026-09-10、monthly、priority 0.8）；`scripts/check-site.mjs` 已把它從 `legacyRedirectFiles` 移到 `sitemapFiles`。`manifesto.html` 仍是轉址頁，維持不列入 sitemap。
