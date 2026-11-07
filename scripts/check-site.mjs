@@ -695,6 +695,16 @@ for (const [file, html] of Object.entries(htmlByFile)) {
 for (const key of ["skipToContent"]) {
   if (!zhDictionaryKeys.has(key) || !enDictionaryKeys.has(key)) fail("script.js", `missing translation key: ${key}`);
 }
+const iconStyleClasses = new Set(["fa-solid", "fa-regular"]);
+const definedIcons = new Set([...styles.matchAll(/^\.(fa-[a-z0-9-]+) \{ --fa-icon:/gm)].map((m) => m[1]));
+const usedIconSources = { ...htmlByFile, "script.js": script };
+for (const [file, source] of Object.entries(usedIconSources)) {
+  for (const match of source.matchAll(/\bfa-(?:solid|regular) (fa-[a-z0-9-]+)/g)) {
+    if (!iconStyleClasses.has(match[1]) && !definedIcons.has(match[1])) {
+      fail(file, `icon ${match[1]} has no local definition in styles.css`);
+    }
+  }
+}
 if (!/@media\s*\(prefers-reduced-motion:\s*reduce\)/.test(styles)) {
   fail("styles.css", "missing prefers-reduced-motion: reduce rules");
 }
