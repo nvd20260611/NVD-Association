@@ -62,6 +62,7 @@ const translations = {
     founderWebsiteAria: "了解陳怡安的更多經歷",
     founderPhotoAlt: "陳怡安，NVD 發起人",
     joinEmailAria: "寄信至 NVD 初步聯絡信箱",
+    skipToContent: "跳到主要內容",
     navHome: "首頁",
     navValues: "核心理念",
     navResilience: "資料倡議",
@@ -627,7 +628,7 @@ const translations = {
       "網站會在你的瀏覽器 localStorage 中保存語言、深淺色主題與收藏清單，僅用於維持你的使用偏好。你可以隨時透過瀏覽器清除網站資料。",
     privacySectionThirdParty: "第三方服務",
     privacyThirdPartyText:
-      "本網站透過 GitHub Pages 提供頁面，並載入 Google Fonts 與 Font Awesome。第三方服務可能依其政策處理必要的連線紀錄。",
+      "本網站透過 GitHub Pages 提供頁面，並載入 Google Fonts。第三方服務可能依其政策處理必要的連線紀錄。",
     privacySectionFounderForm: "發起人意願確認表",
     privacyFounderFormText:
       "第一階段發起人意願暨資格確認表由 Google Forms 提供，可能蒐集姓名、出生年月日、手機、Email、高雄市資格關係、行政區、發起意願、後續補件意願、參與意願與個資告知確認。資料僅供 NVD 籌備、發起人資格確認、聯絡及依法辦理人民團體設立程序使用；本階段不要求身分證字號、身分證影本或完整戶籍資料影本。離開本站後，Google 服務的資料處理方式請以 Google 相關政策為準。",
@@ -721,6 +722,7 @@ const translations = {
     founderWebsiteAria: "Learn more about Yi-An Chen’s experience",
     founderPhotoAlt: "Yi-An Chen, founder of NVD",
     joinEmailAria: "Email NVD’s initial contact address",
+    skipToContent: "Skip to main content",
     navHome: "Home",
     navValues: "Values",
     navResilience: "Data Advocacy",
@@ -1303,7 +1305,7 @@ const translations = {
       "The site stores language and theme preferences in your browser localStorage only to keep your experience consistent. You can clear this site data through your browser at any time.",
     privacySectionThirdParty: "Third-party services",
     privacyThirdPartyText:
-      "This site is hosted on GitHub Pages and may load Google Fonts and Font Awesome. These services may process basic connection logs under their own policies.",
+      "This site is hosted on GitHub Pages and may load Google Fonts. These services may process basic connection logs under their own policies.",
     privacySectionFounderForm: "Founder interest confirmation form",
     privacyFounderFormText:
       "The first-stage founder interest and eligibility form is provided through Google Forms. It may collect name, date of birth, mobile number, email, Kaohsiung eligibility relation, district, founder interest, willingness to provide later documents, participation preferences, and personal-data notice confirmation. The information is used only for NVD preparation, founder eligibility confirmation, contact, and legally required people’s organization establishment procedures. This stage does not ask for a national ID number, ID-card image, or full household-registration document. After leaving this site, Google services handle data under Google’s own policies.",

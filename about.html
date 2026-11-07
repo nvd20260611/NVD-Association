@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; media-src 'self'; frame-src 'none'; manifest-src 'self'; worker-src 'none'; form-action 'none'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; media-src 'self'; frame-src 'none'; manifest-src 'self'; worker-src 'none'; form-action 'none'; upgrade-insecure-requests" />
     <title>關於 NVD｜理念與團隊</title>
     <meta name="description" content="了解 NVD 如何結合 AI 工具、輔具支持、同儕經驗與跨域合作，協助身障同儕與行動不便者延伸生活、表達自我、參與社會並創造價值。" />
     <meta name="robots" content="index, follow" />
@@ -23,10 +23,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css?v=20260622-12" />
+    <link rel="stylesheet" href="styles.css?v=20261107-p0" />
   </head>
   <body class="site-page about-page">
+    <a class="skip-link" href="#main-content" data-i18n="skipToContent">跳到主要內容</a>
     <!-- Shared Navbar: keep links in sync across all public pages -->
     <header class="site-header">
       <nav class="navbar container" aria-label="主要導覽">
@@ -58,12 +58,12 @@
             <button class="language-option lang-btn" type="button" data-language="en" aria-pressed="false">EN</button>
             <button class="brand-voice-toggle lang-btn" type="button" data-brand-voice-toggle aria-label="切換為治理版" aria-pressed="false"><span data-brand-voice-label>白話</span></button>
           </div>
-          <button id="themeToggle" class="theme-toggle" type="button" aria-label="切換深淺色主題"><i class="fa-solid fa-moon"></i></button>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="切換深淺色主題"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section id="about" class="about-section container" aria-labelledby="aboutTitle">
         <div class="section-heading centered-heading"><div><p class="eyebrow" data-i18n="aboutEyebrow">About NVD</p><h1 id="aboutTitle" data-i18n="aboutTitle">關於 NVD</h1></div></div>
         <div class="about-copy">
@@ -81,10 +81,10 @@
       <section id="mission" class="about-focus-section container" aria-labelledby="aboutFocusTitle">
         <div class="section-heading centered-heading"><div><p class="eyebrow" data-i18n="aboutFocusEyebrow">Our Focus</p><h2 id="aboutFocusTitle" data-i18n="aboutFocusTitle">我們關心什麼</h2></div></div>
         <div class="about-focus-grid">
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-person-walking"></i></span><h3 data-i18n="focusMobilityTitle">表達自主</h3><p data-i18n="focusMobilityText">協助身障同儕透過 AI 工具整理想法、說明需求、表達感受，改善家庭、同儕、職場與社會互動。</p></article>
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-shield-heart"></i></span><h3 data-i18n="focusResilienceTitle">輔具支持</h3><p data-i18n="focusResilienceText">關注輪椅、手推輪椅、電動輪椅與各式輔具如何延伸移動能力、生活範圍與公共參與。</p></article>
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-wheelchair-move"></i></span><h3 data-i18n="focusExperienceTitle">真實經驗</h3><p data-i18n="focusExperienceText">重視身障同儕與高齡化社會在日常生活中的使用回饋，讓需求不只被聽見，也能被整理成可改善的依據。</p></article>
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-people-group"></i></span><h3 data-i18n="focusCollaborationTitle">公共協作</h3><p data-i18n="focusCollaborationText">連結同儕、政府、企業、教育單位與社會組織，讓 AI 工具與輔具支持能在真實生活中持續改善。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-person-walking" aria-hidden="true"></i></span><h3 data-i18n="focusMobilityTitle">表達自主</h3><p data-i18n="focusMobilityText">協助身障同儕透過 AI 工具整理想法、說明需求、表達感受，改善家庭、同儕、職場與社會互動。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></span><h3 data-i18n="focusResilienceTitle">輔具支持</h3><p data-i18n="focusResilienceText">關注輪椅、手推輪椅、電動輪椅與各式輔具如何延伸移動能力、生活範圍與公共參與。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-wheelchair-move" aria-hidden="true"></i></span><h3 data-i18n="focusExperienceTitle">真實經驗</h3><p data-i18n="focusExperienceText">重視身障同儕與高齡化社會在日常生活中的使用回饋，讓需求不只被聽見，也能被整理成可改善的依據。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span><h3 data-i18n="focusCollaborationTitle">公共協作</h3><p data-i18n="focusCollaborationText">連結同儕、政府、企業、教育單位與社會組織，讓 AI 工具與輔具支持能在真實生活中持續改善。</p></article>
         </div>
       </section>
 
@@ -105,7 +105,7 @@
           -->
           <article class="team-member-card team-card">
             <div class="team-member-heading">
-              <div class="team-card__avatar"><span class="team-card__placeholder" aria-hidden="true">NVD</span><img src="assets/team/yian-chen.jpg" alt="陳怡安，NVD 發起人" class="team-card__photo" loading="lazy" /></div>
+              <div class="team-card__avatar"><span class="team-card__placeholder" aria-hidden="true">NVD</span><img src="assets/team/yian-chen.jpg" alt="陳怡安，NVD 發起人" class="team-card__photo" width="480" height="600" loading="lazy" /></div>
               <div><p class="eyebrow" data-i18n="founderRoleEyebrow">Founder</p><h3 data-i18n="founderNameRole">陳怡安｜NVD 發起人</h3></div>
             </div>
             <div class="team-member-copy team-content">
@@ -113,7 +113,7 @@
               <p data-i18n="founderParagraphTwo">我具備資訊管理背景與行政實務經驗，習慣用系統化的方式整理問題、建立流程，並把日常經驗轉化為可以被討論、被追蹤、被改善的公共資料。</p>
               <p data-i18n="founderParagraphThree">在 NVD 中，我主要負責理念建構、需求整理、資料倡議與對外溝通。我希望透過 NVD，讓更多人理解：真正友善的城市，不只是讓少數人勉強通過，而是讓每個人在不同人生階段，都能保有安心出門的尊嚴。</p>
             </div>
-            <a class="secondary-link-btn team-member-link" href="https://resume.yian.dedyn.io/" target="_blank" rel="noopener noreferrer" aria-label="了解陳怡安的更多經歷"><span data-i18n="founderWebsiteCta">了解更多經歷</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a class="secondary-link-btn team-member-link" href="https://resume.yian.dedyn.io/" target="_blank" rel="noopener noreferrer" aria-label="了解陳怡安的更多經歷"><span data-i18n="founderWebsiteCta">了解更多經歷</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </article>
           <article class="team-member-card team-card" aria-labelledby="advisorName">
             <div class="team-member-heading">
@@ -137,9 +137,9 @@
       <section id="values" class="values-section container" aria-labelledby="valuesTitle">
         <div class="section-heading centered-heading"><div><p class="eyebrow" data-i18n="valuesEyebrow">Core Values</p><h2 id="valuesTitle" data-i18n="valuesTitle">從工具支持開始，走向友善生活系統</h2><p class="section-lead" data-i18n="valuesLead">我們把真實生活中的工具使用、輔具經驗與互動需求，整理成可被看見、可被理解、可被改善的公共資訊。</p></div></div>
         <div class="values-grid">
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span><h3 data-i18n="valueFrictionTitle">降低門檻</h3><p data-i18n="valueFrictionText">把複雜的工具、流程與資訊整理成更容易理解、使用與參與的方式。</p></article>
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-universal-access"></i></span><h3 data-i18n="valueAccessTitle">友善可及</h3><p data-i18n="valueAccessText">讓身障同儕、高齡者、照顧者、企業與公共服務單位，都能以更低門檻參與 AI 工具與輔具支持的協作。</p></article>
-          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-route"></i></span><h3 data-i18n="valueActionTitle">從回饋到改善</h3><p data-i18n="valueActionText">每一次工具使用、輔具經驗與生活回饋，都能成為下一次服務設計、產品改善與公共倡議的基礎。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span><h3 data-i18n="valueFrictionTitle">降低門檻</h3><p data-i18n="valueFrictionText">把複雜的工具、流程與資訊整理成更容易理解、使用與參與的方式。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-universal-access" aria-hidden="true"></i></span><h3 data-i18n="valueAccessTitle">友善可及</h3><p data-i18n="valueAccessText">讓身障同儕、高齡者、照顧者、企業與公共服務單位，都能以更低門檻參與 AI 工具與輔具支持的協作。</p></article>
+          <article class="value-card"><span class="value-icon"><i class="fa-solid fa-route" aria-hidden="true"></i></span><h3 data-i18n="valueActionTitle">從回饋到改善</h3><p data-i18n="valueActionText">每一次工具使用、輔具經驗與生活回饋，都能成為下一次服務設計、產品改善與公共倡議的基礎。</p></article>
         </div>
       </section>
 
@@ -147,8 +147,8 @@
         <div class="container">
           <div class="section-heading centered-heading"><div><p class="eyebrow" data-i18n="dualFrictionEyebrow">Dual Friction</p><h2 data-i18n="dualFrictionTitle">我們想解決的，不只是移動問題</h2><p class="section-lead" data-i18n="dualFrictionLead">數位工具會卡住人，生活環境也會卡住人。NVD 把這些摩擦視為可以被看見、被整理、被改善的系統問題。</p></div></div>
           <div class="dual-friction-grid">
-            <article class="dual-friction-card digital-card"><span class="dual-friction-icon"><i class="fa-solid fa-terminal"></i></span><h3 data-i18n="digitalFrictionTitle">數位摩擦</h3><p data-i18n="digitalFrictionText">資訊落差、工具門檻、表達困難、通報流程與介面焦慮，讓很多真實需求難以被清楚說出與整理。</p></article>
-            <article class="dual-friction-card physical-card"><span class="dual-friction-icon"><i class="fa-solid fa-wheelchair-move"></i></span><h3 data-i18n="physicalFrictionTitle">生活摩擦</h3><p data-i18n="physicalFrictionText">移動限制、輔具使用困難、不友善動線、家庭與社會互動斷點，讓日常生活變成被迫等待、繞路或放棄。</p></article>
+            <article class="dual-friction-card digital-card"><span class="dual-friction-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span><h3 data-i18n="digitalFrictionTitle">數位摩擦</h3><p data-i18n="digitalFrictionText">資訊落差、工具門檻、表達困難、通報流程與介面焦慮，讓很多真實需求難以被清楚說出與整理。</p></article>
+            <article class="dual-friction-card physical-card"><span class="dual-friction-icon"><i class="fa-solid fa-wheelchair-move" aria-hidden="true"></i></span><h3 data-i18n="physicalFrictionTitle">生活摩擦</h3><p data-i18n="physicalFrictionText">移動限制、輔具使用困難、不友善動線、家庭與社會互動斷點，讓日常生活變成被迫等待、繞路或放棄。</p></article>
           </div>
         </div>
       </section>
@@ -162,6 +162,6 @@
         <section class="footer-column"><h2 data-i18n="footerSiteTitle">網站資訊</h2><ul><li><a href="privacy.html" data-i18n="privacyTitle">隱私權政策</a></li><li><a href="terms.html" data-i18n="termsTitle">服務條款</a></li></ul><nav class="footer-social" aria-label="NVD 社群連結"><a class="footer-social__link" href="https://www.facebook.com/profile.php?id=61591471877511&amp;locale=zh_TW" target="_blank" rel="noopener noreferrer" aria-label="前往 NVD Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.4h2.5l.4-2.9h-2.9V8.8c0-.8.2-1.4 1.4-1.4h1.6V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v2.9h2.5V21h3.2Z" /></svg></a><a class="footer-social__link" href="https://www.youtube.com/@NVD-Taiwan" target="_blank" rel="noopener noreferrer" aria-label="前往 NVD YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.8 4 12 4 12 4h0s-3.8 0-6.7.2c-.4.1-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2.2 9 2.2 10.9v1.7c0 1.8.2 3.7.2 3.7s.2 1.5.8 2.1c.8.8 1.8.8 2.3.9 1.7.2 6.5.2 6.5.2s3.8 0 6.7-.2c.4-.1 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.8.2-3.7v-1.7c0-1.9-.2-3.7-.2-3.7ZM10.1 14.6V8.2l5.9 3.2-5.9 3.2Z" /></svg></a><a class="footer-social__link" href="https://www.instagram.com/nvd_2026?utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="前往 NVD Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 2.8h9.6A4.4 4.4 0 0 1 21.2 7.2v9.6a4.4 4.4 0 0 1-4.4 4.4H7.2a4.4 4.4 0 0 1-4.4-4.4V7.2a4.4 4.4 0 0 1 4.4-4.4Zm0 2A2.4 2.4 0 0 0 4.8 7.2v9.6a2.4 2.4 0 0 0 2.4 2.4h9.6a2.4 2.4 0 0 0 2.4-2.4V7.2a2.4 2.4 0 0 0-2.4-2.4H7.2Zm4.8 3a4.2 4.2 0 1 1 0 8.4 4.2 4.2 0 0 1 0-8.4Zm0 2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4Zm4.5-2.3a1 1 0 1 1 0 2.1 1 1 0 0 1 0-2.1Z" /></svg></a></nav></section>
       </div></div><div class="footer-bottom"><p data-i18n="footerCopy">© 2026 NVD 永賦行動協會</p></div></div>
     </footer>
-    <script src="script.js?v=20260624-16"></script>
+    <script src="script.js?v=20261107-p0"></script>
   </body>
 </html>

@@ -678,6 +678,27 @@ for (const file of legacyRedirectFiles) {
   }
 }
 
+for (const [file, html] of Object.entries(htmlByFile)) {
+  if (!html.includes('<a class="skip-link" href="#main-content" data-i18n="skipToContent">')) {
+    fail(file, "missing skip link to #main-content");
+  }
+  if (!html.includes('<main id="main-content" tabindex="-1">')) {
+    fail(file, 'main element must have id="main-content" for the skip link');
+  }
+  if (/cdnjs\.cloudflare\.com|font-awesome/i.test(html)) {
+    fail(file, "icons must stay local; do not load Font Awesome from a CDN");
+  }
+  for (const match of html.matchAll(/<i\b[^>]*class="[^"]*\bfa-(?:solid|regular)\b[^"]*"[^>]*>/g)) {
+    if (!match[0].includes('aria-hidden="true"')) fail(file, `decorative icon must be aria-hidden: ${match[0]}`);
+  }
+}
+for (const key of ["skipToContent"]) {
+  if (!zhDictionaryKeys.has(key) || !enDictionaryKeys.has(key)) fail("script.js", `missing translation key: ${key}`);
+}
+if (!/@media\s*\(prefers-reduced-motion:\s*reduce\)/.test(styles)) {
+  fail("styles.css", "missing prefers-reduced-motion: reduce rules");
+}
+
 const jsCheck = spawnSync(process.execPath, ["--check", "script.js"], {
   cwd: root,
   encoding: "utf8",

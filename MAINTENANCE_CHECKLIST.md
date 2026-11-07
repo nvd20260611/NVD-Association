@@ -48,11 +48,15 @@
 - [ ] Email 聯絡窗口有可見的用途與限制聲明。
 - [ ] 新增表單前已完成個人資料告知與流程設計。
 - [ ] 提交前已確認 staged 檔案不含內部提示、blueprint 或協作規則。
-- [ ] `assets/team/yian-chen.jpg` 未被修改。
+- [ ] `assets/team/yian-chen.jpg` 的檔名、路徑與裁切比例未被修改（2026-11-07 經使用者同意，已縮小為 480×600 並重新壓縮）。
 - [ ] 手機版 Navbar 正常。
 - [ ] 桌機版 Navbar 正常。
 - [ ] 無水平溢出。
 - [ ] 無 Console error。
+- [ ] 每頁保留「跳到主要內容」連結，`<main id="main-content">` 存在。
+- [ ] `styles.css` 保留 `prefers-reduced-motion: reduce` 規則。
+- [ ] 圖示維持本機 CSS（`styles.css` 檔尾），不重新載入 Font Awesome CDN；新增圖示需補 SVG 規則並加 `aria-hidden="true"`。
+- [ ] 新增或替換照片前先縮到實際顯示需要的尺寸並壓縮（參考：ROAD HUB 600×800、團隊照片 480×600）。
 - [ ] 無 CSP violation；所有公開 HTML 保留 `connect-src`、`media-src`、`frame-src`、`manifest-src`、`worker-src` 與 `form-action` 等必要 CSP directive。
 - [ ] `script.js` 保留 top-level browsing context guard，並避免新增 `document.write`、`document.writeln` 或 `insertAdjacentHTML`。
 - [ ] ZAP 報告中的 GitHub Pages response header 類項目（HSTS、X-Frame-Options、X-Content-Type-Options、CORS、Cache-Control）已標記為平台限制，不假裝由 repo 直接修復。
