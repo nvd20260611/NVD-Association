@@ -63,6 +63,15 @@ const translations = {
     founderPhotoAlt: "陳怡安，NVD 發起人",
     joinEmailAria: "寄信至 NVD 初步聯絡信箱",
     skipToContent: "跳到主要內容",
+    reportJumpLabel: "本頁快速前往",
+    reportJumpDemo: "看 ROAD HUB 示範",
+    reportJumpLoop: "回饋流程",
+    joinHeroFormCta: "填寫發起人意願表",
+    joinHeroNextStep: "填寫意願表後，由籌備團隊人工確認；初步符合資格者，籌備團隊會另行聯繫後續補件。一般合作或參與詢問，請直接寄信。",
+    aboutSummaryLabel: "NVD 重點摘要",
+    aboutSummaryOne: "<strong>關注對象：</strong>身障同儕、行動不便者、高齡者與照顧者，在表達、移動與社會參與上的需求。",
+    aboutSummaryTwo: "<strong>支持方式：</strong>結合 AI 工具與輪椅等各式輔具，協助整理想法、表達需求、延伸生活範圍。",
+    aboutSummaryThree: "<strong>工作方法：</strong>透過同儕經驗、現場觀察與使用回饋，把零散的需求整理成可討論、可改善的公共資訊。",
     navHome: "首頁",
     navValues: "核心理念",
     navResilience: "資料倡議",
@@ -258,7 +267,7 @@ const translations = {
     reportStepFour: "04 資料整理",
     reportStepFive: "05 查看結果",
     smartRoadEyebrow: "回報前準備",
-    smartRoadTitle: "台灣騎樓與人行道通行回報地圖",
+    smartRoadTitle: "用通行回報地圖記錄阻礙",
     smartRoadDescription:
       "台灣騎樓與人行道通行回報地圖是 NVD 目前用來記錄通行阻礙的行動工具，重點是拍照、定位、補充說明，把日常遇到的障礙整理成後續可討論的資料。",
     smartRoadStepsLabel: "台灣騎樓與人行道通行回報地圖功能重點",
@@ -723,6 +732,15 @@ const translations = {
     founderPhotoAlt: "Yi-An Chen, founder of NVD",
     joinEmailAria: "Email NVD’s initial contact address",
     skipToContent: "Skip to main content",
+    reportJumpLabel: "Jump to a section",
+    reportJumpDemo: "See the ROAD HUB demo",
+    reportJumpLoop: "Feedback loop",
+    joinHeroFormCta: "Fill in the founder interest form",
+    joinHeroNextStep: "After you submit the form, the organizing team reviews it by hand and contacts people who meet the initial criteria about the next documents. For general partnership or participation questions, please email us.",
+    aboutSummaryLabel: "NVD at a glance",
+    aboutSummaryOne: "<strong>Who we focus on:</strong> disabled peers, people with limited mobility, older adults and caregivers, and their needs in expression, mobility and social participation.",
+    aboutSummaryTwo: "<strong>How we support:</strong> AI tools together with wheelchairs and other assistive devices, to help organize ideas, express needs and extend daily life.",
+    aboutSummaryThree: "<strong>How we work:</strong> peer experience, field observation and user feedback turn scattered needs into public information that can be discussed and improved.",
     navHome: "Home",
     navValues: "Values",
     navResilience: "Data Advocacy",
@@ -919,7 +937,7 @@ const translations = {
     reportStepFour: "04 Organize the demo",
     reportStepFive: "05 Review the demo",
     smartRoadEyebrow: "Current action tool",
-    smartRoadTitle: "Taiwan Arcade and Sidewalk Access Map",
+    smartRoadTitle: "Record barriers with the access map",
     smartRoadDescription:
       "Taiwan Arcade and Sidewalk Access Map is NVD's current action tool for recording access barriers. It starts with location, photo, and written context, then helps turn everyday obstacles into information that can be discussed later.",
     smartRoadStepsLabel: "Taiwan Arcade and Sidewalk Access Map feature highlights",
@@ -1478,7 +1496,7 @@ const brandVoiceContent = {
 const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 const savedTheme = localStorage.getItem("nvd-theme");
 const savedBrandVoice = localStorage.getItem("nvd-brand-voice");
-const htmlTranslationKeys = new Set(["heroSubtitle"]);
+const htmlTranslationKeys = new Set(["heroSubtitle", "aboutSummaryOne", "aboutSummaryTwo", "aboutSummaryThree"]);
 
 const state = {
   language: localStorage.getItem("nvd-language") || "zh",
