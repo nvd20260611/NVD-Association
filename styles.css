@@ -6569,7 +6569,7 @@ body[data-theme="dark"] .about-summary li {
 /*
  * Health check 2026-11-20
  * Orange buttons: white on #f28c38 is 2.45:1 (fails WCAG AA). Navy text gives
- * 6.8:1 on #f28c38 and 4.7:1 on the hover colour #d96f16.
+ * 6.45:1 on #f28c38 and 4.68:1 on the hover colour #d96f16.
  */
 .primary-link-btn,
 .primary-link-btn:hover,

@@ -719,6 +719,29 @@ const healthCheckCss = styles.slice(styles.indexOf("Health check 2026-11-20"));
 if (!/\.primary-link-btn,[\s\S]*?\{\s*color: #0d2340;/.test(healthCheckCss)) {
   fail("styles.css", "orange buttons must use navy text (#0d2340) for WCAG AA contrast");
 }
+const hexLuminance = (hex) => {
+  const channels = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+  const [r, g, b] = channels.map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+const contrastRatio = (a, b) => {
+  const [hi, lo] = [hexLuminance(a), hexLuminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+};
+const rootToken = (name) => {
+  const start = styles.indexOf(`${name}:`);
+  if (start < 0) return undefined;
+  return (styles.slice(start + name.length + 1).match(/^\s*(#[0-9a-fA-F]{6})/) || [])[1];
+};
+const buttonText = (healthCheckCss.match(/\{\s*color: (#[0-9a-fA-F]{6});/) || [])[1];
+for (const token of ["--brand-orange", "--brand-orange-dark"]) {
+  const background = rootToken(token);
+  if (!background || !buttonText) {
+    fail("styles.css", `cannot read ${token} or the orange button text colour`);
+  } else if (contrastRatio(buttonText, background) < 4.5) {
+    fail("styles.css", `button text ${buttonText} on ${token} ${background} is ${contrastRatio(buttonText, background).toFixed(2)}:1, below 4.5:1`);
+  }
+}
 if (!exists("404.html")) {
   fail("404.html", "missing custom 404 page");
 } else {
