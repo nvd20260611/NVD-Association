@@ -709,6 +709,56 @@ if (!/@media\s*\(prefers-reduced-motion:\s*reduce\)/.test(styles)) {
   fail("styles.css", "missing prefers-reduced-motion: reduce rules");
 }
 
+// Health check 2026-11-20 guards
+for (const [file, html] of Object.entries(htmlByFile)) {
+  if ((html.match(/\bdata-theme-toggle\b/g) || []).length !== 2) {
+    fail(file, "needs two theme toggles (desktop header and mobile menu) with data-theme-toggle");
+  }
+}
+const healthCheckCss = styles.slice(styles.indexOf("Health check 2026-11-20"));
+if (!/\.primary-link-btn,[\s\S]*?\{\s*color: #0d2340;/.test(healthCheckCss)) {
+  fail("styles.css", "orange buttons must use navy text (#0d2340) for WCAG AA contrast");
+}
+if (!exists("404.html")) {
+  fail("404.html", "missing custom 404 page");
+} else {
+  const notFound = read("404.html");
+  const notFoundChecks = [
+    ['<base href="https://nvd20260611.github.io/NVD-Association/" />', "must set <base> so links work from any missing path"],
+    ['<meta name="robots" content="noindex, follow" />', "must be noindex"],
+    ['data-page-key="404.html"', "body must set data-page-key for page metadata"],
+    ['<a class="skip-link" href="#main-content" data-i18n="skipToContent">', "missing skip link"],
+    ['<main id="main-content" tabindex="-1">', "missing main#main-content"],
+  ];
+  for (const [needle, message] of notFoundChecks) if (!notFound.includes(needle)) fail("404.html", message);
+  if ((notFound.match(/<h1\b/g) || []).length !== 1) fail("404.html", "must have exactly one h1");
+  if (/cdnjs\.cloudflare\.com|font-awesome/i.test(notFound)) fail("404.html", "icons must stay local");
+}
+for (const key of ["notFoundPageTitle", "notFoundPageDescription", "notFoundTitle", "notFoundText", "notFoundHomeCta"]) {
+  if (!zhDictionaryKeys.has(key) || !enDictionaryKeys.has(key)) fail("script.js", `missing translation key: ${key}`);
+}
+const jsonLdMatch = htmlByFile["index.html"].match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+if (!jsonLdMatch) {
+  fail("index.html", "missing Organization JSON-LD");
+} else {
+  try {
+    const data = JSON.parse(jsonLdMatch[1]);
+    if (data["@type"] !== "Organization" || data.url !== siteBaseUrl) {
+      fail("index.html", "JSON-LD must be an Organization with the site URL");
+    }
+  } catch (error) {
+    fail("index.html", `JSON-LD is not valid JSON: ${error.message}`);
+  }
+}
+if (!exists("_config.yml")) {
+  fail("_config.yml", "missing Jekyll exclude list for internal documents");
+} else {
+  const configLines = read("_config.yml").split(/\r?\n/).map((line) => line.trim());
+  for (const entry of ["README.md", "PROJECT_AUDIT.md", "MAINTENANCE_CHECKLIST.md", "records", "scripts", "assets/ASSET_SOURCES.md"]) {
+    if (!configLines.includes(`- ${entry}`)) fail("_config.yml", `exclude list must contain ${entry}`);
+  }
+}
+
 const jsCheck = spawnSync(process.execPath, ["--check", "script.js"], {
   cwd: root,
   encoding: "utf8",

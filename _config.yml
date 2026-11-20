@@ -1,0 +1,12 @@
+# GitHub Pages builds this repository with Jekyll.
+# Keep internal documents and tooling out of the published site.
+exclude:
+  - README.md
+  - PROJECT_AUDIT.md
+  - MAINTENANCE_CHECKLIST.md
+  - AGENTS.md
+  - CLAUDE.md
+  - records
+  - docs
+  - scripts
+  - assets/ASSET_SOURCES.md

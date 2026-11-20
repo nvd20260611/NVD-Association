@@ -6565,3 +6565,31 @@ body[data-theme="dark"] .about-summary li {
     flex: 1 1 100%;
   }
 }
+
+/*
+ * Health check 2026-11-20
+ * Orange buttons: white on #f28c38 is 2.45:1 (fails WCAG AA). Navy text gives
+ * 6.8:1 on #f28c38 and 4.7:1 on the hover colour #d96f16.
+ */
+.primary-link-btn,
+.primary-link-btn:hover,
+.primary-link-btn:focus-visible,
+.nav-links .nav-report-cta,
+.nav-links .nav-report-cta:hover,
+.language-option:hover,
+.language-option.active,
+.language-switcher .language-option:hover,
+.language-switcher .language-option.active,
+body[data-theme="dark"] .primary-link-btn,
+body[data-theme="dark"] .nav-links .nav-report-cta,
+body[data-theme="dark"] .language-switcher .language-option.active {
+  color: #0d2340;
+}
+
+.mobile-theme-toggle i {
+  pointer-events: none;
+}
+
+.not-found-actions {
+  justify-content: center;
+}

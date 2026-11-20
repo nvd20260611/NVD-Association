@@ -72,6 +72,11 @@ const translations = {
     aboutSummaryOne: "<strong>關注對象：</strong>身障同儕、行動不便者、高齡者與照顧者，在表達、移動與社會參與上的需求。",
     aboutSummaryTwo: "<strong>支持方式：</strong>結合 AI 工具與輪椅等各式輔具，協助整理想法、表達需求、延伸生活範圍。",
     aboutSummaryThree: "<strong>工作方法：</strong>透過同儕經驗、現場觀察與使用回饋，把零散的需求整理成可討論、可改善的公共資訊。",
+    notFoundPageTitle: "找不到這個頁面｜NVD 永賦行動協會",
+    notFoundPageDescription: "這個網址可能已經移動或輸入有誤，可以從首頁、行動專案或加入我們繼續瀏覽。",
+    notFoundTitle: "找不到這個頁面",
+    notFoundText: "這個網址可能已經移動或輸入有誤。你可以從下面的連結回到網站。",
+    notFoundHomeCta: "回到首頁",
     navHome: "首頁",
     navValues: "核心理念",
     navResilience: "資料倡議",
@@ -741,6 +746,11 @@ const translations = {
     aboutSummaryOne: "<strong>Who we focus on:</strong> disabled peers, people with limited mobility, older adults and caregivers, and their needs in expression, mobility and social participation.",
     aboutSummaryTwo: "<strong>How we support:</strong> AI tools together with wheelchairs and other assistive devices, to help organize ideas, express needs and extend daily life.",
     aboutSummaryThree: "<strong>How we work:</strong> peer experience, field observation and user feedback turn scattered needs into public information that can be discussed and improved.",
+    notFoundPageTitle: "Page not found | NVD Association",
+    notFoundPageDescription: "This address may have moved or been mistyped. Continue from the homepage, action projects or ways to join.",
+    notFoundTitle: "Page not found",
+    notFoundText: "This address may have moved or been mistyped. Use the links below to get back to the site.",
+    notFoundHomeCta: "Back to homepage",
     navHome: "Home",
     navValues: "Values",
     navResilience: "Data Advocacy",
@@ -1508,6 +1518,7 @@ const state = {
 
 const pageMetadataKeys = {
   "index.html": ["indexPageTitle", "indexPageDescription"],
+  "404.html": ["notFoundPageTitle", "notFoundPageDescription"],
   "about.html": ["aboutPageTitle", "aboutPageDescription"],
   "report.html": ["reportPageTitle", "reportPageDescription"],
   "join.html": ["joinPageTitle", "joinPageDescription"],
@@ -1523,7 +1534,7 @@ const languageOptions = document.querySelectorAll(".language-option");
 const currentLanguageLabel = document.querySelector("#currentLanguageLabel");
 const brandVoiceToggles = document.querySelectorAll("[data-brand-voice-toggle]");
 const brandVoiceLabels = document.querySelectorAll("[data-brand-voice-label]");
-const themeToggle = document.querySelector("#themeToggle");
+const themeToggles = document.querySelectorAll("[data-theme-toggle]");
 const mobileNavToggle = document.querySelector("#mobileNavToggle");
 const siteHeader = document.querySelector(".site-header");
 const primaryNav = document.querySelector("#primaryNav");
@@ -1980,7 +1991,10 @@ function initializeTeamPhotoFallbacks() {
 }
 
 function applyPageMetadata() {
-  const pageName = window.location.pathname.split("/").pop() || "index.html";
+  const pageName =
+    document.body.dataset.pageKey ||
+    window.location.pathname.split("/").pop() ||
+    "index.html";
   const [titleKey, descriptionKey] =
     pageMetadataKeys[pageName] || pageMetadataKeys["index.html"];
   const title = t(titleKey);
@@ -2102,15 +2116,15 @@ function setTheme(theme, shouldPersist = true) {
     document.body.removeAttribute("data-theme");
   }
 
-  if (!themeToggle) return;
-
-  const icon = themeToggle.querySelector("i");
   const isDark = theme === "dark";
-  icon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
-  themeToggle.setAttribute(
-    "aria-label",
-    isDark ? t("themeLightLabel") : t("themeDarkLabel"),
-  );
+  themeToggles.forEach((toggle) => {
+    const icon = toggle.querySelector("i");
+    if (icon) icon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+    toggle.setAttribute(
+      "aria-label",
+      isDark ? t("themeLightLabel") : t("themeDarkLabel"),
+    );
+  });
 }
 
 function setLanguage(language) {
@@ -2333,11 +2347,11 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
+themeToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
     setTheme(state.theme === "dark" ? "light" : "dark", true);
   });
-}
+});
 
 brandVoiceToggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
