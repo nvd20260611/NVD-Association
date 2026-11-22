@@ -1,6 +1,7 @@
 ﻿import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import vm from "node:vm";
 
 const root = process.cwd();
 const htmlFiles = [
@@ -794,8 +795,78 @@ if (!htmlByFile["manifesto.html"]?.includes('<meta name="robots" content="noinde
 for (const key of ["newWindowHint"]) {
   if (!zhDictionaryKeys.has(key) || !enDictionaryKeys.has(key)) fail("script.js", `missing translation key: ${key}`);
 }
-if (!script.includes("markNewWindowLinks();")) fail("script.js", "applyTranslations must call markNewWindowLinks()");
-if (!script.includes('querySelector(\'meta[name="theme-color"]\')')) fail("script.js", "setTheme must update meta theme-color");
+if (/font-weight:\s*500\b|font:\s*(?:[a-z-]+\s+)*500\b/.test(styles)) {
+  fail("styles.css", "font weight 500 is not loaded; use 400 or 700, or add 500 to the Google Fonts URL");
+}
+const functionSource = (name) => {
+  const start = script.indexOf(`function ${name}(`);
+  if (start < 0) return "";
+  let depth = 0;
+  for (let i = script.indexOf("{", start); i < script.length; i += 1) {
+    if (script[i] === "{") depth += 1;
+    if (script[i] === "}" && (depth -= 1) === 0) return script.slice(start, i + 1);
+  }
+  return "";
+};
+if (!functionSource("applyTranslations").includes("  markNewWindowLinks();")) {
+  fail("script.js", "applyTranslations must call markNewWindowLinks()");
+}
+const setThemeSource = functionSource("setTheme");
+const darkBg = (styles.match(/body\[data-theme="dark"\] \{\s*--bg-main: (#[0-9a-f]{6});/) || [])[1];
+const themeColorUpdate = setThemeSource.match(
+  /querySelector\('meta\[name="theme-color"\]'\)[\s\S]*?theme === "dark" \? "(#[0-9a-f]{6})" : "(#[0-9a-f]{6})"/,
+);
+if (!themeColorUpdate) {
+  fail("script.js", "setTheme must update meta theme-color for dark and light");
+} else {
+  if (themeColorUpdate[1] !== darkBg) fail("script.js", `dark theme-color ${themeColorUpdate[1]} must match dark --bg-main ${darkBg}`);
+  for (const [file, html] of Object.entries(htmlByFile)) {
+    if (!html.includes(`<meta name="theme-color" content="${themeColorUpdate[2]}" />`)) {
+      fail(file, `theme-color meta must match the light value ${themeColorUpdate[2]} used by setTheme`);
+    }
+  }
+}
+// Run markNewWindowLinks against stub links: repeated passes and language switches
+// must leave exactly one hint in the current language.
+{
+  const hints = [...script.matchAll(/newWindowHint: ("[^"]*"),/g)].map((m) => JSON.parse(m[1]));
+  const source = functionSource("markNewWindowLinks");
+  if (hints.length !== 2 || !source) {
+    fail("script.js", "markNewWindowLinks or its zh/en hints are missing");
+  } else {
+    const makeLink = (label) => ({
+      attrs: label === null ? {} : { "aria-label": label },
+      children: [],
+      getAttribute(name) { return name in this.attrs ? this.attrs[name] : null; },
+      setAttribute(name, value) { this.attrs[name] = String(value); },
+      querySelector() { return this.children.find((child) => child.className.includes("new-window-hint")) || null; },
+      append(child) { this.children.push(child); },
+    });
+    const links = [makeLink("Open map"), makeLink(null)];
+    const context = {
+      language: "zh",
+      translations: { zh: { newWindowHint: hints[0] }, en: { newWindowHint: hints[1] } },
+      document: {
+        querySelectorAll: (selector) => (selector === 'a[target="_blank"]' ? links : []),
+        createElement: () => ({ className: "", textContent: "" }),
+      },
+    };
+    context.t = (key) => context.translations[context.language][key];
+    vm.createContext(context);
+    vm.runInContext(source, context);
+    for (const language of ["zh", "zh", "en", "en", "zh"]) {
+      context.language = language;
+      vm.runInContext("markNewWindowLinks();", context);
+      const hint = context.translations[language].newWindowHint;
+      const [labelled, plain] = links;
+      const notes = plain.children.filter((child) => child.className.includes("new-window-hint"));
+      if (labelled.attrs["aria-label"] !== `Open map${hint}` || notes.length !== 1 || notes[0].textContent !== hint) {
+        fail("script.js", `markNewWindowLinks must keep exactly one ${language} hint after repeated runs`);
+        break;
+      }
+    }
+  }
+}
 const jsCheck = spawnSync(process.execPath, ["--check", "script.js"], {
   cwd: root,
   encoding: "utf8",
