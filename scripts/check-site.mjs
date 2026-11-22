@@ -49,7 +49,7 @@ const forbiddenWords = [
   "數據",
 ];
 const siteBaseUrl = "https://nvd20260611.github.io/NVD-Association/";
-const ogImagePath = "assets/og-image-association-20260614.png";
+const ogImagePath = "assets/og-image-association-20261122.jpg";
 const ogImageUrl = `${siteBaseUrl}${ogImagePath}`;
 const requiredMeta = [
   { label: "description", pattern: /<meta\s+name="description"\s+content="[^"]+"\s*\/?>/i },
@@ -782,6 +782,20 @@ if (!exists("_config.yml")) {
   }
 }
 
+// Health check items 6-9 (2026-11-22)
+for (const [file, html] of Object.entries(htmlByFile)) {
+  const fontLink = html.match(/family=Noto\+Sans\+TC:wght@([0-9;]+)/);
+  if (fontLink && fontLink[1].split(";").includes("500")) fail(file, "do not load Noto Sans TC 500; no rule uses it");
+}
+if (/\bInter\b/.test(styles)) fail("styles.css", "Inter is never loaded; do not list it in font stacks");
+if (!htmlByFile["manifesto.html"]?.includes('<meta name="robots" content="noindex, follow" />')) {
+  fail("manifesto.html", "legacy redirect page must be noindex");
+}
+for (const key of ["newWindowHint"]) {
+  if (!zhDictionaryKeys.has(key) || !enDictionaryKeys.has(key)) fail("script.js", `missing translation key: ${key}`);
+}
+if (!script.includes("markNewWindowLinks();")) fail("script.js", "applyTranslations must call markNewWindowLinks()");
+if (!script.includes('querySelector(\'meta[name="theme-color"]\')')) fail("script.js", "setTheme must update meta theme-color");
 const jsCheck = spawnSync(process.execPath, ["--check", "script.js"], {
   cwd: root,
   encoding: "utf8",

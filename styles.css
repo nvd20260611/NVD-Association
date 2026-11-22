@@ -589,7 +589,6 @@ body[data-theme="dark"] .hero-subtitle strong {
   padding: 0 26px;
   border-radius: 999px;
   font-family:
-    Inter,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -659,7 +658,6 @@ body[data-theme="dark"] .secondary-link-btn {
   border-radius: 999px;
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
   font-family:
-    Inter,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -1313,7 +1311,6 @@ body[data-theme="dark"] .join-contact-address a {
   border: 1px solid transparent;
   box-shadow: none;
   font-family:
-    Inter,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,

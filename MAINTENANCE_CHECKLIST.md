@@ -60,6 +60,10 @@
 - [ ] 橘色按鈕（`.primary-link-btn`、合作提案、語言選中狀態）文字維持深藍 `#0d2340`，不可改回白字（白字對比僅 2.45:1）。
 - [ ] 每頁頁首與手機選單各有一個 `data-theme-toggle` 主題切換按鈕。
 - [ ] `404.html` 保留 `<base href="https://nvd20260611.github.io/NVD-Association/" />` 與 `noindex`；改共用頁首／頁尾時一併更新。
+- [ ] Google Fonts 只載入實際用到的字重（目前 400／700／800）；新增字重前先確認 CSS 有使用。
+- [ ] 更換 OG 圖時用新檔名，並同步所有頁面的 og:image、twitter:image 與 `scripts/check-site.mjs` 的 `ogImagePath`。
+- [ ] 舊網址導引頁（manifesto.html）保持 `noindex, follow`，不列入 sitemap。
+- [ ] 另開新視窗的連結（`target="_blank"`）由 `markNewWindowLinks()` 自動加上提示，不要手動在文字或 aria-label 重複加。
 - [ ] 新增內部文件或資料夾時，加入 `_config.yml` 的 `exclude`，避免被 GitHub Pages 公開。
 - [ ] 內容更新後同步修改 `sitemap.xml` 的 `lastmod`。
 - [ ] 無 CSP violation；所有公開 HTML 保留 `connect-src`、`media-src`、`frame-src`、`manifest-src`、`worker-src` 與 `form-action` 等必要 CSP directive。

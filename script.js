@@ -77,6 +77,7 @@ const translations = {
     notFoundTitle: "找不到這個頁面",
     notFoundText: "這個網址可能已經移動或輸入有誤。你可以從下面的連結回到網站。",
     notFoundHomeCta: "回到首頁",
+    newWindowHint: "（另開新視窗）",
     navHome: "首頁",
     navValues: "核心理念",
     navResilience: "資料倡議",
@@ -751,6 +752,7 @@ const translations = {
     notFoundTitle: "Page not found",
     notFoundText: "This address may have moved or been mistyped. Use the links below to get back to the site.",
     notFoundHomeCta: "Back to homepage",
+    newWindowHint: " (opens in a new tab)",
     navHome: "Home",
     navValues: "Values",
     navResilience: "Data Advocacy",
@@ -2068,6 +2070,31 @@ function applySharedAccessibilityText() {
     ?.setAttribute("aria-label", t("backToTopLabel"));
 }
 
+// Tell screen reader users which links open a new tab. Runs after every
+// translation pass, so it first strips a hint added in either language.
+function markNewWindowLinks() {
+  const hint = t("newWindowHint");
+  const knownHints = [translations.zh.newWindowHint, translations.en.newWindowHint];
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const label = link.getAttribute("aria-label");
+    if (label !== null) {
+      let base = label;
+      knownHints.forEach((known) => {
+        if (base.endsWith(known)) base = base.slice(0, -known.length);
+      });
+      link.setAttribute("aria-label", base + hint);
+      return;
+    }
+    let note = link.querySelector(".new-window-hint");
+    if (!note) {
+      note = document.createElement("span");
+      note.className = "visually-hidden new-window-hint";
+      link.append(note);
+    }
+    note.textContent = hint;
+  });
+}
+
 function applyTranslations() {
   document.documentElement.lang = state.language === "zh" ? "zh-Hant" : "en";
   applyPageMetadata();
@@ -2095,6 +2122,7 @@ function applyTranslations() {
   });
 
   applySharedAccessibilityText();
+  markNewWindowLinks();
 
   if (resilienceDemo) {
     updateResilienceDemoReadout(Number(resilienceDemo.dataset.step) || 0);
@@ -2115,6 +2143,11 @@ function setTheme(theme, shouldPersist = true) {
   } else {
     document.body.removeAttribute("data-theme");
   }
+
+  // Match the mobile browser bar to the page background.
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute("content", theme === "dark" ? "#08111f" : "#f6f1e8");
 
   const isDark = theme === "dark";
   themeToggles.forEach((toggle) => {
